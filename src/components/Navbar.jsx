@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.png";
-import menu from "../assets/navbar/menu.png";
-import close from "../assets/navbar/close.png";
 import eclips1 from "../assets/navbar/eclips1.png";
 import eclips2 from "../assets/navbar/eclips2.png";
 import eclips3 from "../assets/navbar/eclips3.png";
@@ -22,7 +20,7 @@ const Navbar = () => {
         <div className="w-full flex justify-between items-start  mx-auto ">
           <Link
             to="/"
-            className="flex items-center cursor-pointer justify-center gap-1 sm:w-[15%] order-2 sm:justify-start"
+            className="flex items-center cursor-pointer justify-end gap-1 sm:w-[15%] order-2 sm:justify-start"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
@@ -30,7 +28,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo"
-              className={`${toggle === true ? "hidden" : "flex w-[50%]"}`}
+              className={`${toggle === true ? "hidden" : "w-[10%] absolute sm:w-[50%] top-2 sm:relative sm:top-0 z-20"}`}
               loading="lazy"
             />
             <p className="text-[18px] font-bold cursor-pointer xmd:flex hidden mdd:w-0">
@@ -84,7 +82,7 @@ const Navbar = () => {
               }`}
             />
             <button
-              className="flex flex-col h-12 w-12 rounded justify-center items-center group"
+              className="flex flex-col h-12 w-12 rounded justify-center items-center group z-10"
               onClick={() => {
                 setIsOpen(!isOpen);
                 setToggle(!toggle);
