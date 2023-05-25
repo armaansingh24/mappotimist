@@ -150,7 +150,7 @@ const Navbar = () => {
         className={`${
           toggle === false
             ? "opacity-0 h-0"
-            : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer h-screen w-screen transition-all duration-[2000] ease-in-out"
+            : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-full duration-[2000] ease-in-out"
         }`}
         onClick={() => {setToggle(!toggle); setIsOpen(!isOpen);}}
       ></div>
