@@ -18,7 +18,7 @@ const HeroSection = () => {
     const totalParagraphs = 2;
     const timeout = setTimeout(() => {
       setActiveParagraph((prev) => (prev + 1) % totalParagraphs);
-    }, 2000);
+    }, 9000);
 
     return () => clearTimeout(timeout);
   }, [activeParagraph]);
@@ -30,7 +30,7 @@ const HeroSection = () => {
           className="md:order-2 flex items-center justify-center w-full"
         >
           <div className="w-full mx-auto flex items-center justify-center">
-            <img src={heroImage} alt="" loading="lazy" />
+            <img src={heroImage} alt="" loading="lazy" className="w-[75%]" />
           </div>
         </motion.div>
 
@@ -55,7 +55,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row sm:justify-between md:mx-0 md:w-[80%] mt-4">
+            <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row sm:justify-between md:mx-0 md:w-[60%] mt-4">
               <button className="flex items-center gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-Poppins">
                 Hire Talent
                 <span>

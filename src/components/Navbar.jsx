@@ -28,7 +28,11 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo"
-              className={`${toggle === true ? "hidden" : "w-[15%] absolute sm:w-[50%] top-3 sm:relative sm:top-0 z-20"}`}
+              className={`${
+                toggle === true
+                  ? "hidden"
+                  : "w-[15%] absolute sm:w-[50%] top-3 sm:relative sm:top-0 z-20"
+              }`}
               loading="lazy"
             />
             <p className="text-[18px] font-bold cursor-pointer xmd:flex hidden mdd:w-0">
@@ -152,7 +156,10 @@ const Navbar = () => {
             ? "opacity-0 h-0"
             : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-full duration-[2000ms] ease-in-out"
         }`}
-        onClick={() => {setToggle(!toggle); setIsOpen(!isOpen);}}
+        onClick={() => {
+          setToggle(!toggle);
+          setIsOpen(!isOpen);
+        }}
       ></div>
     </>
   );
