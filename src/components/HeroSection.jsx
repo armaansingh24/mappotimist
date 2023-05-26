@@ -30,7 +30,12 @@ const HeroSection = () => {
           className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0"
         >
           <div className="w-full mx-auto flex items-center justify-center">
-            <img src={heroImage} alt="" loading="lazy" className="w-full sm:w-[60%] md:w-full xmd:w-[70%]" />
+            <img
+              src={heroImage}
+              alt=""
+              loading="lazy"
+              className="sm:w-[60%] md:w-full xmd:w-[70%]"
+            />
           </div>
         </motion.div>
 
@@ -40,9 +45,9 @@ const HeroSection = () => {
           className="flex flex-col gap-4 w-full lmd:gap-6"
         >
           <div>
-            <div className="w-[340px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col">
-              <h1 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] ">
-                Hire the perfect talent for your
+            <div className="w-[300px] xsm:w-[340px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col">
+              <h1 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
+                <>Hire the perfect</> <>talent for your</>
               </h1>
               <div className="text-[#DF9507] font-bold lmd:text-[48px] -z-1 ">
                 <TypeWritter

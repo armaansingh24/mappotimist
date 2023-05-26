@@ -122,7 +122,7 @@ const Navbar = () => {
                   <li
                     key={link.id}
                     className="text-[20px] font-semibold cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-500 z-10"
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-[2000ms] z-10"
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
