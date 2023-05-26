@@ -45,7 +45,7 @@ const HeroSection = () => {
           className="flex flex-col gap-4 w-full lmd:gap-6"
         >
           <div>
-            <div className="w-[300px] xsm:w-[340px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col">
+            <div className="w-[300px] xsm:w-[340px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
               <h1 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
                 <>Hire the perfect</> <>talent for your</>
               </h1>
