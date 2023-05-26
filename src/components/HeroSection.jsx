@@ -24,17 +24,19 @@ const HeroSection = () => {
   }, [activeParagraph]);
   return (
     <>
-      <div className="w-full flex flex-col justify-center h-fit mx-auto my-auto sm:mt-1 gap-2 lmd:flex-row lmd:justify-between">
+      <div className="w-full flex flex-col justify-center h-fit mx-auto my-auto sm:mt-1 gap-2 md:flex-row lmd:justify-between">
         <motion.div
-          variants={slideIn("right", "spring", 0.5, 0.55)}
-          className="lmd:order-2 flex items-center justify-center w-full"
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className="md:order-2 flex items-center justify-center w-full"
         >
           <div className="w-full mx-auto flex items-center justify-center">
             <img src={heroImage} alt="" loading="lazy" />
           </div>
         </motion.div>
+
         <motion.div
-          variants={fadeIn("left", "spring", 0.5, 0.55)}
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          annimate="visible"
           className="flex flex-col gap-4 w-full lmd:gap-6"
         >
           <div>

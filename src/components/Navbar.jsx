@@ -43,7 +43,7 @@ const Navbar = () => {
                 "
               >
                 <a
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-500 ease-in-out"
+                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
                   href={`#${link.id}`}
                 >
                   {link.title}
@@ -53,7 +53,7 @@ const Navbar = () => {
           </ul>
 
           {/* Nav Modal */}
-          <div className="sm:hidden flex flex-1 justify-between order-1 w-[100%] bg-white rounded-lg relative z-10 transition-all duration-1000 overflow-hidden">
+          <div className="sm:hidden flex flex-1 justify-between order-1 w-[100%] bg-white rounded-lg relative z-10 transition-all duration-[2000ms] overflow-hidden h-auto ease-in-out">
             <img
               src={eclips1}
               alt="eclips-1"
@@ -110,8 +110,8 @@ const Navbar = () => {
             </button>
             <div
               className={`${
-                !toggle ? "opacity-0 h-0" : "opacity-100 h-auto"
-              }  justify-center items-center mx-auto transition-all duration-1000 ease-in-out`}
+                !toggle ? "opacity-0 h-0" : "opacity-100 h-fit"
+              }  justify-center items-center mx-auto transition-all duration-[2000ms] ease-in-out`}
             >
               <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-full mt-12 transform transition duration-1000">
                 {navLinks.map((link) => (
@@ -150,7 +150,7 @@ const Navbar = () => {
         className={`${
           toggle === false
             ? "opacity-0 h-0"
-            : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-full duration-[2000] ease-in-out"
+            : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-full duration-[2000ms] ease-in-out"
         }`}
         onClick={() => {setToggle(!toggle); setIsOpen(!isOpen);}}
       ></div>
