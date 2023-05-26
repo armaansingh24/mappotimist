@@ -39,7 +39,7 @@ const Navbar = () => {
               MappOptimist
             </p>
           </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-3 lmd:gap-5 md:gap-10 order-3 self-center">
+          <ul className="list-none hidden sm:flex flex-row gap-3 lmd:gap-3 md:gap-10 order-3 self-center">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -125,6 +125,7 @@ const Navbar = () => {
                hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-500 z-10"
                     onClick={() => {
                       setToggle(!toggle);
+                      setIsOpen(!isOpen);
                     }}
                   >
                     <a href={`#${link.id}`}>{link.title}</a>

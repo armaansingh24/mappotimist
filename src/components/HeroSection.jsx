@@ -27,10 +27,10 @@ const HeroSection = () => {
       <div className="w-full flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="md:order-2 flex items-center justify-center w-full"
+          className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0"
         >
           <div className="w-full mx-auto flex items-center justify-center">
-            <img src={heroImage} alt="" loading="lazy" className="w-[60%]" />
+            <img src={heroImage} alt="" loading="lazy" className="w-full sm:w-[60%] md:w-full xmd:w-[70%]" />
           </div>
         </motion.div>
 
@@ -40,11 +40,11 @@ const HeroSection = () => {
           className="flex flex-col gap-4 w-full lmd:gap-6"
         >
           <div>
-            <div className="w-full lmd:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col">
+            <div className="w-[340px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col">
               <h1 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] ">
                 Hire the perfect talent for your
               </h1>
-              <div className="text-[#DF9507] font-bold lmd:text-[48px] mt-2 -z-1">
+              <div className="text-[#DF9507] font-bold lmd:text-[48px] -z-1 ">
                 <TypeWritter
                   options={{
                     autoStart: true,
@@ -62,7 +62,7 @@ const HeroSection = () => {
                   <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
                 </span>
               </button>
-              <div className=" flex ml-10">
+              <div className=" flex ml-10 mt-4 lmd:mt-0">
                 <span className=" left-[-10px] ml-[-18px] z-1">
                   <img src={image1} alt="" className=" w-12" />
                 </span>
