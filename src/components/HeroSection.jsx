@@ -3,8 +3,6 @@ import heroImage from "../assets/hero-section/heroImage.png";
 import TypeWritter from "typewriter-effect";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { fadeIn, slideIn } from "../utils/motion";
 import image1 from "../assets/hero-section/image1.png";
 import image2 from "../assets/hero-section/image2.png";
 import image3 from "../assets/hero-section/image3.png";
