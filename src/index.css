@@ -1,3 +1,97 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --wav1: url("./assets/about/wave.png");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.waves {
+    position: relative;
+    /* background:#3586ff; */
+    /* height: 100vh; */
+    /* width: 100vh; */
+    z-index: -1;
+}
+
+.waves .wave {
+    position: absolute;
+    bottom: 0;
+    left: -10;
+    width: 100vw;
+    height: 260px;
+    background: var(--wav1);
+    background-size: 1453px 260px;
+}
+
+.waves .wave.wave3 {
+    animation: animate1 30s linear infinite;
+    opacity: 1;
+    animation-delay: 0s;
+}
+
+@keyframes animate1 {
+    0% {
+        background-position-x: 0;
+    }
+
+    50% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    50% {
+        background-position-x: 500px;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        background-position-x: 0;
+    }
+
+    50% {
+        background-position-x: 1500px;
+    }
+}
+
+@media screen and (width: 834px) {
+    .waves .wave {
+        height: 170px;
+        background-size: 768px 180px;
+
+    }
+}
+
+@media screen and (width: 767px) {
+    .waves .wave {
+        height: 180px;
+        background-size: 768px 180px;
+    }
+
+    .waves .wave.wave3 {
+        animation: animate3 15s linear infinite;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .waves .wave {
+        height: 155.94px;
+        background-size: 885.06px 155.94px;
+    }
+
+    .waves .wave.wave3 {
+        animation: animate2 15s linear infinite;
+    }
+}
