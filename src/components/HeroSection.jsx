@@ -62,8 +62,8 @@ const HeroSection = () => {
               />
             </div>
           </div>
-          <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row sm:justify-between md:mx-0 md:w-[60%] mt-4">
-            <button className="flex items-center gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-Poppins">
+          <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
+            <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-Poppins">
               Hire Talent
               <span>
                 <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
