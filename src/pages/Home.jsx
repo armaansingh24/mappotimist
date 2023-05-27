@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-import About from "../components/About";
+// import About from "../components/About";
 // import './components/Component.css'
 
 const Home = () => {
