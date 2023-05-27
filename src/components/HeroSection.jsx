@@ -25,8 +25,11 @@ const HeroSection = () => {
   return (
     <>
       <div className="w-full flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center">
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
+        <div
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1000"
           className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0"
         >
           <div className="w-full mx-auto flex items-center justify-center">
@@ -37,11 +40,13 @@ const HeroSection = () => {
               className="sm:w-[60%] md:w-full xmd:w-[70%]"
             />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={fadeIn("right", "tween", 0.2, 1)}
-          annimate="visible"
+        <div
+          data-aos="fade-right"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1000"
           className="flex flex-col gap-4 w-full lmd:gap-6"
         >
           <div>
@@ -118,7 +123,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </>
   );

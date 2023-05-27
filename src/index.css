@@ -25,9 +25,9 @@
     bottom: 0;
     left: -10;
     width: 100vw;
-    height: 260px;
+    height: 200px;
     background: var(--wav1);
-    background-size: 1453px 260px;
+    background-size: 1453px 200px;
 }
 
 .waves .wave.wave3 {
