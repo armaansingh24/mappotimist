@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
     --wav1: url("./assets/about/wave.png");
 }
