@@ -4,7 +4,7 @@ const CountUp = ({ start = 0, end, timer = 200 }) => {
   const [state, setState] = useState(null);
   const ref = useRef(start);
 
-  const accumulator = end / 200;
+  const accumulator = end / 10;
   const updateCounterState = () => {
     if (ref.current < end) {
       const result = Math.ceil(ref.current + accumulator);

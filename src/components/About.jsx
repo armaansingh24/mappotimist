@@ -26,7 +26,6 @@ const About = () => {
             <div className="w-full mx-auto h-full overflow-hidden order-2 xxmd:order-3 xxmd:col-span-2 xxmd:mb-10 z-9 relative xxmd:gap-10">
               <Carousel
                 statusFormatter={() => {}}
-                setthumbs="false"
                 autoPlay="true"
                 infiniteLoop="true"
                 interval={8000}
@@ -36,8 +35,28 @@ const About = () => {
                 showArrows="false"
                 showThumbs="false"
                 stopOnHover="true"
-                showIndicators="false"
+                showIndicators="true"
                 renderThumbs={() => {}}
+                renderIndicator= {(onClickHandler, isSelected, index, label) => {
+        const defStyle = { marginLeft: 20, color: "white", cursor: "pointer",innerWidth:"10px",innerHeight:"10px",borderRadius:"50%",opacity:"0.8", };
+        const style = isSelected
+          ? { ...defStyle, color: "#1CB5E0" }
+          : { ...defStyle };
+        return (
+          <span
+            style={style}
+            onClick={onClickHandler}
+            onKeyDown={onClickHandler}
+            value={index}
+            key={index}
+            role="button"
+            tabIndex={0}
+            aria-label={`${label} ${index + 1}`}
+          >
+            •
+          </span>
+        );
+      }}
                 className="-z-9"
                 // numberOfSlides={4}
               >
@@ -53,9 +72,7 @@ const About = () => {
                   <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
                     <CountUp start={0} end={item.number} /> {item.symbol}
                   </p>
-                  <p className="text-[25px] font-medium ">
-                    {item.title}
-                  </p>
+                  <p className="text-[25px] font-medium ">{item.title}</p>
                   <p className="text-[9px] leading-[12px] capitalize font-medium xxmd:text-[12.25px] xxmd:leading-[18.37px]">
                     {item.description}
                   </p>
