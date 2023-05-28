@@ -74,9 +74,6 @@ const About = () => {
                     marginLeft: 20,
                     color: "white",
                     cursor: "pointer",
-                    innerWidth: "10px",
-                    innerHeight: "10px",
-                    borderRadius: "50%",
                     opacity: "0.8",
                   };
                   const style = isSelected
