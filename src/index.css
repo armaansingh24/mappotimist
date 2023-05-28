@@ -3,6 +3,7 @@
 @tailwind utilities;
 /* @import "react-alice-carousel/lib/alice-carousel.css"; */
 
+
 :root {
     --wav1: url("./assets/about/wave.png");
 }
@@ -31,7 +32,7 @@
 }
 
 .waves .wave.wave3 {
-    animation: animate1 30s linear infinite;
+    animation: animate1 15s linear infinite;
     opacity: 1;
     animation-delay: 0s;
 }
@@ -81,7 +82,7 @@
     }
 
     .waves .wave.wave3 {
-        animation: animate3 15s linear infinite;
+        animation: animate3 7s linear infinite;
     }
 }
 
@@ -92,6 +93,6 @@
     }
 
     .waves .wave.wave3 {
-        animation: animate2 15s linear infinite;
+        animation: animate2 7s linear infinite;
     }
 }
