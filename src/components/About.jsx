@@ -71,10 +71,13 @@ const About = () => {
                 renderThumbs={() => {}}
                 renderIndicator={(onClickHandler, isSelected, index, label) => {
                   const defStyle = {
-                    marginLeft: 20,
+                    marginLeft: 10,
+                    marginRight: 10,
+                    fontSize: "20px",
                     color: "white",
                     cursor: "pointer",
                     opacity: "0.8",
+                    
                   };
                   const style = isSelected
                     ? { ...defStyle, color: "#1CB5E0" }
