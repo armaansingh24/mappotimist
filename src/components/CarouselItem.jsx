@@ -6,7 +6,7 @@ const CarouselItem = ({ item }) => {
       <img
         src={item.backgroudImage}
         alt="slider"
-        className="w-full h-[10rem] sm:h-[17rem] md:h-[20rem] xxmd:h-[450px] object-cover"
+        className="w-full h-[10rem] sm:h-[17rem] md:h-[14rem] xxmd:h-[450px] object-cover"
         loading="lazy"
       />
       <div className="absolute inset-0">
