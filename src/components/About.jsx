@@ -6,8 +6,19 @@ import CountUp from "./CountUp";
 import CarouselItem from "./CarouselItem";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { motion, useInView, useAnimation, useIsPresent } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <>
       <div className="mt-6">
@@ -17,13 +28,33 @@ const About = () => {
 
         <div className="bg-[#DBDCE6] mb-10">
           <div className="max-w-[90%] mx-auto grid grid-cols-1 xxmd:grid-cols-2 gap-5 ">
-            <div className="order-1 w-full">
+            <motion.div
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+              className="order-1 w-full"
+            >
               <h2 className="w-full text-[30px] font-medium leading-8 xxmd:text-[48px] xxmd:leading-[72px]">
                 Unleash your idea's potential with our comprehensive,
                 innovative, and creative digital solutions.
               </h2>
-            </div>
-            <div className="w-full mx-auto h-full overflow-hidden order-2 xxmd:order-3 xxmd:col-span-2 xxmd:mb-10 z-9 relative xxmd:gap-10">
+            </motion.div>
+            <motion.div
+              className="w-full mx-auto h-full overflow-hidden order-2 xxmd:order-3 xxmd:col-span-2 xxmd:mb-10 z-9 relative xxmd:gap-10"
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               <Carousel
                 statusFormatter={() => {}}
                 autoPlay="true"
@@ -37,26 +68,34 @@ const About = () => {
                 stopOnHover="true"
                 showIndicators="true"
                 renderThumbs={() => {}}
-                renderIndicator= {(onClickHandler, isSelected, index, label) => {
-        const defStyle = { marginLeft: 20, color: "white", cursor: "pointer",innerWidth:"10px",innerHeight:"10px",borderRadius:"50%",opacity:"0.8", };
-        const style = isSelected
-          ? { ...defStyle, color: "#1CB5E0" }
-          : { ...defStyle };
-        return (
-          <span
-            style={style}
-            onClick={onClickHandler}
-            onKeyDown={onClickHandler}
-            value={index}
-            key={index}
-            role="button"
-            tabIndex={0}
-            aria-label={`${label} ${index + 1}`}
-          >
-            •
-          </span>
-        );
-      }}
+                renderIndicator={(onClickHandler, isSelected, index, label) => {
+                  const defStyle = {
+                    marginLeft: 20,
+                    color: "white",
+                    cursor: "pointer",
+                    innerWidth: "10px",
+                    innerHeight: "10px",
+                    borderRadius: "50%",
+                    opacity: "0.8",
+                  };
+                  const style = isSelected
+                    ? { ...defStyle, color: "#1CB5E0" }
+                    : { ...defStyle };
+                  return (
+                    <span
+                      style={style}
+                      onClick={onClickHandler}
+                      onKeyDown={onClickHandler}
+                      value={index}
+                      key={index}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`${label} ${index + 1}`}
+                    >
+                      •
+                    </span>
+                  );
+                }}
                 className="-z-9"
                 // numberOfSlides={4}
               >
@@ -64,12 +103,23 @@ const About = () => {
                   <CarouselItem key={item.id} item={item} />
                 ))}
               </Carousel>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 gap-6 w-full mx-auto order-2 mb-10 xxmd:w-[90%] ">
+            <motion.div
+              className="grid grid-cols-2 gap-6 w-full mx-auto order-2 mb-10 xxmd:w-[90%] "
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               {about.map((item) => (
                 <div className="font-Poppins xxmd:text-[36.75px]" key={item.id}>
-                  <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
+                  <p
+                  className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
                     <CountUp start={0} end={item.number} /> {item.symbol}
                   </p>
                   <p className="text-[25px] font-medium ">{item.title}</p>
@@ -78,7 +128,7 @@ const About = () => {
                   </p>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

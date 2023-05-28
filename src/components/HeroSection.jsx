@@ -2,12 +2,13 @@ import React from "react";
 import heroImage from "../assets/hero-section/heroImage.png";
 import TypeWritter from "typewriter-effect";
 import { BsArrowRightCircleFill } from "react-icons/bs";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import image1 from "../assets/hero-section/image1.png";
 import image2 from "../assets/hero-section/image2.png";
 import image3 from "../assets/hero-section/image3.png";
 import image4 from "../assets/hero-section/image4.png";
 import image5 from "../assets/hero-section/image5.png";
+import { motion, useInView, useAnimation, useIsPresent } from "framer-motion";
 
 const HeroSection = () => {
   const [activeParagraph, setActiveParagraph] = useState(0);
@@ -20,32 +21,49 @@ const HeroSection = () => {
 
     return () => clearTimeout(timeout);
   }, [activeParagraph]);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
   return (
     <>
       <div className="w-full flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center">
-        <div
-          className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0"
-          data-aos="fade-left"
-          data-aos-anchor="#example-anchor"
-          data-aos-offset="500"
-          data-aos-duration="2000"
-        >
-          <div className="w-full mx-auto flex items-center justify-center">
+        <div className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0">
+          <motion.div
+            className="w-full mx-auto flex items-center justify-center"
+            ref={ref}
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 1.6 }}
+          >
             <img
               src={heroImage}
               alt=""
               loading="lazy"
               className="sm:w-[60%] md:w-full xmd:w-[70%]"
             />
-          </div>
+          </motion.div>
         </div>
 
-        <div
+        <motion.div
           className="flex flex-col gap-4 w-full lmd:gap-6"
-          data-aos="fade-right"
-          data-aos-anchor="#example-anchor"
-          data-aos-offset="500"
-          data-aos-duration="2000"
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1.6 }}
         >
           <div className="w-[300px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
             <h1 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
@@ -118,7 +136,7 @@ const HeroSection = () => {
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
