@@ -8,7 +8,7 @@ import image2 from "../assets/hero-section/image2.png";
 import image3 from "../assets/hero-section/image3.png";
 import image4 from "../assets/hero-section/image4.png";
 import image5 from "../assets/hero-section/image5.png";
-import { motion, useInView, useAnimation, useIsPresent } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const HeroSection = () => {
   const [activeParagraph, setActiveParagraph] = useState(0);
@@ -29,6 +29,7 @@ const HeroSection = () => {
     if (isInView) {
       mainControls.start("visible");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
   return (
     <>

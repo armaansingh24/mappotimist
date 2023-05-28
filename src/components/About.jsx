@@ -6,7 +6,7 @@ import CountUp from "./CountUp";
 import CarouselItem from "./CarouselItem";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { motion, useInView, useAnimation, useIsPresent } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const About = () => {
@@ -17,6 +17,7 @@ const About = () => {
     if (isInView) {
       mainControls.start("visible");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
   return (
