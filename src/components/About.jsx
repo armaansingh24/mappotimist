@@ -29,7 +29,7 @@ const About = () => {
                 setthumbs="false"
                 autoPlay="true"
                 infiniteLoop="true"
-                interval={7000}
+                interval={8000}
                 showStatus="false"
                 renderArrowPrev={(onClickHandler, hasPrev, label) => {}}
                 renderArrowNext={(onClickHandler, hasNext, label) => {}}
