@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const CountUp = ({ start = 0, end, timer = 10 }) => {
+const CountUp = ({ start = 0, end, timer = 200 }) => {
   const [state, setState] = useState(null);
   const ref = useRef(start);
 
