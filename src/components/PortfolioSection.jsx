@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -14,15 +14,67 @@ import image3 from "../assets/portfolio/image3.png";
 import image4 from "../assets/portfolio/image4.png";
 import image5 from "../assets/portfolio/image5.png";
 
-const PortfolioSection = () => {
+ import Carousel from "react-multi-carousel";
+ import "react-multi-carousel/lib/styles.css";
+
+
+const PortfolioSection = (props) => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 6,
+      slidesToSlide: 4, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+  const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+    
+    return (
+      <div
+        className="absolute carousel-button-group mb-4  gap-4 flex justify-end 
+          items-center w-[100%]"
+      >
+        <button
+          className="absolute w-[2%] h-20 top-[-8rem] text-white left-0 text-center p-3"
+          onClick={() => previous()}
+        >
+          {" "}
+          <AiOutlineArrowLeft className="text-[1.75rem] absolute top-6 left-0 right-0" />
+        </button>
+        <button onClick={() => next()}>
+          <span className="absolute w-[2%] h-20 top-[-8rem] text-white right-[0.3rem] text-center p-3">
+            <AiOutlineArrowRight className="text-[1.75rem] absolute top-6 left-0 right-[-2rem]" />
+          </span>
+        </button>
+      </div>
+    );
+  };
+   const CustomDot = ({  onClick, active }) => {
+     // onMove means if dragging or swiping in progress.
+     // active is provided by this lib for checking if the item is active or not.
+     return (
+       <li className={`${active ? "opacity-1" : "opacity-[.5]"} text-white mt-6`} onClick={() => onClick()}>
+         •
+       </li>
+     );
+   };
   return (
     <>
-      <div className="bg-gradient-to-r from-secondary to-primary w-screen mt-[-rem]">
+      <div className="bg-gradient-to-r from-secondary to-primary w-screen">
         <div className="w-[90%] mx-auto p-10">
-          <h2>Our Portfolios</h2>
+          <h2 className="font-bold text-center sm:text-left">Our Portfolios</h2>
         </div>
         <div className="w-[90%] mx-auto slider">
-          <div className="container">
+          <div className="container hidden sm:block">
             <Swiper
               effect={"coverflow"}
               slidesPerView={3}
@@ -78,10 +130,54 @@ const PortfolioSection = () => {
               </div>
             </Swiper>
           </div>
+          <div className="sm:hidden p-4 mb-3">
+            {/* whole card is not visible check prodata and procard */}
+            <div className="mx-1 relative flex flex-col-reverse group">
+              <Carousel
+                responsive={responsive}
+                arrows={false}
+                renderButtonGroupOutside={true}
+                customButtonGroup={<ButtonGroup />}
+                autoPlay={props.deviceType !== "mobile" ? true : false}
+                infinite={true}
+                autoPlaySpeed={9000}
+                sliderClass={true}
+                showDots={true}
+                dotListClass={true}
+                customDot={<CustomDot />}
+              >
+                <img
+                  src={image1}
+                  alt="slide_image"
+                  className="w-[80%]  p-5 mr-0 ml-7"
+                />
+                <img
+                  src={image2}
+                  alt="slide_image"
+                  className="w-[80%]  p-5 mr-0 ml-7"
+                />
+                <img
+                  src={image3}
+                  alt="slide_image"
+                  className="w-[80%]  p-5 mr-0 ml-7"
+                />
+                <img
+                  src={image4}
+                  alt="slide_image"
+                  className="w-[80%]  p-5 mr-0 ml-7"
+                />
+                <img
+                  src={image5}
+                  alt="slide_image"
+                  className="w-[80%]  p-5 mr-0 ml-7"
+                />
+              </Carousel>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default PortfolioSection
+export default PortfolioSection;

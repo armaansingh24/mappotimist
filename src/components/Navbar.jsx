@@ -14,13 +14,13 @@ const Navbar = () => {
     <>
       <nav
         className={
-          "flex items-center mx-auto mt-6 w-full p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-10 text-black" 
+          "flex items-center mx-auto mt-6 w-full p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-10 text-black"
         }
       >
         <div className="w-full flex justify-between items-start  mx-auto ">
           <Link
             to="/"
-            className="flex items-center cursor-pointer justify-end gap-1 sm:w-[15%] order-2 sm:justify-start"
+            className="flex items-center cursor-pointer justify-end gap-1 sm:w-[15%] order-2 sm:justify-start bg-transparent"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
@@ -57,7 +57,13 @@ const Navbar = () => {
           </ul>
 
           {/* Nav Modal */}
-          <div className="sm:hidden flex flex-1 justify-between order-1 w-[100%] bg-white rounded-lg relative z-10 transition-all duration-[2000ms] overflow-hidden h-auto ease-in-out">
+          <div
+            className={`${
+              isOpen === true
+                ? "bg-white h-auto"
+                : " bg-transparent h-0 bg-none"
+            } sm:hidden flex flex-1 justify-between order-1 w-[100%] rounded-lg relative z-10 transition-all duration-[1000ms] overflow-hidden h-auto ease-in`}
+          >
             <img
               src={eclips1}
               alt="eclips-1"
