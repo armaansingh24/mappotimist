@@ -27,7 +27,7 @@ const About = () => {
           <div className="wave wave3"></div>
         </div>
 
-        <div className="bg-[#DBDCE6] mb-10">
+        <div className="bg-[#DBDCE6]">
           <div className="max-w-[90%] mx-auto grid grid-cols-1 xxmd:grid-cols-2 gap-5 ">
             <motion.div
               ref={ref}

@@ -77,7 +77,7 @@ export const about = [
     id: 3,
     number: "100",
     symbol: "%",
-    title: "years of experience",
+    title: "Happy Clients",
     description: "out clints satisfaction is our first priority.",
   },
   {
