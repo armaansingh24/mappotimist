@@ -1,22 +1,21 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { portfolioImages } from "../constants/index";
 import image1 from "../assets/portfolio/image1.png";
 import image2 from "../assets/portfolio/image2.png";
 import image3 from "../assets/portfolio/image3.png";
 import image4 from "../assets/portfolio/image4.png";
 import image5 from "../assets/portfolio/image5.png";
 
- import Carousel from "react-multi-carousel";
- import "react-multi-carousel/lib/styles.css";
-
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import PortfolioSlider from "./PortfolioSlider";
 
 const PortfolioSection = (props) => {
   const responsive = {
@@ -37,7 +36,6 @@ const PortfolioSection = (props) => {
     },
   };
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
-    
     return (
       <div
         className="absolute carousel-button-group mb-4  gap-4 flex justify-end 
@@ -58,15 +56,18 @@ const PortfolioSection = (props) => {
       </div>
     );
   };
-   const CustomDot = ({  onClick, active }) => {
-     // onMove means if dragging or swiping in progress.
-     // active is provided by this lib for checking if the item is active or not.
-     return (
-       <li className={`${active ? "opacity-1" : "opacity-[.5]"} text-white mt-6`} onClick={() => onClick()}>
-         •
-       </li>
-     );
-   };
+  const CustomDot = ({ onClick, active }) => {
+    // onMove means if dragging or swiping in progress.
+    // active is provided by this lib for checking if the item is active or not.
+    return (
+      <li
+        className={`${active ? "opacity-1" : "opacity-[.5]"} text-white translate-y-[10rem]]`}
+        onClick={() => onClick()}
+      >
+        •
+      </li>
+    );
+  };
   return (
     <>
       <div className="bg-gradient-to-r from-secondary to-primary w-screen">
@@ -95,23 +96,13 @@ const PortfolioSection = (props) => {
                 clickable: true,
               }}
               modules={[EffectCoverflow, Pagination, Navigation]}
-              className="swiper_container"
+              className="swiper_container h-auto"
             >
-              <SwiperSlide>
-                <img src={image1} alt="slide_image" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={image2} alt="slide_image" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={image3} alt="slide_image" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={image4} alt="slide_image" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={image5} alt="slide_image" />
-              </SwiperSlide>
+              {portfolioImages.map((image) => (
+                <SwiperSlide>
+                  <PortfolioSlider image={image.image} key={image.id} />
+                </SwiperSlide>
+              ))}
 
               <div className="slider-controler">
                 <div className="swiper-button-prev slider-arrow">
@@ -138,9 +129,9 @@ const PortfolioSection = (props) => {
                 arrows={false}
                 renderButtonGroupOutside={true}
                 customButtonGroup={<ButtonGroup />}
-                autoPlay={props.deviceType !== "mobile" ? true : false}
+                // autoPlay={props.deviceType !== "mobile" ? true : false}
                 infinite={true}
-                autoPlaySpeed={9000}
+                // autoPlaySpeed={9000}
                 sliderClass={true}
                 showDots={true}
                 dotListClass={true}

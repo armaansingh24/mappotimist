@@ -1,6 +1,12 @@
 import slider1 from "../assets/about/slider1.png";
 import slider2 from "../assets/about/slider2.png";
 import slider3 from "../assets/about/slider3.png";
+
+import image1 from "../assets/portfolio/image1.png";
+import image2 from "../assets/portfolio/image2.png";
+import image3 from "../assets/portfolio/image3.png";
+import image4 from "../assets/portfolio/image4.png";
+import image5 from "../assets/portfolio/image5.png";
 export const navLinks = [
   {
     id: "Home",
@@ -86,5 +92,28 @@ export const about = [
     symbol: "%",
     title: "on-time delivery",
     description: "we have a good record of delivering projects before time.",
+  },
+];
+
+export const portfolioImages = [
+  {
+    id: 1,
+    image: image1 ,
+  },
+  {
+    id: 2,
+    image: image2 ,
+  },
+  {
+    id: 3,
+    image: image3 ,
+  },
+  {
+    id: 4,
+    image: image4 ,
+  },
+  {
+    id: 5,
+    image: image5 ,
   },
 ];
