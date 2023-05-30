@@ -9,8 +9,8 @@ module.exports = {
         xsm:"400px",
         sm: "710px",
         lmd: "767px",
-        md: "834px",
-        xxmd:"1023px",
+        md: "830px",
+        xxmd:"1025px",
         xmd: "1068px",
       },
       colors: {

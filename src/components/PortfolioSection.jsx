@@ -84,7 +84,7 @@ const PortfolioSection = (props) => {
               loop={true}
               // slidesPerView={"auto"}
               coverflowEffect={{
-                rotate: 10,
+                rotate: 17,
                 stretch: 0,
                 depth: 100,
                 modifier: 2.5,

@@ -15,7 +15,7 @@ const CarouselItem = ({ item }) => {
             <p className="text-sm sm:text-xl font-semibold md:text-2xl xxmd:text-[36.75px] xxmd:leading-[55.12px]">
               {item.step}
             </p>
-            <p className="text-lg sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-tl from-primary to-secondary xxmd:text-[36.75px] xxmd:leading-[55.12px]">
+            <p className="text-lg sm:text-2xl sm:mt-[-10px] md:text-3xl text-transparent bg-clip-text bg-gradient-to-tl from-primary to-secondary xxmd:text-[36.75px] xxmd:leading-[55.12px]">
               {item.title}
             </p>
             <p
