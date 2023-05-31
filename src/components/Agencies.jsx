@@ -12,13 +12,13 @@ const Agencies = () => {
           alt=""
           className="absolute top-[-17rem] left-[8rem] h-screen scale-[2] hidden xxmd:block"
         />
-        <div className="w-[79%] mx-auto mt-10 h-20">
-          <h2 className="leading-5 text-xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary xxmd:text-5xl xxmd:w-[40%] ">
+        <div className="w-[79%] mx-auto  mt-10 h-[60px]">
+          <h2 className="leading-5  text-xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary xxmd:text-5xl xxmd:w-[40%] ">
             Available On Top Rated Agencies
           </h2>
         </div>
         <div className="w-[70%] h-auto mx-auto mt-10 xxmd:mt-24 ">
-          <div className="grid grid-cols-2 mt-[25%] mx-auto w-[100%] mr-[4rem]  shadow-sm shadow-black rounded-md items-center justify-between  p-5 mb-14 xxmd:grid-cols-4  xxmd:gap-24 xxmd:p-24 xxmd:mt-[10%]">
+          <div className="grid grid-cols-2 mt-[25%] mx-auto w-[100%] mr-[4rem]  shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)] rounded-md items-center justify-between  p-5 mb-14 xxmd:grid-cols-4  xxmd:gap-24 xxmd:p-24 xxmd:mt-[10%]">
             <div className="w-full lmd:ml-[6rem] xxmd:ml-0">
               <img src={image1} alt="airbnb" />
             </div>

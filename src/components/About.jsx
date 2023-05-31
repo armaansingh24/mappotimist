@@ -77,7 +77,6 @@ const About = () => {
                     color: "white",
                     cursor: "pointer",
                     opacity: "0.8",
-                    
                   };
                   const style = isSelected
                     ? { ...defStyle, color: "#1CB5E0" }
@@ -119,8 +118,7 @@ const About = () => {
             >
               {about.map((item) => (
                 <div className="font-Poppins xxmd:text-[36.75px]" key={item.id}>
-                  <p
-                  className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
+                  <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
                     <CountUp start={0} end={item.number} /> {item.symbol}
                   </p>
                   <p className="text-[25px] font-medium ">{item.title}</p>
