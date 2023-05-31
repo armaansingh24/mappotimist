@@ -88,12 +88,9 @@ const PortfolioSection = (props) => {
           <div className="container hidden sm:block mb-10">
             <Swiper
               effect={"coverflow"}
-              slidesPerView={3}
               onSlideChange={handleSlideChange}
-              // grabCursor={true}
               centeredSlides={true}
               loop={true}
-              // slidesPerView={"auto"}
               coverflowEffect={{
                 rotate: 14,
                 stretch: 0,
@@ -107,11 +104,13 @@ const PortfolioSection = (props) => {
               }}
               pagination={{ clickable: true }}
               modules={[EffectCoverflow, Pagination, Navigation]}
+              // direction="rtl"
+              loopAdditionalSlides={portfolioImages.length}
+              slidesPerView={3}
+              // direction="ltr"
               className="swiper_container h-auto"
-              // index={currentSlideIndex}
-              // key={currentSlideIndex}
             >
-              {portfolioImages.map((image, index) => (
+              {portfolioImages.reverse().map((image, index) => (
                 <SwiperSlide key={index}>
                   <PortfolioSlider
                     image={image.image}
@@ -138,8 +137,7 @@ const PortfolioSection = (props) => {
               </div>
             </Swiper>
           </div>
-          <div className="sm:hidden p-4 mb-3">
-            {/* whole card is not visible check prodata and procard */}
+          <div className="sm:hidden mb-12 ">
             <div className="mx-1 relative flex flex-col-reverse group">
               <Carousel
                 responsive={responsive}
@@ -151,7 +149,7 @@ const PortfolioSection = (props) => {
                 autoPlaySpeed={9000}
                 sliderClass={true}
                 showDots={true}
-                dotListClass={"top-[12.7rem] "}
+                dotListClass={"top-[15rem] ssm:top-[15rem] midxs:top-[16.7rem] translate-x-[-3%]"}
                 customDot={<CustomDot />}
               >
                 <img

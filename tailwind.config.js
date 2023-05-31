@@ -5,12 +5,14 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        supers:"270px",
         ssm: "340px",
-        xsm:"400px",
+        midxs: "410px",
+        xsm: "400px",
         sm: "710px",
         lmd: "768px",
         md: "830px",
-        xxmd:"1025px",
+        xxmd: "1025px",
         xmd: "1068px",
       },
       colors: {

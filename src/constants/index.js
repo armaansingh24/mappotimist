@@ -116,4 +116,12 @@ export const portfolioImages = [
     id: 5,
     image: image5 ,
   },
+  {
+    id: 6,
+    image: image5 ,
+  },
+  {
+    id: 7,
+    image: image5 ,
+  },
 ];
