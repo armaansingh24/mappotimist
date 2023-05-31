@@ -39,7 +39,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
               : ""
           } xxmd:h-auto absolute top-[1.09rem] bottom-[3.3rem] lmd:bottom-[3.62rem] md:bottom-[5.4rem] xxmd:bottom-[4.8rem] left-[-0.01rem]  right-0 group-hover:scale-[1.06] transition-all delay-500 ease-in-out rounded-3xl`}
         >
-          <div className="w-[90%] xxmd:w-[89%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-10 border-white border-2 rounded-2xl mt-[3%] md:mt-[16%] xxmd:mt-[10%] gap-4">
+          <div className="w-[90%] xxmd:w-[89%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-10 border-white border-2 rounded-2xl mt-[3%] md:mt-[16%] xxmd:mt-[15%] gap-4">
             <motion.div
               ref={ref}
               variants={{
