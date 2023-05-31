@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -6,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import SwiperCore from "swiper";
 import { portfolioImages } from "../constants/index";
 import image1 from "../assets/portfolio/image1.png";
 import image2 from "../assets/portfolio/image2.png";
@@ -16,6 +18,8 @@ import image5 from "../assets/portfolio/image5.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import PortfolioSlider from "./PortfolioSlider";
+
+SwiperCore.use([Pagination]);
 
 const PortfolioSection = (props) => {
   const responsive = {
@@ -61,12 +65,18 @@ const PortfolioSection = (props) => {
     // active is provided by this lib for checking if the item is active or not.
     return (
       <li
-        className={`${active ? "opacity-1" : "opacity-[.5]"} text-white translate-y-[10rem]]`}
+        className={`${active ? "opacity-1" : "opacity-[.5]"} text-white`}
         onClick={() => onClick()}
       >
         •
       </li>
     );
+  };
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    setCurrentSlideIndex(swiper.realIndex);
+    //  console.log(swiper.activeIndex);
   };
   return (
     <>
@@ -75,32 +85,39 @@ const PortfolioSection = (props) => {
           <h2 className="font-bold text-center sm:text-left">Our Portfolios</h2>
         </div>
         <div className="w-[90%] mx-auto slider">
-          <div className="container hidden sm:block">
+          <div className="container hidden sm:block mb-10">
             <Swiper
               effect={"coverflow"}
               slidesPerView={3}
+              onSlideChange={handleSlideChange}
               // grabCursor={true}
               centeredSlides={true}
               loop={true}
               // slidesPerView={"auto"}
               coverflowEffect={{
-                rotate: 17,
+                rotate: 14,
                 stretch: 0,
                 depth: 100,
                 modifier: 2.5,
               }}
-              pagination={{ el: ".swiper-pagination", clickable: true }}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
                 clickable: true,
               }}
+              pagination={{ clickable: true }}
               modules={[EffectCoverflow, Pagination, Navigation]}
               className="swiper_container h-auto"
+              // index={currentSlideIndex}
+              // key={currentSlideIndex}
             >
-              {portfolioImages.map((image) => (
-                <SwiperSlide>
-                  <PortfolioSlider image={image.image} key={image.id} />
+              {portfolioImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <PortfolioSlider
+                    image={image.image}
+                    index={index}
+                    currentSlideIndex={currentSlideIndex}
+                  />
                 </SwiperSlide>
               ))}
 
@@ -114,10 +131,10 @@ const PortfolioSection = (props) => {
                 <div className="swiper-button-next slider-arrow">
                   <AiOutlineArrowRight
                     name="arrow-back-outline"
-                    className="text-white"
+                    className="text-white absolute top-[1.2rem] right-[.2rem]"
                   ></AiOutlineArrowRight>
                 </div>
-                <div className="swiper-pagination"></div>
+                <div className="swiper-pagination " />
               </div>
             </Swiper>
           </div>
@@ -129,12 +146,12 @@ const PortfolioSection = (props) => {
                 arrows={false}
                 renderButtonGroupOutside={true}
                 customButtonGroup={<ButtonGroup />}
-                // autoPlay={props.deviceType !== "mobile" ? true : false}
+                autoPlay={props.deviceType !== "mobile" ? true : false}
                 infinite={true}
-                // autoPlaySpeed={9000}
+                autoPlaySpeed={9000}
                 sliderClass={true}
                 showDots={true}
-                dotListClass={true}
+                dotListClass={"top-[12.7rem] "}
                 customDot={<CustomDot />}
               >
                 <img
