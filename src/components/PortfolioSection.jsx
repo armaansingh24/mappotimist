@@ -6,7 +6,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import {  Pagination, Navigation } from "swiper";
 import SwiperCore from "swiper";
 import { portfolioImages } from "../constants/index";
 import image1 from "../assets/portfolio/image1.png";
