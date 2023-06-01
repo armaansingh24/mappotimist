@@ -20,6 +20,7 @@ const About = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
+
   return (
     <>
       <div className="mt-6">
@@ -69,12 +70,13 @@ const About = () => {
                 stopOnHover="true"
                 showIndicators="true"
                 renderThumbs={() => {}}
+                dotposition="bottom"
                 renderIndicator={(onClickHandler, isSelected, index, label) => {
                   const defStyle = {
                     marginLeft: 10,
                     marginRight: 10,
                     fontSize: "23px",
-                    color: "white",
+                    color: "rgb(107 114 128)",
                     cursor: "pointer",
                     opacity: "0.8",
                   };

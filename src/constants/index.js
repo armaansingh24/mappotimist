@@ -7,6 +7,18 @@ import image2 from "../assets/portfolio/image2.png";
 import image3 from "../assets/portfolio/image3.png";
 import image4 from "../assets/portfolio/image4.png";
 import image5 from "../assets/portfolio/image5.png";
+
+
+import behance from "../assets/agencies/behance.png";
+import dribble from "../assets/agencies/dribble.png";
+import fiverr from "../assets/agencies/fiverr.png";
+import upwork from "../assets/agencies/upwork.png";
+import freelancer from "../assets/agencies/freelancer.png";
+import pangian from "../assets/agencies/pangian.png";
+import indeed from "../assets/agencies/indeed.png";
+import flexjobs from "../assets/agencies/flexjobs.png";
+
+
 export const navLinks = [
   {
     id: "Home",
@@ -123,5 +135,40 @@ export const portfolioImages = [
   {
     id: 7,
     image: image5 ,
+  },
+];
+
+export const agencies = [
+  {
+    id: 1,
+    image: behance,
+  },
+  {
+    id: 2,
+    image: dribble,
+  },
+  {
+    id: 3,
+    image: fiverr,
+  },
+  {
+    id: 4,
+    image: upwork,
+  },
+  {
+    id: 5,
+    image: freelancer,
+  },
+  {
+    id: 6,
+    image: pangian,
+  },
+  {
+    id: 7,
+    image: indeed,
+  },
+  {
+    id: 8,
+    image: flexjobs,
   },
 ];

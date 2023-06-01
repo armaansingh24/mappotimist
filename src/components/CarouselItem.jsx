@@ -6,12 +6,12 @@ const CarouselItem = ({ item }) => {
       <img
         src={item.backgroudImage}
         alt="slider"
-        className="w-full h-[10rem] sm:h-[17rem] md:h-[19rem] xxmd:h-[390px] object-cover"
+        className="w-full h-[10.8rem] sm:h-[17rem] md:h-[19rem] xxmd:h-[390px] object-cover"
         loading="lazy"
       />
       <div className="absolute inset-0">
         <div className="w-full flex justify-between p-2 xsm:p-0 xsm:px-2 sm:p-0 sm:px-10 sm:py-4  items-center gap-3">
-          <div className="w-full ssm:w-[56%] my-2 sm:my-0 text-left md:w-full flex gap-2 md:gap-3 flex-col">
+          <div className="w-full ssm:w-[56%] my-1 ssm:my-2 sm:my-0 text-left md:w-full flex gap-2 md:gap-3 flex-col">
             <p className="text-sm sm:text-xl font-semibold md:text-2xl xxmd:text-[36.75px] xxmd:leading-[55.12px]">
               {item.step}
             </p>
