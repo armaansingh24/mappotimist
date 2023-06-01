@@ -20,8 +20,8 @@ const Agencies = () => {
         <div className="w-[70%] h-auto mx-auto mt-10 xxmd:mt-24 z-0 ">
           <div className="grid grid-cols-2 mt-[25%] mx-auto w-[100%] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)] rounded-md items-center justify-between gap-6 p-8 mb-14 xxmd:grid-cols-4  xxmd:gap-24 xxmd:p-24 xxmd:mt-[10%]">
             {agencies.map((agency) => (
-              <div className="w-full self-center lmd:ml-[6rem] xxmd:ml-0">
-                <img src={agency.image} alt="" />
+              <div className="w-full self-center lmd:ml-[6rem] xxmd:ml-0" key={agency.id}>
+                <img src={agency.image} alt="" key={agency.id}/>
               </div>
             ))}
           </div>

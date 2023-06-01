@@ -87,7 +87,7 @@ const PortfolioSection = (props) => {
         <div className="w-[90%] mx-auto slider">
           <div className="container hidden sm:block mb-10">
             <Swiper
-              effect={"coverflow"}
+              // effect={"coverflow"}
               onSlideChange={handleSlideChange}
               centeredSlides={true}
               loop={true}
@@ -103,14 +103,13 @@ const PortfolioSection = (props) => {
                 clickable: true,
               }}
               pagination={{ clickable: true }}
-              modules={[EffectCoverflow, Pagination, Navigation]}
+              modules={[ Pagination, Navigation]}
               // direction="rtl"
-              loopAdditionalSlides={portfolioImages.length}
               slidesPerView={3}
               // direction="ltr"
               className="swiper_container h-auto"
             >
-              {portfolioImages.reverse().map((image, index) => (
+              {portfolioImages.map((image, index) => (
                 <SwiperSlide key={index}>
                   <PortfolioSlider
                     image={image.image}

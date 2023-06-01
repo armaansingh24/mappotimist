@@ -1,14 +1,16 @@
+// about Section carsaul images
 import slider1 from "../assets/about/slider1.png";
 import slider2 from "../assets/about/slider2.png";
 import slider3 from "../assets/about/slider3.png";
 
+// Portfolio Images
 import image1 from "../assets/portfolio/image1.png";
 import image2 from "../assets/portfolio/image2.png";
 import image3 from "../assets/portfolio/image3.png";
 import image4 from "../assets/portfolio/image4.png";
 import image5 from "../assets/portfolio/image5.png";
 
-
+// Agencies Images
 import behance from "../assets/agencies/behance.png";
 import dribble from "../assets/agencies/dribble.png";
 import fiverr from "../assets/agencies/fiverr.png";
@@ -18,6 +20,22 @@ import pangian from "../assets/agencies/pangian.png";
 import indeed from "../assets/agencies/indeed.png";
 import flexjobs from "../assets/agencies/flexjobs.png";
 
+
+// Expertise Images
+import ios from "../assets/expertise/ios.png";
+import Android from "../assets/expertise/Android.png";
+import Flutter from "../assets/expertise/Flutter.png";
+import React_Native from "../assets/expertise/React_Native.png";
+import Python from "../assets/expertise/Python.png";
+import HTML from "../assets/expertise/HTML.png";
+import Node from "../assets/expertise/Node.png";
+import JAVA from "../assets/expertise/JAVA.png";
+import Blockchain from "../assets/expertise/Blockchain.png";
+import Amazon from "../assets/expertise/Amazon.png";
+import IoT from "../assets/expertise/IoT.png";
+import Oracle from "../assets/expertise/Oracle.png";
+import SQL from "../assets/expertise/SQL.png";
+import Salesforce from "../assets/expertise/Salesforce.png";
 
 export const navLinks = [
   {
@@ -171,4 +189,91 @@ export const agencies = [
     id: 8,
     image: flexjobs,
   },
+];
+
+export const expertiseItem = [
+  {
+    id: 1,
+    image: ios,
+    name: "IOS",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 2,
+    image: Android,
+    name: "Android",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 3,
+    image: Flutter,
+    name: "Flutter",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 4,
+    image: React_Native,
+    name: "React Native",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 5,
+    image: Python,
+    name: "Python",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 6,
+    image: HTML,
+    name: "HTML + CSS",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 7,
+    image: Node,
+    name: "Node JS",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 8,
+    image: JAVA,
+    name: "JAVA",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 9,
+    image: Blockchain,
+    name: "Blockchain",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 10,
+    image: Amazon,
+    name: "Amazon Web",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 11,
+    image: IoT,
+    name: "IOT",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 12,
+    image: Oracle,
+    name: "Oracle",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id:13,
+    image: SQL,
+    name: "SQL Service",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
+  {
+    id: 14,
+    image:Salesforce,
+    name: "Salesforce",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  }
 ];

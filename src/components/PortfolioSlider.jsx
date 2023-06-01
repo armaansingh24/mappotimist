@@ -29,8 +29,8 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
           src={image}
           alt="slide_image"
           className={`z-[-10] ${
-            index === currentSlideIndex ? "group-hover:scale-[1.06]" : ""
-          } transition-all delay-500 ease-in-out`}
+            index === currentSlideIndex ? "hover:scale-[1.06]" : ""
+          } transition-all delay-500 ease-in-out rotate-`}
         />
         <div
           className={`opacity-0 ${

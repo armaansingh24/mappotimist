@@ -75,7 +75,7 @@ const About = () => {
                   const defStyle = {
                     marginLeft: 10,
                     marginRight: 10,
-                    fontSize: "23px",
+                    fontSize: "27px",
                     color: "rgb(107 114 128)",
                     cursor: "pointer",
                     opacity: "0.8",
