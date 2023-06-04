@@ -20,7 +20,6 @@ import pangian from "../assets/agencies/pangian.png";
 import indeed from "../assets/agencies/indeed.png";
 import flexjobs from "../assets/agencies/flexjobs.png";
 
-
 // Expertise Images
 import ios from "../assets/expertise/ios.png";
 import Android from "../assets/expertise/Android.png";
@@ -129,31 +128,31 @@ export const about = [
 export const portfolioImages = [
   {
     id: 1,
-    image: image1 ,
+    image: image1,
   },
   {
     id: 2,
-    image: image2 ,
+    image: image2,
   },
   {
     id: 3,
-    image: image3 ,
+    image: image3,
   },
   {
     id: 4,
-    image: image4 ,
+    image: image4,
   },
   {
     id: 5,
-    image: image5 ,
+    image: image5,
   },
   {
     id: 6,
-    image: image5 ,
+    image: image5,
   },
   {
     id: 7,
-    image: image5 ,
+    image: image5,
   },
 ];
 
@@ -192,95 +191,239 @@ export const agencies = [
   },
 ];
 
+export const reviewImages1 = [
+  {
+    id: 1,
+    image: image1,
+  },
+  {
+    id: 2,
+    image: image2,
+  },
+  {
+    id: 3,
+    image: image3,
+  },
+  {
+    id: 4,
+    image: image4,
+  },
+  {
+    id: 5,
+    image: image5,
+  },
+];
+
+export const reviewImages2 = [
+  {
+    id: 1,
+    image: image4,
+  },
+  {
+    id: 2,
+    image: image5,
+  },
+  {
+    id: 3,
+    image: image3,
+  },
+  {
+    id: 4,
+
+    image: image1,
+  },
+  {
+    id: 5,
+    image: image2,
+  },
+];
+
+export const reviewImages3 = [
+  {
+    id: 1,
+    image: image4,
+  },
+  {
+    id: 2,
+    image: image3,
+  },
+  {
+    id: 3,
+
+    image: image2,
+  },
+  {
+    id: 4,
+    image: image1,
+  },
+  {
+    id: 5,
+    image: image5,
+  },
+];
+
+export const reviews = [
+  {
+    id: 1,
+    image: image1,
+    name: "John Doe",
+    date: "12/12/2020",
+    description:
+      "The IT services and solutions provided by this company are top-notch. Their expertise, reliability, and efficiency have greatly enhanced our business operations. Highly recommended for all your IT needs.",
+  },
+  {
+    id: 2,
+    image: image2,
+    name: "Karan Singh",
+    date: "1/1/2022",
+    description:
+      "Reliable and efficient IT services provider; their solutions transformed our operations. The team's expertise, responsiveness, and commitment to excellence made them an invaluable partner for our business.",
+  },
+  {
+    id: 3,
+    image: image3,
+    name: "Arpit Devedi",
+    date: "1/1/2022",
+    description:
+      "Exceptional IT services! The company's expertise and efficient solutions have transformed our business. Their prompt support and innovative approach make them a reliable partner. Highly recommended!",
+  },
+  {
+    id: 4,
+    image: image3,
+    name: "Amit Kumar",
+    date: "1/1/2022",
+    description:
+      "Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism, and timely delivery exceeded our expectations. Highly recommended!",
+  },
+  {
+    id: 5,
+    image: image3,
+    name: "Armaan Singh",
+    date: "1/1/2022",
+    description:
+      " Exceptional Android development services; they built an impressive app that perfectly catered to our needs. Their team's expertise, attention to detail, and prompt support made the experience seamless.",
+  },
+];
+
 export const expertiseItem = [
   {
     id: 1,
     image: ios,
-    name: "IOS",
-    desc: "Our company offers comprehensive services and solutions. With a team of skilled experts, we create cross-platform applications with Flutter's framework, enabling seamless functionality across iOS and Android. Trust us for top-quality, end-to-end Flutter development tailored to your specific requirements",
+    name: "iOS",
+    desc: "Our team of iOS experts to deliver cutting-edge, user-friendly apps using Swift, Swift UI, and Objective-C. With a focus on industry best practices, we guarantee seamless functionality, optimized performance, and intuitive interfaces. Rely on us for comprehensive end-to-end iOS development services.",
+    hoverDesc:
+      "Technologies -: MacOs, tvOS , WatchOs, ARKit , MapKit , UIKit, SpriteKit, Socket io, Charts, Cocoapods, Swift UI, Swift , Objective C , Core Data , Realm, APNS , FCM, Authentication and Authorization, HealthKit, XCTests, Core Animation etc.",
   },
   {
     id: 2,
     image: Android,
     name: "Android",
-    desc: "Our company offers comprehensive services and solutions. With a team of skilled experts, we create cross-platform applications with Flutter's framework, enabling seamless functionality across iOS and Android. Trust us for top-quality, end-to-end Flutter development tailored to your specific requirements",
+    desc: "Our company for comprehensive services and solutions. Our team of skilled professionals in crafting innovative and user-friendly Android applications, customized to your needs. Trust us for top-notch end-to-end Android app development, from concept to post-launch support, ensuring exceptional quality.",
+    hoverDesc:
+      " Technologies -: Java, Kotlin, Android SDK, JSON , SQLite, Retrofit, Firebase , Gradle, Material Design, Dagger, RxJava, Glide, Room, ButterKnife OkHttp, Gson,RxJava, AdMob ,Recycler View, Goggle Play Services, Picasso etc.",
   },
   {
     id: 3,
     image: Flutter,
     name: "Flutter",
     desc: "Our company offers comprehensive services and solutions. With a team of skilled experts, we create cross-platform applications with Flutter's framework, enabling seamless functionality across iOS and Android. Trust us for top-quality, end-to-end Flutter development tailored to your specific requirements",
+    hoverDesc:
+      "Technologies -: Dart , Flutter Framewrok , Flutterflow , Cupertino, State Management Tools (Provider, Redux,etc),  flutter_test, Mockito, Widget libraries, Firebase Cloud Messaging, In-App Purchases,Bloc, RxDart, Firestore, etc",
   },
   {
     id: 4,
     image: React_Native,
     name: "React Native",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our company excels in React Native development, providing tailored solutions for iOS and Android apps. Our expert team crafts high-quality mobile experiences, delivering customized solutions, seamless integrations, and efficient maintenance. Cost-effective and timely, they prioritize client satisfaction.",
+    hoverDesc:
+      "Technologies -: React Native , Java Script , JSX, Node.js, Redux , Expo, React  Navigation, TypeScript, GraphQL, Axios, Async Storage, MobX , Fastlane, etc.",
   },
   {
     id: 5,
     image: Python,
     name: "Python",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our company provides a comprehensive array of services. Our skilled team excels at delivering Python applications that cater to your specific requirements. Whether it's web development, data analysis, or machine learning, rely on us for top-quality Python solutions that propel your business to new heights.",
+    hoverDesc:
+      "Technologies -: Python, Django, Flask, NumPy, Pandas, Matplotlib, SciPy, TensorFlow, PyTorch, Scikit-learn, Keras, SQLAlchemy, Django REST framework, Celery, BeautifulSoup, Requests, Selenium, Docker, Git, Jupyter Notebook, etc",
   },
   {
     id: 6,
     image: HTML,
     name: "HTML + CSS",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "With a focus on frontend development, our company delivers comprehensive solutions in HTML, CSS, and JavaScript. Our skilled experts specialise in crafting visually stunning and interactive web applications. We customize our services to align with your requirements, guaranteeing exceptional outcomes.",
+    hoverDesc:
+      "TTechnologies -: HTML5, CSS3, JavaScript, jQuery, Bootstrap, React.js, AngularJS, Vue.js, Sass, LESS, Babel, Webpack, Grunt, Gulp, ESLint, Prettier, PostCSS, AJAX, JSON, Responsive design, etc",
   },
   {
     id: 7,
     image: Node,
     name: "Node JS",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our specialized team offering comprehensive services and solutions in Node.js and PHP. With our skilled team we create robust and scalable applications for you. Whether it's building APIs, handling databases, or implementing server-side logic, trust us for reliable backend solutions to your specific needs.",
+    hoverDesc:
+      "Technologies -: Dart , Flutter Framewrok , Flutterflow , Cupertino, State Management Tools (Provider, Redux,etc),  flutter_test, Mockito, Widget libraries, Firebase Cloud Messaging, In-App Purchases,Bloc, RxDart, Firestore, etc",
   },
   {
     id: 8,
     image: JAVA,
     name: "JAVA",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our company specializes in Java development, offering comprehensive services and solutions. With our skilled team of experts, we create robust and scalable applications. From enterprise software development to web applications and mobile apps, trust us for reliable Java solutions tailored to your needs.",
+    hoverDesc:
+      "Technologies -: Java, Spring Framework, Hibernate, Maven, Gradle, JUnit, Apache Tomcat, RESTful APIs, JDBC, Git, IntelliJ IDEA, Eclipse, JavaFX, Log4j, JSON, XML, MySQL, PostgreSQL, Oracle, Apache Kafka, etc",
   },
   {
     id: 9,
     image: Blockchain,
     name: "Blockchain",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our specialized team in Blockchain development, offering comprehensive services and solutions. We create secure and decentralized applications. From smart contract development to cryptocurrency solutions and blockchain consulting, trust us for reliable and innovative solutions tailored to your needs.",
+    hoverDesc:
+      "Technologies -: Internet of Things (IoT), MQTT, CoAP, Zigbee, Z-Wave, Bluetooth, LoRaWAN, WiFi, RFID, Edge Computing, Sensor Networks, Cloud Platforms, Arduino, Raspberry Pi, Node-RED, AWS IoT, Microsoft Azure IoT, Google Cloud IoT, IBM Watson IoT, ThingSpeak, etc",
   },
   {
     id: 10,
     image: Amazon,
     name: "Amazon Web",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "We specialize in AWS development, delivering comprehensive and tailored solutions. Our expert team creates scalable, secure, and reliable cloud-based applications, covering infrastructure setup, serverless computing, and machine learning. Trust us for top-quality AWS solutions that meet your unique needs.",
+    hoverDesc:
+      "Technologies -:EC2, S3, Lambda, RDS, DynamoDB, CloudFormation, Elastic Beanstalk, API Gateway, CloudFront, CloudWatch, IAM, SNS, SQS, SES, Route 53, VPC, Aurora, AWS CLI, Elastic Load Balancer, CloudTrail, etc",
   },
   {
     id: 11,
     image: IoT,
     name: "IOT",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our team specialized in IoT development, offering comprehensive services and solutions. We create innovative and connected solutions for the Internet of Things. From device integration to data analytics and cloud connectivity, trust us for reliable and scalable IoT solutions tailored to your specific needs.",
+    hoverDesc:
+      "Technologies -: Internet of Things (IoT), MQTT, CoAP, Zigbee, Z-Wave, Bluetooth, LoRaWAN, WiFi, RFID, Edge Computing, Sensor Networks, Cloud Platforms, Arduino, Raspberry Pi, Node-RED, AWS IoT, Microsoft Azure IoT, Google Cloud IoT, IBM Watson IoT, ThingSpeak, etc",
   },
   {
     id: 12,
     image: Oracle,
     name: "Oracle",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our company specialized in Oracle development, offering comprehensive services and solutions. We create robust and scalable applications on Oracle platforms. From database design and management to Oracle E-Business Suite customization, trust us for reliable Oracle solutions tailored to your specific needs.",
+    hoverDesc:
+      "Technologies -: Oracle Database, Oracle SQL, PL/SQL, Oracle Application Express (APEX), Oracle Forms, Oracle Reports, Oracle Fusion Middleware, Oracle WebLogic Server, Oracle SOA Suite, Oracle Data Integrator (ODI), Oracle BI (Business Intelligence), Oracle Database Appliance, Oracle RAC, Oracle Advanced Security, etc",
   },
   {
     id: 13,
     image: SQL,
     name: "SQL Service",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Specializing in SQL services, we offer tailored solutions for your database needs. Our skilled team provides efficient database design, optimization, and administration services. From data modelling to query performance tuning, trust us for reliable and scalable SQL services that drive your business forward.",
+    hoverDesc:
+      "Technologies -: SQL, MySQL, Microsoft SQL Server, Oracle Database, PostgreSQL, SQLite, MariaDB, MongoDB, CouchDB, Redis, Elasticsearch, Apache Cassandra, IBM DB2, Amazon RDS, Google Cloud SQL, Azure SQL Database, Firebase, Hadoop, Apache Hive, Apache Spark, etc",
   },
   {
     id: 14,
     image: Salesforce,
     name: "Salesforce",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our team specializes in Salesforce development. We create customized Salesforce solutions tailored to your business needs. From CRM implementation and customization to integration and support, and efficient Salesforce development that helps drive your sales and customer relationship management processes.",
+    hoverDesc:
+      "Technologies -: Salesforce, Apex, Visualforce, Lightning Components, SOQL, SOSL, Salesforce Lightning, Salesforce DX, Salesforce Connect, Salesforce Mobile, Salesforce Einstein, Salesforce Communities, Salesforce AppExchange, Salesforce Integration, Salesforce REST API, etc",
   },
   {
     id: 15,
     image: Golang,
     name: "GoLang",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "We specialize in Go development, offering comprehensive services and solutions. Our expert team creates efficient and scalable applications using Go. Trust us for reliable and high-performance Go solutions tailored to your specific needs, including web development, microservices, and system programming.",
+    hoverDesc:
+      "Technologies -: Go (Golang), Gorilla/Mux, Gin, Revel, Echo, GORM, PostgreSQL, MySQL, MongoDB, Redis, gRPC, RESTful APIs, JWT (JSON Web Tokens), Docker, Kubernetes, Prometheus, GraphQL, Kafka, RabbitMQ, AWS SDK,etc",
   },
 ];

@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import About from "../components/About";
 import PortfolioSection from "../components/PortfolioSection";
 import Agencies from "../components/Agencies";
+import ClientReviews from "../components/ClientReviews";
 import Experties from "../components/Experties";
 
 const Home = () => {
@@ -13,6 +14,9 @@ const Home = () => {
         <About />
         <PortfolioSection />
         <Agencies />
+        <div className="w-screen">
+          <ClientReviews />
+        </div>
         <Experties />
       </div>
     </>

@@ -100,7 +100,6 @@ const PortfolioSection = (props) => {
                 depth: 100,
                 modifier: 2.5,
               }}
-              loopFillGroupWithBlank={true}
               // slideToClickedSlide={true}
               // loopPreventsSliding={true}
               navigation={{
