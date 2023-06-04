@@ -3,7 +3,7 @@ import HeroSection from "../components/HeroSection";
 import About from "../components/About";
 import PortfolioSection from "../components/PortfolioSection";
 import Agencies from "../components/Agencies";
-// import Experties from "../components/Experties";
+import Experties from "../components/Experties";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         <About />
         <PortfolioSection />
         <Agencies />
-        {/* <Experties /> */}
+        <Experties />
       </div>
     </>
   );

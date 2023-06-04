@@ -21,7 +21,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
   return (
     <>
       <div
-        className="group w-full h-auto z-9 mt-4 cursor-pointer "
+        className="group w-full h-auto z-9 mt-4 cursor-pointer overflow-hidden relative rounded-3xl"
         onMouseEnter={handleHover}
         onMouseLeave={() => mainControls.start("hidden")}
       >
@@ -29,17 +29,17 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
           src={image}
           alt="slide_image"
           className={`z-[-10] ${
-            index === currentSlideIndex ? "hover:scale-[1.06]" : ""
-          } transition-all delay-500 ease-in-out rotate-`}
+            index === currentSlideIndex ? "group-hover:scale-[1.06]" : ""
+          } transition-all delay-75 ease-in-out`}
         />
         <div
           className={`opacity-0 ${
             index === currentSlideIndex
               ? "group-hover:opacity-[1] group-hover:bg-[rgb(0,0,0,0.6)]"
               : ""
-          } xxmd:h-auto absolute top-[1.09rem] bottom-[3.3rem] lmd:bottom-[3.62rem] md:bottom-[5.4rem] xxmd:bottom-[4.8rem] left-[-0.01rem]  right-0 group-hover:scale-[1.06] transition-all delay-500 ease-in-out rounded-3xl`}
+          } xxmd:h-auto absolute top-0 bottom-0 group-hover:scale-[1.06] transition-all delay-75 ease-in-out rounded-3xl overflow-hidden`}
         >
-          <div className="w-[90%] xxmd:w-[89%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-10 border-white border-2 rounded-2xl mt-[3%] md:mt-[16%] xxmd:mt-[15%] gap-4">
+          <div className="w-[90%] xxmd:w-[89%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-10 border-white border-2 rounded-2xl mt-[3%] md:mt-[16%] xxmd:mt-[15%] gap-4 overflow-hidden">
             <motion.div
               ref={ref}
               variants={{
@@ -48,7 +48,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-lg xxmd:text-3xl font-bold text-white transition delay-1000 ease-in-out ">
                 John Cooper
@@ -62,7 +62,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col items-center justify-center gap-4 w-full"
             >
               <p className="hidden xxmd:block text-lg font-bold text-white w-full">

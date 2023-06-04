@@ -5,8 +5,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/virtual";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import {  Pagination, Navigation } from "swiper";
+import { EffectCoverflow, Pagination, Navigation, Virtual } from "swiper";
 import SwiperCore from "swiper";
 import { portfolioImages } from "../constants/index";
 import image1 from "../assets/portfolio/image1.png";
@@ -78,6 +79,7 @@ const PortfolioSection = (props) => {
     setCurrentSlideIndex(swiper.realIndex);
     //  console.log(swiper.activeIndex);
   };
+
   return (
     <>
       <div className="bg-gradient-to-r from-secondary to-primary w-screen">
@@ -87,7 +89,8 @@ const PortfolioSection = (props) => {
         <div className="w-[90%] mx-auto slider">
           <div className="container hidden sm:block mb-10">
             <Swiper
-              // effect={"coverflow"}
+              modules={[EffectCoverflow, Pagination, Navigation, Virtual]}
+              effect={"coverflow"}
               onSlideChange={handleSlideChange}
               centeredSlides={true}
               loop={true}
@@ -97,20 +100,31 @@ const PortfolioSection = (props) => {
                 depth: 100,
                 modifier: 2.5,
               }}
+              loopFillGroupWithBlank={true}
+              // slideToClickedSlide={true}
+              // loopPreventsSliding={true}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
                 clickable: true,
               }}
+              autoplay={{
+                delay: 100,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+                stopOnLastSlide: false,
+                waitForTransition: true,
+              }}
+              // modules={[Autoplay]}
               pagination={{ clickable: true }}
-              modules={[ Pagination, Navigation]}
+              // virtual={true}
               // direction="rtl"
               slidesPerView={3}
               // direction="ltr"
               className="swiper_container h-auto"
             >
               {portfolioImages.map((image, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide virtualIndex={index} key={index}>
                   <PortfolioSlider
                     image={image.image}
                     index={index}
@@ -148,7 +162,9 @@ const PortfolioSection = (props) => {
                 autoPlaySpeed={9000}
                 sliderClass={true}
                 showDots={true}
-                dotListClass={"top-[15rem] ssm:top-[15rem] midxs:top-[16.7rem] translate-x-[-3%]"}
+                dotListClass={
+                  "top-[15rem] ssm:top-[15rem] midxs:top-[16.7rem] translate-x-[-3%]"
+                }
                 customDot={<CustomDot />}
               >
                 <img

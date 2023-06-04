@@ -318,3 +318,16 @@ body {
         background-size: 100% 100%;
     }
 }
+
+
+.gradient-bg {
+    background: linear-gradient(to right, #ff7f00, #ff1a00);
+    /* Initial gradient background */
+    transition: background 0.5s ease;
+    /* Transition property */
+}
+
+.gradient-bg:hover {
+    background: linear-gradient(to right, #00bfff, #005eff);
+    /* Hover gradient background */
+}

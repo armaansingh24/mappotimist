@@ -36,6 +36,7 @@ import IoT from "../assets/expertise/IoT.png";
 import Oracle from "../assets/expertise/Oracle.png";
 import SQL from "../assets/expertise/SQL.png";
 import Salesforce from "../assets/expertise/Salesforce.png";
+import Golang from "../assets/expertise/Golang.png";
 
 export const navLinks = [
   {
@@ -196,19 +197,19 @@ export const expertiseItem = [
     id: 1,
     image: ios,
     name: "IOS",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our company offers comprehensive services and solutions. With a team of skilled experts, we create cross-platform applications with Flutter's framework, enabling seamless functionality across iOS and Android. Trust us for top-quality, end-to-end Flutter development tailored to your specific requirements",
   },
   {
     id: 2,
     image: Android,
     name: "Android",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our company offers comprehensive services and solutions. With a team of skilled experts, we create cross-platform applications with Flutter's framework, enabling seamless functionality across iOS and Android. Trust us for top-quality, end-to-end Flutter development tailored to your specific requirements",
   },
   {
     id: 3,
     image: Flutter,
     name: "Flutter",
-    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    desc: "Our company offers comprehensive services and solutions. With a team of skilled experts, we create cross-platform applications with Flutter's framework, enabling seamless functionality across iOS and Android. Trust us for top-quality, end-to-end Flutter development tailored to your specific requirements",
   },
   {
     id: 4,
@@ -265,15 +266,21 @@ export const expertiseItem = [
     desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
   },
   {
-    id:13,
+    id: 13,
     image: SQL,
     name: "SQL Service",
     desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
   },
   {
     id: 14,
-    image:Salesforce,
+    image: Salesforce,
     name: "Salesforce",
     desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-  }
+  },
+  {
+    id: 15,
+    image: Golang,
+    name: "GoLang",
+    desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  },
 ];
