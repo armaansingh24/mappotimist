@@ -61,19 +61,15 @@ const Experties = () => {
           alt=""
           className="absolute top-[14%] right-0 z-10 block xxmd:hidden h-full left-0"
         />
-        <img
-          src={upper}
-          alt=""
-          className="w-[100%] relative z-20"
-        />
+        <img src={upper} alt="" className="w-full scale-[1.1] relative z-20" />
         <h2 className="text-bold w-[79%] mx-auto font-semibold mb-[8%] xxmd:mt-[-9%]">
           Expertise
         </h2>
         <div
           className={`w-[90%] mx-auto grid grid-cols-2 gap-6 sm:grid-cols-3 p-5 sm:p-10 justify-between items-center mt-10 overflow-hidden transition-h duration-[1000ms] ease-in-out ${
             expanded
-              ? "h-[86rem] lmd:h-[77rem] xxmd:h-[72rem]"
-              : "h-[53.4rem] msm:h-[49rem] ssm:h-[49rem] midxs:h-[48rem] sm:h-[35.8rem] lmd:h-[47rem] xmd:h-[44rem]"
+              ? "h-[130rem] msm:h-[122rem] ssm:h-[120rem] sm:h-[86rem] lmd:h-[83rem] xxmd:h-[75rem]"
+              : "h-[57.4rem] msm:h-[51.6rem] ssm:h-[50rem] midxs:h-[65rem] sm:h-[35.8rem] lmd:h-[51rem] xxmd:h-[45rem] xmd:h-[44rem]"
           }`}
         >
           {expertiseItem.map(
@@ -105,7 +101,7 @@ const Experties = () => {
             )}
           </p>
         </div>
-        <img src={lower} alt="" className="w-[100%] mt-[-10%]" />
+        <img src={lower} alt="" className="scale-[1.1] relative mt-[-10%]" />
       </div>
     </>
   );

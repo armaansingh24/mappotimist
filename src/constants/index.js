@@ -401,6 +401,7 @@ export const expertiseItem = [
     desc: "Our company specialized in Oracle development, offering comprehensive services and solutions. We create robust and scalable applications on Oracle platforms. From database design and management to Oracle E-Business Suite customization, trust us for reliable Oracle solutions tailored to your specific needs.",
     hoverDesc:
       "Technologies -: Oracle Database, Oracle SQL, PL/SQL, Oracle Application Express (APEX), Oracle Forms, Oracle Reports, Oracle Fusion Middleware, Oracle WebLogic Server, Oracle SOA Suite, Oracle Data Integrator (ODI), Oracle BI (Business Intelligence), Oracle Database Appliance, Oracle RAC, Oracle Advanced Security, etc",
+
   },
   {
     id: 13,
