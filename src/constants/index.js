@@ -352,7 +352,7 @@ export const expertiseItem = [
     name: "HTML + CSS",
     desc: "With a focus on frontend development, our company delivers comprehensive solutions in HTML, CSS, and JavaScript. Our skilled experts specialise in crafting visually stunning and interactive web applications. We customize our services to align with your requirements, guaranteeing exceptional outcomes.",
     hoverDesc:
-      "TTechnologies -: HTML5, CSS3, JavaScript, jQuery, Bootstrap, React.js, AngularJS, Vue.js, Sass, LESS, Babel, Webpack, Grunt, Gulp, ESLint, Prettier, PostCSS, AJAX, JSON, Responsive design, etc",
+      "Technologies -: HTML5, CSS3, JavaScript, jQuery, Bootstrap, React.js, AngularJS, Vue.js, Sass, LESS, Babel, Webpack, Grunt, Gulp, ESLint, Prettier, PostCSS, AJAX, JSON, Responsive design, etc",
   },
   {
     id: 7,
