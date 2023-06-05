@@ -10,6 +10,7 @@ import ClientReviewsItem from "./ClientReviewsItem";
 import { reviewImages1 } from "../constants/index";
 import { reviewImages2 } from "../constants/index";
 import { reviewImages3 } from "../constants/index";
+import R1 from "../assets/clientReviews/R1.png";
 
 // icons
 import { AiFillInstagram } from "react-icons/ai";
@@ -29,11 +30,18 @@ const ClientReviews = () => {
   }, [data.length]);
   return (
     <>
-      <div className="w-[95%] ml-[10%] mx-auto mt-24">
-        <h2 className="text-left font-medium text-[100%]">ClientReviews</h2>
+      <div className="w-[95%] ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
+        <img
+          src={R1}
+          alt=""
+          className="absolute top-[-10%] sm:top-[-16.5%] right-0 sm:right-[5.5%] h-full z-20 block midxmd:hidden midlg:block midlg:h-screen midlg:top-[-18%] lg:hidden"
+        />
+        <h2 className="text-left font-medium mt-10 sm:mt-24 text-[100%]">
+          ClientReviews
+        </h2>
         <div className="w-full mt-[10%]">
           <div className="w-full flex justify-start items-end text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
-            <div className="w-full xxmd:w-[45%] h-full">
+            <div className="w-full midxmd:w-[45%] h-full midlg:w-full lg:w-[45%]">
               {data.map((item, index) => (
                 <div
                   key={index}
@@ -43,9 +51,9 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-[50%] hidden xxmd:block">
+            <div className="relative w-[50%] hidden midxmd:block midlg:hidden lg:block">
               <div className="absolute left-[-3rem] top-4 rounded-full">
-                {/* upper left */}
+                {/* upper left image*/}
                 {reviewImages2.map((item, index) => (
                   <div
                     key={index}

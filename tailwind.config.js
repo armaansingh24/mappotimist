@@ -14,7 +14,10 @@ module.exports = {
         lmd: "769px",
         md: "830px",
         xxmd: "1023px",
+        midxmd: "1030px",
         xmd: "1068px",
+        midlg: "1300px",
+        lg: "1376px",
       },
       colors: {
         primary: "#000046",

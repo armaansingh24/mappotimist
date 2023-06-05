@@ -54,14 +54,14 @@ const Experties = () => {
         <img
           src={R1}
           alt=""
-          className="absolute top-[14%] right-0 z-10 hidden xxmd:block"
+          className="absolute top-[11%] right-0 z-10 hidden xxmd:block"
         />
         <img
           src={R2}
           alt=""
           className="absolute top-[14%] right-0 z-10 block xxmd:hidden h-full left-0"
         />
-        <img src={upper} alt="" className="w-full scale-[1.1] relative z-20" />
+        <img src={upper} alt="" className="w-full scale-[1.1] relative z-10" />
         <h2 className="text-bold w-[79%] mx-auto font-semibold mb-[8%] xxmd:mt-[-9%]">
           Expertise
         </h2>
