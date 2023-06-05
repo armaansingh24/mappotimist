@@ -10,7 +10,6 @@ import ClientReviewsItem from "./ClientReviewsItem";
 import { reviewImages1 } from "../constants/index";
 import { reviewImages2 } from "../constants/index";
 import { reviewImages3 } from "../constants/index";
-import R1 from "../assets/clientReviews/R1.png";
 
 // icons
 import { AiFillInstagram } from "react-icons/ai";

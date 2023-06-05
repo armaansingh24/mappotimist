@@ -9,8 +9,6 @@ import Ellipse1 from "../assets/expertise/Ellipse1.png";
 import Ellipse2 from "../assets/expertise/Ellipse2.png";
 import Ellipse3 from "../assets/expertise/Ellipse3.png";
 import R1 from "../assets/expertise/R1.png";
-import R2 from "../assets/expertise/R2.png";
-
 const Experties = () => {
   const [expanded, setExpanded] = useState(false);
 
