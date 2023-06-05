@@ -31,13 +31,8 @@ const ClientReviews = () => {
   return (
     <>
       <div className="w-[95%] ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
-        <img
-          src={R1}
-          alt=""
-          className="absolute top-[-10%] sm:top-[-16.5%] right-0 sm:right-[5.5%] h-full z-20 block midxmd:hidden midlg:block midlg:h-screen midlg:top-[-18%] lg:hidden"
-        />
-        <h2 className="text-left font-medium mt-10 sm:mt-24 text-[100%]">
-          ClientReviews
+        <h2 className="tfont-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap sm:mt-24 ">
+          Client Reviews
         </h2>
         <div className="w-full mt-[10%]">
           <div className="w-full flex justify-start items-end text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
@@ -165,17 +160,11 @@ const ClientReviews = () => {
           <div className="flex gap-10 mt-14 mb-[-11%]">
             <div className="relative group rounded-full">
               <span className="relative ">
-                <BsFacebook className="text-[#7F838D] hover:bg-white" />
+                <BsFacebook className="text-[#7F838D] hover:text-white relative z-10" />
               </span>
-              <span className="absolute inset-0 bg-gradient-to-bl rounded-full from-secondary to-primary opacity-0 group-hover:opacity-100 "></span>
+              <span className="absolute inset-0 bg-gradient-to-bl rounded-full from-secondary to-primary opacity-0 group-hover:opacity-100 z-10"></span>
             </div>
-            {/* <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100"></div>
-              <BsFacebook className="relative z-10 text-white" />
-              <span className="absolute inset-0 z-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100"></span>
-            </div> */}
-            {/* <BsFacebook className="text-[90%] mt-[0.2rem] hover:bg-gradient-to-bl hover:from-secondary hover:to-primary rounded-full hover-text-transparent  text" /> */}
-            <RiSlackFill />
+            <RiSlackFill className="text-[#7F838D] hover:bg-gradient-to-r hover:from-[#000046] hover:to-[#1CB5E0]" />
             <AiFillInstagram />
             <RiLinkedinBoxFill />
           </div>

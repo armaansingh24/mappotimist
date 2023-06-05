@@ -49,7 +49,7 @@ const HeroSection = () => {
             <img
               src={heroImage}
               alt=""
-              loading="lazy"
+             
               className="sm:w-[60%] md:w-full xmd:w-[70%]"
             />
           </motion.div>
@@ -64,7 +64,7 @@ const HeroSection = () => {
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 1.6 }}
+          transition={{ duration: 1.9 }}
         >
           <div className="w-[300px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
             <h1 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">

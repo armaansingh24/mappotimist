@@ -46,30 +46,26 @@ const Experties = () => {
           alt=""
           className="absolute top-[38%] z-10 left-[28%] hidden xxmd:block"
         />
+
         <img
           src={Ellipse3}
           alt=""
-          className="absolute bottom-[23.3%] hidden xxmd:block"
+          className={`absolute bottom-[24.3%] hidden xxmd:block z-10`}
         />
         <img
           src={R1}
           alt=""
-          className="absolute top-[11%] right-0 z-10 hidden xxmd:block"
-        />
-        <img
-          src={R2}
-          alt=""
-          className="absolute top-[14%] right-0 z-10 block xxmd:hidden h-full left-0"
+          className="absolute top-[11%] right-1 z-5 hidden xxmd:block"
         />
         <img src={upper} alt="" className="w-full scale-[1.1] relative z-10" />
-        <h2 className="text-bold w-[79%] mx-auto font-semibold mb-[8%] xxmd:mt-[-9%]">
+        <h2 className="text-bold w-[79%] font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mx-auto mb-[8%] xxmd:mt-[-9%]">
           Expertise
         </h2>
         <div
           className={`w-[90%] mx-auto grid grid-cols-2 gap-6 sm:grid-cols-3 p-5 sm:p-10 justify-between items-center mt-10 overflow-hidden transition-h duration-[1000ms] ease-in-out ${
             expanded
               ? "h-[130rem] msm:h-[122rem] ssm:h-[120rem] sm:h-[86rem] lmd:h-[83rem] xxmd:h-[75rem]"
-              : "h-[57.4rem] msm:h-[51.6rem] ssm:h-[50rem] midxs:h-[65rem] sm:h-[35.8rem] lmd:h-[51rem] xxmd:h-[45rem] xmd:h-[44rem]"
+              : "h-[60.4rem] msm:h-[51.6rem] ssm:h-[50rem] midxs:h-[65rem] sm:h-[35.8rem] lmd:h-[51rem] xxmd:h-[45rem] xmd:h-[44rem]"
           }`}
         >
           {expertiseItem.map(

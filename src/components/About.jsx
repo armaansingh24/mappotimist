@@ -61,7 +61,7 @@ const About = () => {
                 statusFormatter={() => {}}
                 autoPlay="true"
                 infiniteLoop="true"
-                interval={8000}
+                interval={4000}
                 showStatus="false"
                 renderArrowPrev={(onClickHandler, hasPrev, label) => {}}
                 renderArrowNext={(onClickHandler, hasNext, label) => {}}
