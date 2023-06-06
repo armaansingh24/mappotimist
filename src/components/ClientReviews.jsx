@@ -45,7 +45,7 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-[50%] hidden midxmd:block midlg:hidden lg:block">
+            <div className="relative w-[743.26px] hidden midxmd:block midlg:hidden lg:block">
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {/* upper left image*/}
                 {reviewImages2.map((item, index) => (
@@ -64,7 +64,7 @@ const ClientReviews = () => {
                 ))}
               </div>
               {/* 3 rd row left */}
-              <div className="absolute right-[3%] top-[50%] rounded-full">
+              <div className="absolute right-9 top-72 rounded-full">
                 {reviewImages1.map((item, index) => (
                   <div
                     key={index}
@@ -81,7 +81,7 @@ const ClientReviews = () => {
                 ))}
               </div>
               {/* 3 rd row right */}
-              <div className="absolute right-[-35.8%] top-[50%] ">
+              <div className="absolute left-[508px] top-[50%] ">
                 {reviewImages1.map((item, index) => (
                   <div
                     key={index}
@@ -89,7 +89,7 @@ const ClientReviews = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <img src={item.image} alt="" className="w-[29%]" />
+                    <img src={item.image} alt="" className="w-[65%]" />
                   </div>
                 ))}
               </div>
@@ -153,7 +153,7 @@ const ClientReviews = () => {
                 alt=""
                 className="absolute bottom-36 left-[-6%] rounded-lg"
               />
-              <img src={pattern} alt="" />
+              <img src={pattern} alt="" className="" />
             </div>
           </div>
           <div className="flex gap-10 mt-14 mb-[-11%]">
