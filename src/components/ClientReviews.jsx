@@ -81,7 +81,7 @@ const ClientReviews = () => {
                 ))}
               </div>
               {/* 3 rd row right */}
-              <div className="absolute left-[508px] top-[50%] ">
+              <div className="absolute left-[515px] top-[50%] ">
                 {reviewImages1.map((item, index) => (
                   <div
                     key={index}
@@ -89,7 +89,7 @@ const ClientReviews = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <img src={item.image} alt="" className="w-[65%]" />
+                    <img src={item.image} alt="" className="w-[144px]" />
                   </div>
                 ))}
               </div>
@@ -111,7 +111,7 @@ const ClientReviews = () => {
                 ))}
               </div>
               {/* Fourth row image */}
-              <div className="absolute right-[-29%] bottom-0 ">
+              <div className="absolute -right-[12.7rem] bottom-0 ">
                 {reviewImages1.map((item, index) => (
                   <div
                     key={index}
