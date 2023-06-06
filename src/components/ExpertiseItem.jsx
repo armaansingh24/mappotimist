@@ -1,21 +1,10 @@
 import React from "react";
-import { useState } from "react";
 
 const ExpertiseItem = ({ item }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHover = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+ 
   return (
     <div
       className="w-full p-[0.15rem] group  rounded-lg  relative "
-      onMouseEnter={handleHover}
-      onMouseLeave={handleMouseLeave}
     >
       <div
         className="w-full h-full opacity-0 group-hover:opacity-100 absolute z-0 bg-gradient-to-bl from-secondary to-primary transition-all 
