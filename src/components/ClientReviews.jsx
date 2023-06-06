@@ -45,7 +45,7 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-[743.26px] hidden xxmd:block midlg:hidden lg:block">
+            <div className="relative w-[743.26px] hidden midFM:block midlg:hidden lg:block">
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {/* upper left image*/}
                 {reviewImages2.map((item, index) => (
