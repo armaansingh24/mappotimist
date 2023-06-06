@@ -32,16 +32,12 @@ const ExpertiseItem = ({ item }) => {
         </p>
         <div className="w-[96%] text-[30%] leading-3 text-center sm:text-[37%] lmd:text-[41%] mb-3 relative group z-20">
           <p
-            className={`transition-opacity duration-[500ms] ${
-              isHovered ? "opacity-0" : "opacity-100"
-            }`}
+            className={`transition-opacity duration-[500ms] opacity-100 group-hover:opacity-0`}
           >
             {item.desc}
           </p>
           <div
-            className={`absolute top-0 left-0 transition-opacity duration-[500ms] ${
-              isHovered ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute top-0 left-0 transition-opacity duration-[500ms] opacity-0 group-hover:opacity-100`}
           >
             <span className="font-bold">Technologies -: </span>
             {item.hoverDesc}
