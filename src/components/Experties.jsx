@@ -87,7 +87,10 @@ const Experties = () => {
           >
             {expanded ? "View Less" : "View More"}
           </p>
-          <p className="relative cursor-pointer text-center bg-gradient-to-tr from-primary to-secondary bg-clip-text z-20">
+          <p
+            className="relative cursor-pointer text-center bg-gradient-to-tr from-primary to-secondary bg-clip-text z-20"
+            onClick={toggleDivHeight}
+          >
             {!expanded ? (
               <AiOutlineDown className="mx-auto" />
             ) : (

@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <nav
         className={
-          "flex items-center mx-auto mt-6 w-full p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-10 text-black"
+          "flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-10 text-black"
         }
       >
         <div className="w-full flex justify-between items-start  mx-auto ">
@@ -62,7 +62,7 @@ const Navbar = () => {
               isOpen === true
                 ? "bg-white h-auto"
                 : " bg-transparent h-0 bg-none"
-            } sm:hidden flex flex-1 justify-between order-1 w-[100%] rounded-lg relative z-10 transition-all duration-[1000ms] overflow-hidden h-auto ease-in`}
+            } sm:hidden flex flex-1 justify-between order-1 w-[100%] rounded-lg relative z-10 transition-all duration-[1000ms] overflow-hidden h-auto linear`}
           >
             <img
               src={eclips1}
@@ -121,7 +121,7 @@ const Navbar = () => {
             <div
               className={`${
                 !toggle ? "opacity-0 h-0" : "opacity-100 h-fit"
-              }  justify-center items-center mx-auto transition-all duration-[2000ms] ease-in-out`}
+              }  justify-center items-center mx-auto transition-all duration-[2000ms] linear`}
             >
               <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-full mt-12 transform transition duration-1000">
                 {navLinks.map((link) => (

@@ -4,12 +4,14 @@ import pattern1 from "../assets/clientReviews/pattern1.png";
 import pattern2 from "../assets/clientReviews/pattern2.png";
 import pattern3 from "../assets/clientReviews/pattern3.png";
 import pattern4 from "../assets/clientReviews/pattern4.png";
+import  curve1  from "../assets/clientReviews/curve1.png";
+import  curve2  from "../assets/clientReviews/curve2.png";
 import { useEffect, useState } from "react";
 import { reviews } from "../constants/index";
 import ClientReviewsItem from "./ClientReviewsItem";
 import { reviewImages1 } from "../constants/index";
-import { reviewImages2 } from "../constants/index";
 import { reviewImages3 } from "../constants/index";
+import { reviewImages2 } from "../constants/index";
 
 // icons
 import { AiFillInstagram } from "react-icons/ai";
@@ -29,7 +31,7 @@ const ClientReviews = () => {
   }, [data.length]);
   return (
     <>
-      <div className="w-[95%] ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
+      <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
         <h2 className="tfont-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap sm:mt-24 ">
           Client Reviews
         </h2>
@@ -45,7 +47,7 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-[743.26px] hidden midxmd:block midlg:hidden lg:block">
+            <div className="relative w-[743.26px] hidden midxmd:block midlg:hidden lg:block z-4">
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {/* upper left image*/}
                 {reviewImages2.map((item, index) => (
@@ -93,6 +95,14 @@ const ClientReviews = () => {
                   </div>
                 ))}
               </div>
+              {/* 3rd row right image curve */}
+              <div>
+                <img
+                  src={curve1}
+                  alt=""
+                  className="absolute left-[515px] top-[50%] w-[144px] z-30"
+                />
+              </div>
               {/* 2nd row imaage */}
               <div className="absolute -right-36 top-[31.3%] rounded-full">
                 {reviewImages3.map((item, index) => (
@@ -111,7 +121,7 @@ const ClientReviews = () => {
                 ))}
               </div>
               {/* Fourth row image */}
-              <div className="absolute -right-[12.7rem] bottom-0 ">
+              <div className="absolute -right-[15.7rem] bottom-0 z-10">
                 {reviewImages1.map((item, index) => (
                   <div
                     key={index}
@@ -119,9 +129,17 @@ const ClientReviews = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <img src={item.image} alt="" className="w-[10%]" />
+                    <img src={item.image} alt="" className="w-[15.1%]" />
                   </div>
                 ))}
+              </div>
+              {/* fourth image curve */}
+              <div>
+                <img
+                  src={curve2}
+                  alt=""
+                  className="absolute right-[9.9rem] -bottom-1 w-[10%] z-30"
+                />
               </div>
               {/* Red Circle */}
               <img
