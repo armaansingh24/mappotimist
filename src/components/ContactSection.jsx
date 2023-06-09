@@ -21,9 +21,6 @@ const ContactSection = () => {
       [event.target.name]: event.target.value,
     }));
   }
-  {
-    console.log(formData);
-  }
   return (
     <>
       <div className="relative z-30 w-full -mt-10">
@@ -86,7 +83,7 @@ const ContactSection = () => {
                     Email
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     id="email"
                     name="email"
                     onChange={changeHandler}
