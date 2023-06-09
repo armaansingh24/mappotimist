@@ -5,7 +5,7 @@ import PortfolioSection from "../components/PortfolioSection";
 import Agencies from "../components/Agencies";
 import ClientReviews from "../components/ClientReviews";
 import Experties from "../components/Experties";
-// import ContactSection from "../components/ContactSection";
+import ContactSection from "../components/ContactSection";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
           <ClientReviews />
         </div>
         <Experties />
-        {/* <ContactSection/> */}
+        <ContactSection/>
       </div>
     </>
   );
