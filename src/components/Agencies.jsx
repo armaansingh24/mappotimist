@@ -12,7 +12,7 @@ const Agencies = () => {
           alt=""
           className="absolute top-[-30rem] left-[7rem] h-full scale-[2] hidden xxmd:block z-0 select-none"
         />
-        <div className="w-[79%] mx-auto  mt-10 h-auto z-10 relative">
+        <div className="w-full ssm:w-[79%] mx-auto  mt-10 h-auto z-10 relative">
           <h2 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap h-[10rem] z-10 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary xxmd:text-5xl xxmd:w-[40%] select-none">
             Available On Top Rated Agencies
           </h2>
