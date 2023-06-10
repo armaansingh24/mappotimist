@@ -20,10 +20,22 @@ const Footer = () => {
                 <li className="cursor-pointer">terms & conditions</li>
               </ul>
             </div>
-            <div className="flex gap-4 self-end justify-items-end mt-14 msm:mt-3 sm:mt-4 ">
-              <img src={fb} alt="" className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]" />
-              <img src={slack} alt="" className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]" />
-              <img src={insta} alt="" className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]" />
+            <div className="flex gap-4 self-end justify-items-end mt-14 midms:mt-3 sm:mt-4 ">
+              <img
+                src={fb}
+                alt=""
+                className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]"
+              />
+              <img
+                src={slack}
+                alt=""
+                className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]"
+              />
+              <img
+                src={insta}
+                alt=""
+                className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]"
+              />
               <img
                 src={linkedin}
                 alt=""
