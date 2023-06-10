@@ -109,7 +109,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-3 xsm:gap-2 items-center justify-between w-full mt-6">
+          <div className="flex gap-5 xsm:gap-2 items-center justify-between w-full mt-6">
             <div>
               <div className="w-[2px] h-10 lmd:h-16 bg-[#6F6C90]"></div>
             </div>
