@@ -15,7 +15,7 @@ const Agencies = () => {
         {/* <div className="block midxs:hidden font-semibold text-[30px] mt-10 mb-20 ml-10 w-[80%]">
           Available On Top Rated Agencies
         </div> */}
-        <div className="hidden midxs:block w-[79%] mx-auto  mt-10 h-auto z-30 relative">
+        <div className=" w-[79%] mx-auto  mt-10 h-auto z-30 relative">
           <h2 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap h-[10rem] z-10 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary xxmd:text-5xl xxmd:w-[40%] msm:select-none">
             Available On Top Rated Agencies
           </h2>
