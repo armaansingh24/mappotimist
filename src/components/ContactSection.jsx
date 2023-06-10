@@ -1,7 +1,8 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useState } from "react";
-import image1  from "../assets/contactUs/image1.png"
-import R2  from "../assets/contactUs/R2.png"
+import image1 from "../assets/contactUs/image1.png";
+import R2 from "../assets/contactUs/R2.png";
+import linkedin from "../assets/contactUs/linkedin.png";
 
 const ContactSection = () => {
   const [text] = useTypewriter({
@@ -44,17 +45,27 @@ const ContactSection = () => {
                 </p>
               </div>
               <div className="mt-5 flex items-center gap-6">
-                <img src={image1} alt="" className="" />
+                <div>
+                  <img src={image1} alt="" className="" />
+                  <img src={linkedin} alt="" className="-mt-7 ml-12" />
+                </div>
                 <div className="">
                   <p className="text-lg font-bold text-center">Arpit Dwivedi</p>
-                  <p className="text-sm text-center">Position Name</p>
+                  <p className="text-lg text-[#CCCCCC] text-center">
+                    Position Name
+                  </p>
                 </div>
               </div>
               <div className="mt-5 flex items-center gap-6">
-                <img src={image1} alt="" className="" />
+                <div>
+                  <img src={image1} alt="" className="" />
+                  <img src={linkedin} alt="" className="-mt-7 ml-12" />
+                </div>
                 <div className="">
                   <p className="text-lg font-bold text-center">Arpit Dwivedi</p>
-                  <p className="text-sm text-center">Position Name</p>
+                  <p className="text-lg text-[#CCCCCC]  text-center">
+                    Position Name
+                  </p>
                 </div>
               </div>
             </div>
