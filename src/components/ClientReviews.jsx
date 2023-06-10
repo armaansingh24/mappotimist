@@ -174,7 +174,7 @@ const ClientReviews = () => {
               <img src={pattern} alt="" className="" />
             </div>
           </div>
-          <div className="flex gap-10 mt-14 mb-[-11%] w-full relative z-30">
+          <div className="flex gap-12 midms:gap-10 mt-14 mb-[-11%] w-full relative z-30">
             <div className="relative group rounded-full">
               <span className="relative ">
                 <BsFacebook className="text-[#7F838D] hover:text-white relative z-10" />
