@@ -10,8 +10,8 @@ const ClientReviewsItem = ({item}) => {
         <div className="w-full bg-[#D9D9D9] flex rounded-2xl gap-10 xsm:gap-5">
           <img src={item.image} alt="" className="w-[25%] rounded-2xl object-cover h-[25%]" />
           <div className="w-full flex flex-col items-start justify-center">
-            <p className="text-2xl sm:text-3xl font-bold text-center">{item.name}</p>
-            <p className="text-base font-bold text-center">{item.date}</p>
+            <p className="text-2xl sm:text-3xl font-bold text-center ml-2">{item.name}</p>
+            <p className="text-base font-bold text-center ml-2">{item.date}</p>
           </div>
         </div>
       </div>
