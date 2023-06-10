@@ -12,7 +12,7 @@ const Agencies = () => {
           alt=""
           className="absolute top-[-30rem] left-[7rem] h-full scale-[2] hidden xxmd:block z-0 select-none"
         />
-        <div className="block midxs:hidden font-semibold text-[30px] w-[80%]">
+        <div className="block midxs:hidden font-semibold text-[30px] mt-10 mb-20 ml-10 w-[80%]">
           Available On Top Rated Agencies
         </div>
         <div className="hidden midxs:block w-[79%] mx-auto  mt-10 h-auto z-30 relative">
