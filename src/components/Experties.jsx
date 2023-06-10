@@ -62,7 +62,7 @@ const Experties = () => {
         <div
           className={`w-[90%] mx-auto grid grid-cols-2 gap-6 sm:grid-cols-3 p-5 sm:p-10 justify-between items-center mt-10 overflow-hidden transition-h duration-[1000ms] ease-in-out ${
             expanded
-              ? "h-[130rem] msm:h-[122rem] ssm:h-[120rem] sm:h-[86rem] lmd:h-[83rem] xxmd:h-[75rem]"
+              ? "h-[133rem] msm:h-[127rem] ssm:h-[123rem] sm:h-[86rem] lmd:h-[83rem] xxmd:h-[75rem]"
               : "h-[60.4rem] msm:h-[51.6rem] ssm:h-[50rem] midxs:h-[65rem] sm:h-[35.8rem] lmd:h-[51rem] xxmd:h-[45rem] xmd:h-[44rem]"
           }`}
         >
