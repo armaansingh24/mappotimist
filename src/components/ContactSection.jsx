@@ -142,7 +142,6 @@ const ContactSection = () => {
                   <span className=" midxmd:text-5xl">Do you have a </span>
                   <span className="text-[#DF9507] lmd:text-[48px] -z-1 inline midxmd:text-5xl">
                     {text}
-                    <Cursor cursorStyle="." />
                   </span>
                 </div>
                 <span className="midxmd:text-5xl">Let's Talk 👋</span>
@@ -268,7 +267,7 @@ const ContactSection = () => {
                         )}
                       </div>
                     </div>
-                    <button className="relative z-30 text-sm w-[30%] h-fit bg-gradient-to-r from-[#000046] to-[#1CB5E0] hover:from-secondary hover:to-primary transition-all duration-1000 rounded-lg text-white font-bold py-2 mt-8 sm:text-lg midxmd:mb-[20%]">
+                    <button className="relative z-30 text-sm w-[30%] h-fit bg-gradient-to-r from-[#000046] to-[#1CB5E0] hover:from-secondary hover:to-primary transition-all duration-1000 rounded-lg text-white font-poppins py-2 mt-8 sm:text-lg midxmd:mb-[20%]">
                       Submit
                     </button>
                   </form>

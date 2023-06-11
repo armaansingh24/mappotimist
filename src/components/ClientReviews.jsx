@@ -91,7 +91,11 @@ const ClientReviews = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <img src={item.image} alt="" className="w-[140px] rounded-none" />
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-[140px] rounded-none"
+                    />
                   </div>
                 ))}
               </div>
@@ -129,7 +133,11 @@ const ClientReviews = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <img src={item.image} alt="" className="w-[14.1%] rounded-none" />
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-[14.1%] rounded-none"
+                    />
                   </div>
                 ))}
               </div>
@@ -179,7 +187,9 @@ const ClientReviews = () => {
               <span className="relative ">
                 <BsFacebook className="text-[#7F838D] hover:text-white relative z-10" />
               </span>
-              <span className="absolute inset-0 bg-gradient-to-bl rounded-full from-secondary to-primary opacity-0 group-hover:opacity-100 z-10"></span>
+              <span className="absolute inset-0 bg-gradient-to-bl rounded-full from-secondary to-primary opacity-0 group-hover:opacity-100 z-10">
+    
+              </span>
             </div>
             <RiSlackFill className="text-[#7F838D] hover:bg-gradient-to-r hover:from-[#000046] hover:to-[#1CB5E0]" />
             <AiFillInstagram />
