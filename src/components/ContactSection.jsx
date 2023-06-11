@@ -1,4 +1,4 @@
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 import { useState } from "react";
 import image1 from "../assets/contactUs/image1.png";
 import R2 from "../assets/contactUs/R2.png";
