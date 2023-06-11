@@ -41,13 +41,13 @@ const About = () => {
               transition={{ duration: 1.6 }}
               className="order-1 w-full"
             >
-              <h2 className="w-full text-[30px] font-medium leading-8 xxmd:text-[48px] xxmd:leading-[72px]">
+              <h2 className="w-full text-[30px] font-poppins500 leading-8 xxmd:text-[46px] xxmd:leading-[72px]">
                 Unleash your idea's potential with our comprehensive,
                 innovative, and creative digital solutions.
               </h2>
             </motion.div>
             <motion.div
-              className="w-full mx-auto h-full overflow-hidden order-2 xxmd:order-3 xxmd:col-span-2 xxmd:mb-10 z-9 relative xxmd:gap-10"
+              className="w-full mx-auto h-full overflow-hidden order-2 xxmd:order-3 xxmd:col-span-2 xxmd:mb-10 z-9 relative xxmd:gap-10 font-poppins500"
               ref={ref}
               variants={{
                 hidden: { opacity: 0, y: 100 },
@@ -119,7 +119,7 @@ const About = () => {
               transition={{ duration: 1.6 }}
             >
               {about.map((item) => (
-                <div className="font-Poppins xxmd:text-[36.75px]" key={item.id}>
+                <div className="font-poppins500 xxmd:text-[36.75px]" key={item.id}>
                   <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
                     <CountUp start={0} end={item.number} /> {item.symbol}
                   </p>

@@ -16,10 +16,10 @@ const ExpertiseItem = ({ item }) => {
           alt=""
           className="w-[30%] lmd:w-[20%] mt-4 xxmd:w-[17%] relative z-10"
         />
-        <p className="text-[50%] font-light sm:text-[58%] lmd:text-[60%]">
+        <p className="text-[50%] sm:text-[58%] lmd:text-[60%] font-poppins500">
           {item.name}
         </p>
-        <div className="w-[96%] text-[30%] leading-3 text-center sm:text-[37%] lmd:text-[41%] mb-3 relative group z-20">
+        <div className="w-[96%] text-[30%] leading-3 text-center sm:text-[37%] lmd:text-[41%] mb-3 relative group z-20 font-poppins300">
           <p
             className={`transition-opacity duration-[500ms] opacity-100 group-hover:opacity-0`}
           >

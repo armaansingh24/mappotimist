@@ -84,7 +84,7 @@ const PortfolioSection = (props) => {
     <>
       <div className="bg-gradient-to-r from-secondary to-primary w-screen">
         <div className="w-[90%] mx-auto p-10">
-          <h2 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">Our Portfolios</h2>
+          <h2 className="font-poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">Our Portfolios</h2>
         </div>
         <div className="w-[90%] mx-auto slider">
           <div className="container hidden sm:block mb-10">

@@ -24,11 +24,10 @@ const ContactSection = () => {
   const [customService, setCustomService] = useState("");
 
   function changeHandler(event) {
-        setFormData((prevData) => ({
-          ...prevData,
-          [event.target.name]: event.target.value,
-        }));
-      
+    setFormData((prevData) => ({
+      ...prevData,
+      [event.target.name]: event.target.value,
+    }));
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,6 +52,7 @@ const ContactSection = () => {
     setError1("");
     setError2("");
 
+    console.log(formData);
     // Perform other validation checks or submit the form
   };
 
@@ -63,40 +63,42 @@ const ContactSection = () => {
   };
 
   const handleSelectedService = (service) => {
-      setSelectedService(service);
-      setFormData((prevData) => ({
-        ...prevData,
-        idea: service,
-      }));
-      setCustomService("");
+    setSelectedService(service);
+    setFormData((prevData) => ({
+      ...prevData,
+      idea: service,
+    }));
+    setCustomService("");
   };
 
   const handleCustomServiceChange = (event) => {
-      setSelectedService("");
-     setFormData((prevData) => ({
-       ...prevData,
-       idea: event.target.value,
-     }));
-     setCustomService(event.target.value);
+    setSelectedService("");
+    setFormData((prevData) => ({
+      ...prevData,
+      idea: event.target.value,
+    }));
+    setCustomService(event.target.value);
   };
 
   return (
     <>
-      <div className="relative z-30 w-full -mt-10 midxmd:-mt-60 overflow-hidden">
+      <div className="relative z-30 w-full -mt-10 midxmd:-mt-60 ">
         <img
           src={R2}
           alt=""
-          className="absolute -top-[40%] left-0 hidden midxmd:block z-0"
+          className="absolute -top-[40%] -left-2 hidden midxmd:block z-0"
         />
         <div className=" mx-auto p-3">
-          <h2 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] text-start midxmd:ml-20">
+          <h2 className="font-poppins500  text-[30px] lmd:text-[48px] text-start midxmd:ml-20">
             Contact Us
           </h2>
           <div className="flex midxs:mt-32 gap-10">
             <div className="hidden midxmd:flex flex-col items-center justify-start w-[25%] relative z-10  ">
               <div className="">
-                <p className="text-sm text-center">You can email us at</p>
-                <p className="text-lg text-center font-bold">
+                <p className="text-sm text-center font-poppins500">
+                  You can email us at
+                </p>
+                <p className="text-lg text-center font-poppins">
                   info@mappoptimist.com
                 </p>
               </div>
@@ -106,8 +108,10 @@ const ContactSection = () => {
                   <img src={linkedin} alt="" className="-mt-7 ml-12" />
                 </div>
                 <div className="">
-                  <p className="text-lg font-bold text-center">Arpit Dwivedi</p>
-                  <p className="text-lg text-[#CCCCCC] text-center">
+                  <p className="text-lg font-poppins text-center">
+                    Arpit Dwivedi
+                  </p>
+                  <p className="text-lg text-[#CCCCCC] font-poppins mx-auto text-center">
                     Position Name
                   </p>
                 </div>
@@ -118,8 +122,10 @@ const ContactSection = () => {
                   <img src={linkedin} alt="" className="-mt-7 ml-12" />
                 </div>
                 <div className="">
-                  <p className="text-lg font-bold text-center">Arpit Dwivedi</p>
-                  <p className="text-lg text-[#CCCCCC]  text-center">
+                  <p className="text-lg font-poppins text-center">
+                    Arpit Dwivedi
+                  </p>
+                  <p className="text-lg text-[#CCCCCC] font-poppins mx-auto text-center">
                     Position Name
                   </p>
                 </div>
@@ -130,25 +136,25 @@ const ContactSection = () => {
               <div className="w-1 bg-via-[rgb(0,0,0,0.6)] relative" />
             </div>
             <div>
-              <div className="flex flex-col flex-wrap mt-8 midxmd:mt-0 w-full">
-                <span className="font-bold midxmd:text-5xl">Hey there!</span>
+              <div className="flex flex-col flex-wrap mt-8 midxmd:mt-0 w-full font-poppins500">
+                <span className="midxmd:text-5xl">Hey there!</span>
                 <div className="flex flex-wrap gap-1 items-baseline">
-                  <span className="font-bold midxmd:text-5xl">
-                    Do you have a{" "}
-                  </span>
-                  <span className="text-[#DF9507] font-bold lmd:text-[48px] -z-1 inline midxmd:text-5xl">
+                  <span className=" midxmd:text-5xl">Do you have a </span>
+                  <span className="text-[#DF9507] lmd:text-[48px] -z-1 inline midxmd:text-5xl">
                     {text}
                     <Cursor cursorStyle="." />
                   </span>
                 </div>
-                <span className="font-bold midxmd:text-5xl">Let's Talk 👋</span>
+                <span className="midxmd:text-5xl">Let's Talk 👋</span>
               </div>
 
               <div className="flex flex-col gap-2 mt-10 relative z-20">
-                <p className="text-sm sm:text-lg">What services you need?</p>
+                <p className="text-sm sm:text-lg font-poppins500">
+                  What services you need?
+                </p>
                 <div className="h-fit flex flex-wrap justify-start items-center gap-2 midxmd:w-[90%]">
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
                     onClick={() =>
                       handleSelectedService("Mobile App Development")
                     }
@@ -156,30 +162,33 @@ const ContactSection = () => {
                     Mobile App Development
                   </span>
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
                     onClick={() => handleSelectedService("Website Development")}
                   >
                     Website Development
                   </span>
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
                     onClick={() => handleSelectedService("Website Design")}
                   >
                     Website Design
                   </span>
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
                     onClick={() => handleSelectedService("Mobile App Design")}
                   >
                     Mobile App Design
                   </span>
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
                     onClick={() => handleSelectedService("Product strategy")}
                   >
                     Product strategy
                   </span>
-                  <span className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer">
+                  <span
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
+                    onClick={() => handleSelectedService("Please Specify Here")}
+                  >
                     Others
                   </span>
                 </div>
@@ -189,7 +198,7 @@ const ContactSection = () => {
                       <div className="flex flex-col mt-5">
                         <label
                           htmlFor="name"
-                          className="text-sm mb-2 sm:text-lg"
+                          className="text-sm mb-2 sm:text-lg font-poppins500 text-primary"
                         >
                           Name
                         </label>
@@ -205,7 +214,7 @@ const ContactSection = () => {
                           onClick={errorHandler}
                         />
                         {error.length !== 0 && (
-                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[90%] rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
                             {error}
                           </p>
                         )}
@@ -213,7 +222,7 @@ const ContactSection = () => {
                       <div className="flex flex-col mt-5">
                         <label
                           htmlFor="email"
-                          className="text-sm mb-2 sm:text-lg"
+                          className="text-sm mb-2 sm:text-lg font-poppins500 text-primary"
                         >
                           Email
                         </label>
@@ -229,7 +238,7 @@ const ContactSection = () => {
                           onClick={errorHandler}
                         />
                         {error1.length !== 0 && (
-                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[90%] rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
                             {error1}
                           </p>
                         )}
@@ -237,7 +246,7 @@ const ContactSection = () => {
                       <div className="flex flex-col mt-5">
                         <label
                           htmlFor="idea"
-                          className="text-sm mb-2 sm:text-lg"
+                          className="text-sm mb-2 sm:text-lg font-poppins500 text-primary"
                         >
                           Tell Us About Your Idea
                         </label>
@@ -246,14 +255,14 @@ const ContactSection = () => {
                           id="idea"
                           name="idea"
                           onChange={handleCustomServiceChange}
-                          value={selectedService||customService}
+                          value={selectedService || customService}
                           className={`w-[90%] border  ${
                             error2 ? "border-red-500" : "border-gray-300"
                           } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-lg relative z-20`}
                           onClick={errorHandler}
                         />
                         {error2.length !== 0 && (
-                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[90%] rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
                             {error2}
                           </p>
                         )}

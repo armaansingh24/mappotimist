@@ -56,7 +56,7 @@ const Experties = () => {
           className="absolute top-[11%] right-1 z-5 hidden xxmd:block"
         />
         <img src={upper} alt="" className="w-full scale-[1.1] relative z-10" />
-        <h2 className="text-bold w-[79%] font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mx-auto mb-[8%] xxmd:mt-[-9%]">
+        <h2 className="text-bold w-[79%] font-poppins500  text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mx-auto mb-[8%] xxmd:mt-[-9%]">
           Expertise
         </h2>
         <div

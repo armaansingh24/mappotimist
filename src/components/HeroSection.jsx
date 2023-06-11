@@ -35,24 +35,13 @@ const HeroSection = () => {
     <>
       <div className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center">
         <div className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0">
-          <motion.div
-            className="w-full mx-auto flex items-center justify-center"
-            ref={ref}
-            variants={{
-              hidden: { opacity: 0, x: 100 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 1.6 }}
-          >
+          <div className="w-full mx-auto flex items-center justify-center">
             <img
               src={heroImage}
               alt=""
-             
               className="sm:w-[60%] md:w-full xmd:w-[70%]"
             />
-          </motion.div>
+          </div>
         </div>
 
         <motion.div
@@ -66,8 +55,8 @@ const HeroSection = () => {
           animate={mainControls}
           transition={{ duration: 1.9 }}
         >
-          <div className="w-[300px] sm:w-full md:w-[392px] font-semibold lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
-            <h1 className="font-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
+          <div className="w-[300px] sm:w-full md:w-[392px] font-poppins lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
+            <h1 className="font-Poppinstext-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
               <>Hire the perfect</> <>talent for your</>
             </h1>
             <div className="text-[#DF9507] font-bold lmd:text-[48px] -z-1 ">
@@ -82,7 +71,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
-            <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-Poppins">
+            <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500">
               Hire Talent
               <span>
                 <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
@@ -115,7 +104,7 @@ const HeroSection = () => {
             </div>
             <div>
               {activeParagraph === 0 && (
-                <p className="text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD]">
+                <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD]">
                   Hire top-notch remote developers, designers, and product
                   managers with exceptional technical expertise and effective
                   communication skills. Our rigorous screening process
@@ -126,7 +115,7 @@ const HeroSection = () => {
                 </p>
               )}
               {activeParagraph === 1 && (
-                <p className="text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD]">
+                <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD]">
                   Witness the realisation of your ideas into tangible success as
                   we guide your path from technologies to solutions. Our team of
                   trained experts provides cost-effective web and application

@@ -32,7 +32,7 @@ const ClientReviews = () => {
   return (
     <>
       <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
-        <h2 className="tfont-Poppins font-semibold text-[30px] lmd:text-[48px] flex gap-2 flex-wrap sm:mt-24 ">
+        <h2 className="font-poppins500 text-[30px] lmd:text-[48px] flex gap-2 flex-wrap sm:mt-24 ">
           Client Reviews
         </h2>
         <div className="w-full mt-[10%]">
@@ -91,7 +91,7 @@ const ClientReviews = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <img src={item.image} alt="" className="w-[140px]" />
+                    <img src={item.image} alt="" className="w-[140px] rounded-none" />
                   </div>
                 ))}
               </div>
@@ -121,7 +121,7 @@ const ClientReviews = () => {
                 ))}
               </div>
               {/* Fourth row image */}
-              <div className="absolute -right-[15.7rem] bottom-0 z-10">
+              <div className="absolute -right-[16.3rem] bottom-0 z-10">
                 {reviewImages1.map((item, index) => (
                   <div
                     key={index}
@@ -129,7 +129,7 @@ const ClientReviews = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <img src={item.image} alt="" className="w-[15.1%]" />
+                    <img src={item.image} alt="" className="w-[14.1%] rounded-none" />
                   </div>
                 ))}
               </div>
@@ -138,7 +138,7 @@ const ClientReviews = () => {
                 <img
                   src={curve2}
                   alt=""
-                  className="absolute right-[9.9rem] -bottom-1 w-[10%] z-30"
+                  className="absolute right-[9.4rem] -bottom-1 w-[10%] z-30"
                 />
               </div>
               {/* Red Circle */}

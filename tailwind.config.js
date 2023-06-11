@@ -5,10 +5,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        supers:"270px",
+        supers: "270px",
         ssm: "340px",
-        msm:"360px",
-        midms:"370px",
+        msm: "360px",
+        midms: "370px",
         xsm: "400px",
         midxs: "410px",
         middlesm: "600px",
@@ -25,6 +25,11 @@ module.exports = {
       colors: {
         primary: "#000046",
         secondary: "#1CB5E0",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        poppins500: ["Poppins", "sans-serif"],
+        poppins300: ["Poppins", "sans-serif"],
       },
     },
   },
