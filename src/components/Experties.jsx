@@ -37,7 +37,7 @@ const Experties = () => {
         <img
           src={Ellipse1}
           alt=""
-          className="absolute top-[23.2%] hidden xxmd:block"
+          className="absolute top-[23.2%] hidden xxmd:block z-10"
         />
         <img
           src={Ellipse2}
