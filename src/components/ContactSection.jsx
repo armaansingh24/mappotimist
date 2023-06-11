@@ -213,7 +213,7 @@ const ContactSection = () => {
                           onClick={errorHandler}
                         />
                         {error.length !== 0 && (
-                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 sm:w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
                             {error}
                           </p>
                         )}
