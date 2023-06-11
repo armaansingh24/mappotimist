@@ -209,7 +209,7 @@ const ContactSection = () => {
                           value={formData.name}
                           className={`w-[90%] border  ${
                             error ? "border-red-500" : "border-gray-300"
-                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-lg relative z-20`}
+                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
                           onClick={errorHandler}
                         />
                         {error.length !== 0 && (
@@ -233,7 +233,7 @@ const ContactSection = () => {
                           value={formData.email}
                           className={`w-[90%] border  ${
                             error1 ? "border-red-500" : "border-gray-300"
-                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-lg relative z-20`}
+                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
                           onClick={errorHandler}
                         />
                         {error1.length !== 0 && (
@@ -257,7 +257,7 @@ const ContactSection = () => {
                           value={selectedService || customService}
                           className={`w-[90%] border  ${
                             error2 ? "border-red-500" : "border-gray-300"
-                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-lg relative z-20`}
+                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
                           onClick={errorHandler}
                         />
                         {error2.length !== 0 && (
