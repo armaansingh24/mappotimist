@@ -3,7 +3,6 @@ import { useState } from "react";
 import image1 from "../assets/contactUs/image1.png";
 import R2 from "../assets/contactUs/R2.png";
 import linkedin from "../assets/contactUs/linkedin.png";
-import { SectionWrapper } from "../hoc";
 
 const ContactSection = () => {
   const [text] = useTypewriter({
