@@ -43,6 +43,7 @@ const PortfolioSection = (props) => {
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     return (
       <div
+      
         className="absolute carousel-button-group mb-4  gap-4 flex justify-end 
           items-center w-[100%]"
       >
@@ -82,9 +83,14 @@ const PortfolioSection = (props) => {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-secondary to-primary w-screen">
+      <div
+        className="bg-gradient-to-r from-secondary to-primary w-screen"
+        id="Portfolio"
+      >
         <div className="w-[90%] mx-auto p-10">
-          <h2 className="font-poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">Our Portfolios</h2>
+          <h2 className="font-poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
+            Our Portfolios
+          </h2>
         </div>
         <div className="w-[90%] mx-auto slider">
           <div className="container hidden sm:block mb-10">

@@ -3,6 +3,7 @@ import { useState } from "react";
 import image1 from "../assets/contactUs/image1.png";
 import R2 from "../assets/contactUs/R2.png";
 import linkedin from "../assets/contactUs/linkedin.png";
+import { SectionWrapper } from "../hoc";
 
 const ContactSection = () => {
   const [text] = useTypewriter({
@@ -33,18 +34,18 @@ const ContactSection = () => {
     e.preventDefault();
 
     if (formData.name.trim() === "") {
-      setError("filling this part is mandatory");
+      setError("This field is necessary");
       return;
     }
     // Validate email field
     if (formData.email.trim() === "") {
-      setError1("filling this part is mandatory");
+      setError1("This field is necessary");
       return;
     }
 
     // Validate idea field
     if (formData.idea.trim() === "") {
-      setError2("filling this part is mandatory");
+      setError2("This field is necessary");
       return;
     }
 
@@ -63,11 +64,19 @@ const ContactSection = () => {
   };
 
   const handleSelectedService = (service) => {
-    setSelectedService(service);
-    setFormData((prevData) => ({
-      ...prevData,
-      idea: service,
-    }));
+    if (selectedService === "") {
+      setSelectedService(service);
+      setFormData((prevData) => ({
+        ...prevData,
+        idea: service,
+      }));
+    } else {
+      setSelectedService((prevService) => prevService + ", " + service);
+      setFormData((prevData) => ({
+        ...prevData,
+        idea: prevData.idea + ", " + service,
+      }));
+    }
     setCustomService("");
   };
 
@@ -82,18 +91,21 @@ const ContactSection = () => {
 
   return (
     <>
-      <div className="relative z-30 w-full -mt-10 midxmd:-mt-60 ">
+      <div
+        className="relative z-30 w-full -mt-10 midxmd:-mt-60 "
+        id="Contact Us"
+      >
         <img
           src={R2}
           alt=""
           className="absolute -top-[40%] -left-2 hidden midxmd:block z-0"
         />
         <div className=" mx-auto p-3">
-          <h2 className="font-poppins500  text-[30px] lmd:text-[48px] text-start midxmd:ml-20">
+          <h2 className="font-poppins500  text-[30px] lmd:text-[48px] text-start ">
             Contact Us
           </h2>
           <div className="flex midxs:mt-32 gap-10">
-            <div className="hidden midxmd:flex flex-col items-center justify-start w-[25%] relative z-10  ">
+            <div className="hidden midxmd:flex flex-col items-center justify-start w-[25%] relative z-10  -ml-10">
               <div className="">
                 <p className="text-sm text-center font-poppins500">
                   You can email us at
@@ -186,7 +198,7 @@ const ContactSection = () => {
                   </span>
                   <span
                     className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
-                    onClick={() => handleSelectedService("Please Specify Here")}
+                    onClick={() => handleSelectedService("")}
                   >
                     Others
                   </span>
@@ -211,9 +223,10 @@ const ContactSection = () => {
                             error ? "border-red-500" : "border-gray-300"
                           } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
                           onClick={errorHandler}
+                          placeholder="Your Name"
                         />
                         {error.length !== 0 && (
-                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 sm:w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-sm text-center mr-20 border border-red-500 sm:w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
                             {error}
                           </p>
                         )}
@@ -235,9 +248,10 @@ const ContactSection = () => {
                             error1 ? "border-red-500" : "border-gray-300"
                           } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
                           onClick={errorHandler}
+                          placeholder="yourName@gmail.com"
                         />
                         {error1.length !== 0 && (
-                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-sm text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
                             {error1}
                           </p>
                         )}
@@ -256,12 +270,17 @@ const ContactSection = () => {
                           onChange={handleCustomServiceChange}
                           value={selectedService || customService}
                           className={`w-[90%] border  ${
-                            error2 ? "border-red-500" : "border-gray-300"
+                            !selectedService && error2
+                              ? "border-red-500"
+                              : "border-gray-300"
                           } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
                           onClick={errorHandler}
+                          placeholder={
+                            selectedService ? "" : "tell us about your idea"
+                          }
                         />
-                        {error2.length !== 0 && (
-                          <p className="text-red-500 text-base text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                        {!selectedService && error2.length !== 0 && (
+                          <p className="text-red-500 text-sm text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
                             {error2}
                           </p>
                         )}

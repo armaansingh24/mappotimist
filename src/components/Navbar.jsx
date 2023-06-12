@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link  } from "react-router-dom";
+import { Link } from "react-scroll";
 import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.png";
 import eclips1 from "../assets/navbar/eclips1.png";
@@ -19,7 +20,7 @@ const Navbar = () => {
       >
         <div className="w-full flex justify-between items-start  mx-auto ">
           <Link
-            to="/"
+            to="home"
             className="flex items-center cursor-pointer justify-end gap-1 sm:w-[15%] order-2 sm:justify-start bg-transparent"
             onClick={() => {
               window.scrollTo(0, 0);
@@ -46,12 +47,16 @@ const Navbar = () => {
                 className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
                 "
               >
-                <a
+                <Link
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  href={`#${link.id}`}
+                  to={`${link.id}`}
+                  spy={true}
+                  smooth={true}
+                  offset={100}
+                  duration={1000}
                 >
                   {link.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -134,7 +139,19 @@ const Navbar = () => {
                       setIsOpen(!isOpen);
                     }}
                   >
-                    <a href={`#${link.id}`}>{link.title}</a>
+                    <Link
+                      to={`${link.id}`}
+                      spy={true}
+                      smooth={true}
+                      offset={100}
+                      duration={1000}
+                      onClick={() => {
+                        setToggle(!toggle);
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      {link.title}
+                    </Link>
                   </li>
                 ))}
               </ul>

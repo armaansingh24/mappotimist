@@ -185,15 +185,12 @@ const ClientReviews = () => {
           <div className="flex gap-10 mt-14 mb-[-11%]">
             <div className="relative group rounded-full">
               <span className="relative ">
-                <BsFacebook className="text-[#7F838D] hover:text-white relative z-10" />
-              </span>
-              <span className="absolute inset-0 bg-gradient-to-bl rounded-full from-secondary to-primary opacity-0 group-hover:opacity-100 z-10">
-    
+                <BsFacebook className="text-[#7F838D] hover:text-primary relative z-10" />
               </span>
             </div>
-            <RiSlackFill className="text-[#7F838D] hover:bg-gradient-to-r hover:from-[#000046] hover:to-[#1CB5E0]" />
-            <AiFillInstagram />
-            <RiLinkedinBoxFill />
+            <RiSlackFill className="text-[#7F838D] hover:text-primary relative z-10" />
+            <AiFillInstagram className="text-[#7F838D] hover:text-primary relative z-10" />
+            <RiLinkedinBoxFill className="text-[#7F838D] hover:text-primary relative z-10" />
           </div>
         </div>
       </div>

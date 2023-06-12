@@ -8,7 +8,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -19,7 +18,6 @@ const About = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
-
 
   return (
     <>
@@ -106,30 +104,34 @@ const About = () => {
                 ))}
               </Carousel>
             </motion.div>
-
-            <motion.div
-              className="grid grid-cols-2 gap-6 w-full mx-auto order-2 mb-10 xxmd:w-[90%] "
-              ref={ref}
-              variants={{
-                hidden: { opacity: 0, y: 100 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControls}
-              transition={{ duration: 1.6 }}
-            >
-              {about.map((item) => (
-                <div className="font-poppins500 xxmd:text-[36.75px]" key={item.id}>
-                  <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
-                    <CountUp start={0} end={item.number} /> {item.symbol}
-                  </p>
-                  <p className="text-[25px] font-medium ">{item.title}</p>
-                  <p className="text-[9px] leading-[12px] capitalize font-medium xxmd:text-[12.25px] xxmd:leading-[18.37px]">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </motion.div>
+         
+              <motion.div
+                className="grid grid-cols-2 gap-6 w-full mx-auto order-2 mb-10 xxmd:w-[90%] "
+                ref={ref}
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 1.6 }}
+              >
+                {about.map((item) => (
+                  <div
+                    className="font-poppins500 xxmd:text-[36.75px]"
+                    key={item.id}
+                  >
+                    <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
+                      <CountUp start={0} end={item.number} /> {item.symbol}
+                    </p>
+                    <p className="text-[25px] font-medium ">{item.title}</p>
+                    <p className="text-[9px] leading-[12px] capitalize font-medium xxmd:text-[12.25px] xxmd:leading-[18.37px]">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </motion.div>
+  
           </div>
         </div>
       </div>
