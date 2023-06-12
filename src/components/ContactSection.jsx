@@ -103,7 +103,7 @@ const ContactSection = () => {
           <h2 className="font-poppins500  text-[30px] lmd:text-[48px] text-start ">
             Contact Us
           </h2>
-          <div className="flex midxs:mt-32 gap-10">
+          <div className="flex middlesm:mt-32 gap-10">
             <div className="hidden midxmd:flex flex-col items-center justify-start w-[25%] relative z-10  -ml-10">
               <div className="">
                 <p className="text-sm text-center font-poppins500">
