@@ -9,7 +9,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
    const navigate = useNavigate();
 
    const handleReadMore = () => {
-    navigate(`/portfolio/${item.id}`, { state: { item } });
+     navigate(`/portfolio/${item.id}`, { state: { item } });
    };
 
   const handleHover = () => {
@@ -26,7 +26,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
   return (
     <>
       <div
-        className="group w-full h-auto z-40 mt-4 cursor-pointer overflow-hidden relative rounded-3xl"
+        className="group w-full h-auto z-9 mt-4 cursor-pointer overflow-hidden relative rounded-3xl"
         onMouseEnter={handleHover}
         onMouseLeave={() => mainControls.start("hidden")}
       >
