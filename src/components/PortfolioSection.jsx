@@ -121,7 +121,7 @@ const PortfolioSection = (props) => {
               // direction="rtl"
               slidesPerView={3}
               // direction="ltr"
-              className="swiper_container h-auto"
+              className="swiper_container w-[80%] mx-auto mb-10"
             >
               {portfolioImages.map((item, index) => (
                 <SwiperSlide virtualIndex={index} key={index}>
@@ -147,7 +147,7 @@ const PortfolioSection = (props) => {
                     className="text-white absolute top-[1.2rem] right-[.2rem]"
                   ></AiOutlineArrowRight>
                 </div>
-                <div className="swiper-pagination " />
+                <div className="swiper-pagination mt-20 " />
               </div>
             </Swiper>
           </div>

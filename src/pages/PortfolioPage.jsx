@@ -213,7 +213,7 @@ const PortfolioPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-white w-[20rem] bottom-5 left-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute">
+            <div className="bg-white w-[20rem] -bottom-5 left-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute">
               <img
                 src={Group}
                 alt=""
@@ -228,7 +228,7 @@ const PortfolioPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-white w-[20rem] bottom-5 right-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute ">
+            <div className="bg-white w-[20rem] -bottom-5 right-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute ">
               <img
                 src={Group}
                 alt=""
@@ -243,6 +243,24 @@ const PortfolioPage = () => {
                 </p>
               </div>
             </div>
+            {
+              item.feature7.length !== 0 && (
+              <div className="skew-x-12 bg-white w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1 items-start justify-center absolute">
+                <img
+                  src={Group}
+                  alt=""
+                  className="w-[50%] h-[50%] sm:w-[5%] sm:h-[5%] ml-2"
+                />
+                <div className="">
+                  <p className="text-[7.97px] font-poppins xxmd:text-base">
+                    {item.feature4}
+                  </p>
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
+                    {item.feature4Desc}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
