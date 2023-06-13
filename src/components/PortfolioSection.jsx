@@ -10,11 +10,7 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import { EffectCoverflow, Pagination, Navigation, Virtual } from "swiper";
 import SwiperCore from "swiper";
 import { portfolioImages } from "../constants/index";
-import image1 from "../assets/portfolio/image1.png";
-import image2 from "../assets/portfolio/image2.png";
-import image3 from "../assets/portfolio/image3.png";
-import image4 from "../assets/portfolio/image4.png";
-import image5 from "../assets/portfolio/image5.png";
+import PortfolioMobile from "./PortfolioMobile";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -43,7 +39,6 @@ const PortfolioSection = (props) => {
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     return (
       <div
-      
         className="absolute carousel-button-group mb-4  gap-4 flex justify-end 
           items-center w-[100%]"
       >
@@ -128,11 +123,12 @@ const PortfolioSection = (props) => {
               // direction="ltr"
               className="swiper_container h-auto"
             >
-              {portfolioImages.map((image, index) => (
+              {portfolioImages.map((item, index) => (
                 <SwiperSlide virtualIndex={index} key={index}>
                   <PortfolioSlider
-                    image={image.image}
+                    // image={image.image}
                     index={index}
+                    item={item}
                     currentSlideIndex={currentSlideIndex}
                   />
                 </SwiperSlide>
@@ -172,31 +168,16 @@ const PortfolioSection = (props) => {
                 }
                 customDot={<CustomDot />}
               >
-                <img
-                  src={image1}
-                  alt="slide_image"
-                  className="w-[80%]  p-5 mr-0 ml-7"
-                />
-                <img
-                  src={image2}
-                  alt="slide_image"
-                  className="w-[80%]  p-5 mr-0 ml-7"
-                />
-                <img
-                  src={image3}
-                  alt="slide_image"
-                  className="w-[80%]  p-5 mr-0 ml-7"
-                />
-                <img
-                  src={image4}
-                  alt="slide_image"
-                  className="w-[80%]  p-5 mr-0 ml-7"
-                />
-                <img
-                  src={image5}
-                  alt="slide_image"
-                  className="w-[80%]  p-5 mr-0 ml-7"
-                />
+                {portfolioImages.map((item, index) => (
+              
+                    <PortfolioMobile
+                      // image={image.image}
+                      index={index}
+                      item={item}
+                      currentSlideIndex={currentSlideIndex}
+                    />
+                
+                ))}
               </Carousel>
             </div>
           </div>

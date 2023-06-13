@@ -1,11 +1,16 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
+const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
   const ref = useRef(null);
   const mainControls = useAnimation();
+   const navigate = useNavigate();
+
+   const handleReadMore = () => {
+    navigate(`/portfolio/${item.id}`, { state: { item } });
+   };
 
   const handleHover = () => {
     mainControls.start("visible");
@@ -26,7 +31,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
         onMouseLeave={() => mainControls.start("hidden")}
       >
         <img
-          src={image}
+          src={item.image}
           alt="slide_image"
           className={`z-[-10] ${
             index === currentSlideIndex ? "group-hover:scale-[1.06]" : ""
@@ -51,7 +56,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-lg xxmd:text-3xl font-bold text-white transition delay-1000 ease-in-out ">
-                John Cooper
+                {item.title}
               </p>
             </motion.div>
             <motion.div
@@ -66,11 +71,12 @@ const PortfolioSlider = ({ image, index, currentSlideIndex }) => {
               className="flex flex-col items-center justify-center gap-4 w-full"
             >
               <p className="hidden xxmd:block text-lg font-bold text-white w-full">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                id magni a facilis fugiat tempore error deleniti accusamus
-                numquam. Enim?
+                {item.onhover}
               </p>
-              <button className="sm:text-base xxmd:text-xl text-white font-light border-[1px] p-1 xxmd:p-2 rounded-lg border-white">
+              <button
+                className="sm:text-base xxmd:text-xl text-white font-light border-[1px] p-1 xxmd:p-2 rounded-lg border-white"
+                onClick={handleReadMore}
+              >
                 Read More
               </button>
             </motion.div>

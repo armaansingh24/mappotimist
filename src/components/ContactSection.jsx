@@ -1,5 +1,5 @@
 import { useTypewriter } from "react-simple-typewriter";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import image1 from "../assets/contactUs/image1.png";
 import R2 from "../assets/contactUs/R2.png";
 import linkedin from "../assets/contactUs/linkedin.png";
@@ -22,6 +22,13 @@ const ContactSection = () => {
   const [error2, setError2] = useState("");
   const [selectedService, setSelectedService] = useState("");
   const [customService, setCustomService] = useState("");
+  const inputRef = useRef(null);
+
+  const handleButtonClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
 
   function changeHandler(event) {
     setFormData((prevData) => ({
@@ -197,7 +204,8 @@ const ContactSection = () => {
                   </span>
                   <span
                     className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
-                    onClick={() => handleSelectedService("")}
+                    ref={inputRef}
+                    onClick={handleButtonClick}
                   >
                     Others
                   </span>
@@ -225,7 +233,7 @@ const ContactSection = () => {
                           placeholder="Your Name"
                         />
                         {error.length !== 0 && (
-                          <p className="text-red-500 text-sm text-center mr-20 border border-red-500 sm:w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-sm  text-left rounded-lg  relative z-10  flex items-center justify-start">
                             {error}
                           </p>
                         )}
@@ -250,7 +258,7 @@ const ContactSection = () => {
                           placeholder="yourName@gmail.com"
                         />
                         {error1.length !== 0 && (
-                          <p className="text-red-500 text-sm text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-sm  text-left rounded-lg  relative z-10  flex items-center justify-start">
                             {error1}
                           </p>
                         )}
@@ -277,9 +285,10 @@ const ContactSection = () => {
                           placeholder={
                             selectedService ? "" : "tell us about your idea"
                           }
+                          ref={inputRef}
                         />
                         {!selectedService && error2.length !== 0 && (
-                          <p className="text-red-500 text-sm text-center mr-20 border border-red-500 w-[80%] mx-auto rounded-lg -mt-2 relative z-10 h-8 flex items-center justify-center">
+                          <p className="text-red-500 text-sm  text-left rounded-lg  relative z-10  flex items-center justify-start">
                             {error2}
                           </p>
                         )}

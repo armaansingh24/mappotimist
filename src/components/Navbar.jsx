@@ -10,6 +10,7 @@ import eclips3 from "../assets/navbar/eclips3.png";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
   return (
     <>

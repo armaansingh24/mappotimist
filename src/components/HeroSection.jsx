@@ -58,10 +58,10 @@ const HeroSection = () => {
           transition={{ duration: 1.9 }}
         >
           <div className="w-[300px] sm:w-full md:w-[392px] font-poppins lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
-            <h1 className="font-Poppinstext-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
+            <h1 className="font-Poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
               <>Hire the perfect</> <>talent for your</>
             </h1>
-            <div className="text-[#DF9507] font-bold lmd:text-[48px] -z-1 ">
+            <div className="text-[#DF9507] lmd:text-[48px] -z-1 font-poppins ">
               <TypeWritter
                 options={{
                   autoStart: true,

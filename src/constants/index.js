@@ -129,30 +129,185 @@ export const portfolioImages = [
   {
     id: 1,
     image: image1,
+    title: "Bobble",
+    onhover:
+      "Bobble is the most usable keyboard and has all keyboard features in one. There's never a boring chat with Bobble.",
+    feature1: "Bigmoji",
+    feature1Desc:
+      "The Bigmoji feature enhances the typical emoji experience by enlarging the size of the selected emoji, making it more visually prominent and expressive.",
+
+    feature2: "Suggestion Drawer",
+    feature2Desc:
+      "Real-time sticker sharing adds dynamic expression to conversations, enhancing communication with instant and adaptable visuals.",
+
+    feature3: "Fonts",
+    feature3Desc:
+      "Fun and cool font support enhances conversations, adding an exciting feature that brings a unique and enjoyable way to communicate.",
+
+    feature4: "Themes",
+    feature4Desc:
+      "Customize themes for a personalized touch, switch from pre-set options to achieve greater personalization, and even add your own image as the keyboard theme.",
+    feature5: "Custom Stickers",
+    feature5Desc:
+      "This feature enables users to create personalized face stickers with various expressions and share them as custom stickers.",
+    feature6: "Custom Stickers",
+    feature6Desc:
+      "This feature enables users to create personalized face stickers with various expressions and share them as custom stickers.",
+    feature7: "ATW",
+    feature7Desc:
+      ' Users can conveniently add their preferred sticker packs directly to the WhatsApp application using the "Add to WhatsApp" feature.',
+    feature8: "Stories",
+    feature8Desc:
+      "Users can create and update custom stories with their partners, adding personalized text for an enhanced experience.",
+    feature9: "GIF's",
+    feature9Desc:
+      "Users have the ability to share custom GIFs containing meme content and can also customize the head support in the GIFs.",
+    feature10: "AI",
+    feature10Desc:
+      "AI models are employed to enhance typing experiences by providing precise suggestions, predictions, and automatic corrections.",
+
+    leftImage1: "UI/UX Design",
+    leftImage1Desc:
+      "We utilized tools like Zeplin and Figma to create a comprehensive UI/UX design. Our responsive designs cater to various screen sizes, and adhere to established design principles.",
+
+    leftImage2: "Work Distribution",
+    leftImage2Desc:
+      "Thoroughly analyzed the project requirements and allocated specific tasks to individuals to ensure timely completion. Employed the Divide and Conquer strategy to meet deadlines.",
+
+    leftImage3: "Testing",
+    leftImage3Desc:
+      "Developed a variety of test cases and thoroughly examined each one. Implemented the Beta version technique to ensure comprehensive coverage of edge cases.",
+
+    rightImage1: "ATW  Feature",
+    rightImage1Desc:
+      "Deep linking was implemented, utilizing standard iOS and Android practices and clever techniques to enable seamless redirection between our app and WhatsApp.",
+    rightImage2: "AI Model Integration",
+    rightImage2Desc:
+      "AI tflite models were integrated with memory optimization and concurrency. Repetitive code was optimized using industry-standard design patterns.",
+    rightImage3: "CST Feature",
+    rightImage3Desc:
+      "The content suggestion drawer utilized various APIs, with responses parsed using protocols, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
   },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //  Project 2
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 2,
     image: image2,
+    title: "FTL: Fantasy trading league",
+    onhover:
+      "FTL offers genuine trading experience by providing real-time data for crypto, US stocks and Indian stocks using simulated funds provided by the platform.",
+    feature1: "Real-time data",
+    feature1Desc:
+      "Real-time data for the market refers to the immediate and continuous flow of information related to trading prices, trading volumes,  and other market indicators. It provides investors, traders, and financial institutions with market movements and enables them to make timely and informed decisions.\n   Real-time market data: trading prices, volumes, and indicators that inform investors, enabling timely decision-making.",
+
+    feature2: "TOROai",
+    feature2Desc:
+      "TOROai is an innovative chatbot designed to provide users with valuable financial market information. With its user-friendly interface and advanced algorithms, TOROai aims to deliver real-time data, analysis, and insights to individuals seeking to stay informed about the dynamic world of finance.\n TOROai: a user-friendly chatbot offering real-time financial market data, analysis, and insights to keep users informed about finance.",
+
+    feature3: "Trading experience",
+    feature3Desc:
+      "Live trading experience provides individuals with an immersive and dynamic environment to engage in real-time buying and selling of financial instruments, such as stocks or cryptocurrencies. It offers a hands-on approach to understanding the intricacies of financial markets, observe price fluctuations, and analyze market trends.\nLive trading immerses individuals in real-time buying/selling of financial instruments. Learn market intricacies, observe price fluctuations, and analyze trends hands-on.",
+
+    feature4: "Gameplay",
+    feature4Desc: "",
+    feature5: "Charts for market analysis",
+    feature5Desc: "",
+    feature6: "Reward system",
+    feature6Desc: "",
+    feature7: "",
+    feature7Desc: "",
+    feature8: "",
+    feature8Desc: "",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+    
+    leftImage1: "UI/UX Design",
+    leftImage1Desc:
+      "We utilized tools like Zeplin and Figma to create a comprehensive UI/UX design. Our responsive designs cater to various screen sizes and adhere to established design principles.",
+
+    leftImage2: "UI/UX Design",
+    leftImage2Desc:
+      "Thoroughly analyzed the project requirements and allocated specific tasks to individuals to ensure timely completion. Employed the Divide and Conquer strategy to meet deadlines.",
+
+    leftImage3: "Testing",
+    leftImage3Desc:
+      "Developed a variety of test cases and thoroughly examined each one. Implemented the Beta version technique to ensure comprehensive coverage of edge cases.",
+
+    rightImage1: "ATW  Feature",
+    rightImage1Desc:
+      "Deep linking was implemented, utilizing standard iOS practices and clever techniques to enable seamless redirection between our app and WhatsApp.",
+    rightImage2: "AI Model Integration",
+    rightImage2Desc:
+      "AI tflite models were integrated with memory optimization and concurrency. Repetitive code was optimized using industry-standard design patterns.",
+    rightImage3: "CST Feature",
+    rightImage3Desc:
+      "The content suggestion drawer utilized various APIs, with responses parsed using protocols, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
   },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project 3
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 3,
     image: image3,
-  },
-  {
-    id: 4,
-    image: image4,
-  },
-  {
-    id: 5,
-    image: image5,
-  },
-  {
-    id: 6,
-    image: image5,
-  },
-  {
-    id: 7,
-    image: image5,
+    title: "GoFetch",
+    onhover:
+      "Discover a world of online shopping at your fingertips. Browse, compare, and buy products with ease through our intuitive GoFetch app.",
+    feature1: "Languages",
+    feature1Desc:
+      "Explore this user-centric app offering content in multiple languages. Users can also request regional language support to personalize their experience.",
+
+    feature2: "Home",
+    feature2Desc:
+      "Users can discover endless possibilities to shop the latest trends, find exclusive deals, and experience seamless shopping on our captivating Go Fetch App.",
+
+    feature3: "Catalogue",
+    feature3Desc:
+      "Find a diverse range of brands to explore, filter, and fulfil your expectations. Our catalogue includes items for all age groups - kids, teens, and adults.",
+
+    feature4: "Payment",
+    feature4Desc:
+      "Enjoy peace of mind with our trusted and reliable payment gateway, offering seamless and secure transactions for hassle-free experiences",
+    feature5: "Cart",
+    feature5Desc:
+      "Users can keep track of their selections in one place as well as easily review, modify, and finalize the shopping cart for a smooth checkout experience",
+    feature6: "Activities",
+    feature6Desc:
+      "Users can access their complete order history at a glance. Track deliveries, view past purchases, and manage returns effortlessly on this page",
+    feature7: "Authentication",
+    feature7Desc:
+      " Users can effortlessly secure their accounts, safeguard their personal information, and enjoy a secure login experience using our trusted authentication page.",
+    feature8: "Sidebar",
+    feature8Desc:
+      "Users can navigate with ease. Access key features, categories, settings, and personalized options conveniently from the sidebar menu on our app.",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+
+    leftImage1: "UI/UX Design",
+    leftImage1Desc:
+      "We utilized tools like Zeplin and Figma to create a comprehensive UI/UX design. Our responsive designs cater to various screen sizes and adhere to established design principles.",
+
+    leftImage2: "UI/UX Design",
+    leftImage2Desc:
+      "Thoroughly analyzed the project requirements and allocated specific tasks to individuals to ensure timely completion. Employed the Divide and Conquer strategy to meet deadlines.",
+
+    leftImage3: "Testing",
+    leftImage3Desc:
+      "Developed a variety of test cases and thoroughly examined each one. Implemented the Beta version technique to ensure comprehensive coverage of edge cases.",
+
+    rightImage1: "Payment",
+    rightImage1Desc:
+      "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",
+    rightImage2: "Cart",
+    rightImage2Desc:
+      "We have designed UI/UX, implemented add/remove functionality, calculated total cost, enable quantity modification, and integrated with checkout for our app’s cart page.",
+    rightImage3: "Filtering",
+    rightImage3Desc:
+      "Our app utilizes highly optimized algorithms like Tries, Hashing, and more to deliver a swift and seamless filtering experience.",
   },
 ];
 
