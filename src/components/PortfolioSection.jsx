@@ -121,7 +121,7 @@ const PortfolioSection = (props) => {
               // direction="rtl"
               slidesPerView={3}
               // direction="ltr"
-              className="swiper_container w-[80%] mx-auto mb-10"
+              className="swiper_container w-[80%] mx-auto mb-10 relative z-40"
             >
               {portfolioImages.map((item, index) => (
                 <SwiperSlide virtualIndex={index} key={index}>
