@@ -5,6 +5,10 @@ import main from "../assets/portfolio/main.png";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
 import leftImage from "../assets/portfolio/leftImage.png";  
+import R1 from "../assets/portfolio/R1.png";
+import R2 from "../assets/portfolio/R2.png";
+import Group1 from "../assets/portfolio/Group1.png";
+
 // import { useState } from "react";
 
 const PortfolioPage = () => {
@@ -42,7 +46,7 @@ const PortfolioPage = () => {
                 </p>
               </div>
               <div className="">
-                <img src={item.image} alt="" className="w-[70%] mx-auto" />
+                <img src={Group1} alt="" className="mx-auto" />
                 {/* <p>{item.title}</p> */}
               </div>
             </div>
@@ -276,7 +280,7 @@ const PortfolioPage = () => {
             )}
             {item.feature8.length !== 0 && (
               <div
-                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] bottom-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] bottom-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
                 // onFocus={handleFocus}
@@ -296,7 +300,7 @@ const PortfolioPage = () => {
             )}
             {item.feature9.length !== 0 && (
               <div
-                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] top-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] top-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
                 // onFocus={handleFocus}
@@ -316,7 +320,7 @@ const PortfolioPage = () => {
             )}
             {item.feature10.length !== 0 && (
               <div
-                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] bottom-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] bottom-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
                 // onFocus={handleFocus}
@@ -341,35 +345,45 @@ const PortfolioPage = () => {
         {/* left image section */}
         {/* ................................................ */}
 
-        <div className="w-[90%] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row sm:h-screen">
+        <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row sm:h-screen relative">
+          <img
+            src={R1}
+            alt=""
+            className="absolute  -top-[34.4%] -right-8 block sm:hidden z-0"
+          />
+          <img
+            src={R2}
+            alt=""
+            className="absolute  -top-[2%] -right-44 hidden midFM:block z-0"
+          />
           <div>
             <img src={leftImage} alt="" />
           </div>
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div className="flex flex-col items-center justify-center gap-3 relative z-10">
             <div className="flex flex-col items-center justify-center gap-2">
-              <p className="text-4xl font-poppins500 sm:text-3xl">
+              <p className="text-xl font-poppins500 sm:text-3xl">
                 UI/UX Design
               </p>
-              <p className="text-lg font-poppins300 text-center sm:text-sm sm:w-[70%]">
+              <p className="text-sm font-poppins300 text-center sm:text-sm sm:w-[70%]">
                 We utilized tools like Zeplin and Figma to create a
                 comprehensive UI/UX design. Our responsive designs cater to
                 various screen sizes, and adhere to established design
                 principles.
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-3">
-              <p className="text-4xl font-poppins500 sm:text-3xl">
+            <div className="flex flex-col items-center justify-center gap-2">
+              <p className="text-xl font-poppins500 sm:text-3xl">
                 Work Distribution
               </p>
-              <p className="text-lg font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+              <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
                 Thoroughly analyzed the project requirements and allocated
                 specific tasks to individuals to ensure timely completion.
                 Employed the Divide and Conquer strategy to meet deadlines.
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-3">
-              <p className="text-4xl font-poppins500 sm:text-3xl">Testing</p>
-              <p className="text-lg font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+            <div className="flex flex-col items-center justify-center gap-2">
+              <p className="text-xl font-poppins500 sm:text-3xl">Testing</p>
+              <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
                 Developed a variety of test cases and thoroughly examined each
                 one. Implemented the Beta version technique to ensure
                 comprehensive coverage of edge cases.
