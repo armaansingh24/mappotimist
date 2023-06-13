@@ -4,12 +4,20 @@ import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
 import main from "../assets/portfolio/main.png";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
+import { useState } from "react";
+
 const PortfolioPage = () => {
-  //  const { itemId } = useParams();
   const location = useLocation();
   const item = location.state?.item;
+  const [isFocused, setIsFocused] = useState(false);
 
-  // Rest of the component code
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
 
   return (
     <>
@@ -243,20 +251,21 @@ const PortfolioPage = () => {
                 </p>
               </div>
             </div>
-            {
-              item.feature7.length !== 0 && (
-              <div className="skew-x-12 bg-white w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1 items-start justify-center absolute">
-                <img
-                  src={Group}
-                  alt=""
-                  className="w-[50%] h-[50%] sm:w-[5%] sm:h-[5%] ml-2"
-                />
+            {item.feature7.length !== 0 && (
+              <div
+                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                  ${isFocused ? "h-16" : "h-40"}
+                `}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              >
+                <img src={Group} alt="" className="mx-auto" />
                 <div className="">
-                  <p className="text-[7.97px] font-poppins xxmd:text-base">
-                    {item.feature4}
+                  <p className="font-poppins text-base text-center">
+                    {item.feature7}
                   </p>
-                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
-                    {item.feature4Desc}
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
+                    {item.feature7Desc}
                   </p>
                 </div>
               </div>
