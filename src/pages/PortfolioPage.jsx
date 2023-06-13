@@ -256,7 +256,7 @@ const PortfolioPage = () => {
             </div>
             {item.feature7.length !== 0 && (
               <div
-                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
                 // onFocus={handleFocus}
