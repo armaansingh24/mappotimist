@@ -33,7 +33,7 @@ const PortfolioPage = () => {
                 </p>
               </div>
               <div className="">
-                <img src={item.image} alt="" />
+                {/* <img src={item.image} alt="" /> */}
                 {/* <p>{item.title}</p> */}
               </div>
             </div>
