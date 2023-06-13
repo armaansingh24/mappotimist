@@ -172,6 +172,7 @@ const PortfolioSection = (props) => {
               
                     <PortfolioMobile
                       // image={image.image}
+                      key={index}
                       index={index}
                       item={item}
                       currentSlideIndex={currentSlideIndex}
