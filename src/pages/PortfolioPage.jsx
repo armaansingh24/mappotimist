@@ -4,24 +4,25 @@ import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
 import main from "../assets/portfolio/main.png";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
-import { useState } from "react";
+import leftImage from "../assets/portfolio/leftImage.png";  
+// import { useState } from "react";
 
 const PortfolioPage = () => {
   const location = useLocation();
   const item = location.state?.item;
-  const [isFocused, setIsFocused] = useState(false);
+  // const [isFocused, setIsFocused] = useState(false);
 
-  const handleFocus = () => {
-    setIsFocused(true);
-  };
+  // const handleFocus = () => {
+  //   setIsFocused(true);
+  // };
 
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
+  // const handleBlur = () => {
+  //   setIsFocused(false);
+  // };
 
   return (
     <>
-      <div className="w-full relative mb-10">
+      <div className="w-full relative ">
         <div className="">
           <div className="relative5 z-0 bg-gradient-to-r from-secondary via-secondary to-white">
             <img
@@ -41,14 +42,14 @@ const PortfolioPage = () => {
                 </p>
               </div>
               <div className="">
-                {/* <img src={item.image} alt="" /> */}
+                <img src={item.image} alt="" className="w-[70%] mx-auto" />
                 {/* <p>{item.title}</p> */}
               </div>
             </div>
           </div>
         </div>
         {/* Feature section */}
-        <div className="bg-gradient-to-r from-primary to-secondary w-screen pb-10">
+        <div className="bg-gradient-to-br from-primary to-primary via-secondary w-screen pb-10">
           <div className="flex flex-col items-center justify-center p-1">
             <p className="text-lg sm:text-3xl font-poppins text-center text-white mt-20">
               Awesome Features
@@ -64,7 +65,7 @@ const PortfolioPage = () => {
             </div>
             {/* mobile view cards */}
             <div className="grid grid-cols-2 gap-5 w-[90%] mx-auto items-center justify-center ">
-              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-sm p-1 items-center justify-center">
+              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2 items-center justify-center shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)] ">
                 <img
                   src={featureIcon}
                   alt=""
@@ -74,12 +75,12 @@ const PortfolioPage = () => {
                   <p className="text-[7.97px] font-poppins xxmd:text-base">
                     {item.feature1}
                   </p>
-                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-1">
                     {item.feature1Desc}
                   </p>
                 </div>
               </div>
-              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-sm p-1  items-center justify-center">
+              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2  items-center justify-center shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]">
                 <img
                   src={featureIcon}
                   alt=""
@@ -89,12 +90,12 @@ const PortfolioPage = () => {
                   <p className="text-[7.97px] font-poppins xxmd:text-base">
                     {item.feature2}
                   </p>
-                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
                     {item.feature2Desc}
                   </p>
                 </div>
               </div>
-              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-sm p-1  items-center justify-center">
+              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2  items-center justify-center  shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]">
                 <img
                   src={featureIcon}
                   alt=""
@@ -104,12 +105,12 @@ const PortfolioPage = () => {
                   <p className="text-[7.97px] font-poppins xxmd:text-base">
                     {item.feature3}
                   </p>
-                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
                     {item.feature3Desc}
                   </p>
                 </div>
               </div>
-              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-sm p-1  items-center justify-center">
+              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2  items-center justify-center  shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]">
                 <img
                   src={featureIcon}
                   alt=""
@@ -119,12 +120,12 @@ const PortfolioPage = () => {
                   <p className="text-[7.97px] font-poppins xxmd:text-base">
                     {item.feature4}
                   </p>
-                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
                     {item.feature4Desc}
                   </p>
                 </div>
               </div>
-              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-sm p-1 items-center justify-center">
+              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2 items-center justify-center  shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]">
                 <img
                   src={featureIcon}
                   alt=""
@@ -134,12 +135,12 @@ const PortfolioPage = () => {
                   <p className="text-[7.97px] font-poppins xxmd:text-base">
                     {item.feature5}
                   </p>
-                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
                     {item.feature5Desc}
                   </p>
                 </div>
               </div>
-              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-sm p-1  items-center justify-center">
+              <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2  items-center justify-center  shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]">
                 <img
                   src={featureIcon}
                   alt=""
@@ -149,14 +150,16 @@ const PortfolioPage = () => {
                   <p className="text-[7.97px] font-poppins xxmd:text-base">
                     {item.feature6}
                   </p>
-                  <p className="text-[6px] font-poppins500 xxmd:text-[9px]">
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
                     {item.feature6Desc}
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          {/* ................................................... */}
           {/* desktop view cards */}
+          {/* ................................................... */}
           <div className="hidden midxmd:block relative p-10">
             <div className="mb-1 mt-20">
               <img src={main} alt="" className="w-[50%] mx-auto sm:w-[12%] " />
@@ -254,10 +257,11 @@ const PortfolioPage = () => {
             {item.feature7.length !== 0 && (
               <div
                 className={`skew-x-12 bg-[#EAEAEA] w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
-                  ${isFocused ? "h-16" : "h-40"}
+                  h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
+                // onFocus={handleFocus}
+                // onBlur={handleBlur}
+                // tabIndex={0}
               >
                 <img src={Group} alt="" className="mx-auto" />
                 <div className="">
@@ -270,6 +274,107 @@ const PortfolioPage = () => {
                 </div>
               </div>
             )}
+            {item.feature8.length !== 0 && (
+              <div
+                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] bottom-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                  h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
+                `}
+                // onFocus={handleFocus}
+                // onBlur={handleBlur}
+                // tabIndex={0}
+              >
+                <img src={Group} alt="" className="mx-auto" />
+                <div className="">
+                  <p className="font-poppins text-base text-center">
+                    {item.feature8}
+                  </p>
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
+                    {item.feature8Desc}
+                  </p>
+                </div>
+              </div>
+            )}
+            {item.feature9.length !== 0 && (
+              <div
+                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] top-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                  h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
+                `}
+                // onFocus={handleFocus}
+                // onBlur={handleBlur}
+                // tabIndex={0}
+              >
+                <img src={Group} alt="" className="mx-auto" />
+                <div className="">
+                  <p className="font-poppins text-base text-center">
+                    {item.feature9}
+                  </p>
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
+                    {item.feature9Desc}
+                  </p>
+                </div>
+              </div>
+            )}
+            {item.feature10.length !== 0 && (
+              <div
+                className={`skew-x-12 bg-[#EAEAEA] w-[10rem] bottom-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
+                  h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
+                `}
+                // onFocus={handleFocus}
+                // onBlur={handleBlur}
+                // tabIndex={0}
+              >
+                <img src={Group} alt="" className="mx-auto" />
+                <div className="">
+                  <p className="font-poppins text-base text-center">
+                    {item.feature10}
+                  </p>
+                  <p className="text-[6px] font-poppins500 xxmd:text-[9px] mt-2">
+                    {item.feature10Desc}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* ................................................ */}
+        {/* left image section */}
+        {/* ................................................ */}
+
+        <div className="w-[90%] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row sm:h-screen">
+          <div>
+            <img src={leftImage} alt="" />
+          </div>
+          <div className="flex flex-col items-center justify-center gap-3">
+            <div className="flex flex-col items-center justify-center gap-2">
+              <p className="text-4xl font-poppins500 sm:text-3xl">
+                UI/UX Design
+              </p>
+              <p className="text-lg font-poppins300 text-center sm:text-sm sm:w-[70%]">
+                We utilized tools like Zeplin and Figma to create a
+                comprehensive UI/UX design. Our responsive designs cater to
+                various screen sizes, and adhere to established design
+                principles.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-3">
+              <p className="text-4xl font-poppins500 sm:text-3xl">
+                Work Distribution
+              </p>
+              <p className="text-lg font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+                Thoroughly analyzed the project requirements and allocated
+                specific tasks to individuals to ensure timely completion.
+                Employed the Divide and Conquer strategy to meet deadlines.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-3">
+              <p className="text-4xl font-poppins500 sm:text-3xl">Testing</p>
+              <p className="text-lg font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+                Developed a variety of test cases and thoroughly examined each
+                one. Implemented the Beta version technique to ensure
+                comprehensive coverage of edge cases.
+              </p>
+            </div>
           </div>
         </div>
       </div>

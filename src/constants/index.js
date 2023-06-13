@@ -147,9 +147,9 @@ export const portfolioImages = [
     feature4: "Themes",
     feature4Desc:
       "Customize themes for a personalized touch, switch from pre-set options to achieve greater personalization, and even add your own image as the keyboard theme.",
-    feature5: "Custom Stickers",
+    feature5: "Jokes ",
     feature5Desc:
-      "This feature enables users to create personalized face stickers with various expressions and share them as custom stickers.",
+      "Spread joy with a single tap. Enjoy categorized jokes for filtering, making it easy to share happiness in your preferred language.",
     feature6: "Custom Stickers",
     feature6Desc:
       "This feature enables users to create personalized face stickers with various expressions and share them as custom stickers.",
@@ -223,7 +223,7 @@ export const portfolioImages = [
     feature9Desc: "",
     feature10: "",
     feature10Desc: "",
-    
+
     leftImage1: "UI/UX Design",
     leftImage1Desc:
       "We utilized tools like Zeplin and Figma to create a comprehensive UI/UX design. Our responsive designs cater to various screen sizes and adhere to established design principles.",
