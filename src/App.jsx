@@ -1,25 +1,43 @@
 import React from 'react';
 import Home from './pages/Home';
 import PortfolioPage from './pages/PortfolioPage';
-import { Routes,Route } from 'react-router-dom';
-import Navbar from "./components/Navbar";
+import {
+  
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+
+
 import Footer from './components/Footer';
+import { useEffect } from 'react';
 
 function App() {
   return (
     <>
       <div className="w-full mx-auto relative overflow-hidden scroll-smooth">
         <div className=" mx-auto">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
-          </Routes>
+          <>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
+            </Routes>
+          </>
           <Footer />
         </div>
       </div>
     </>
   );
+}
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, [location]);
+
+  return null;
 }
 
 export default App;

@@ -34,7 +34,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center"
-      
+      id="home"
       >
         <div className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0">
           <div className="w-full mx-auto flex items-center justify-center">

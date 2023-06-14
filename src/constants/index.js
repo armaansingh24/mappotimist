@@ -166,17 +166,6 @@ export const portfolioImages = [
     feature10Desc:
       "AI models are employed to enhance typing experiences by providing precise suggestions, predictions, and automatic corrections.",
 
-    leftImage1: "UI/UX Design",
-    leftImage1Desc:
-      "We utilized tools like Zeplin and Figma to create a comprehensive UI/UX design. Our responsive designs cater to various screen sizes, and adhere to established design principles.",
-
-    leftImage2: "Work Distribution",
-    leftImage2Desc:
-      "Thoroughly analyzed the project requirements and allocated specific tasks to individuals to ensure timely completion. Employed the Divide and Conquer strategy to meet deadlines.",
-
-    leftImage3: "Testing",
-    leftImage3Desc:
-      "Developed a variety of test cases and thoroughly examined each one. Implemented the Beta version technique to ensure comprehensive coverage of edge cases.",
 
     rightImage1: "ATW  Feature",
     rightImage1Desc:
@@ -223,18 +212,6 @@ export const portfolioImages = [
     feature9Desc: "",
     feature10: "",
     feature10Desc: "",
-
-    leftImage1: "UI/UX Design",
-    leftImage1Desc:
-      "We utilized tools like Zeplin and Figma to create a comprehensive UI/UX design. Our responsive designs cater to various screen sizes and adhere to established design principles.",
-
-    leftImage2: "UI/UX Design",
-    leftImage2Desc:
-      "Thoroughly analyzed the project requirements and allocated specific tasks to individuals to ensure timely completion. Employed the Divide and Conquer strategy to meet deadlines.",
-
-    leftImage3: "Testing",
-    leftImage3Desc:
-      "Developed a variety of test cases and thoroughly examined each one. Implemented the Beta version technique to ensure comprehensive coverage of edge cases.",
 
     rightImage1: "ATW  Feature",
     rightImage1Desc:
@@ -286,19 +263,7 @@ export const portfolioImages = [
     feature9Desc: "",
     feature10: "",
     feature10Desc: "",
-
-    leftImage1: "UI/UX Design",
-    leftImage1Desc:
-      "We utilized tools like Zeplin and Figma to create a comprehensive UI/UX design. Our responsive designs cater to various screen sizes and adhere to established design principles.",
-
-    leftImage2: "UI/UX Design",
-    leftImage2Desc:
-      "Thoroughly analyzed the project requirements and allocated specific tasks to individuals to ensure timely completion. Employed the Divide and Conquer strategy to meet deadlines.",
-
-    leftImage3: "Testing",
-    leftImage3Desc:
-      "Developed a variety of test cases and thoroughly examined each one. Implemented the Beta version technique to ensure comprehensive coverage of edge cases.",
-
+    
     rightImage1: "Payment",
     rightImage1Desc:
       "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",

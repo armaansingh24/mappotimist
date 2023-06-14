@@ -4,14 +4,19 @@ import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
 import main from "../assets/portfolio/main.png";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
-import leftImage from "../assets/portfolio/leftImage.png";  
+import leftImage from "../assets/portfolio/leftImage.png";
 import R1 from "../assets/portfolio/R1.png";
 import R2 from "../assets/portfolio/R2.png";
+import R3 from "../assets/portfolio/R3.png";
+import R4 from "../assets/portfolio/R4.png";
+import lower from "../assets/expertise/lower.png";
 import Group1 from "../assets/portfolio/Group1.png";
+import PortfolioCarausel from "../components/PortfolioCarausel";
+import PortfolioNavbar from "../components/PortfolioNavbar";
 
 // import { useState } from "react";
 
-const PortfolioPage = () => {
+const PortfolioPage = (props) => {
   const location = useLocation();
   const item = location.state?.item;
   // const [isFocused, setIsFocused] = useState(false);
@@ -27,8 +32,9 @@ const PortfolioPage = () => {
   return (
     <>
       <div className="w-full relative ">
+        <PortfolioNavbar />
         <div className="">
-          <div className="relative5 z-0 bg-gradient-to-r from-secondary via-secondary to-white">
+          <div className="relative z-0 bg-gradient-to-r from-secondary via-secondary to-white">
             <img
               src={backgroudPortfolio}
               alt=""
@@ -354,7 +360,7 @@ const PortfolioPage = () => {
           <img
             src={R2}
             alt=""
-            className="absolute  -top-[2%] -right-44 hidden midFM:block z-0"
+            className="absolute  -top-[2%] -right-44 hidden sm:block z-0"
           />
           <div>
             <img src={leftImage} alt="" />
@@ -389,6 +395,73 @@ const PortfolioPage = () => {
                 comprehensive coverage of edge cases.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* ................................... */}
+        {/* Right image section */}
+        {/* .................................... */}
+
+        <div className="relative">
+          <img
+            src={R4}
+            alt=""
+            className="absolute -top-20 z-0 block sm:hidden"
+          />
+          <div className="w-[80%] mx-auto flex flex-col items-start justify-center gap-4 sm:flex-row relative h-fit mt-20 sm:mt-0">
+            <div className="sm:order-2 ">
+              <img src={leftImage} alt="" className="" />
+            </div>
+            <div className="flex flex-col items-baseline justify-center gap-3 relative z-10">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <p className="text-xl font-poppins500 sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  {item.rightImage1}
+                </p>
+                <p className="text-sm font-poppins300 text-center sm:text-sm sm:w-[70%]">
+                  {item.rightImage1Desc}
+                </p>
+              </div>
+              <div className="flex flex-col items-center justify-center gap-2 ">
+                <p className="text-xl font-poppins500 sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  {item.rightImage2}
+                </p>
+                <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+                  {item.rightImage2Desc}
+                </p>
+              </div>
+              <div className="flex flex-col items-center justify-center gap-2 mb-24">
+                <p className="text-xl font-poppins500 sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  {item.rightImage3}
+                </p>
+                <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+                  {item.rightImage3Desc}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ................................................ */}
+        {/* other portfolio */}
+        {/* ................................................ */}
+        <div className="relative w-screen" id="Portfolio">
+          <img
+            src={lower}
+            alt=""
+            className="scale-[1.3] w-screen relative z-10 block midFM:hidden"
+          />
+          <img
+            src={R3}
+            alt=""
+            className="absolute -bottom-[20%] midFM:-top-[22%] z-0"
+          />
+          <div className="w-[90%] mx-auto p-10">
+            <h2 className="font-poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap bg-gradient-to-br from-secondary to-primary text-transparent bg-clip-text">
+              Our Portfolios
+            </h2>
+          </div>
+          <div className="mx-auto relative z-10">
+            <PortfolioCarausel props={props} page={"portfolio"} />
           </div>
         </div>
       </div>

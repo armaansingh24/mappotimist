@@ -3,6 +3,8 @@ import { useState, useRef } from "react";
 import image1 from "../assets/contactUs/image1.png";
 import R2 from "../assets/contactUs/R2.png";
 import linkedin from "../assets/contactUs/linkedin.png";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 const ContactSection = () => {
   const [text] = useTypewriter({
@@ -23,6 +25,7 @@ const ContactSection = () => {
   const [selectedService, setSelectedService] = useState("");
   const [customService, setCustomService] = useState("");
   const inputRef = useRef(null);
+  const form = useRef();
 
   const handleButtonClick = () => {
     if (inputRef.current) {
@@ -36,6 +39,7 @@ const ContactSection = () => {
       [event.target.name]: event.target.value,
     }));
   }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -58,9 +62,34 @@ const ContactSection = () => {
     setError("");
     setError1("");
     setError2("");
-
+    
     console.log(formData);
+    toast.success("Email sent successfully");          
     // Perform other validation checks or submit the form
+     emailjs
+       .sendForm(
+         "service_iputf9n",
+         "template_jkuoeob",
+         form.current,
+         "T91EFMrT_M4euWwoH"
+       )
+       .then(
+         (result) => {
+           console.log(result.text);
+           console.log("success");
+          },
+          (error) => {
+            console.log(error.text);
+            console.log("error");      
+          }
+       );
+       setFormData({
+         name: "",
+         email: "",
+         idea: "",
+        });
+        setCustomService("");
+        setSelectedService("");
   };
 
   const errorHandler = () => {
@@ -107,7 +136,7 @@ const ContactSection = () => {
           className="absolute -top-[40%] -left-2 hidden midxmd:block z-0"
         />
         <div className=" mx-auto p-3">
-          <h2 className="font-poppins500  text-[30px] lmd:text-[48px] text-start ">
+          <h2 className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32">
             Contact Us
           </h2>
           <div className="flex middlesm:mt-32 gap-10">
@@ -120,21 +149,7 @@ const ContactSection = () => {
                   info@mappoptimist.com
                 </p>
               </div>
-              <div className="mt-5 flex items-center gap-6">
-                <div>
-                  <img src={image1} alt="" className="" />
-                  <img src={linkedin} alt="" className="-mt-7 ml-12" />
-                </div>
-                <div className="">
-                  <p className="text-lg font-poppins text-center">
-                    Arpit Dwivedi
-                  </p>
-                  <p className="text-lg text-[#CCCCCC] font-poppins mx-auto text-center">
-                    Position Name
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 flex items-center gap-6">
+              <div className="mt-12 flex items-center gap-6">
                 <div>
                   <img src={image1} alt="" className="" />
                   <img src={linkedin} alt="" className="-mt-7 ml-12" />
@@ -211,7 +226,12 @@ const ContactSection = () => {
                   </span>
                 </div>
                 <div className="w-[100%]">
-                  <form action="" className="" onSubmit={handleSubmit}>
+                  <form
+                    action=""
+                    className=""
+                    onSubmit={handleSubmit}
+                    ref={form}
+                  >
                     <div className="midxmd:grid midxmd:grid-cols-2 ">
                       <div className="flex flex-col mt-5">
                         <label
@@ -263,15 +283,16 @@ const ContactSection = () => {
                           </p>
                         )}
                       </div>
-                      <div className="flex flex-col mt-5">
+                      <div className="flex flex-col mt-5 midxmd:col-span-2 midxmd:w-[75vw]">
                         <label
                           htmlFor="idea"
                           className="text-sm mb-2 sm:text-lg font-poppins500 text-primary"
                         >
                           Tell Us About Your Idea
                         </label>
-                        <input
-                          type="text"
+                        <textarea
+                          rows={3}
+                          minLength={500}
                           id="idea"
                           name="idea"
                           onChange={handleCustomServiceChange}

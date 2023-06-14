@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { HashRouter as Link  } from "react-router-dom";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import { HashLink as Link } from "react-router-hash-link";
 import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.png";
 import eclips1 from "../assets/navbar/eclips1.png";
@@ -10,7 +11,7 @@ import eclips3 from "../assets/navbar/eclips3.png";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
   return (
     <>
@@ -50,12 +51,11 @@ const Navbar = () => {
               >
                 <Link
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  to={`${link.id}`}
+                  to={`/#${link.id}`}
                   spy={true}
                   smooth={true}
                   offset={100}
                   duration={1000}
-               
                 >
                   {link.title}
                 </Link>
@@ -142,7 +142,7 @@ const Navbar = () => {
                     }}
                   >
                     <Link
-                      to={`${link.id}`}
+                      to={`/#${link.id}`}
                       spy={true}
                       smooth={true}
                       offset={100}
