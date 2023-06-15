@@ -163,7 +163,7 @@ body {
 }
 
 .swiper-slide {
-    width: 37rem;
+    width: 20rem;
     height: auto;
     position: relative;
 }
@@ -174,12 +174,12 @@ body {
     }
 
     .swiper-slide {
-        width: 28rem !important;
+        width: 22rem !important;
         height: 36rem !important;
     }
 
     .swiper-slide img {
-        width: 20rem !important;
+        width: 10rem !important;
         height: 36rem !important;
     }
 }
@@ -219,7 +219,7 @@ body {
     }
 
     .swiper_container {
-        height: 19rem;
+        height: 32rem;
     }
 }
 
@@ -235,7 +235,7 @@ body {
     }
 
     .swiper_container {
-        height: 25rem;
+        height: 42rem;
     }
 }
 
@@ -251,7 +251,7 @@ body {
     }
 
     .swiper_container {
-        height: 60rem;
+        height: 44rem;
     }
 }
 

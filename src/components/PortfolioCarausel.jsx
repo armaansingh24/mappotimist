@@ -44,7 +44,9 @@ const PortfolioCarausel = ({props,page}) => {
           items-center w-[100%]"
          >
            <button
-             className={`absolute w-[2%] h-20 top-[-8rem]  left-0 text-center p-3`}
+             className={`absolute w-[2%] h-20 ${
+               page === "portfolio" ? "text-black" : "text-white"
+             } top-[-15rem]  left-0 text-center p-3`}
              onClick={() => previous()}
            >
              {" "}
@@ -52,7 +54,7 @@ const PortfolioCarausel = ({props,page}) => {
            </button>
            <button onClick={() => next()}>
              <span
-               className={`absolute w-[2%] h-20 top-[-8rem] ${
+               className={`absolute w-[2%] h-20 top-[-15rem] ${
                  page === "portfolio" ? "text-black" : "text-white"
                } right-[0.3rem] text-center p-3`}
              >
@@ -68,7 +70,7 @@ const PortfolioCarausel = ({props,page}) => {
        return (
          <li
            className={`${active ? "opacity-1" : "opacity-[.5]"} ${
-             page === "portfolio" ? "text-black" : "text-white"
+             page === "portfolio" ? "text-black" : "text-white mt-[63%]"
            }`}
            onClick={() => onClick()}
          >
@@ -119,7 +121,7 @@ const PortfolioCarausel = ({props,page}) => {
             // direction="rtl"
             slidesPerView={3}
             // direction="ltr"
-            className="swiper_container "
+            className="swiper_container mr-20"
           >
             {portfolioImages.map((item, index) => (
               <SwiperSlide virtualIndex={index} key={index}>

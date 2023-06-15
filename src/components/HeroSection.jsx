@@ -9,6 +9,7 @@ import image3 from "../assets/hero-section/image3.png";
 import image4 from "../assets/hero-section/image4.png";
 import image5 from "../assets/hero-section/image5.png";
 import { motion, useInView, useAnimation } from "framer-motion";
+import  Comp1  from "../assets/hero-section/Comp1.mp4";
 
 const HeroSection = () => {
   const [activeParagraph, setActiveParagraph] = useState(0);
@@ -33,16 +34,16 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center"
-      id="home"
+      <div
+        className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center"
+        id="home"
       >
         <div className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0">
           <div className="w-full mx-auto flex items-center justify-center">
-            <img
-              src={heroImage}
-              alt=""
-              className="sm:w-[60%] md:w-full xmd:w-[70%]"
-            />
+            <video autoplay muted loop className="bg-transparent">
+              <source src={Comp1} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
