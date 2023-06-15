@@ -1,5 +1,4 @@
 import React from "react";
-// import heroImage from "../assets/hero-section/heroImage.png";
 import TypeWritter from "typewriter-effect";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useState, useEffect, useRef } from "react";

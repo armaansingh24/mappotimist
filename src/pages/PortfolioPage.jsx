@@ -14,20 +14,9 @@ import Group1 from "../assets/portfolio/Group1.png";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 
-// import { useState } from "react";
-
 const PortfolioPage = (props) => {
   const location = useLocation();
   const item = location.state?.item;
-  // const [isFocused, setIsFocused] = useState(false);
-
-  // const handleFocus = () => {
-  //   setIsFocused(true);
-  // };
-
-  // const handleBlur = () => {
-  //   setIsFocused(false);
-  // };
 
   return (
     <>
@@ -38,11 +27,11 @@ const PortfolioPage = (props) => {
             <img
               src={backgroudPortfolio}
               alt=""
-              className=" object-cover h-[700px] w-screen  opacity-70"
+              className=" object-cover h-[700px] midxmd:h-full w-screen  opacity-70"
             />
           </div>
-          <div className="absolute inset-0 mt-32">
-            <div className="flex items-center justify-center flex-col sm:flex-row w-[90%] mx-auto">
+          <div className="absolute inset-0 mt-32 ">
+            <div className="flex items-center justify-center flex-col sm:flex-row w-[90%] mx-auto midxmd:h-[25%]">
               <div className="w-full">
                 <p className="font-poppins text-[30px] lmd:text-[48px] text-white">
                   We Provide{" "}

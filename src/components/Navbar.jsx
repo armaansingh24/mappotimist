@@ -11,7 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   
-  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
+  const genericHamburgerLine = `h-1 w-6 rounded-full bg-black transition ease transform duration-300`;
   return (
     <>
       <nav
