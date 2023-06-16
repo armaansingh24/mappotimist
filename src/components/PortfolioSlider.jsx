@@ -26,7 +26,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
   return (
     <>
       <div
-        className="group  h-auto z-9 mt-4 cursor-pointer overflow-hidden relative rounded-3xl w-full"
+        className="group  h-full z-9 mt-4 cursor-pointer overflow-hidden relative rounded-3xl w-full"
         onMouseEnter={handleHover}
         onMouseLeave={() => mainControls.start("hidden")}
       >
@@ -34,17 +34,17 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
           src={item.image}
           alt="slide_image"
           className={`z-[-10] ${
-            index === currentSlideIndex ? "group-hover:scale-[1.06]" : ""
-          } transition-all delay-75 ease-in-out ml-1 midxmd:ml-14 sm:w-[40%]`}
+            index === currentSlideIndex ? "" : ""
+          } transition-all delay-75 ease-in-out ml-1 midxmd:ml-14 sm:w-[40%] object-fill`}
         />
         <div
           className={`opacity-0 ${
             index === currentSlideIndex
-              ? "group-hover:opacity-[1] group-hover:bg-[rgb(0,0,0,0.85)]"
+              ? "group-hover:opacity-[1] group-hover:bg-[rgb(0,0,0,0.7)]"
               : ""
-          } xxmd:h-auto absolute top-0 bottom-0 group-hover:scale-[1.06] transition-all delay-75 ease-in-out rounded-[3rem] overflow-hidden midxmd:w-[65%] midxmd:ml-16`}
+          } h-[39rem] mt-1 absolute inset-0 transition-all delay-75 ease-in-out rounded-[3rem] overflow-hidden midxmd:w-[64%] midxmd:ml-[4.5rem]`}
         >
-          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-5 midxmd:p-2 border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[40%] gap-4 overflow-hidden">
+          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-5 midxmd:p-2 border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[40.1%] gap-4 overflow-hidden">
             <motion.div
               ref={ref}
               variants={{

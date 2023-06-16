@@ -17,7 +17,7 @@ import bobble1 from "../assets/portfolio/bobble/bobble1.png";
 import bobble2 from "../assets/portfolio/bobble/bobble2.png";
 import bobble3 from "../assets/portfolio/bobble/bobble3.png";
 import bobble4 from "../assets/portfolio/bobble/bobble4.png";
-import bobblemain from "../assets/portfolio/bobble/bobblemain.png"; 
+import bobblemain from "../assets/portfolio/bobble/bobblemain.png";
 
 // Go Fetch Images
 import Fetch1 from "../assets/portfolio/Fetch/Fetch1.png";
@@ -59,7 +59,6 @@ import two1 from "../assets/portfolio/two/two1.png";
 import two2 from "../assets/portfolio/two/two2.png";
 import two3 from "../assets/portfolio/two/two3.png";
 import two4 from "../assets/portfolio/two/two4.png";
-
 
 // Agencies Images
 import behance from "../assets/agencies/behance.png";
@@ -180,10 +179,10 @@ export const portfolioImages = [
   // Bobble
   {
     id: 1,
-    image: bobblemain,
+    image: bobble2,
     title: "Bobble",
     mainImage: bobble1,
-    feature1: bobble2,
+    feature: bobblemain,
     onhover:
       "Bobble is the most usable keyboard and has all keyboard features in one. There's never a boring chat with Bobble.",
     feature1: "Bigmoji",
@@ -237,10 +236,10 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 2,
-    image: FTLmain,
+    image: FTL2,
     title: "FTL: Fantasy trading league",
-    mainImage: FTL2,
-    feature1: FTL2,
+    mainImage: FTL1,
+    feature: FTLmain,
     onhover:
       "FTL offers genuine trading experience by providing real-time data for crypto, US stocks and Indian stocks using simulated funds provided by the platform.",
     feature1: "Real-time data",
@@ -290,10 +289,10 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 3,
-    image: Fetchmain,
+    image: Fetch2,
     title: "GoFetch",
     mainImage: Fetch1,
-    feature1: Fetch2,
+    feature: Fetchmain,
     onhover:
       "Discover a world of online shopping at your fingertips. Browse, compare, and buy products with ease through our intuitive GoFetch app.",
     feature1: "Languages",
@@ -344,10 +343,10 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 4,
-    image: medimain,
+    image: medi2,
     title: "MediHelp",
     mainImage: medi1,
-    feature1: medi2,
+    feature: medimain,
     onhover:
       "The MediHelp app facilitates digital connectivity with doctors, enabling appointment booking, appointment alerts, profile management, health tips, and emergency contacts.",
     feature1: "DualAuth",
@@ -399,7 +398,7 @@ export const portfolioImages = [
     image: Happymain,
     title: "Happy Ride",
     mainImage: Happy1,
-    feature1: Happy2,
+    feature: Happy2,
     onhover:
       "Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
     feature1: "Map",
@@ -451,7 +450,7 @@ export const portfolioImages = [
     image: onemain,
     title: "Website 1",
     mainImage: one1,
-    feature1: onemain,
+    feature: onemain,
     onhover:
       "Our mission is to deliver top-notch Tile & Stone Installation Solutions worldwide, ensuring high-quality projects completed on time with unwavering trust.",
     feature1: "Responsiveness",
@@ -505,7 +504,7 @@ export const portfolioImages = [
     image: twomain,
     title: "Website 2",
     mainImage: two1,
-    feature1: two2,
+    feature: two2,
     onhover:
       " This website offers room sales services, facilitating seamless transactions and providing a user-friendly experience for buyers and sellers.",
     feature1: "Responsiveness",
@@ -539,8 +538,8 @@ export const portfolioImages = [
     feature9Desc: "",
     feature10: "",
     feature10Desc: "",
-    leftImage: two2,
-    rightImage: two3,
+    leftImage: two3,
+    rightImage: two4,
     rightImage1: "SEO Friendly",
     rightImage1Desc:
       "To build an SEO-friendly website, we focused on keyword research, optimized content, meta tags, proper URL structure, mobile-friendliness, and link building strategies.",
@@ -666,7 +665,7 @@ export const reviews = [
     name: "John Doe",
     date: "12/12/2020",
     description:
-      "The IT services and solutions provided by this company are top-notch. Their expertise, reliability, and efficiency have greatly enhanced our business operations. Highly recommended for all your IT needs.",
+      " The IT services and solutions provided by this company are top-notch. Their expertise, reliability, and efficiency have greatly enhanced our business operations. Enthusiastically endorsed!",
   },
   {
     id: 2,
@@ -674,7 +673,7 @@ export const reviews = [
     name: "Karan Singh",
     date: "1/1/2022",
     description:
-      "Reliable and efficient IT services provider; their solutions transformed our operations. The team's expertise, responsiveness, and commitment to excellence made them an invaluable partner for our business.",
+      "Reliable and efficient IT services provider; their solutions transformed our operations. The team's expertise, responsiveness, and commitment to excellence made them an invaluable partner.",
   },
   {
     id: 3,
@@ -690,7 +689,7 @@ export const reviews = [
     name: "Amit Kumar",
     date: "1/1/2022",
     description:
-      "Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism, and timely delivery exceeded our expectations. Highly recommended!",
+      " Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism, and timely delivery exceeded our expectations. Highly recommended!",
   },
   {
     id: 5,
@@ -698,7 +697,7 @@ export const reviews = [
     name: "Armaan Singh",
     date: "1/1/2022",
     description:
-      " Exceptional Android development services; they built an impressive app that perfectly catered to our needs. Their team's expertise, attention to detail, and prompt support made the experience seamless.",
+      "Exceptional Android development services; they built an impressive app that perfectly catered to our needs. Their team's expertise, attention to detail, and prompt support made the experience seamless.",
   },
 ];
 

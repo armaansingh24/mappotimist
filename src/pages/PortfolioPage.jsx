@@ -1,16 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
-import main from "../assets/portfolio/main.png";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
-import leftImage from "../assets/portfolio/leftImage.png";
 import R1 from "../assets/portfolio/R1.png";
 import R2 from "../assets/portfolio/R2.png";
 import R3 from "../assets/portfolio/R3.png";
 import R4 from "../assets/portfolio/R4.png";
 import lower from "../assets/expertise/lower.png";
-import Group1 from "../assets/portfolio/Group1.png";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 
@@ -170,9 +167,9 @@ const PortfolioPage = (props) => {
           <div className="hidden midxmd:block relative p-10">
             <div className="mb-1 mt-20">
               <img
-                src={item.mainImage}
+                src={item.feature}
                 alt=""
-                className="w-[50%] mx-auto sm:w-[25%] "
+                className="w-[50%] mx-auto sm:w-[13%] "
               />
             </div>
             <div className=" bg-white w-[20rem] top-10 left-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute">

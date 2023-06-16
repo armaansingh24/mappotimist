@@ -27,11 +27,11 @@
 .waves .wave {
     position: absolute;
     bottom: 0;
-    left: -10;
+    left: 0;
     width: 100vw;
     height: 200px;
     background: var(--wav1);
-    background-size: 1453px 200px;
+    background-size: 1453px 220px;
 }
 
 .waves .wave.wave3 {
