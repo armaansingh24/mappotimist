@@ -10,6 +10,57 @@ import image3 from "../assets/portfolio/image3.png";
 import image4 from "../assets/portfolio/image4.png";
 import image5 from "../assets/portfolio/image5.png";
 
+// portfolio Images
+
+// Bobble Images
+import bobble1 from "../assets/portfolio/bobble/bobble1.png";
+import bobble2 from "../assets/portfolio/bobble/bobble2.png";
+import bobble3 from "../assets/portfolio/bobble/bobble3.png";
+import bobble4 from "../assets/portfolio/bobble/bobble4.png";
+import bobblemain from "../assets/portfolio/bobble/bobblemain.png"; 
+
+// Go Fetch Images
+import Fetch1 from "../assets/portfolio/Fetch/Fetch1.png";
+import Fetch2 from "../assets/portfolio/Fetch/Fetch2.png";
+import Fetch3 from "../assets/portfolio/Fetch/Fetch3.png";
+import Fetch4 from "../assets/portfolio/Fetch/Fetch4.png";
+import Fetchmain from "../assets/portfolio/Fetch/Fetchmain.png";
+
+// FTL Images
+import FTL1 from "../assets/portfolio/FTL/FTL1.png";
+import FTL2 from "../assets/portfolio/FTL/FTL2.png";
+import FTL3 from "../assets/portfolio/FTL/FTL3.png";
+import FTL4 from "../assets/portfolio/FTL/FTL4.png";
+import FTLmain from "../assets/portfolio/FTL/FTLmain.png";
+
+// Happy Images
+import Happy1 from "../assets/portfolio/happy/Happy1.png";
+import Happy2 from "../assets/portfolio/happy/Happy2.png";
+import Happy3 from "../assets/portfolio/happy/Happy3.png";
+import Happy4 from "../assets/portfolio/happy/Happy4.png";
+import Happymain from "../assets/portfolio/happy/Happymain.png";
+
+// MediHelp Images
+import medi1 from "../assets/portfolio/mediHelp/medi1.png";
+import medi2 from "../assets/portfolio/mediHelp/medi2.png";
+import medi3 from "../assets/portfolio/mediHelp/medi3.png";
+import medi4 from "../assets/portfolio/mediHelp/medi4.png";
+import medimain from "../assets/portfolio/mediHelp/medimain.png";
+
+// Website 1 Images
+import onemain from "../assets/portfolio/one/onemain.png";
+import one1 from "../assets/portfolio/one/one1.png";
+import one2 from "../assets/portfolio/one/one2.png";
+import one3 from "../assets/portfolio/one/one3.png";
+
+// Website 2 Images
+import twomain from "../assets/portfolio/two/twomain.png";
+import two1 from "../assets/portfolio/two/two1.png";
+import two2 from "../assets/portfolio/two/two2.png";
+import two3 from "../assets/portfolio/two/two3.png";
+import two4 from "../assets/portfolio/two/two4.png";
+
+
 // Agencies Images
 import behance from "../assets/agencies/behance.png";
 import dribble from "../assets/agencies/dribble.png";
@@ -126,10 +177,13 @@ export const about = [
 ];
 
 export const portfolioImages = [
+  // Bobble
   {
     id: 1,
-    image: image1,
+    image: bobblemain,
     title: "Bobble",
+    mainImage: bobble1,
+    feature1: bobble2,
     onhover:
       "Bobble is the most usable keyboard and has all keyboard features in one. There's never a boring chat with Bobble.",
     feature1: "Bigmoji",
@@ -166,7 +220,8 @@ export const portfolioImages = [
     feature10Desc:
       "AI models are employed to enhance typing experiences by providing precise suggestions, predictions, and automatic corrections.",
 
-
+    leftImage: bobble3,
+    rightImage: bobble4,
     rightImage1: "ATW  Feature",
     rightImage1Desc:
       "Deep linking was implemented, utilizing standard iOS and Android practices and clever techniques to enable seamless redirection between our app and WhatsApp.",
@@ -178,32 +233,37 @@ export const portfolioImages = [
       "The content suggestion drawer utilized various APIs, with responses parsed using protocols, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
   },
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  //  Project 2
+  //  Project 2 FTL
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 2,
-    image: image2,
+    image: FTLmain,
     title: "FTL: Fantasy trading league",
+    mainImage: FTL2,
+    feature1: FTL2,
     onhover:
       "FTL offers genuine trading experience by providing real-time data for crypto, US stocks and Indian stocks using simulated funds provided by the platform.",
     feature1: "Real-time data",
     feature1Desc:
-      "Real-time data for the market refers to the immediate and continuous flow of information related to trading prices, trading volumes,  and other market indicators. It provides investors, traders, and financial institutions with market movements and enables them to make timely and informed decisions.\n   Real-time market data: trading prices, volumes, and indicators that inform investors, enabling timely decision-making.",
+      "Real-time market data: trading prices, volumes, and indicators that inform investors, enabling timely decision-making.",
 
     feature2: "TOROai",
     feature2Desc:
-      "TOROai is an innovative chatbot designed to provide users with valuable financial market information. With its user-friendly interface and advanced algorithms, TOROai aims to deliver real-time data, analysis, and insights to individuals seeking to stay informed about the dynamic world of finance.\n TOROai: a user-friendly chatbot offering real-time financial market data, analysis, and insights to keep users informed about finance.",
+      "TOROai: a user-friendly chatbot offering real-time financial market data, analysis, and insights to keep users informed about finance.",
 
     feature3: "Trading experience",
     feature3Desc:
-      "Live trading experience provides individuals with an immersive and dynamic environment to engage in real-time buying and selling of financial instruments, such as stocks or cryptocurrencies. It offers a hands-on approach to understanding the intricacies of financial markets, observe price fluctuations, and analyze market trends.\nLive trading immerses individuals in real-time buying/selling of financial instruments. Learn market intricacies, observe price fluctuations, and analyze trends hands-on.",
+      "LLive trading immerses individuals in real-time buying/selling of financial instruments. Learn market intricacies, observe price fluctuations, and analyze trends hands-on.",
 
     feature4: "Gameplay",
-    feature4Desc: "",
+    feature4Desc:
+      "Gameplay offers an immersive experience, to simulate real-world trading scenarios, strategies, and gain financial knowledge while enjoying the thrill of virtual trading.",
     feature5: "Charts for market analysis",
-    feature5Desc: "",
+    feature5Desc:
+      "Charts provide visual representation of market data, to analyze price patterns, trends, and indicators, aiding in informed decision-making for effective market analysis.",
     feature6: "Reward system",
-    feature6Desc: "",
+    feature6Desc:
+      "Reward system incentivizes users with bonuses or  exclusive perks or active participation, enhancing user motivation, and overall trading experience.",
     feature7: "",
     feature7Desc: "",
     feature8: "",
@@ -213,23 +273,27 @@ export const portfolioImages = [
     feature10: "",
     feature10Desc: "",
 
-    rightImage1: "ATW  Feature",
+    leftImage: FTL3,
+    rightImage: FTL4,
+    rightImage1: "Push notification",
     rightImage1Desc:
-      "Deep linking was implemented, utilizing standard iOS practices and clever techniques to enable seamless redirection between our app and WhatsApp.",
+      "Push notifications using Firebase enable real-time communication with app users. With personalized messages, updates, and alerts, it enhances engagement, user retention, and delivers timely information, boosting the overall app experience.",
     rightImage2: "AI Model Integration",
     rightImage2Desc:
-      "AI tflite models were integrated with memory optimization and concurrency. Repetitive code was optimized using industry-standard design patterns.",
+      "The AI chat support offers intelligent assistance tailored to the financial market. With advanced algorithms, it provides users with personalized insights, enhancing decision-making and enabling seamless engagement with the financial market.",
     rightImage3: "CST Feature",
     rightImage3Desc:
       "The content suggestion drawer utilized various APIs, with responses parsed using protocols, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
   },
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 3
+  // Project 3 GO FETCH
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 3,
-    image: image3,
+    image: Fetchmain,
     title: "GoFetch",
+    mainImage: Fetch1,
+    feature1: Fetch2,
     onhover:
       "Discover a world of online shopping at your fingertips. Browse, compare, and buy products with ease through our intuitive GoFetch app.",
     feature1: "Languages",
@@ -263,7 +327,8 @@ export const portfolioImages = [
     feature9Desc: "",
     feature10: "",
     feature10Desc: "",
-    
+    leftImage: Fetch3,
+    rightImage: Fetch4,
     rightImage1: "Payment",
     rightImage1Desc:
       "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",
@@ -273,6 +338,218 @@ export const portfolioImages = [
     rightImage3: "Filtering",
     rightImage3Desc:
       "Our app utilizes highly optimized algorithms like Tries, Hashing, and more to deliver a swift and seamless filtering experience.",
+  },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project 4 MediHelp
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  {
+    id: 4,
+    image: medimain,
+    title: "MediHelp",
+    mainImage: medi1,
+    feature1: medi2,
+    onhover:
+      "The MediHelp app facilitates digital connectivity with doctors, enabling appointment booking, appointment alerts, profile management, health tips, and emergency contacts.",
+    feature1: "DualAuth",
+    feature1Desc:
+      "This app facilitates patient and doctor login with separate credentials, providing individual profiles and dashboards for each user.",
+
+    feature2: "Appointments",
+    feature2Desc:
+      "Patients can view doctor availability and book appointments online, selecting preferred time and date ranges to generate a final appointment receipt.",
+
+    feature3: "Add Medicine",
+    feature3Desc:
+      " Add medicine into a patient's treatment plan, enhancing their therapeutic options and addressing specific health needs prescribed by the doctor.",
+
+    feature4: "Prescriptions",
+    feature4Desc:
+      "Patients can access and manage their prescriptions in one location, with the ability to view detailed medication schedules for intake timings.",
+    feature5: "Upcoming",
+    feature5Desc:
+      "Scheduled patient consultations and medical sessions, ensuring timely healthcare delivery and effective patient management.",
+    feature6: "Test Reports",
+    feature6Desc:
+      "Patients can access and download their test reports, while also having the option to add comments for clarification, which will be addressed by a doctor.",
+    feature7: "",
+    feature7Desc: "",
+    feature8: "",
+    feature8Desc: "",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+    leftImage: medi3,
+    rightImage: medi4,
+    rightImage1: "Appointments Feature",
+    rightImage1Desc:
+      "The content suggestion drawer utilized various APIs, with responses parsed using intents, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
+    rightImage2: "Test Reports",
+    rightImage2Desc:
+      "The app incorporates Google Text-to-Speech, allowing doctors to conveniently generate reports by narrating them through voice, and automatically transcribing them.",
+    rightImage3: "Prescription",
+    rightImage3Desc:
+      "The prescription is personalized with dropdown options and allows selecting dates from a calendar, tailoring medication instructions to individual needs for enhanced convenience and accuracy.",
+  },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project 5 Happy Ride
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  {
+    id: 5,
+    image: Happymain,
+    title: "Happy Ride",
+    mainImage: Happy1,
+    feature1: Happy2,
+    onhover:
+      "Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
+    feature1: "Map",
+    feature1Desc:
+      " This app offers a real-time location rendering map for users to track their own and assigned rider's location, distance, and more.",
+
+    feature2: "Rent",
+    feature2Desc:
+      "In addition to offering taxi rentals for drop-off purposes, this app allows users to rent taxis for their personal use, enabling multi-day rides.",
+
+    feature3: "Live Data",
+    feature3Desc:
+      "Users can view nearby drivers, access their live locations, and see the type of vehicles they are using in real-time.",
+
+    feature4: "Personalization",
+    feature4Desc:
+      "User can Rent their  favorite car models and customize them with color, seating arrangement, music system, and more through our app.",
+    feature5: "GPS",
+    feature5Desc:
+      "Users can effortlessly navigate with GPS, find optimal routes, and reach thier destination efficiently using our cab booking app's built-in navigation.",
+    feature6: "Split Fare",
+    feature6Desc:
+      "Users can easily split fares with friends and share rides by leveraging our cab booking app's convenient split fare option.",
+    feature7: "",
+    feature7Desc: "",
+    feature8: "",
+    feature8Desc: "",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+    leftImage: Happy3,
+    rightImage: Happy4,
+    rightImage1: "Payment",
+    rightImage1Desc:
+      "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",
+    rightImage2: "GPS",
+    rightImage2Desc:
+      "Our cab booking  app seamlessly incorporates Google Maps, enabling destination search, route selection, and turn-by-turn navigation instructions.",
+    rightImage3: "Real Time Data",
+    rightImage3Desc:
+      "In our app, real-time updates are facilitated through a WebSocket Server, allowing live updates of user interface components with received data.",
+  },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project 6 Wbsite 1
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  {
+    id: 6,
+    image: onemain,
+    title: "Website 1",
+    mainImage: one1,
+    feature1: onemain,
+    onhover:
+      "Our mission is to deliver top-notch Tile & Stone Installation Solutions worldwide, ensuring high-quality projects completed on time with unwavering trust.",
+    feature1: "Responsiveness",
+    feature1Desc:
+      "This website dynamically adjusts its layout and content to provide an optimal viewing experience across various devices and screen sizes.",
+
+    feature2: "Animations",
+    feature2Desc:
+      "This website incorporates captivating animations and transitions to enhance user engagement and create a visually appealing experience.",
+
+    feature3: "SEO Friendly",
+    feature3Desc:
+      "This website is optimized for search engines, allowing it to rank higher in search results and attract organic traffic.",
+
+    feature4: "Swift",
+    feature4Desc:
+      "This website loads quickly, providing a seamless and efficient browsing experience for users with minimal waiting times.",
+    feature5: "Effortless Navigation",
+    feature5Desc:
+      "This website ensures a smooth user experience by offering intuitive menus, clear organization, and seamless transitions.",
+    feature6: "Top Quality Content",
+    feature6Desc:
+      "This website offers well-crafted, informative, and engaging material that meets users' needs and provides valuable information.",
+    feature7: "Secure",
+    feature7Desc:
+      "This website implements robust measures to protect user data, ensuring privacy and providing a safe browsing environment for visitors",
+    feature8: "Analytics",
+    feature8Desc:
+      "This web.site integrates tools to collect data, analyze user behavior, and gain insights for informed decision-making.",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+    leftImage: one2,
+    rightImage: one3,
+    rightImage1: "Responsiveness",
+    rightImage1Desc:
+      "To build website responsiveness we focused on flexible layouts, fluid grids, media queries, and optimize images. Test on various devices and adjust as needed for optimal user experience.",
+    rightImage2: "Fast Loading time",
+    rightImage2Desc:
+      "We have optimized images and code, minimize HTTP requests, leverage caching, use a content delivery network (CDN), and prioritize critical resources for efficient loading.",
+    rightImage3: "Real Time Data",
+    rightImage3Desc:
+      "To build website's animations, define animation goals, we planned key interactions, use CSS or JavaScript frameworks, optimize performance, and test across browsers.",
+  },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project 7 Wbsite 2
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  {
+    id: 7,
+    image: twomain,
+    title: "Website 2",
+    mainImage: two1,
+    feature1: two2,
+    onhover:
+      " This website offers room sales services, facilitating seamless transactions and providing a user-friendly experience for buyers and sellers.",
+    feature1: "Responsiveness",
+    feature1Desc:
+      "This website dynamically adjusts its layout and content to provide an optimal viewing experience across various devices and screen sizes.",
+
+    feature2: "Animations",
+    feature2Desc:
+      "This website incorporates captivating animations and transitions to enhance user engagement and create a visually appealing experience.",
+
+    feature3: "SEO Friendly",
+    feature3Desc:
+      "This website is optimized for search engines, allowing it to rank higher in search results and attract organic traffic.",
+
+    feature4: "Swift",
+    feature4Desc:
+      "This website loads quickly, providing a seamless and efficient browsing experience for users with minimal waiting times.",
+    feature5: "Effortless Navigation",
+    feature5Desc:
+      "This website ensures a smooth user experience by offering intuitive menus, clear organization, and seamless transitions.",
+    feature6: "Top Quality Content",
+    feature6Desc:
+      "This website offers well-crafted, informative, and engaging material that meets users' needs and provides valuable information.",
+    feature7: "Secure",
+    feature7Desc:
+      " This website implements robust measures to protect user data, ensuring privacy and providing a safe browsing environment for visitors.",
+    feature8: "Analytics",
+    feature8Desc:
+      "This website integrates tools to collect data, analyze user behavior, and gain insights for informed decision-making.",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+    leftImage: two2,
+    rightImage: two3,
+    rightImage1: "SEO Friendly",
+    rightImage1Desc:
+      "To build an SEO-friendly website, we focused on keyword research, optimized content, meta tags, proper URL structure, mobile-friendliness, and link building strategies.",
+    rightImage2: "Secure",
+    rightImage2Desc:
+      "To build a secure website,we have implemented SSL encryption, secure hosting, strong passwords, regular updates, and vulnerability scanning to protect user data and privacy.",
+    rightImage3: "Analytics and Tracking",
+    rightImage3Desc:
+      "To build analytics and tracking capabilities, we have integrated tracking codes, set up conversion goals, configure event tracking, and analyze data for insights and optimization.",
   },
 ];
 

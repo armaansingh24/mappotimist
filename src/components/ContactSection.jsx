@@ -301,7 +301,7 @@ const ContactSection = () => {
                             !selectedService && error2
                               ? "border-red-500"
                               : "border-gray-300"
-                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
+                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20 resize-none`}
                           onClick={errorHandler}
                           placeholder={
                             selectedService ? "" : "tell us about your idea"
