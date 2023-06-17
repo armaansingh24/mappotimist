@@ -33,7 +33,7 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className="bg-gradient-curve w-screen h-[85vh] relative z-1">
+      <div className="bg-gradient-to-tr from-secondary via-gray-100 to-gray-100 w-screen h-[85vh] relative z-1">
         <div
           className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center "
           id="home"
@@ -107,7 +107,7 @@ const HeroSection = () => {
               </div>
               <div>
                 {activeParagraph === 0 && (
-                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD]">
+                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium">
                     Hire top-notch remote developers, designers, and product
                     managers with exceptional technical expertise and effective
                     communication skills. Our rigorous screening process
@@ -118,7 +118,7 @@ const HeroSection = () => {
                   </p>
                 )}
                 {activeParagraph === 1 && (
-                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD]">
+                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium">
                     Witness the realisation of your ideas into tangible success
                     as we guide your path from technologies to solutions. Our
                     team of trained experts provides cost-effective web and
