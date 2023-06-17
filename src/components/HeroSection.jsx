@@ -40,7 +40,7 @@ const HeroSection = () => {
         >
           <div className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0">
             <div className="w-full mx-auto flex items-center justify-center">
-              <video autoPlay muted loop className="ml-[30%] -mt-20">
+              <video autoPlay muted loop className="ml-[30%] -mt-24">
                 <source src={Comp1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
