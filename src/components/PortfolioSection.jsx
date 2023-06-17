@@ -13,7 +13,7 @@ const PortfolioSection = (props) => {
             Our Portfolios
           </h2>
         </div>
-        <div className="mx-auto">
+        <div className="mx-auto ">
           <PortfolioCarausel props={props} page={""} />
         </div>
       </div>

@@ -41,7 +41,7 @@ const PortfolioCarausel = ({props,page}) => {
        return (
          <div
            className="absolute carousel-button-group mb-4  gap-4 flex justify-end 
-          items-center w-[100%]"
+          items-center w-[100%] h-[90%]"
          >
            <button
              className={`absolute w-[2%] h-20 ${
