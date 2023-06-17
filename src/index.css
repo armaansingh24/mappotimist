@@ -27,7 +27,7 @@
 }
 /* Custom CSS */
 .bg-gradient-curve {
-    background-image: radial-gradient(circle at bottom left, #1CB5E0, #F3F4F6, #F3F4F6);
+    background-image: radial-gradient(ellipse at bottom left, #1CB5E0,#1CB5E0,#1CB5E0,#F3F4F6,#F3F4F6, #F3F4F6, #F3F4F6);
 }
 .waves {
     position: relative;

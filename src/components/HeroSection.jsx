@@ -33,14 +33,14 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className="bg-gradient-to-tr from-secondary via-gray-100 to-gray-100 w-screen h-[85vh] relative z-1">
+      <div className="bg-gradient-curve w-screen h-[85vh] relative z-1">
         <div
           className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center "
           id="home"
         >
           <div className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0">
             <div className="w-full mx-auto flex items-center justify-center">
-              <video autoPlay muted loop className="">
+              <video autoPlay muted loop className="ml-[30%] -mt-20">
                 <source src={Comp1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -107,7 +107,7 @@ const HeroSection = () => {
               </div>
               <div>
                 {activeParagraph === 0 && (
-                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium">
+                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium ">
                     Hire top-notch remote developers, designers, and product
                     managers with exceptional technical expertise and effective
                     communication skills. Our rigorous screening process
