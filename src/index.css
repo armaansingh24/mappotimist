@@ -16,6 +16,19 @@
     padding: 0;
 }
 
+.custom-input::-webkit-inner-spin-button,
+.custom-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-input {
+    -moz-appearance: textfield;
+}
+/* Custom CSS */
+.bg-gradient-curve {
+    background-image: radial-gradient(circle at bottom left, #1CB5E0, #F3F4F6, #F3F4F6);
+}
 .waves {
     position: relative;
     /* background:#3586ff; */

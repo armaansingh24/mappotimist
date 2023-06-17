@@ -292,7 +292,7 @@ const ContactSection = () => {
                         </label>
                         <textarea
                           rows={3}
-                          minLength={500}
+                          maxLength={500}
                           id="idea"
                           name="idea"
                           onChange={handleCustomServiceChange}

@@ -27,7 +27,7 @@ const PortfolioPage = (props) => {
               className=" object-cover h-[700px] midxmd:h-full w-screen  opacity-70"
             />
           </div>
-          <div className="absolute inset-0 mt-32 ">
+          <div className="absolute inset-0 mt-32">
             <div className="flex items-center justify-center flex-col sm:flex-row w-[90%] mx-auto midxmd:h-[25%]">
               <div className="w-full">
                 <p className="font-poppins text-[30px] lmd:text-[48px] text-white">

@@ -4,6 +4,7 @@ import About from "../components/About";
 import PortfolioSection from "../components/PortfolioSection";
 import Agencies from "../components/Agencies";
 import ClientReviews from "../components/ClientReviews";
+import Developer from "../components/Developer";
 import Experties from "../components/Experties";
 import ContactSection from "../components/ContactSection";
 import Navbar from "../components/Navbar";
@@ -17,9 +18,8 @@ const Home = () => {
         <About />
         <PortfolioSection />
         <Agencies />
-        <div className="w-screen">
-          <ClientReviews />
-        </div>
+        <Developer />
+        <ClientReviews />
         <Experties />
         <ContactSection />
       </div>

@@ -22,7 +22,7 @@ const About = () => {
   return (
     <>
       <div className="mt-6 relative z-40">
-        <div className="waves bg-gradient-to-bl to-secondary from-gray-100 via-gray-100 mt-[60%] xms:mt-[51%] sm:mt-[46%] lmd:mt-[47%] md:mt-[33%] xmd:mt-[1%] w-screen">
+        <div className="waves bg-gradient-to-bl to-secondary from-gray-100 via-gray-100 mt-[60%] xms:mt-[51%] sm:mt-[46%] lmd:mt-[47%] md:mt-[33%] xmd:mt-[1.8%] w-screen">
           <div className="wave wave3"></div>
         </div>
 
