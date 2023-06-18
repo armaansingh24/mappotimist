@@ -24,7 +24,7 @@ const PortfolioPage = (props) => {
             <img
               src={item.bgimage}
               alt=""
-              className=" object-cover h-[700px] midxmd:h-full w-screen  opacity-70"
+              className=" object-cover h-[700px] midxmd:h-[95vh] w-screen  opacity-70"
             />
           </div>
           <div className="absolute inset-0 mt-32">
