@@ -19,7 +19,7 @@ SwiperCore.use([Pagination]);
 
 
 const PortfolioCarausel = ({props,page}) => {
-    console.log(page);
+    // console.log(page);
      const responsive = {
        desktop: {
          breakpoint: { max: 3000, min: 1024 },

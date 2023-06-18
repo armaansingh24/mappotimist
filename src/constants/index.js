@@ -395,10 +395,10 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 5,
-    image: Happymain,
+    image: Happy2,
     title: "Happy Ride",
     mainImage: Happy1,
-    feature: Happy2,
+    feature: Happymain,
     onhover:
       "Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
     feature1: "Map",

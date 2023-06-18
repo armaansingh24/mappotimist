@@ -35,14 +35,14 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
           alt="slide_image"
           className={`z-[-10] ${
             index === currentSlideIndex ? "" : ""
-          } transition-all delay-75 ease-in-out ml-1 midxmd:ml-14 sm:w-[40%] object-fill`}
+          } transition-all delay-75 ease-in-out ml-1 midxmd:ml-20 sm:w-[40%] object-fill`}
         />
         <div
           className={`opacity-0 ${
             index === currentSlideIndex
               ? "group-hover:opacity-[1] group-hover:bg-[rgb(0,0,0,0.7)]"
               : ""
-          } h-[39rem] mt-1 absolute inset-0 transition-all delay-75 ease-in-out rounded-[3rem] overflow-hidden midxmd:w-[64%] midxmd:ml-[4.5rem]`}
+          } h-[35rem] mt-1 absolute inset-0 transition-all delay-75 ease-in-out rounded-[3rem] overflow-hidden midxmd:w-[60%] midxmd:ml-[5.3rem]`}
         >
           <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-5 midxmd:p-2 border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[40.1%] gap-4 overflow-hidden">
             <motion.div
