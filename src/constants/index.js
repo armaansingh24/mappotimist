@@ -29,7 +29,7 @@ import Fetch4 from "../assets/portfolio/Fetch/Fetch4.png";
 import Fetchmain from "../assets/portfolio/Fetch/Fetchmain.png";
 
 // FTL Images
-import FTL1 from "../assets/portfolio/FTL/FTL1.png";
+// import FTL1 from "../assets/portfolio/FTL/FTL1.png";
 import FTL2 from "../assets/portfolio/FTL/FTL2.png";
 import FTL3 from "../assets/portfolio/FTL/FTL3.png";
 import FTL4 from "../assets/portfolio/FTL/FTL4.png";
@@ -242,7 +242,7 @@ export const portfolioImages = [
     image: FTL2,
     bgimage: background2,
     title: "FTL: Fantasy trading league",
-    mainImage: FTL1,
+    mainImage: FTL3,
     feature: FTLmain,
     onhover:
       "FTL offers genuine trading experience by providing real-time data for crypto, US stocks and Indian stocks using simulated funds provided by the platform.",

@@ -41,7 +41,7 @@ const PortfolioPage = (props) => {
                 <img
                   src={item.mainImage}
                   alt=""
-                  className="mx-auto  -mr-[10%] "
+                  className="w-[95%] mt-20 mr-[8%] "
                 />
                 {/* <p>{item.title}</p> */}
               </div>
@@ -408,11 +408,7 @@ const PortfolioPage = (props) => {
           />
           <div className="w-[80%] mx-auto flex flex-col items-start justify-center gap-4 sm:flex-row relative h-fit mt-20 sm:mt-0">
             <div className="sm:order-2 ">
-              <img
-                src={item.rightImage}
-                alt=""
-                className="w-full mr-20 -mt-20"
-              />
+              <img src={item.rightImage} alt="" className="w-full mr-20 -mt-20" />
             </div>
             <div className="flex flex-col items-baseline justify-center gap-3 relative z-10">
               <div className="flex flex-col items-center justify-center gap-2">
