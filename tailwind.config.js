@@ -21,7 +21,7 @@ module.exports = {
         xmd: "1068px",
         midlg: "1300px",
         lg: "1376px",
-        xl: "1380px",
+        midXl: "1398px",
       },
       colors: {
         primary: "#000046",
