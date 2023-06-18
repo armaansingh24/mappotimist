@@ -19,9 +19,9 @@ module.exports = {
         xxmd: "1023px",
         midxmd: "1030px",
         xmd: "1068px",
-        midlg: "1300px",
         lg: "1376px",
         xl: "1390px",
+        xxl: "1395px",
       },
       colors: {
         primary: "#000046",
