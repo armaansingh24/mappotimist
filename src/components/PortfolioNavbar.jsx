@@ -52,7 +52,7 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
                   to={`/#${link.id}`}
-                  spy={true}
+                  // spy={true}
                   smooth={true}
                   offset={100}
                   duration={1000}
@@ -143,7 +143,7 @@ const Navbar = () => {
                   >
                     <Link
                       to={`/#${link.id}`}
-                      spy={true}
+                      // spy={true}
                       smooth={true}
                       offset={100}
                       duration={1000}

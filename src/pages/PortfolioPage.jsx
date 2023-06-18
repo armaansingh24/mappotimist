@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
+// import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
 import R1 from "../assets/portfolio/R1.png";
@@ -22,7 +22,7 @@ const PortfolioPage = (props) => {
         <div className="">
           <div className="relative z-0 bg-gradient-to-r from-secondary via-secondary to-white">
             <img
-              src={backgroudPortfolio}
+              src={item.bgimage}
               alt=""
               className=" object-cover h-[700px] midxmd:h-full w-screen  opacity-70"
             />
@@ -408,7 +408,11 @@ const PortfolioPage = (props) => {
           />
           <div className="w-[80%] mx-auto flex flex-col items-start justify-center gap-4 sm:flex-row relative h-fit mt-20 sm:mt-0">
             <div className="sm:order-2 ">
-              <img src={item.rightImage} alt="" className="w-full mr-20 -mt-20" />
+              <img
+                src={item.rightImage}
+                alt=""
+                className="w-full mr-20 -mt-20"
+              />
             </div>
             <div className="flex flex-col items-baseline justify-center gap-3 relative z-10">
               <div className="flex flex-col items-center justify-center gap-2">

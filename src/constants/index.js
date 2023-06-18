@@ -9,6 +9,8 @@ import image2 from "../assets/portfolio/image2.png";
 import image3 from "../assets/portfolio/image3.png";
 import image4 from "../assets/portfolio/image4.png";
 import image5 from "../assets/portfolio/image5.png";
+import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
+import background2 from "../assets/portfolio/background2.jpg";
 
 // portfolio Images
 
@@ -179,6 +181,7 @@ export const portfolioImages = [
   // Bobble
   {
     id: 1,
+    bgimage: backgroudPortfolio,
     image: bobble2,
     title: "Bobble",
     mainImage: bobble4,
@@ -237,6 +240,7 @@ export const portfolioImages = [
   {
     id: 2,
     image: FTL2,
+    bgimage: background2,
     title: "FTL: Fantasy trading league",
     mainImage: FTL1,
     feature: FTLmain,
@@ -289,6 +293,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 3,
+    bgimage: backgroudPortfolio,
     image: Fetch2,
     title: "GoFetch",
     mainImage: Fetch1,
@@ -343,6 +348,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 4,
+    bgimage: background2,
     image: medi2,
     title: "MediHelp",
     mainImage: medi1,
@@ -395,6 +401,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 5,
+    bgimage: background2,
     image: Happy2,
     title: "Happy Ride",
     mainImage: Happy1,
@@ -448,6 +455,7 @@ export const portfolioImages = [
   {
     id: 6,
     image: onemain,
+    bgimage: background2,
     title: "Website 1",
     mainImage: one1,
     feature: onemain,
@@ -501,6 +509,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 7,
+    bgimage: background2,
     image: twomain,
     title: "Website 2",
     mainImage: two1,
