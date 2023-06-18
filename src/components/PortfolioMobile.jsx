@@ -5,12 +5,13 @@ const PortfolioMobile = ({item}) => {
      const navigate = useNavigate();
 
      const handleReadMore = () => {
+      console.log(item.id);
        navigate(`/portfolio/${item.id}`, { state: { item } });
      };
 
 
   return (
-    <div>
+    <div className="relative z-40">
       <img
         src={item.image}
         alt="slide_image"

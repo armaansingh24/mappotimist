@@ -40,13 +40,13 @@ const PortfolioCarausel = ({props,page}) => {
      const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
        return (
          <div
-           className="absolute carousel-button-group mb-4  gap-4 flex justify-end 
+           className="absolute carousel-button-group mb-4 gap-4 flex justify-end 
           items-center w-[100%] h-[90%]"
          >
            <button
              className={`absolute w-[2%] h-20 ${
                page === "portfolio" ? "text-black" : "text-white"
-             } top-[-15rem]  left-0 text-center p-3`}
+             } top-[15rem]  left-0 text-center p-3`}
              onClick={() => previous()}
            >
              {" "}
@@ -54,7 +54,7 @@ const PortfolioCarausel = ({props,page}) => {
            </button>
            <button onClick={() => next()}>
              <span
-               className={`absolute w-[2%] h-20 top-[-15rem] ${
+               className={`absolute w-[2%] h-20 top-[15rem] ${
                  page === "portfolio" ? "text-black" : "text-white"
                } right-[0.3rem] text-center p-3`}
              >
@@ -156,7 +156,7 @@ const PortfolioCarausel = ({props,page}) => {
           </Swiper>
         </div>
         <div className="sm:hidden mb-12 ">
-          <div className="mx-1 relative flex flex-col-reverse group">
+          <div className="mx-1 relative flex flex-col-reverse group z-10">
             <Carousel
               responsive={responsive}
               arrows={false}
@@ -179,6 +179,7 @@ const PortfolioCarausel = ({props,page}) => {
                   index={index}
                   item={item}
                   currentSlideIndex={currentSlideIndex}
+                  className="w-[100%] h-[100%] "
                 />
               ))}
             </Carousel>

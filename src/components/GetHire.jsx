@@ -5,9 +5,9 @@ import { IoLocationSharp } from "react-icons/io5";
 import { RxDividerVertical } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
 import { GrAttachment } from "react-icons/gr";
-import {MdOutlineMessage} from "react-icons/md";
 import { useState, useRef } from "react";
 import ellips from "../assets/contactUs/ellipes.png";
+import { MdOutlineMessage } from "react-icons/md";
 
 const GetHired = () => {
   const fileInputRef = useRef(null);
@@ -24,13 +24,13 @@ const GetHired = () => {
     contact: "",
     email: "",
     file: "",
-    type: "",
-    duration: "",
-    summery: "",
+    expertise: "",
+    experience: "",
+    bio: "",
   });
 
   function changeHandler(event) {
-    console.log(formData);
+    // console.log(formData);
     if (event.target.name === "file") {
       setFormData((prevData) => ({
         ...prevData,
@@ -47,7 +47,7 @@ const GetHired = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(error1);
+    console.log(formData);
     if (formData.name.trim() === "") {
       setError1("This field is necessary");
       return;
@@ -71,20 +71,20 @@ const GetHired = () => {
       return;
     }
 
-    // Validate type field
-    if (formData.type.trim() === "" && accountType === "Hire Team") {
+    // Validate expertise field
+    if (formData.expertise.trim() === "") {
       setError5("This field is necessary");
       return;
     }
 
-    // Validate duration field
-    if (formData.duration.trim() === "" && accountType === "Hire Team") {
+    // Validate experience field
+    if (formData.experience.trim() === "") {
       setError6("This field is necessary");
       return;
     }
 
-    // Validate summery field
-    if (formData.summery.trim() === "") {
+    // Validate bio field
+    if (formData.bio.trim() === "") {
       setError7("This field is necessary");
       return;
     }
@@ -99,12 +99,12 @@ const GetHired = () => {
 
     setFormData({
       name: "",
-    contact: "",
-    email: "",
-    file: "",
-    type: "",
-    duration: "",
-    summery: "",
+      contact: "",
+      email: "",
+      file: "",
+      expertise: "",
+      experience: "",
+      bio: "",
     });
   };
   const errorHandler = () => {
@@ -117,7 +117,6 @@ const GetHired = () => {
     setError7("");
   };
 
-  const [accountType, setAccountType] = useState("Hire Team");
 
   const handleFileReset = () => {
     fileInputRef.current.value = ""; // Reset the value of the file input element
@@ -140,29 +139,8 @@ const GetHired = () => {
                 Exercitation veniam consequat sunt nostrud amet.
               </p>
             </div>
-            <div className="bg-white w-[50%] flex items-center justify-center p-1 gap-x-1 my-4 mb-10 rounded-full">
-              <button
-                className={`${
-                  accountType === "Hire Team"
-                    ? "bg-gradient-to-r from-[#000046] to-[#1CB5E0] text-white font-semibold"
-                    : "bg-white text-black"
-                } py-2 px-5 rounded-full transition-all duration-200 w-full text-2xl`}
-                onClick={() => setAccountType("Hire Team")}
-              >
-                Hire Team
-              </button>
-              <button
-                className={`${
-                  accountType === "Hire Individual Developer"
-                    ? "bg-gradient-to-r to-[#000046] from-[#1CB5E0] text-white font-semibold"
-                    : "bg-white text-black"
-                } py-2 px-5 rounded-full transition-all duration-200 w-full text-2xl`}
-                onClick={() => setAccountType("Hire Individual Developer")}
-              >
-                Hire Individual Developer
-              </button>
-            </div>
-            <div className="bg-white w-[80%] h-full flex rounded-xl p-2 mb-10">
+
+            <div className="bg-white w-[80%] h-full flex rounded-xl p-2 mb-10 mt-10">
               <div className="w-[60%] p-7 rounded-xl bg-gradient-to-tl from-[#1CB5E0] to-[#8ed7ec] relative">
                 <img
                   src={ellips}
@@ -292,9 +270,7 @@ const GetHired = () => {
                           </span>
                         ) : (
                           <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">
-                            {accountType === "Hire Team"
-                              ? "Attach File"
-                              : "Required Skills"}
+                            Resume
                           </span>
                         )}
                       </div>
@@ -306,17 +282,17 @@ const GetHired = () => {
                     )}
                   </div>
 
-                  {accountType === "Hire Team" && (
+                  {
                     <div>
                       <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                         <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
                         <RxDividerVertical className="text-4xl" />
                         <input
                           type="text"
-                          name="type"
+                          name="expertise"
                           onChange={changeHandler}
-                          placeholder="Project Type"
-                          value={formData.type}
+                          placeholder="Area Of Expertise"
+                          value={formData.expertise}
                           onClick={errorHandler}
                           className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
                         />
@@ -327,18 +303,18 @@ const GetHired = () => {
                         </p>
                       )}
                     </div>
-                  )}
-                  {accountType === "Hire Team" && (
+                  }
+                  {
                     <div>
                       <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                         <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
                         <RxDividerVertical className="text-4xl" />
                         <input
                           type="text"
-                          name="duration"
+                          name="experience"
                           onChange={changeHandler}
-                          placeholder="Duration"
-                          value={formData.duration}
+                          placeholder="Years of Experience"
+                          value={formData.experience}
                           onClick={errorHandler}
                           className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
                         />
@@ -349,20 +325,20 @@ const GetHired = () => {
                         </p>
                       )}
                     </div>
-                  )}
+                  }
                   <div className="col-span-2">
                     <div className="flex items-start  bg-richblack-800 rounded-xl text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]  h-[8rem]">
                       <MdOutlineMessage className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
                       <RxDividerVertical className="text-4xl -translate-x-1 -translate-y-1" />
                       <textarea
-                        name="summery"
+                        name="bio"
                         onChange={changeHandler}
-                        placeholder="Summary of project"
-                        value={formData.summery}
+                        placeholder="Bio"
+                        value={formData.bio}
                         minLength={10}
                         maxLength={300}
                         onClick={errorHandler}
-                        className="h-full w-full focus:outline-none text-xl mr-20 resize-none"
+                        className="h-full w-full focus:outline-none text-lg mr-20 resize-none"
                       />
                     </div>
                     {error7.length !== 0 && (
