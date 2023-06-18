@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { BsPersonFill } from "react-icons/bs";
 import { RxDividerVertical } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
@@ -7,7 +7,7 @@ import { MdOutlineMessage } from "react-icons/md";
 import { useState, useRef } from "react";
 
 
-const GetHireMobile = () => {
+const HireMobile = () => {
   const fileInputRef = useRef(null);
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
@@ -345,4 +345,4 @@ const GetHireMobile = () => {
   );
 };
 
-export default GetHireMobile;
+export default HireMobile

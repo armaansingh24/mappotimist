@@ -14,10 +14,8 @@ const GetHired = () => {
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
   const [error3, setError3] = useState("");
-  const [error4, setError4] = useState("");
   const [error5, setError5] = useState("");
   const [error6, setError6] = useState("");
-  const [error7, setError7] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -65,11 +63,6 @@ const GetHired = () => {
       return;
     }
 
-    // Validate file field
-    if (!formData.file) {
-      setError4("This field is necessary");
-      return;
-    }
 
     // Validate type field
     if (formData.type.trim() === "" && accountType === "Hire Team") {
@@ -83,19 +76,13 @@ const GetHired = () => {
       return;
     }
 
-    // Validate summery field
-    if (formData.summery.trim() === "") {
-      setError7("This field is necessary");
-      return;
-    }
+
     console.log(formData);
     setError1("");
     setError2("");
     setError3("");
-    setError4("");
     setError5("");
     setError6("");
-    setError7("");
 
     setFormData({
       name: "",
@@ -111,10 +98,8 @@ const GetHired = () => {
     setError1("");
     setError2("");
     setError3("");
-    setError4("");
     setError5("");
     setError6("");
-    setError7("");
   };
 
   const [accountType, setAccountType] = useState("Hire Team");
@@ -129,7 +114,7 @@ const GetHired = () => {
 
   return (
     <>
-      <div className="w-screen h-screen relative z-30">
+      <div className="w-screen h-screen relative z-10">
         <div className="w-[97%] h-auto mx-auto mt-[2.5%] bg-gradient-to-r from-[#000046] to-[#1CB5E0] rounded-xl">
           <div className="flex items-center flex-col w-[100%] mx-auto">
             <div className="text-center flex flex-col gap-4 w-[60%] p-10">
@@ -268,7 +253,9 @@ const GetHired = () => {
                       <GrAttachment className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
                       <RxDividerVertical className="text-4xl translate-x-[0.4rem]" />
                       <input
-                        type="file"
+                        type={`${
+                          accountType === "Hire Team" ? "file" : "text"
+                        }`}
                         id="fileInput"
                         name="file"
                         className="hidden"
@@ -294,16 +281,12 @@ const GetHired = () => {
                           <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">
                             {accountType === "Hire Team"
                               ? "Attach File"
-                              : "Required Skills"}
+                              : ""}
                           </span>
                         )}
                       </div>
-                    </div>
-                    {error4.length !== 0 && (
-                      <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                        {error4}
-                      </p>
-                    )}
+                    </div>  
+                    
                   </div>
 
                   {accountType === "Hire Team" && (
@@ -365,11 +348,7 @@ const GetHired = () => {
                         className="h-full w-full focus:outline-none text-xl mr-20 resize-none"
                       />
                     </div>
-                    {error7.length !== 0 && (
-                      <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                        {error7}
-                      </p>
-                    )}
+                   
                   </div>
                   <button
                     type="submit"

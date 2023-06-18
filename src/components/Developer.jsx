@@ -5,7 +5,8 @@ import three from "../assets/developer/three.png";
 import { useState } from "react";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
-import GetHireMobile from "./GetHireMobile";
+import GetHiredMobile from "./GetHiredMobile"
+import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import { Tilt } from "react-tilt";
 
@@ -56,13 +57,13 @@ const Developer = () => {
                     Opportunity To Work With Us A/T Your Experience And Job
                     Profile
                   </p>
-                </div>
                   <button
-                    className="bg-gradient-to-b text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white absolute -bottom-5 left-0 right-0 mx-auto w-[50%]"
+                    className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                     onClick={handleGetHired}
                   >
                     Get Hired
                   </button>
+                </div>
               </Tilt>
             </div>
             {/* second card */}
@@ -83,7 +84,7 @@ const Developer = () => {
                     Profile
                   </p>
                   <button
-                    className="bg-gradient-to-b text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
+                    className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                     onClick={handleGetHire}
                   >
                     Get Hired
@@ -108,7 +109,7 @@ const Developer = () => {
                     Opportunity To Work With Us A/T Your Experience And Job
                     Profile
                   </p>
-                  <button className="bg-gradient-to-b text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
+                  <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
                     Get Hired
                   </button>
                 </div>
@@ -133,7 +134,7 @@ const Developer = () => {
                     <SlClose />
                   </button>
                 </div>
-                <GetHireMobile />
+                <GetHiredMobile />
               </div>
               <div
                 className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
@@ -154,12 +155,12 @@ const Developer = () => {
                 <GetHire />
               </div>
               <div className="block midFM:hidden mt-20">
-                <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
+                <div className="absolute top-24 right-8 text-[28px] text-secondary z-50">
                   <button onClick={handleGetHire}>
                     <SlClose />
                   </button>
                 </div>
-                <GetHireMobile />
+                <HireMobile />
               </div>
               <div
                 className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"

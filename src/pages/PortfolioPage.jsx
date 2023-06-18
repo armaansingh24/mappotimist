@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-// import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
+import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
 import R1 from "../assets/portfolio/R1.png";
@@ -22,9 +22,9 @@ const PortfolioPage = (props) => {
         <div className="">
           <div className="relative z-0 bg-gradient-to-r from-secondary via-secondary to-white">
             <img
-              src={item.bgimage}
+              src={backgroudPortfolio}
               alt=""
-              className=" object-cover h-[700px] midxmd:h-[95vh] w-screen  opacity-70"
+              className=" object-cover h-[700px] midxmd:h-full w-screen  opacity-70"
             />
           </div>
           <div className="absolute inset-0 mt-32">
@@ -41,7 +41,7 @@ const PortfolioPage = (props) => {
                 <img
                   src={item.mainImage}
                   alt=""
-                  className="w-[95%] mt-20 mr-[8%] "
+                  className="mx-auto  -mr-[10%]"
                 />
                 {/* <p>{item.title}</p> */}
               </div>
