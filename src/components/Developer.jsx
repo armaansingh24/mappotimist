@@ -56,13 +56,13 @@ const Developer = () => {
                     Opportunity To Work With Us A/T Your Experience And Job
                     Profile
                   </p>
+                </div>
                   <button
-                    className="bg-gradient-to-b text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white"
+                    className="bg-gradient-to-b text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white absolute -bottom-5 left-0 right-0 mx-auto w-[50%]"
                     onClick={handleGetHired}
                   >
                     Get Hired
                   </button>
-                </div>
               </Tilt>
             </div>
             {/* second card */}

@@ -181,7 +181,7 @@ export const portfolioImages = [
     id: 1,
     image: bobble2,
     title: "Bobble",
-    mainImage: bobble1,
+    mainImage: bobble4,
     feature: bobblemain,
     onhover:
       "Bobble is the most usable keyboard and has all keyboard features in one. There's never a boring chat with Bobble.",

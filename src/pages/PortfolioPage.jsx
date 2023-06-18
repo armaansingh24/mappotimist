@@ -37,11 +37,11 @@ const PortfolioPage = (props) => {
                   Great Service.
                 </p>
               </div>
-              <div className="">
+              <div className="w-full">
                 <img
                   src={item.mainImage}
                   alt=""
-                  className="mx-auto w-full mr-[50%]"
+                  className="mx-auto  mr-[4%] "
                 />
                 {/* <p>{item.title}</p> */}
               </div>
