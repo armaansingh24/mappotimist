@@ -1,28 +1,27 @@
 import React, { useState } from "react";
 // import { HashRouter as Link  } from "react-router-dom";
 // import { Link } from "react-scroll";
-import { HashLink as Link } from "react-router-hash-link";
 import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.png";
 import eclips1 from "../assets/navbar/eclips1.png";
 import eclips2 from "../assets/navbar/eclips2.png";
 import eclips3 from "../assets/navbar/eclips3.png";
-
+import { HashLink as Link } from "react-router-hash-link";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
+  const genericHamburgerLine = `h-1 w-6 rounded-full bg-black transition ease transform duration-300`;
   return (
     <>
       <nav
         className={
-          "flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-10 text-black"
+          "flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black"
         }
       >
         <div className="w-full flex justify-between items-start  mx-auto ">
           <Link
-            to="home"
+            to="/#Home"
             className="flex items-center cursor-pointer justify-end gap-1 sm:w-[15%] order-2 sm:justify-start bg-transparent"
             onClick={() => {
               window.scrollTo(0, 0);
@@ -69,7 +68,7 @@ const Navbar = () => {
               isOpen === true
                 ? "bg-white h-auto"
                 : " bg-transparent h-0 bg-none"
-            } sm:hidden flex flex-1 justify-between order-1 w-[100%] rounded-lg relative z-10 transition-all duration-[1000ms] overflow-hidden h-auto linear`}
+            } sm:hidden flex flex-1 justify-between order-1 w-[100%] rounded-lg relative z-40 transition-all duration-[1000ms] overflow-hidden h-auto linear`}
           >
             <img
               src={eclips1}
@@ -99,7 +98,7 @@ const Navbar = () => {
               }`}
             />
             <button
-              className="flex flex-col h-12 w-12 rounded justify-center items-center group z-10"
+              className="flex flex-col gap-1 h-12 w-20 rounded justify-center items-center group z-50"
               onClick={() => {
                 setIsOpen(!isOpen);
                 setToggle(!toggle);
@@ -120,8 +119,8 @@ const Navbar = () => {
               <div
                 className={`${genericHamburgerLine} ${
                   isOpen
-                    ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
-                    : "opacity-50 group-hover:opacity-100"
+                    ? "-rotate-45 -translate-y-1 opacity-50 group-hover:opacity-100"
+                    : "opacity-50 group-hover:opacity-100 "
                 }`}
               />
             </button>
@@ -160,7 +159,7 @@ const Navbar = () => {
             </div>
             <div className="flex justify-end w-[13%]">
               <Link
-                to="/"
+                to="#Home"
                 className=""
                 onClick={() => {
                   window.scrollTo(0, 0);
@@ -169,7 +168,9 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="logo"
-                  className={`${toggle === false ? "hidden" : "w-full block"}`}
+                  className={`${
+                    toggle === false ? "hidden" : "w-[80%] block h-fit"
+                  }`}
                 />
               </Link>
             </div>
@@ -180,7 +181,7 @@ const Navbar = () => {
         className={`${
           toggle === false
             ? "opacity-0 h-0"
-            : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-full duration-[2000ms] ease-in-out"
+            : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-10 overflow-hidden cursor-pointer transition-all w-screen h-full duration-[2000ms] ease-in-out"
         }`}
         onClick={() => {
           setToggle(!toggle);

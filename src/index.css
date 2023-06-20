@@ -25,12 +25,21 @@
 .custom-input {
     -moz-appearance: textfield;
 }
+
 /* Custom CSS */
 .bg-gradient-curve {
-    background-image: radial-gradient(ellipse at bottom left, #1CB5E0,#1CB5E0,#1CB5E0,#F7F5F8,#F7F5F8, #F7F5F8, #F7F5F8);
-    background-repeat: no-repeat;
+    background-image: none;
     /* background-image: linear-gradient(380deg, #1CB5E0,#F3F4F5,#F3F4F5); */
 }
+
+@media screen and (min-width: 1000px) {
+    .bg-gradient-curve{
+        background-image: radial-gradient(ellipse at bottom left, #1CB5E0, #1CB5E0, #1CB5E0, #F7F5F8, #F7F5F8, #F7F5F8, #F7F5F8);
+    background-repeat: no-repeat;
+    }
+    
+}
+
 .waves {
     position: relative;
     /* background:#3586ff; */
@@ -324,6 +333,7 @@ body {
 .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary);
 }
+
 .swiper-pagination2 {
     bottom: -100px;
     padding: -60rem 0;
@@ -336,7 +346,7 @@ body {
 }
 
 .swiper-pagination2 .swiper-pagination2-bullet-active {
-    background:black !important;
+    background: black !important;
 }
 
 
@@ -361,14 +371,61 @@ body {
 }
 
 
-.gradient-bg {
-    background: linear-gradient(to right, #ff7f00, #ff1a00);
-    /* Initial gradient background */
-    transition: background 0.5s ease;
-    /* Transition property */
+/* Annimation card developer */
+
+.card {
+    animation-name: rotate;
+    width: 10.3em;
+    /* height: 6.8em; */
+    transform: translate3d(0, 0, 0);
 }
 
-.gradient-bg:hover {
-    background: linear-gradient(to right, #00bfff, #005eff);
-    /* Hover gradient background */
+.card-texture {
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+
+    from,
+    to {
+        animation-timing-function: ease-in;
+        box-shadow:
+            0 0 0 hsl(0, 0%, 80%),
+            0.1rem 0 0 hsl(0, 0%, 100%),
+            -0.2rem 0 0.75rem 0 hsla(0, 0%, 0%, 0.3);
+        transform: rotateY(-10deg);
+    }
+
+    25%,
+    75% {
+        animation-timing-function: ease-out;
+        box-shadow:
+            0 0 0 hsl(0, 0%, 80%),
+            0 0 0 hsl(0, 0%, 100%),
+            -0.25rem -0.05rem 1rem 0.15rem hsla(0, 0%, 0%, 0.3);
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        animation-timing-function: ease-in;
+        box-shadow:
+            -0.1rem 0 0 hsl(0, 0%, 80%),
+            0 0 0 hsl(0, 0%, 100%),
+            -0.3rem -0.1rem 1.5rem 0.3rem hsla(0, 0%, 0%, 0.3);
+        transform: rotateY(10deg);
+    }
+}
+
+@keyframes texture {
+
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-50%, 0, 0);
+    }
 }

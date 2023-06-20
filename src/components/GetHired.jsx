@@ -21,6 +21,7 @@ const GetHired = () => {
     name: "",
     contact: "",
     email: "",
+    required:"",
     file: "",
     type: "",
     duration: "",
@@ -89,6 +90,7 @@ const GetHired = () => {
     contact: "",
     email: "",
     file: "",
+    required:"",
     type: "",
     duration: "",
     summery: "",
@@ -166,21 +168,20 @@ const GetHired = () => {
                     <BsFillTelephoneFill />
                   </span>
                   <span className="text-lg">
-                    <p>+91 9693474471</p>
-                    <p>+91 9693474471</p>
+                    <p>+91 8171977577</p>
                   </span>
                 </div>
                 <div className="mt-10 flex text-lg gap-3 items-center">
                   <span>
                     <MdEmail />
                   </span>
-                  <p>name@email.com</p>
+                  <p>info@mappoptimist.com</p>
                 </div>
                 <div className="mt-10 flex text-lg gap-3 items-center">
                   <span>
                     <IoLocationSharp />
                   </span>
-                  <p>St George's Ln Singapore</p>
+                  <p>New Delhi,India</p>
                 </div>
               </div>
               <div className="w-full">
@@ -198,7 +199,6 @@ const GetHired = () => {
                         onChange={changeHandler}
                         placeholder="Name"
                         value={formData.name}
-                        onClick={errorHandler}
                         className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
                       />
                     </div>
@@ -248,46 +248,60 @@ const GetHired = () => {
                       </p>
                     )}
                   </div>
-                  <div>
-                    <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                      <GrAttachment className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                      <RxDividerVertical className="text-4xl translate-x-[0.4rem]" />
+                  {accountType !== "Hire Team" && (
+                    <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                      <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                      <RxDividerVertical className="text-4xl" />
                       <input
-                        type={`${
-                          accountType === "Hire Team" ? "file" : "text"
-                        }`}
-                        id="fileInput"
-                        name="file"
-                        className="hidden"
-                        ref={fileInputRef}
+                        type="text"
+                        name="skills"
                         onChange={changeHandler}
+                        placeholder="Required Skills"
+                        value={formData.required}
+                        onClick={errorHandler}
+                        className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
                       />
-                      <div
-                        htmlFor="fileInput"
-                        className="w-full h-full cursor-pointer ml-3 -mt-2"
-                        onClick={() => {
-                          handleFileReset();
-                          fileInputRef.current.click();
-                          errorHandler();
-                        }} // Open file selection dialog
-                        // htmlFor="fileInput"
-                        // className="w-full h-full cursor-pointer ml-3"
-                      >
-                        {formData.file !== "" ? (
-                          <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">
-                            {formData.file.name}
-                          </span>
-                        ) : (
-                          <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">
-                            {accountType === "Hire Team"
-                              ? "Attach File"
-                              : ""}
-                          </span>
-                        )}
+                    </div>
+                  )}
+                  {accountType === "Hire Team" && (
+                    <div>
+                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                        <GrAttachment className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                        <RxDividerVertical className="text-4xl translate-x-[0.4rem]" />
+                        <input
+                          type={`${
+                            accountType === "Hire Team" ? "file" : "text"
+                          }`}
+                          id="fileInput"
+                          name="file"
+                          className="hidden"
+                          ref={fileInputRef}
+                          onChange={changeHandler}
+                        />
+                        <div
+                          htmlFor="fileInput"
+                          className="w-full h-full cursor-pointer ml-3 -mt-2"
+                          onClick={() => {
+                            handleFileReset();
+                            fileInputRef.current.click();
+                            errorHandler();
+                          }} // Open file selection dialog
+                          // htmlFor="fileInput"
+                          // className="w-full h-full cursor-pointer ml-3"
+                        >
+                          {formData.file !== "" ? (
+                            <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">
+                              {formData.file.name}
+                            </span>
+                          ) : (
+                            <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">
+                              {accountType === "Hire Team" ? "Attach File" : ""}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    </div>  
-                    
-                  </div>
+                    </div>
+                  )}
 
                   {accountType === "Hire Team" && (
                     <div>
@@ -348,7 +362,6 @@ const GetHired = () => {
                         className="h-full w-full focus:outline-none text-xl mr-20 resize-none"
                       />
                     </div>
-                   
                   </div>
                   <button
                     type="submit"

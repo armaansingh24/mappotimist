@@ -41,12 +41,12 @@ const PortfolioCarausel = ({props,page}) => {
        return (
          <div
            className="absolute carousel-button-group mb-4 gap-4 flex justify-end 
-          items-center w-[100%] h-[90%]"
+          items-center w-[100%] h-fit z-10 bottom-0"
          >
            <button
-             className={`absolute w-[2%] h-20 ${
+             className={`absolute w-[2%] h-full ${
                page === "portfolio" ? "text-black" : "text-white"
-             } top-[15rem]  left-0 text-center p-3`}
+             } -top-[15rem]  left-0 text-center p-3 z-[100]`}
              onClick={() => previous()}
            >
              {" "}
@@ -54,9 +54,9 @@ const PortfolioCarausel = ({props,page}) => {
            </button>
            <button onClick={() => next()}>
              <span
-               className={`absolute w-[2%] h-20 top-[15rem] ${
+               className={`absolute w-[2%] h-20 -top-[15rem] ${
                  page === "portfolio" ? "text-black" : "text-white"
-               } right-[0.3rem] text-center p-3`}
+               } right-[0.3rem] text-center p-3 z-[100]`}
              >
                <AiOutlineArrowRight className="text-[1.75rem] absolute top-6 left-0 right-[-2rem]" />
              </span>
@@ -64,26 +64,33 @@ const PortfolioCarausel = ({props,page}) => {
          </div>
        );
      };
-     const CustomDot = ({ onClick, active }) => {
-       // onMove means if dragging or swiping in progress.
-       // active is provided by this lib for checking if the item is active or not.
-       return (
-         <li
-           className={`${active ? "opacity-1" : "opacity-[.5]"} ${
-             page === "portfolio" ? "text-black" : "text-white mt-[63%]"
-           }`}
-           onClick={() => onClick()}
-         >
-           •
-         </li>
-       );
-     };
+    const CustomDot = ({ onClick, active }) => {
+      const dotStyle = {
+        opacity: active ? 1 : 0.5,
+        color: page === "portfolio" ? "black" : "white",
+        marginLeft: "5px",
+        marginRight: "5px",
+        marginTop: "150px",
+      };
+
+      return (
+        <div className="relative z-0 h-[10rem]" onClick={onClick} style={dotStyle}>
+          •
+        </div>
+      );
+    };
      const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+      // const swiperRef = useRef(null);
 
      const handleSlideChange = (swiper) => {
        setCurrentSlideIndex(swiper.realIndex);
        //  console.log(swiper.activeIndex);
      };
+    //  const handleClickItem = (index) => {
+    //    if (swiperRef.current) {
+    //      swiperRef.current.swiper.slideTo(index);
+    //    }
+    //  };
 
   return (
     <>
@@ -122,6 +129,7 @@ const PortfolioCarausel = ({props,page}) => {
             slidesPerView={3}
             // direction="ltr"
             className="swiper_container mr-20"
+            // goToSlide={handleClickItem}
           >
             {portfolioImages.map((item, index) => (
               <SwiperSlide virtualIndex={index} key={index}>
@@ -156,21 +164,21 @@ const PortfolioCarausel = ({props,page}) => {
           </Swiper>
         </div>
         <div className="sm:hidden mb-12 ">
-          <div className="mx-1 relative flex flex-col-reverse group z-10">
+          <div className="mx-1 relative flex flex-col-reverse group z-50">
             <Carousel
               responsive={responsive}
               arrows={false}
               renderButtonGroupOutside={true}
-              customButtonGroup={<ButtonGroup />}
+              customButtonGroup={<ButtonGroup className="z-10" />}
               autoPlay={props.deviceType !== "mobile" ? true : false}
               infinite={true}
               autoPlaySpeed={9000}
               sliderClass={true}
               showDots={true}
               dotListClass={
-                "top-[15rem] ssm:top-[15rem] midxs:top-[16.7rem] translate-x-[-3%]"
+                "top-[15rem] ssm:top-[20rem] midxs:top-[16.7rem] translate-x-[-3%] relative -z-10"
               }
-              customDot={<CustomDot />}
+              customDot={<CustomDot className="mt-20" />}
             >
               {portfolioImages.map((item, index) => (
                 <PortfolioMobile
@@ -179,7 +187,7 @@ const PortfolioCarausel = ({props,page}) => {
                   index={index}
                   item={item}
                   currentSlideIndex={currentSlideIndex}
-                  className="w-[100%] h-[100%] "
+                  className="w-[50%] h-[100%]"
                 />
               ))}
             </Carousel>

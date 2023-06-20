@@ -26,7 +26,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
   return (
     <>
       <div
-        className="group  h-full z-9 mt-4 cursor-pointer overflow-hidden relative rounded-3xl w-full"
+        className="group  h-full z-9 mt-4 ml-6 cursor-pointer overflow-hidden relative rounded-3xl w-full"
         onMouseEnter={handleHover}
         onMouseLeave={() => mainControls.start("hidden")}
       >
@@ -35,7 +35,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
           alt="slide_image"
           className={`z-[-10] ${
             index === currentSlideIndex ? "" : ""
-          } transition-all delay-75 ease-in-out ml-1 midxmd:ml-20 sm:w-[40%] object-fill`}
+          } transition-all delay-75 ease-in-out mr-10 midxmd:ml-20 sm:w-[40%] object-fill`}
         />
         <div
           className={`opacity-0 ${
@@ -44,7 +44,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
               : ""
           } h-[35rem] mt-1 absolute inset-0 transition-all delay-75 ease-in-out rounded-[3rem] overflow-hidden w-full xl:w-[64%] midXl:w-[59.8%] xxl:w-[58.6%] midxmd:ml-[5.3rem]`}
         >
-          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto md:p-[3.4rem] xxmd:p-5 midxmd:p-2 border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[40.1%] gap-4 overflow-hidden">
+          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto  border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[50%] mr-3 gap-4 overflow-hidden">
             <motion.div
               ref={ref}
               variants={{
@@ -68,9 +68,9 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
               initial="hidden"
               animate={mainControls}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col items-center justify-center gap-4 w-full"
+              className="flex flex-col items-center justify-center gap-4 w-full p-2"
             >
-              <p className="hidden xxmd:block text-lg font-bold text-white w-full mx-auto midxmd:ml-3 mt-3">
+              <p className="hidden xxmd:block text-lg font-bold text-white w-full mx-auto mt-3">
                 {item.onhover}
               </p>
               <button

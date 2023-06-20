@@ -5,6 +5,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { GrAttachment } from "react-icons/gr";
 import { MdOutlineMessage } from "react-icons/md";
 import { useState, useRef } from "react";
+import ellips1 from "../assets/contactUs/ellips1.png";
+import ellips2 from "../assets/contactUs/ellips2.png";
 
 
 const GetHiredMobile = () => {
@@ -12,29 +14,28 @@ const GetHiredMobile = () => {
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
   const [error3, setError3] = useState("");
-  const [error4, setError4] = useState("");
   const [error5, setError5] = useState("");
   const [error6, setError6] = useState("");
-  const [error7, setError7] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
     email: "",
     file: "",
+    required: "",
     type: "",
     duration: "",
     summery: "",
   });
 
   function changeHandler(event) {
-    console.log(formData);
     if (event.target.name === "file") {
       setFormData((prevData) => ({
         ...prevData,
         file: event.target.files[0], // Update file value with the selected file
       }));
     } else {
+      console.log(formData);
       setFormData((prevData) => ({
         ...prevData,
         [event.target.name]: event.target.value,
@@ -63,12 +64,6 @@ const GetHiredMobile = () => {
       return;
     }
 
-    // Validate file field
-    if (!formData.file) {
-      setError4("This field is necessary");
-      return;
-    }
-
     // Validate type field
     if (formData.type.trim() === "" && accountType === "Hire Team") {
       setError5("This field is necessary");
@@ -81,25 +76,19 @@ const GetHiredMobile = () => {
       return;
     }
 
-    // Validate summery field
-    if (formData.summery.trim() === "") {
-      setError7("This field is necessary");
-      return;
-    }
     console.log(formData);
     setError1("");
     setError2("");
     setError3("");
-    setError4("");
     setError5("");
     setError6("");
-    setError7("");
 
     setFormData({
       name: "",
       contact: "",
       email: "",
       file: "",
+      required: "",
       type: "",
       duration: "",
       summery: "",
@@ -109,10 +98,8 @@ const GetHiredMobile = () => {
     setError1("");
     setError2("");
     setError3("");
-    setError4("");
     setError5("");
     setError6("");
-    setError7("");
   };
 
   const [accountType, setAccountType] = useState("Hire Team");
@@ -126,8 +113,10 @@ const GetHiredMobile = () => {
   };
 
   return (
-    <div className="w-screen h-scree relative z-30 ">
-      <div className="w-[90%] mx-auto bg-white text-center rounded-3xl">
+    <div className="w-screen h-scree relative z-30">
+      <div className="w-[90%] mx-auto bg-white text-center rounded-3xl relative">
+        <img src={ellips1} alt="" className="absolute right-0 top-[50%] z-0"/>
+        <img src={ellips2} alt="" className="absolute bottom-0 z-0"/>
         <div className="flex items-center justify-center w-[90%] mx-auto flex-col">
           <div className="mt-10 flex gap-4 flex-col">
             <h2 className="text-4xl font-poppins text-transparent bg-gradient-to-b from-primary to-secondary bg-clip-text">
@@ -223,48 +212,58 @@ const GetHiredMobile = () => {
                   </p>
                 )}
               </div>
-              <div>
-                <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                  <GrAttachment className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                  <RxDividerVertical className="text-4xl translate-x-[0.4rem]" />
+              {accountType !== "Hire Team" && (
+                <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                  <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                  <RxDividerVertical className="text-4xl" />
                   <input
-                    type="file"
-                    id="fileInput"
-                    name="file"
-                    className="hidden"
-                    ref={fileInputRef}
+                    type="text"
+                    name="required"
                     onChange={changeHandler}
+                    placeholder="Required Skills"
+                    value={formData.required}
+                    onClick={errorHandler}
+                    className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
                   />
-                  <div
-                    htmlFor="fileInput"
-                    className="w-full h-full cursor-pointer ml-3 -mt-2"
-                    onClick={() => {
-                      handleFileReset();
-                      fileInputRef.current.click();
-                      errorHandler();
-                    }} // Open file selection dialog
-                    // htmlFor="fileInput"
-                    // className="w-full h-full cursor-pointer ml-3"
-                  >
-                    {formData.file !== "" ? (
-                      <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-lg px-1 bg-transparentl -ml-16">
-                        {formData.file.name}
-                      </span>
-                    ) : (
-                      <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-lg px-1 bg-transparent -ml-20">
-                        {accountType === "Hire Team"
-                          ? "Attach File"
-                          : "Required Skills"}
-                      </span>
-                    )}
+                </div>
+              )}
+              {accountType === "Hire Team" && (
+                <div>
+                  <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                    <GrAttachment className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                    <RxDividerVertical className="text-4xl translate-x-[0.4rem]" />
+                    <input
+                      type={`${accountType === "Hire Team" ? "file" : "text"}`}
+                      id="fileInput"
+                      name="file"
+                      className="hidden"
+                      ref={fileInputRef}
+                      onChange={changeHandler}
+                    />
+                    <div
+                      htmlFor="fileInput"
+                      className="w-full h-full cursor-pointer ml-3 -mt-2"
+                      onClick={() => {
+                        handleFileReset();
+                        fileInputRef.current.click();
+                        errorHandler();
+                      }} // Open file selection dialog
+                      // htmlFor="fileInput"
+                      // className="w-full h-full cursor-pointer ml-3"
+                    >
+                      {formData.file !== "" ? (
+                        <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">
+                          {formData.file.name}
+                        </span>
+                      ) : (
+                        <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">
+                          {accountType === "Hire Team" ? "Attach File" : ""}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
-                {error4.length !== 0 && (
-                  <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                    {error4}
-                  </p>
-                )}
-              </div>
+              )}
 
               {accountType === "Hire Team" && (
                 <div>
@@ -321,15 +320,10 @@ const GetHiredMobile = () => {
                     value={formData.summery}
                     minLength={10}
                     maxLength={300}
-                    onClick={errorHandler}
-                    className="h-full w-screen focus:outline-none text-lg mr-20 resize-none"
+                    className="h-full w-screen focus:outline-none text-lg resize-none"
                   />
                 </div>
-                {error7.length !== 0 && (
-                  <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                    {error7}
-                  </p>
-                )}
+                
               </div>
               <button
                 type="submit"

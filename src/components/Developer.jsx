@@ -41,7 +41,7 @@ const Developer = () => {
             Developer
           </h2>
           <div className="w-full flex flex-col midFM:flex-row gap-10 items-center justify-evenly mt-[10%]">
-            <div className="midFM:w-[25%]">
+            <div className="midFM:w-[25%] card">
               <Tilt
                 options={{
                   max: 45,
@@ -49,6 +49,7 @@ const Developer = () => {
                   speed: 450,
                 }}
               >
+                <div className="card-texture"></div>
                 <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3">
                   <p className="text-2xl font-poppins500">Get People</p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
@@ -147,15 +148,15 @@ const Developer = () => {
           {showForm2 && (
             <div>
               <div className="hidden midFM:block">
-                <div className="absolute top-20 right-20 text-[50px] text-white z-40">
+                <div className="absolute mt-3 right-20 text-[50px] text-white z-40">
                   <button onClick={handleGetHire}>
                     <SlClose />
                   </button>
                 </div>
                 <GetHire />
               </div>
-              <div className="block midFM:hidden mt-20">
-                <div className="absolute top-24 right-8 text-[28px] text-secondary z-50">
+              <div className="block midFM:hidden mt-[45rem]">
+                <div className="absolute mt-3 right-8 text-[28px] text-secondary z-50">
                   <button onClick={handleGetHire}>
                     <SlClose />
                   </button>

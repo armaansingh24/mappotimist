@@ -11,11 +11,11 @@ const PortfolioMobile = ({item}) => {
 
 
   return (
-    <div className="relative z-40">
+    <div className="relative z-60">
       <img
         src={item.image}
         alt="slide_image"
-        className="w-[80%]  p-5 mr-0 ml-7"
+        className="w-[80%]  p-5 mr-0 ml-7  z-50"
         onClick={handleReadMore}
       />
     </div>

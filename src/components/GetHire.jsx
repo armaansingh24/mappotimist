@@ -8,6 +8,8 @@ import { GrAttachment } from "react-icons/gr";
 import { useState, useRef } from "react";
 import ellips from "../assets/contactUs/ellipes.png";
 import { MdOutlineMessage } from "react-icons/md";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const GetHired = () => {
   const fileInputRef = useRef(null);
@@ -44,51 +46,44 @@ const GetHired = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     console.log(formData);
     if (formData.name.trim() === "") {
       setError1("This field is necessary");
       return;
     }
 
-    // Validate contact field
     if (formData.contact.trim() === "") {
       setError2("This field is necessary");
       return;
     }
 
-    // Validate email field
     if (formData.email.trim() === "") {
       setError3("This field is necessary");
       return;
     }
 
-    // Validate file field
     if (!formData.file) {
       setError4("This field is necessary");
       return;
     }
 
-    // Validate expertise field
     if (formData.expertise.trim() === "") {
       setError5("This field is necessary");
       return;
     }
 
-    // Validate experience field
     if (formData.experience.trim() === "") {
       setError6("This field is necessary");
       return;
     }
 
-    // Validate bio field
     if (formData.bio.trim() === "") {
       setError7("This field is necessary");
       return;
     }
-    console.log(formData);
+
     setError1("");
     setError2("");
     setError3("");
@@ -97,15 +92,38 @@ const GetHired = () => {
     setError6("");
     setError7("");
 
-    setFormData({
-      name: "",
-      contact: "",
-      email: "",
-      file: "",
-      expertise: "",
-      experience: "",
-      bio: "",
-    });
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/send-email",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      if (response.status === 200) {
+        console.log("Form data sent successfully");
+        // Reset the form
+        toast.success("Email sent successfully");
+        setFormData({
+          name: "",
+          contact: "",
+          email: "",
+          file: "",
+          expertise: "",
+          experience: "",
+          bio: "",
+        });
+      } else {
+        toast.error("Email not sent");
+      }
+    } catch (error) {
+      toast.error("Email not sent");
+      // Handle error
+      console.error("Error:", error);
+    }
+    // Handle successful response from the server
   };
   const errorHandler = () => {
     setError1("");
@@ -116,7 +134,6 @@ const GetHired = () => {
     setError6("");
     setError7("");
   };
-
 
   const handleFileReset = () => {
     fileInputRef.current.value = ""; // Reset the value of the file input element
@@ -159,21 +176,20 @@ const GetHired = () => {
                     <BsFillTelephoneFill />
                   </span>
                   <span className="text-lg">
-                    <p>+91 9693474471</p>
-                    <p>+91 9693474471</p>
+                    <p>+91 8171977577</p>
                   </span>
                 </div>
                 <div className="mt-10 flex text-lg gap-3 items-center">
                   <span>
                     <MdEmail />
                   </span>
-                  <p>name@email.com</p>
+                  <p>info@mappoptimist.com</p>
                 </div>
                 <div className="mt-10 flex text-lg gap-3 items-center">
                   <span>
                     <IoLocationSharp />
                   </span>
-                  <p>St George's Ln Singapore</p>
+                  <p>New Delhi,India</p>
                 </div>
               </div>
               <div className="w-full">
