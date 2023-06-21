@@ -15,6 +15,7 @@ import PortfolioMobile from "./PortfolioMobile";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import PortfolioSlider from "./PortfolioSlider";
+import DesktopCarausel from './DesktopCarausel';
 SwiperCore.use([Pagination]);
 
 
@@ -131,16 +132,29 @@ const PortfolioCarausel = ({props,page}) => {
             className="swiper_container mr-20"
             // goToSlide={handleClickItem}
           >
-            {portfolioImages.map((item, index) => (
-              <SwiperSlide virtualIndex={index} key={index}>
-                <PortfolioSlider
-                  // image={image.image}
-                  index={index}
-                  item={item}
-                  currentSlideIndex={currentSlideIndex}
-                />
-              </SwiperSlide>
-            ))}
+            {portfolioImages.map((item, index) => {
+              if (item.id === 4 || item.id === 5) {
+                return (
+                  <SwiperSlide virtualIndex={index} key={index}>
+                    <DesktopCarausel
+                      index={index}
+                      item={item}
+                      currentSlideIndex={currentSlideIndex}
+                    />
+                  </SwiperSlide>
+                );
+              }
+
+              return (
+                <SwiperSlide virtualIndex={index} key={index}>
+                  <PortfolioSlider
+                    index={index}
+                    item={item}
+                    currentSlideIndex={currentSlideIndex}
+                  />
+                </SwiperSlide>
+              );
+            })}
 
             <div className="slider-controler">
               <div className="swiper-button-prev slider-arrow">

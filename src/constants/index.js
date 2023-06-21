@@ -344,116 +344,10 @@ export const portfolioImages = [
       "Our app utilizes highly optimized algorithms like Tries, Hashing, and more to deliver a swift and seamless filtering experience.",
   },
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 4 MediHelp
+  // Project 4 Wbsite 1
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 4,
-    bgimage: background2,
-    image: medi2,
-    title: "MediHelp",
-    mainImage: medi1,
-    feature: medimain,
-    onhover:
-      "The MediHelp app facilitates digital connectivity with doctors, enabling appointment booking, appointment alerts, profile management, health tips, and emergency contacts.",
-    feature1: "DualAuth",
-    feature1Desc:
-      "This app facilitates patient and doctor login with separate credentials, providing individual profiles and dashboards for each user.",
-
-    feature2: "Appointments",
-    feature2Desc:
-      "Patients can view doctor availability and book appointments online, selecting preferred time and date ranges to generate a final appointment receipt.",
-
-    feature3: "Add Medicine",
-    feature3Desc:
-      " Add medicine into a patient's treatment plan, enhancing their therapeutic options and addressing specific health needs prescribed by the doctor.",
-
-    feature4: "Prescriptions",
-    feature4Desc:
-      "Patients can access and manage their prescriptions in one location, with the ability to view detailed medication schedules for intake timings.",
-    feature5: "Upcoming",
-    feature5Desc:
-      "Scheduled patient consultations and medical sessions, ensuring timely healthcare delivery and effective patient management.",
-    feature6: "Test Reports",
-    feature6Desc:
-      "Patients can access and download their test reports, while also having the option to add comments for clarification, which will be addressed by a doctor.",
-    feature7: "",
-    feature7Desc: "",
-    feature8: "",
-    feature8Desc: "",
-    feature9: "",
-    feature9Desc: "",
-    feature10: "",
-    feature10Desc: "",
-    leftImage: medi3,
-    rightImage: medi4,
-    rightImage1: "Appointments Feature",
-    rightImage1Desc:
-      "The content suggestion drawer utilized various APIs, with responses parsed using intents, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
-    rightImage2: "Test Reports",
-    rightImage2Desc:
-      "The app incorporates Google Text-to-Speech, allowing doctors to conveniently generate reports by narrating them through voice, and automatically transcribing them.",
-    rightImage3: "Prescription",
-    rightImage3Desc:
-      "The prescription is personalized with dropdown options and allows selecting dates from a calendar, tailoring medication instructions to individual needs for enhanced convenience and accuracy.",
-  },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 5 Happy Ride
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  {
-    id: 5,
-    bgimage: background2,
-    image: Happy2,
-    title: "Happy Ride",
-    mainImage: Happy1,
-    feature: Happymain,
-    onhover:
-      "Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
-    feature1: "Map",
-    feature1Desc:
-      " This app offers a real-time location rendering map for users to track their own and assigned rider's location, distance, and more.",
-
-    feature2: "Rent",
-    feature2Desc:
-      "In addition to offering taxi rentals for drop-off purposes, this app allows users to rent taxis for their personal use, enabling multi-day rides.",
-
-    feature3: "Live Data",
-    feature3Desc:
-      "Users can view nearby drivers, access their live locations, and see the type of vehicles they are using in real-time.",
-
-    feature4: "Personalization",
-    feature4Desc:
-      "User can Rent their  favorite car models and customize them with color, seating arrangement, music system, and more through our app.",
-    feature5: "GPS",
-    feature5Desc:
-      "Users can effortlessly navigate with GPS, find optimal routes, and reach thier destination efficiently using our cab booking app's built-in navigation.",
-    feature6: "Split Fare",
-    feature6Desc:
-      "Users can easily split fares with friends and share rides by leveraging our cab booking app's convenient split fare option.",
-    feature7: "",
-    feature7Desc: "",
-    feature8: "",
-    feature8Desc: "",
-    feature9: "",
-    feature9Desc: "",
-    feature10: "",
-    feature10Desc: "",
-    leftImage: Happy3,
-    rightImage: Happy4,
-    rightImage1: "Payment",
-    rightImage1Desc:
-      "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",
-    rightImage2: "GPS",
-    rightImage2Desc:
-      "Our cab booking  app seamlessly incorporates Google Maps, enabling destination search, route selection, and turn-by-turn navigation instructions.",
-    rightImage3: "Real Time Data",
-    rightImage3Desc:
-      "In our app, real-time updates are facilitated through a WebSocket Server, allowing live updates of user interface components with received data.",
-  },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 6 Wbsite 1
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  {
-    id: 6,
     image: onemain,
     bgimage: background2,
     title: "Website 1",
@@ -505,10 +399,10 @@ export const portfolioImages = [
       "To build website's animations, define animation goals, we planned key interactions, use CSS or JavaScript frameworks, optimize performance, and test across browsers.",
   },
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 7 Wbsite 2
+  // Project 5 Wbsite 2
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
-    id: 7,
+    id: 5,
     bgimage: background2,
     image: twomain,
     title: "Website 2",
@@ -558,6 +452,112 @@ export const portfolioImages = [
     rightImage3: "Analytics and Tracking",
     rightImage3Desc:
       "To build analytics and tracking capabilities, we have integrated tracking codes, set up conversion goals, configure event tracking, and analyze data for insights and optimization.",
+  },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project 6 MediHelp
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  {
+    id: 6,
+    bgimage: background2,
+    image: medi2,
+    title: "MediHelp",
+    mainImage: medi1,
+    feature: medimain,
+    onhover:
+      "The MediHelp app facilitates digital connectivity with doctors, enabling appointment booking, appointment alerts, profile management, health tips, and emergency contacts.",
+    feature1: "DualAuth",
+    feature1Desc:
+      "This app facilitates patient and doctor login with separate credentials, providing individual profiles and dashboards for each user.",
+
+    feature2: "Appointments",
+    feature2Desc:
+      "Patients can view doctor availability and book appointments online, selecting preferred time and date ranges to generate a final appointment receipt.",
+
+    feature3: "Add Medicine",
+    feature3Desc:
+      " Add medicine into a patient's treatment plan, enhancing their therapeutic options and addressing specific health needs prescribed by the doctor.",
+
+    feature4: "Prescriptions",
+    feature4Desc:
+      "Patients can access and manage their prescriptions in one location, with the ability to view detailed medication schedules for intake timings.",
+    feature5: "Upcoming",
+    feature5Desc:
+      "Scheduled patient consultations and medical sessions, ensuring timely healthcare delivery and effective patient management.",
+    feature6: "Test Reports",
+    feature6Desc:
+      "Patients can access and download their test reports, while also having the option to add comments for clarification, which will be addressed by a doctor.",
+    feature7: "",
+    feature7Desc: "",
+    feature8: "",
+    feature8Desc: "",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+    leftImage: medi3,
+    rightImage: medi4,
+    rightImage1: "Appointments Feature",
+    rightImage1Desc:
+      "The content suggestion drawer utilized various APIs, with responses parsed using intents, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
+    rightImage2: "Test Reports",
+    rightImage2Desc:
+      "The app incorporates Google Text-to-Speech, allowing doctors to conveniently generate reports by narrating them through voice, and automatically transcribing them.",
+    rightImage3: "Prescription",
+    rightImage3Desc:
+      "The prescription is personalized with dropdown options and allows selecting dates from a calendar, tailoring medication instructions to individual needs for enhanced convenience and accuracy.",
+  },
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project 7 Happy Ride
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  {
+    id: 7,
+    bgimage: background2,
+    image: Happy2,
+    title: "Happy Ride",
+    mainImage: Happy1,
+    feature: Happymain,
+    onhover:
+      "Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
+    feature1: "Map",
+    feature1Desc:
+      " This app offers a real-time location rendering map for users to track their own and assigned rider's location, distance, and more.",
+
+    feature2: "Rent",
+    feature2Desc:
+      "In addition to offering taxi rentals for drop-off purposes, this app allows users to rent taxis for their personal use, enabling multi-day rides.",
+
+    feature3: "Live Data",
+    feature3Desc:
+      "Users can view nearby drivers, access their live locations, and see the type of vehicles they are using in real-time.",
+
+    feature4: "Personalization",
+    feature4Desc:
+      "User can Rent their  favorite car models and customize them with color, seating arrangement, music system, and more through our app.",
+    feature5: "GPS",
+    feature5Desc:
+      "Users can effortlessly navigate with GPS, find optimal routes, and reach thier destination efficiently using our cab booking app's built-in navigation.",
+    feature6: "Split Fare",
+    feature6Desc:
+      "Users can easily split fares with friends and share rides by leveraging our cab booking app's convenient split fare option.",
+    feature7: "",
+    feature7Desc: "",
+    feature8: "",
+    feature8Desc: "",
+    feature9: "",
+    feature9Desc: "",
+    feature10: "",
+    feature10Desc: "",
+    leftImage: Happy3,
+    rightImage: Happy4,
+    rightImage1: "Payment",
+    rightImage1Desc:
+      "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",
+    rightImage2: "GPS",
+    rightImage2Desc:
+      "Our cab booking  app seamlessly incorporates Google Maps, enabling destination search, route selection, and turn-by-turn navigation instructions.",
+    rightImage3: "Real Time Data",
+    rightImage3Desc:
+      "In our app, real-time updates are facilitated through a WebSocket Server, allowing live updates of user interface components with received data.",
   },
 ];
 
