@@ -5,7 +5,7 @@ import three from "../assets/developer/three.png";
 import { useState } from "react";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
-import GetHiredMobile from "./GetHiredMobile"
+import GetHiredMobile from "./GetHiredMobile";
 import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import { Tilt } from "react-tilt";
@@ -40,6 +40,7 @@ const Developer = () => {
           <h2 className="text-black midFM:text-white font-poppins500 text-[30px] lmd:text-[48px]">
             Developer
           </h2>
+          {/* First Card */}
           <div className="w-full flex flex-col midFM:flex-row gap-10 items-center justify-evenly mt-[10%]">
             <div className="midFM:w-[25%] card">
               <Tilt
@@ -51,18 +52,18 @@ const Developer = () => {
               >
                 <div className="card-texture"></div>
                 <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3">
-                  <p className="text-2xl font-poppins500">Get People</p>
+                  <p className="text-2xl font-poppins500">Recruit Us</p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
-                    We Will Provide You Freelance As Well As Full Time
-                    Opportunity To Work With Us A/T Your Experience And Job
-                    Profile
+                    If you are a client, hiring for a skilled professional(s) to
+                    bring expertise and efficiency to your project. Contact us
+                    for details!
                   </p>
                   <button
                     className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                     onClick={handleGetHired}
                   >
-                    Get Hired
+                    Recruit
                   </button>
                 </div>
               </Tilt>
@@ -77,12 +78,11 @@ const Developer = () => {
                 }}
               >
                 <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midFM:h-[31.7rem]">
-                  <p className="text-2xl font-poppins500">Get Hire</p>
+                  <p className="text-2xl font-poppins500">Get Employed</p>
                   <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500 mt-9">
-                    We Will Provide You Freelance As Well As Full Time
-                    Opportunity To Work With Us A/T Your Experience And Job
-                    Profile
+                    If you are a freelancer seeking engaging projects, let's
+                    collaborate and bring your vision to life!
                   </p>
                   <button
                     className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
@@ -103,15 +103,14 @@ const Developer = () => {
                 }}
               >
                 <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3  h-full midFM:h-[31.5rem]">
-                  <p className="text-2xl font-poppins500">OCR / ICR</p>
+                  <p className="text-2xl font-poppins500"> OCR/ICR</p>
                   <img src={three} alt="" className="mt-12 midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500 mt-9">
-                    We Will Provide You Freelance As Well As Full Time
-                    Opportunity To Work With Us A/T Your Experience And Job
-                    Profile
+                    Unlock the power of automation with our cutting-edge OCR/ICR
+                    solutions and enhance your productivity effortlessly.
                   </p>
                   <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
-                    Get Hired
+                    View More
                   </button>
                 </div>
               </Tilt>
