@@ -94,7 +94,7 @@ const GetHired = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/send-email",
+        "http://localhost:3000/send-email-hire",
         formData,
         {
           headers: {
@@ -123,7 +123,7 @@ const GetHired = () => {
       // Handle error
       console.error("Error:", error);
     }
-    // Handle successful response from the server
+    errorHandler();
   };
   const errorHandler = () => {
     setError1("");

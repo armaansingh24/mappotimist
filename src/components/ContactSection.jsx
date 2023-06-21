@@ -3,8 +3,8 @@ import { useState, useRef } from "react";
 import image1 from "../assets/contactUs/image1.png";
 import R2 from "../assets/contactUs/R2.png";
 import linkedin from "../assets/contactUs/linkedin.png";
-import emailjs from "@emailjs/browser";
 import { toast } from "react-hot-toast";
+import axios from "axios";
 
 const ContactSection = () => {
   const [text] = useTypewriter({
@@ -18,6 +18,7 @@ const ContactSection = () => {
     name: "",
     email: "",
     idea: "",
+    // formId: "Contact Us",
   });
   const [error, setError] = useState("");
   const [error1, setError1] = useState("");
@@ -40,7 +41,7 @@ const ContactSection = () => {
     }));
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (formData.name.trim() === "") {
@@ -62,34 +63,31 @@ const ContactSection = () => {
     setError("");
     setError1("");
     setError2("");
-    
-    console.log(formData);
-    toast.success("Email sent successfully");          
-    // Perform other validation checks or submit the form
-     emailjs
-       .sendForm(
-         "service_iputf9n",
-         "template_jkuoeob",
-         form.current,
-         "T91EFMrT_M4euWwoH"
-       )
-       .then(
-         (result) => {
-           console.log(result.text);
-           console.log("success");
-          },
-          (error) => {
-            console.log(error.text);
-            console.log("error");      
-          }
-       );
-       setFormData({
-         name: "",
-         email: "",
-         idea: "",
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/send-email-contact",
+        formData,
+      );
+      if (response.status === 200) {
+        console.log("Form data sent successfully");
+        // Reset the form
+        toast.success("Email sent successfully");
+        setFormData({
+          name: "",
+          email: "",
+          idea: "",
         });
         setCustomService("");
         setSelectedService("");
+      } else {
+        toast.error("Email not sent");
+      }
+    } catch (error) {
+      toast.error("Email not sent");
+      // Handle error
+      console.error("Error:", error);
+    }
+    console.log(formData);
   };
 
   const errorHandler = () => {

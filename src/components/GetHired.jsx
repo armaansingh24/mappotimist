@@ -5,9 +5,11 @@ import { IoLocationSharp } from "react-icons/io5";
 import { RxDividerVertical } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
 import { GrAttachment } from "react-icons/gr";
-import {MdOutlineMessage} from "react-icons/md";
+import { MdOutlineMessage } from "react-icons/md";
 import { useState, useRef } from "react";
 import ellips from "../assets/contactUs/ellipes.png";
+import { toast } from "react-hot-toast";
+import axios from "axios";
 
 const GetHired = () => {
   const fileInputRef = useRef(null);
@@ -16,17 +18,25 @@ const GetHired = () => {
   const [error3, setError3] = useState("");
   const [error5, setError5] = useState("");
   const [error6, setError6] = useState("");
+  const [error7, setError7] = useState("");
+  const [accountType, setAccountType] = useState("Hire Team");
 
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
     email: "",
-    required:"",
+    required: "",
     file: "",
     type: "",
     duration: "",
     summery: "",
+    // formId: accountType,
   });
+  const handleFormId = (str) => {
+    setAccountType(str);
+    // formData.formId = str;
+    // console.log(formData.formId);
+  };
 
   function changeHandler(event) {
     console.log(formData);
@@ -43,10 +53,10 @@ const GetHired = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(error1);
+    // console.log(error1);
     if (formData.name.trim() === "") {
       setError1("This field is necessary");
       return;
@@ -64,7 +74,6 @@ const GetHired = () => {
       return;
     }
 
-
     // Validate type field
     if (formData.type.trim() === "" && accountType === "Hire Team") {
       setError5("This field is necessary");
@@ -76,25 +85,104 @@ const GetHired = () => {
       setError6("This field is necessary");
       return;
     }
+    // Validate required field
+    if (formData.required.trim() === "" && accountType !== "Hire Team") {
+      setError7("This field is necessary");
+      return;
+    }
 
+    if (accountType === "Hire Team") {
+      const formDataSent = {
+        name: formData.name,
+        contact: formData.contact,
+        email: formData.email,
+        type:formData.type,
+        duration:formData.duration,
+        summery: formData.summery,
+        file:formData.file
+      };
+      try {
+        const response = await axios.post(
+          "http://localhost:3000/send-email-hire-team",
+          formDataSent,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        if (response.status === 200) {
+          console.log("Form data sent successfully");
+          // Reset the form
+          toast.success("Email sent successfully");
+          setFormData({
+            name: "",
+            contact: "",
+            email: "",
+            required: "",
+            file: "",
+            type: "",
+            duration: "",
+            summery: "",
+          });
+        } else {
+          toast.error("Email not sent");
+        }
+      } catch (error) {
+        toast.error("Email not sent");
+        // Handle error
+        console.error("Error:", error);
+      }
+    } else {
+      const formDataSent = {
+        name: formData.name,
+        contact: formData.contact,
+        email: formData.email,
+        required: formData.required,
+        summery: formData.summery,
+      };
+      try {
+        const response = await axios.post(
+          "http://localhost:3000/send-email-individual",
+          formDataSent,
+        );
+        if (response.status === 200) {
+          console.log("Form data sent successfully");
+          // Reset the form
+          toast.success("Email sent successfully");
+          setFormData({
+            name: "",
+            contact: "",
+            email: "",
+            required: "",
+            file: "",
+            type: "",
+            duration: "",
+            summery: "",
+          });
+        } else {
+          toast.error("Email not sent");
+        }
+      } catch (error) {
+        toast.error("Email not sent");
+        // Handle error
+        console.error("Error:", error);
+      }
+    }
+    // console.log(formData);
+    errorHandler();
 
-    console.log(formData);
-    setError1("");
-    setError2("");
-    setError3("");
-    setError5("");
-    setError6("");
-
-    setFormData({
-      name: "",
-    contact: "",
-    email: "",
-    file: "",
-    required:"",
-    type: "",
-    duration: "",
-    summery: "",
-    });
+    // setFormData({
+    //   name: "",
+    //   contact: "",
+    //   email: "",
+    //   file: "",
+    //   required: "",
+    //   type: "",
+    //   duration: "",
+    //   summery: "",
+    //   formId: accountType,
+    // });
   };
   const errorHandler = () => {
     setError1("");
@@ -102,9 +190,8 @@ const GetHired = () => {
     setError3("");
     setError5("");
     setError6("");
+    setError7("");
   };
-
-  const [accountType, setAccountType] = useState("Hire Team");
 
   const handleFileReset = () => {
     fileInputRef.current.value = ""; // Reset the value of the file input element
@@ -134,7 +221,7 @@ const GetHired = () => {
                     ? "bg-gradient-to-r from-[#000046] to-[#1CB5E0] text-white font-semibold"
                     : "bg-white text-black"
                 } py-2 px-5 rounded-full transition-all duration-200 w-full text-2xl`}
-                onClick={() => setAccountType("Hire Team")}
+                onClick={() => handleFormId("Hire Team")}
               >
                 Hire Team
               </button>
@@ -144,7 +231,7 @@ const GetHired = () => {
                     ? "bg-gradient-to-r to-[#000046] from-[#1CB5E0] text-white font-semibold"
                     : "bg-white text-black"
                 } py-2 px-5 rounded-full transition-all duration-200 w-full text-2xl`}
-                onClick={() => setAccountType("Hire Individual Developer")}
+                onClick={() => handleFormId("Hire Individual Developer")}
               >
                 Hire Individual Developer
               </button>
@@ -229,7 +316,7 @@ const GetHired = () => {
                     )}
                   </div>
                   <div>
-                    <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                    <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                       <HiOutlineMail className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
                       <RxDividerVertical className="text-4xl" />
                       <input
@@ -249,18 +336,25 @@ const GetHired = () => {
                     )}
                   </div>
                   {accountType !== "Hire Team" && (
-                    <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                      <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                      <RxDividerVertical className="text-4xl" />
-                      <input
-                        type="text"
-                        name="skills"
-                        onChange={changeHandler}
-                        placeholder="Required Skills"
-                        value={formData.required}
-                        onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
-                      />
+                    <div>
+                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                        <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                        <RxDividerVertical className="text-4xl" />
+                        <input
+                          type="text"
+                          name="required"
+                          onChange={changeHandler}
+                          placeholder="Required Skills"
+                          value={formData.required}
+                          onClick={errorHandler}
+                          className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent appearance-none custom-input"
+                        />
+                      </div>
+                      {error7.length !== 0 && (
+                        <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                          {error7}
+                        </p>
+                      )}
                     </div>
                   )}
                   {accountType === "Hire Team" && (

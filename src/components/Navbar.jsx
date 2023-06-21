@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <nav
         className={
-          "bg-gray-100 flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black"
+          "bg-[#F7F5F8] flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black"
         }
       >
         <div className="w-full flex justify-between items-start  mx-auto ">
@@ -55,7 +55,6 @@ const Navbar = () => {
                   smooth={true}
                   offset={100}
                   duration={1000}
-               
                 >
                   {link.title}
                 </Link>
@@ -169,7 +168,9 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="logo"
-                  className={`${toggle === false ? "hidden" : "w-[80%] block h-fit"}`}
+                  className={`${
+                    toggle === false ? "hidden" : "w-[80%] block h-fit"
+                  }`}
                 />
               </Link>
             </div>

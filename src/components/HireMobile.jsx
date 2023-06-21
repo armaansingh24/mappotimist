@@ -7,6 +7,8 @@ import { MdOutlineMessage } from "react-icons/md";
 import { useState, useRef } from "react";
 import ellips1 from "../assets/contactUs/ellips1.png";
 import ellips2 from "../assets/contactUs/ellips2.png";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const HireMobile = () => {
    const fileInputRef = useRef(null);
@@ -26,6 +28,7 @@ const HireMobile = () => {
      expertise: "",
      experience: "",
      bio: "",
+     formId:"hire"
    });
 
    function changeHandler(event) {
@@ -43,69 +46,85 @@ const HireMobile = () => {
      }
    }
 
-   const handleSubmit = (e) => {
-     e.preventDefault();
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      console.log(formData);
+      if (formData.name.trim() === "") {
+        setError1("This field is necessary");
+        return;
+      }
 
-     console.log(formData);
-     if (formData.name.trim() === "") {
-       setError1("This field is necessary");
-       return;
-     }
+      if (formData.contact.trim() === "") {
+        setError2("This field is necessary");
+        return;
+      }
 
-     // Validate contact field
-     if (formData.contact.trim() === "") {
-       setError2("This field is necessary");
-       return;
-     }
+      if (formData.email.trim() === "") {
+        setError3("This field is necessary");
+        return;
+      }
 
-     // Validate email field
-     if (formData.email.trim() === "") {
-       setError3("This field is necessary");
-       return;
-     }
+      if (!formData.file) {
+        setError4("This field is necessary");
+        return;
+      }
 
-     // Validate file field
-     if (!formData.file) {
-       setError4("This field is necessary");
-       return;
-     }
+      if (formData.expertise.trim() === "") {
+        setError5("This field is necessary");
+        return;
+      }
 
-     // Validate expertise field
-     if (formData.expertise.trim() === "") {
-       setError5("This field is necessary");
-       return;
-     }
+      if (formData.experience.trim() === "") {
+        setError6("This field is necessary");
+        return;
+      }
 
-     // Validate experience field
-     if (formData.experience.trim() === "") {
-       setError6("This field is necessary");
-       return;
-     }
+      if (formData.bio.trim() === "") {
+        setError7("This field is necessary");
+        return;
+      }
 
-     // Validate bio field
-     if (formData.bio.trim() === "") {
-       setError7("This field is necessary");
-       return;
-     }
-     console.log(formData);
-     setError1("");
-     setError2("");
-     setError3("");
-     setError4("");
-     setError5("");
-     setError6("");
-     setError7("");
+      setError1("");
+      setError2("");
+      setError3("");
+      setError4("");
+      setError5("");
+      setError6("");
+      setError7("");
 
-     setFormData({
-       name: "",
-       contact: "",
-       email: "",
-       file: "",
-       expertise: "",
-       experience: "",
-       bio: "",
-     });
-   };
+      try {
+        const response = await axios.post(
+          "http://localhost:3000/send-email",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        if (response.status === 200) {
+          console.log("Form data sent successfully");
+          // Reset the form
+          toast.success("Email sent successfully");
+          setFormData({
+            name: "",
+            contact: "",
+            email: "",
+            file: "",
+            expertise: "",
+            experience: "",
+            bio: "",
+          });
+        } else {
+          toast.error("Email not sent");
+        }
+      } catch (error) {
+        toast.error("Email not sent");
+        // Handle error
+        console.error("Error:", error);
+      }
+      // Handle successful response from the server
+    };  
    const errorHandler = () => {
      setError1("");
      setError2("");
