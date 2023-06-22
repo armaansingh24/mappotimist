@@ -41,7 +41,7 @@ const PortfolioPage = (props) => {
                 <img
                   src={item.mainImage}
                   alt=""
-                  className="mx-auto midFM:w-[70%] mt-14 midFM:-mt-20 midFM:-mr-[4%]"
+                  className="mx-auto midFM:w-[75%] mt-10  midFM:-mt-48 midFM:mr-[1%]"
                 />
                 {/* <p>{item.title}</p> */}
               </div>
@@ -51,7 +51,7 @@ const PortfolioPage = (props) => {
         {/* Feature section */}
         <div className="bg-gradient-to-br from-primary to-primary via-secondary w-screen pb-16">
           <div className="flex flex-col items-center justify-center p-1">
-            <p className="text-lg sm:text-3xl font-poppins text-center text-white mt-10 midFM:mt-20">
+            <p className="text-lg sm:text-3xl font-poppins text-center text-white mt-10 midFM:mt-10">
               Awesome Features
             </p>
             <p className="text-base text-center font-poppins500 sm:text-xl sm:w-[80%] mx-auto mt-2 text-white">
@@ -62,7 +62,7 @@ const PortfolioPage = (props) => {
           <div className="mt-10 sm:mt-28 block midxmd:hidden">
             <div className="">
               <img
-                src={item.mainImage}
+                src={item.feature}
                 alt=""
                 className="w-[50%] mx-auto sm:w-[20%] "
               />

@@ -98,7 +98,7 @@ const Navbar = () => {
               }`}
             />
             <button
-              className="flex flex-col gap-1 h-12 w-20 rounded justify-center items-center group z-50"
+              className="flex flex-col gap-1 h-12 w-16 rounded justify-center items-center group z-50"
               onClick={() => {
                 setIsOpen(!isOpen);
                 setToggle(!toggle);
@@ -169,7 +169,7 @@ const Navbar = () => {
                   src={logo}
                   alt="logo"
                   className={`${
-                    toggle === false ? "hidden" : "w-[80%] block h-fit"
+                    toggle === false ? "hidden" : "w-[80%] block"
                   }`}
                 />
               </Link>

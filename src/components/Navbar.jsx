@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <nav
         className={
-          "bg-[#F7F5F8] flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black"
+          " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black"
         }
       >
         <div className="w-full flex justify-between items-start  mx-auto ">
@@ -41,7 +41,7 @@ const Navbar = () => {
               MappOptimist
             </p>
           </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-3 lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center">
+          <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -98,7 +98,7 @@ const Navbar = () => {
               }`}
             />
             <button
-              className="flex flex-col gap-1 h-12 w-20 rounded justify-center items-center group z-50"
+              className="flex flex-col gap-1 h-12 w-16 rounded justify-center items-center group z-50"
               onClick={() => {
                 setIsOpen(!isOpen);
                 setToggle(!toggle);
@@ -169,7 +169,7 @@ const Navbar = () => {
                   src={logo}
                   alt="logo"
                   className={`${
-                    toggle === false ? "hidden" : "w-[80%] block h-fit"
+                    toggle === false ? "hidden" : "w-[80%] block"
                   }`}
                 />
               </Link>
