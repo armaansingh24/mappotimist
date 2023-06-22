@@ -43,7 +43,7 @@ const DesktopCarausel = ({ image, index, currentSlideIndex, item }) => {
             index === currentSlideIndex
               ? "group-hover:opacity-[1] group-hover:bg-[rgb(0,0,0,0.7)]"
               : ""
-          } h-[13rem] mt-24 absolute inset-0 transition-all delay-75 ease-in-out rounded overflow-hidden w-full xl:w-[64%] midXl:w-[100%] xxl:w-[95.8%] hidden middleXmd:block`}
+          } h-[13rem] mt-24 absolute inset-0 transition-all delay-75 ease-in-out rounded overflow-hidden w-full xl:w-[64%]  midXl:w-[99.8%] xxl:w-[96%] midlg:w-[90%] hidden middleXmd:block`}
         >
           <div className="w-full midlg:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto  border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[12%] mr-3 gap-4 overflow-hidden">
             <motion.div
