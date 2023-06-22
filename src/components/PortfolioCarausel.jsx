@@ -88,7 +88,7 @@ const PortfolioCarausel = ({ props, page }) => {
 
     return (
       <div
-        className="relative z-0 h-[10rem]"
+        className="relative z-0 h-[1rem]"
         onClick={onClick}
         style={dotStyle}
       >
@@ -211,26 +211,28 @@ const PortfolioCarausel = ({ props, page }) => {
               arrows={false}
               renderButtonGroupOutside={true}
               customButtonGroup={<ButtonGroup className="z-10" />}
-              autoPlay={props.deviceType !== "mobile" ? true : false}
+              // autoPlay={props.deviceType !== "mobile" ? true : false}
               infinite={true}
-              autoPlaySpeed={9000}
+              // autoPlaySpeed={9000}
               sliderClass={true}
               showDots={true}
               dotListClass={
-                "top-[15rem] ssm:top-[20rem] midxs:top-[16.7rem] translate-x-[-3%] relative -z-10"
+                "top-[15rem] ssm:top-[19rem] midms:top-[20.7rem] middlems:top-[22rem] xsm:top-[24rem] translate-x-[-3%] relative -z-10"
               }
               customDot={<CustomDot className="mt-20" />}
             >
-              {portfolioImages.map((item, index) => (
-                <PortfolioMobile
-                  // image={image.image}
-                  key={index}
-                  index={index}
-                  item={item}
-                  currentSlideIndex={currentSlideIndex}
-                  className="w-[50%] h-[100%]"
-                />
-              ))}
+              {portfolioImages.map((item, index) => {
+                return (
+                  <PortfolioMobile
+                    // image={image.image}
+                    key={index}
+                    index={index}
+                    item={item}
+                    currentSlideIndex={currentSlideIndex}
+                    className="w-[50%] h-[100%]"
+                  />
+                );
+              })}
             </Carousel>
           </div>
         </div>

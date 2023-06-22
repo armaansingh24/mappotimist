@@ -9,6 +9,7 @@ module.exports = {
         ssm: "340px",
         msm: "360px",
         midms: "370px",
+        middlems: "380px",
         xsm: "400px",
         midxs: "410px",
         middlesm: "600px",
