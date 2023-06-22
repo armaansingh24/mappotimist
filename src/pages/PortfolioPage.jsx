@@ -364,7 +364,7 @@ const PortfolioPage = (props) => {
             <img
               src={item.leftImage}
               alt=""
-              className="w-full ml-14 midFM:ml-20"
+              className="w-full ml-8 midFM:ml-20"
             />
           </div>
           <div className="flex flex-col items-center justify-center gap-3 relative z-10">
