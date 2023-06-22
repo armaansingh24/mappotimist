@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,84 +15,99 @@ import PortfolioMobile from "./PortfolioMobile";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import PortfolioSlider from "./PortfolioSlider";
-import DesktopCarausel from './DesktopCarausel';
-import DesktopCarauselTwo from './DesktopCarauselTwo';
+import DesktopCarausel from "./DesktopCarausel";
+import DesktopCarauselTwo from "./DesktopCarauselTwo";
 SwiperCore.use([Pagination]);
 
-
-const PortfolioCarausel = ({props,page}) => {
-    // console.log(page);
-     const responsive = {
-       desktop: {
-         breakpoint: { max: 3000, min: 1024 },
-         items: 6,
-         slidesToSlide: 4, // optional, default to 1.
-       },
-       tablet: {
-         breakpoint: { max: 1024, min: 464 },
-         items: 2,
-         slidesToSlide: 2, // optional, default to 1.
-       },
-       mobile: {
-         breakpoint: { max: 464, min: 0 },
-         items: 1,
-         slidesToSlide: 1, // optional, default to 1.
-       },
-     };
-     const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
-       return (
-         <div
-           className="absolute carousel-button-group mb-4 gap-4 flex justify-end 
-          items-center w-[100%] h-fit z-10 bottom-0"
-         >
-           <button
-             className={`absolute w-[2%] h-full ${
-               page === "portfolio" ? "text-black" : "text-white"
-             } -top-[15rem]  left-0 text-center p-3 z-[100]`}
-             onClick={() => previous()}
-           >
-             {" "}
-             <AiOutlineArrowLeft className="text-[1.75rem] absolute top-6 left-0 right-0" />
-           </button>
-           <button onClick={() => next()}>
-             <span
-               className={`absolute w-[2%] h-20 -top-[15rem] ${
-                 page === "portfolio" ? "text-black" : "text-white"
-               } right-[0.3rem] text-center p-3 z-[100]`}
-             >
-               <AiOutlineArrowRight className="text-[1.75rem] absolute top-6 left-0 right-[-2rem]" />
-             </span>
-           </button>
-         </div>
-       );
-     };
-    const CustomDot = ({ onClick, active }) => {
-      const dotStyle = {
-        opacity: active ? 1 : 0.5,
-        color: page === "portfolio" ? "black" : "white",
-        marginLeft: "5px",
-        marginRight: "5px",
-        marginTop: "150px",
-      };
-
-      return (
-        <div className="relative z-0 h-[10rem]" onClick={onClick} style={dotStyle}>
-          •
-        </div>
+const PortfolioCarausel = ({ props, page }) => {
+  useEffect(() => {
+    if (page === "portfolio") {
+      const elements = document.getElementsByClassName(
+        "swiper-pagination-bullet"
       );
+      if (elements.length > 0) {
+        for(let i=0; i<elements.length; i++){
+          elements[i].style.backgroundColor = "black";
+        }
+      }
+    }
+  }, [page]);
+  // console.log(page);
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 6,
+      slidesToSlide: 4, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+  const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+    return (
+      <div
+        className="absolute carousel-button-group mb-4 gap-4 flex justify-end 
+          items-center w-[100%] h-fit z-10 bottom-0"
+      >
+        <button
+          className={`absolute w-[2%] h-full ${
+            page === "portfolio" ? "text-black" : "text-white"
+          } -top-[15rem]  left-0 text-center p-3 z-[100]`}
+          onClick={() => previous()}
+        >
+          {" "}
+          <AiOutlineArrowLeft className="text-[1.75rem] absolute top-6 left-0 right-0" />
+        </button>
+        <button onClick={() => next()}>
+          <span
+            className={`absolute w-[2%] h-20 -top-[15rem] ${
+              page === "portfolio" ? "text-black" : "text-white"
+            } right-[0.3rem] text-center p-3 z-[100]`}
+          >
+            <AiOutlineArrowRight className="text-[1.75rem] absolute top-6 left-0 right-[-2rem]" />
+          </span>
+        </button>
+      </div>
+    );
+  };
+  const CustomDot = ({ onClick, active }) => {
+    const dotStyle = {
+      opacity: active ? 1 : 0.5,
+      color: page === "portfolio" ? "black" : "white",
+      marginLeft: "5px",
+      marginRight: "5px",
+      marginTop: "150px",
     };
-     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-      // const swiperRef = useRef(null);
 
-     const handleSlideChange = (swiper) => {
-       setCurrentSlideIndex(swiper.realIndex);
-       //  console.log(swiper.activeIndex);
-     };
-    //  const handleClickItem = (index) => {
-    //    if (swiperRef.current) {
-    //      swiperRef.current.swiper.slideTo(index);
-    //    }
-    //  };
+    return (
+      <div
+        className="relative z-0 h-[10rem]"
+        onClick={onClick}
+        style={dotStyle}
+      >
+        •
+      </div>
+    );
+  };
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  // const swiperRef = useRef(null);
+
+  const handleSlideChange = (swiper) => {
+    setCurrentSlideIndex(swiper.realIndex);
+    //  console.log(swiper.activeIndex);
+  };
+  //  const handleClickItem = (index) => {
+  //    if (swiperRef.current) {
+  //      swiperRef.current.swiper.slideTo(index);
+  //    }
+  //  };
 
   return (
     <>
@@ -156,7 +171,6 @@ const PortfolioCarausel = ({props,page}) => {
                   </SwiperSlide>
                 );
               }
-
 
               return (
                 <SwiperSlide virtualIndex={index} key={index}>
@@ -223,6 +237,6 @@ const PortfolioCarausel = ({props,page}) => {
       </div>
     </>
   );
-}
+};
 
-export default PortfolioCarausel
+export default PortfolioCarausel;

@@ -243,7 +243,8 @@ body {
     }
 
     .swiper_container {
-        height: 32rem;
+        height: 35rem;
+        width: 100%;
     }
 }
 
@@ -332,6 +333,7 @@ body {
 
 .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary);
+    /* background: black */
 }
 
 .swiper-pagination2 {

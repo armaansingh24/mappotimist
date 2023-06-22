@@ -56,6 +56,7 @@ const About = () => {
               transition={{ duration: 1.6 }}
             >
               <Carousel
+                emulateTouch="true"
                 statusFormatter={() => {}}
                 autoPlay="true"
                 infiniteLoop="true"

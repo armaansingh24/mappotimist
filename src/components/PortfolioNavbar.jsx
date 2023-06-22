@@ -41,7 +41,7 @@ const Navbar = () => {
               MappOptimist
             </p>
           </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-3 lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center">
+          <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center">
             {navLinks.map((link) => (
               <li
                 key={link.id}
