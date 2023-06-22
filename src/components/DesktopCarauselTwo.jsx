@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const DesktopCarausel = ({ image, index, currentSlideIndex, item }) => {
+const DesktopCarauselTwo = ({ image, index, currentSlideIndex, item }) => {
   const ref = useRef(null);
   const mainControls = useAnimation();
   const navigate = useNavigate();
@@ -36,15 +36,16 @@ const DesktopCarausel = ({ image, index, currentSlideIndex, item }) => {
           className={`z-[-10] ${
             index === currentSlideIndex ? "" : ""
           } transition-all delay-75 ease-in-out mr-16 midxmd:mr-10 mt-24 object-fill`}
+          onClick={handleReadMore}
         />
         <div
           className={`opacity-0 ${
             index === currentSlideIndex
               ? "group-hover:opacity-[1] group-hover:bg-[rgb(0,0,0,0.7)]"
               : ""
-          } h-[13rem] mt-24 absolute inset-0 transition-all delay-75 ease-in-out rounded overflow-hidden w-full xl:w-[64%] midXl:w-[59.8%] xxl:w-[95.8%] `}
+          } h-[11.8rem] mt-[28.5%] absolute inset-0 transition-all delay-75 ease-in-out overflow-hidden w-full xl:w-[64%] midXl:w-[59.8%] xxl:w-[95.8%] ml-2 hidden midFM:block`}
         >
-          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto  border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[12%] mr-3 gap-4 overflow-hidden">
+          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto  border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[8%] mr-4 gap-4 overflow-hidden">
             <motion.div
               ref={ref}
               variants={{
@@ -84,4 +85,4 @@ const DesktopCarausel = ({ image, index, currentSlideIndex, item }) => {
   );
 };
 
-export default DesktopCarausel;
+export default DesktopCarauselTwo;

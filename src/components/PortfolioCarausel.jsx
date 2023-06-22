@@ -16,6 +16,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import PortfolioSlider from "./PortfolioSlider";
 import DesktopCarausel from './DesktopCarausel';
+import DesktopCarauselTwo from './DesktopCarauselTwo';
 SwiperCore.use([Pagination]);
 
 
@@ -133,7 +134,7 @@ const PortfolioCarausel = ({props,page}) => {
             // goToSlide={handleClickItem}
           >
             {portfolioImages.map((item, index) => {
-              if (item.id === 4 || item.id === 5) {
+              if (item.id === 4) {
                 return (
                   <SwiperSlide virtualIndex={index} key={index}>
                     <DesktopCarausel
@@ -144,6 +145,18 @@ const PortfolioCarausel = ({props,page}) => {
                   </SwiperSlide>
                 );
               }
+              if (item.id === 5) {
+                return (
+                  <SwiperSlide virtualIndex={index} key={index}>
+                    <DesktopCarauselTwo
+                      index={index}
+                      item={item}
+                      currentSlideIndex={currentSlideIndex}
+                    />
+                  </SwiperSlide>
+                );
+              }
+
 
               return (
                 <SwiperSlide virtualIndex={index} key={index}>

@@ -15,7 +15,7 @@ import background2 from "../assets/portfolio/background2.jpg";
 // portfolio Images
 
 // Bobble Images
-// import bobble1 from "../assets/portfolio/bobble/bobble1.png";
+import bobble1 from "../assets/portfolio/bobble/bobble1.png";
 import bobble2 from "../assets/portfolio/bobble/bobble2.png";
 import bobble3 from "../assets/portfolio/bobble/bobble3.png";
 import bobble4 from "../assets/portfolio/bobble/bobble4.png";
@@ -29,7 +29,7 @@ import Fetch4 from "../assets/portfolio/Fetch/Fetch4.png";
 import Fetchmain from "../assets/portfolio/Fetch/Fetchmain.png";
 
 // FTL Images
-// import FTL1 from "../assets/portfolio/FTL/FTL1.png";
+import FTL1 from "../assets/portfolio/FTL/FTL1.png";
 import FTL2 from "../assets/portfolio/FTL/FTL2.png";
 import FTL3 from "../assets/portfolio/FTL/FTL3.png";
 import FTL4 from "../assets/portfolio/FTL/FTL4.png";
@@ -223,7 +223,7 @@ export const portfolioImages = [
       "AI models are employed to enhance typing experiences by providing precise suggestions, predictions, and automatic corrections.",
 
     leftImage: bobble3,
-    rightImage: bobble4,
+    rightImage: bobble1,
     rightImage1: "ATW  Feature",
     rightImage1Desc:
       "Deep linking was implemented, utilizing standard iOS and Android practices and clever techniques to enable seamless redirection between our app and WhatsApp.",
@@ -242,7 +242,7 @@ export const portfolioImages = [
     image: FTL2,
     bgimage: background2,
     title: "FTL: Fantasy trading league",
-    mainImage: FTL3,
+    mainImage: FTL4,
     feature: FTLmain,
     onhover:
       "FTL offers genuine trading experience by providing real-time data for crypto, US stocks and Indian stocks using simulated funds provided by the platform.",
@@ -277,7 +277,7 @@ export const portfolioImages = [
     feature10Desc: "",
 
     leftImage: FTL3,
-    rightImage: FTL4,
+    rightImage: FTL1,
     rightImage1: "Push notification",
     rightImage1Desc:
       "Push notifications using Firebase enable real-time communication with app users. With personalized messages, updates, and alerts, it enhances engagement, user retention, and delivers timely information, boosting the overall app experience.",
@@ -296,7 +296,7 @@ export const portfolioImages = [
     bgimage: backgroudPortfolio,
     image: Fetch2,
     title: "GoFetch",
-    mainImage: Fetch1,
+    mainImage: Fetch4,
     feature: Fetchmain,
     onhover:
       "Discover a world of online shopping at your fingertips. Browse, compare, and buy products with ease through our intuitive GoFetch app.",
@@ -332,7 +332,7 @@ export const portfolioImages = [
     feature10: "",
     feature10Desc: "",
     leftImage: Fetch3,
-    rightImage: Fetch4,
+    rightImage: Fetch1,
     rightImage1: "Payment",
     rightImage1Desc:
       "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",
@@ -351,7 +351,7 @@ export const portfolioImages = [
     image: onemain,
     bgimage: background2,
     title: "Website 1",
-    mainImage: one1,
+    mainImage: one3,
     feature: onemain,
     onhover:
       "Our mission is to deliver top-notch Tile & Stone Installation Solutions worldwide, ensuring high-quality projects completed on time with unwavering trust.",
@@ -387,7 +387,7 @@ export const portfolioImages = [
     feature10: "",
     feature10Desc: "",
     leftImage: one2,
-    rightImage: one3,
+    rightImage: one1,
     rightImage1: "Responsiveness",
     rightImage1Desc:
       "To build website responsiveness we focused on flexible layouts, fluid grids, media queries, and optimize images. Test on various devices and adjust as needed for optimal user experience.",
@@ -404,10 +404,10 @@ export const portfolioImages = [
   {
     id: 5,
     bgimage: background2,
-    image: twomain,
+    image: two2,
     title: "Website 2",
-    mainImage: two1,
-    feature: two2,
+    mainImage: two4,
+    feature: twomain,
     onhover:
       " This website offers room sales services, facilitating seamless transactions and providing a user-friendly experience for buyers and sellers.",
     feature1: "Responsiveness",
@@ -442,7 +442,7 @@ export const portfolioImages = [
     feature10: "",
     feature10Desc: "",
     leftImage: two3,
-    rightImage: two4,
+    rightImage: two1,
     rightImage1: "SEO Friendly",
     rightImage1Desc:
       "To build an SEO-friendly website, we focused on keyword research, optimized content, meta tags, proper URL structure, mobile-friendliness, and link building strategies.",
@@ -461,7 +461,7 @@ export const portfolioImages = [
     bgimage: background2,
     image: medi2,
     title: "MediHelp",
-    mainImage: medi1,
+    mainImage: medi4,
     feature: medimain,
     onhover:
       "The MediHelp app facilitates digital connectivity with doctors, enabling appointment booking, appointment alerts, profile management, health tips, and emergency contacts.",
@@ -495,7 +495,7 @@ export const portfolioImages = [
     feature10: "",
     feature10Desc: "",
     leftImage: medi3,
-    rightImage: medi4,
+    rightImage: medi1,
     rightImage1: "Appointments Feature",
     rightImage1Desc:
       "The content suggestion drawer utilized various APIs, with responses parsed using intents, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
@@ -511,10 +511,9 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 7,
-    bgimage: background2,
     image: Happy2,
     title: "Happy Ride",
-    mainImage: Happy1,
+    mainImage: Happy4,
     feature: Happymain,
     onhover:
       "Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
@@ -548,7 +547,7 @@ export const portfolioImages = [
     feature10: "",
     feature10Desc: "",
     leftImage: Happy3,
-    rightImage: Happy4,
+    rightImage: Happy1,
     rightImage1: "Payment",
     rightImage1Desc:
       "To establish customer confidence, our app incorporates various payment gateways like Apple Pay, Google Pay, Paytm, etc., ensuring seamless in-app transactions.",

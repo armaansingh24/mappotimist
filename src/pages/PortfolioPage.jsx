@@ -41,7 +41,7 @@ const PortfolioPage = (props) => {
                 <img
                   src={item.mainImage}
                   alt=""
-                  className="mx-auto w-[70%] -mt-20 -mr-[4%]"
+                  className="mx-auto midFM:w-[70%] mt-14 midFM:-mt-20 midFM:-mr-[4%]"
                 />
                 {/* <p>{item.title}</p> */}
               </div>
@@ -49,9 +49,9 @@ const PortfolioPage = (props) => {
           </div>
         </div>
         {/* Feature section */}
-        <div className="bg-gradient-to-br from-primary to-primary via-secondary w-screen pb-10">
+        <div className="bg-gradient-to-br from-primary to-primary via-secondary w-screen pb-16">
           <div className="flex flex-col items-center justify-center p-1">
-            <p className="text-lg sm:text-3xl font-poppins text-center text-white mt-20">
+            <p className="text-lg sm:text-3xl font-poppins text-center text-white mt-10 midFM:mt-20">
               Awesome Features
             </p>
             <p className="text-base text-center font-poppins500 sm:text-xl sm:w-[80%] mx-auto mt-2 text-white">
@@ -59,7 +59,7 @@ const PortfolioPage = (props) => {
             </p>
           </div>
 
-          <div className="sm:mt-28 block midxmd:hidden">
+          <div className="mt-10 sm:mt-28 block midxmd:hidden">
             <div className="">
               <img
                 src={item.mainImage}
@@ -68,7 +68,7 @@ const PortfolioPage = (props) => {
               />
             </div>
             {/* mobile view cards */}
-            <div className="grid grid-cols-2 gap-5 w-[90%] mx-auto items-center justify-center ">
+            <div className="grid grid-cols-2 gap-5 w-[90%] mx-auto items-center justify-center mt-10">
               <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2 items-center justify-center shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)] ">
                 <img
                   src={featureIcon}
@@ -353,7 +353,7 @@ const PortfolioPage = (props) => {
           <img
             src={R1}
             alt=""
-            className="absolute  -top-[34.4%] -right-8 block sm:hidden z-0"
+            className="absolute  -top-[32.9%] -right-8 block sm:hidden z-0"
           />
           <img
             src={R2}
@@ -406,9 +406,13 @@ const PortfolioPage = (props) => {
             alt=""
             className="absolute -top-20 z-0 block sm:hidden"
           />
-          <div className="w-[80%] mx-auto flex flex-col items-start justify-center gap-4 sm:flex-row relative h-fit mt-20 sm:mt-0">
+          <div className="w-[80%] mx-auto flex flex-col items-start justify-center gap-4 sm:flex-row relative h-fit mt-36 sm:mt-0">
             <div className="sm:order-2 ">
-              <img src={item.rightImage} alt="" className="w-full mr-20 -mt-20" />
+              <img
+                src={item.rightImage}
+                alt=""
+                className="w-full mr-20 -mt-20"
+              />
             </div>
             <div className="flex flex-col items-baseline justify-center gap-3 relative z-10">
               <div className="flex flex-col items-center justify-center gap-2">
