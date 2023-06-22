@@ -241,7 +241,7 @@ export const portfolioImages = [
   {
     id: 2,
     image: FTL2,
-    css: "mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[60%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[50%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
+    css: "mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[40%] mt-14 middleXmd:-mt-48 middleXmd:mr-[18%]",
     bgimage: background2,
     title: "FTL: Fantasy trading league",
     mainImage: FTL4,
@@ -295,6 +295,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 3,
+    css: "mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
     bgimage: backgroudPortfolio,
     image: Fetch2,
     title: "GoFetch",

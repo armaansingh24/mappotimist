@@ -42,6 +42,7 @@ const PortfolioPage = (props) => {
                   src={item.mainImage}
                   alt=""
                   className={`${item.css}`}
+                  // className="mx-auto scale-[2] mt-36 midms:w-[95%] xsm:w-[89%] sm:w-[100%] sm:mt-44 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-48 middleXmd:mr-[1%]"
                 />
                 {/* <p>{item.title}</p> */}
               </div>
