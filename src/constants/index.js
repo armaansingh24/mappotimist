@@ -181,6 +181,7 @@ export const portfolioImages = [
   // Bobble
   {
     id: 1,
+    css: "mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
     bgimage: backgroudPortfolio,
     image: bobble2,
     title: "Bobble",
@@ -240,12 +241,13 @@ export const portfolioImages = [
   {
     id: 2,
     image: FTL2,
+    css: "mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[60%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[50%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
     bgimage: background2,
     title: "FTL: Fantasy trading league",
     mainImage: FTL4,
     feature: FTLmain,
     onhover:
-      "FTL offers genuine trading experience by providing real-time data for crypto, US stocks and Indian stocks using simulated funds provided by the platform.",
+      "FTL provides real-time data for crypto & stocks, offering an authentic trading experience with simulated funds.",
     feature1: "Real-time data",
     feature1Desc:
       "Real-time market data: trading prices, volumes, and indicators that inform investors, enabling timely decision-making.",
@@ -302,7 +304,7 @@ export const portfolioImages = [
       "Discover a world of online shopping at your fingertips. Browse, compare, and buy products with ease through our intuitive GoFetch app.",
     feature1: "Languages",
     feature1Desc:
-      "Explore this user-centric app offering content in multiple languages. Users can also request regional language support to personalize their experience.",
+      "Shop easily with GoFetch. Browse, compare, and buy products conveniently through the online shopping experience.",
 
     feature2: "Home",
     feature2Desc:
@@ -350,7 +352,7 @@ export const portfolioImages = [
     id: 4,
     image: onemain,
     bgimage: background2,
-    title: "Website 1",
+    title: "Website",
     mainImage: one3,
     feature: onemain,
     onhover:
@@ -405,11 +407,11 @@ export const portfolioImages = [
     id: 5,
     bgimage: background2,
     image: two2,
-    title: "Website 2",
+    title: "Website",
     mainImage: two4,
     feature: twomain,
     onhover:
-      " This website offers room sales services, facilitating seamless transactions and providing a user-friendly experience for buyers and sellers.",
+      "This website offers room sales services, facilitating seamless transactions and providing a user-friendly experience for buyers and sellers.",
     feature1: "Responsiveness",
     feature1Desc:
       "This website dynamically adjusts its layout and content to provide an optimal viewing experience across various devices and screen sizes.",
@@ -464,7 +466,7 @@ export const portfolioImages = [
     mainImage: medi4,
     feature: medimain,
     onhover:
-      "The MediHelp app facilitates digital connectivity with doctors, enabling appointment booking, appointment alerts, profile management, health tips, and emergency contacts.",
+      "MediHelp app: Connect with doctors, book appointments, manage profiles, access health tips, and emergency contacts.",
     feature1: "DualAuth",
     feature1Desc:
       "This app facilitates patient and doctor login with separate credentials, providing individual profiles and dashboards for each user.",
@@ -516,7 +518,7 @@ export const portfolioImages = [
     mainImage: Happy4,
     feature: Happymain,
     onhover:
-      "Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
+      " Effortlessly book taxis, track your ride, and pay securely with our user-friendly and reliable taxi booking app.",
     feature1: "Map",
     feature1Desc:
       " This app offers a real-time location rendering map for users to track their own and assigned rider's location, distance, and more.",
