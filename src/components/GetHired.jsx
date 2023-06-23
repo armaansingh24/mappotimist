@@ -203,15 +203,16 @@ const GetHired = () => {
 
   return (
     <>
-      <div className="w-screen h-screen relative z-10">
+      <div className="w-screen h-screen relative z-40">
         <div className="w-[97%] h-auto mx-auto mt-[2.5%] bg-gradient-to-r from-[#000046] to-[#1CB5E0] rounded-xl">
           <div className="flex items-center flex-col w-[100%] mx-auto">
             <div className="text-center flex flex-col gap-4 w-[60%] p-10">
               <h2 className="text-2xl font-bold text-white">Get In Touch</h2>
               <p className="text-white text-lg">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
+                Boost your project's success with our IT solutions. Whether you
+                need individual or team developers, or flexible contract-based
+                talent, we deliver top-notch expertise for seamless development
+                experiences.
               </p>
             </div>
             <div className="bg-white w-[50%] flex items-center justify-center p-1 gap-x-1 my-4 mb-10 rounded-full">
@@ -246,8 +247,9 @@ const GetHired = () => {
                 <div className="font-medium">
                   <p className="text-lg">Contact information</p>
                   <p className="text-[13px] leading-[19px]">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. V
+                    Contact us today to forge a deeper understanding and create
+                    a strong bond. Let's collaborate and achieve remarkable
+                    results together!
                   </p>
                 </div>
                 <div className="mt-10 flex gap-3 items-center">

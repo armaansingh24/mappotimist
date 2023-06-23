@@ -7,7 +7,8 @@ import { MdOutlineMessage } from "react-icons/md";
 import { useState, useRef } from "react";
 import ellips1 from "../assets/contactUs/ellips1.png";
 import ellips2 from "../assets/contactUs/ellips2.png";
-
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const GetHiredMobile = () => {
   const fileInputRef = useRef(null);
@@ -16,6 +17,7 @@ const GetHiredMobile = () => {
   const [error3, setError3] = useState("");
   const [error5, setError5] = useState("");
   const [error6, setError6] = useState("");
+  const [error7, setError7] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -43,63 +45,144 @@ const GetHiredMobile = () => {
     }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+   const handleSubmit = async (e) => {
+     e.preventDefault();
 
-    console.log(error1);
-    if (formData.name.trim() === "") {
-      setError1("This field is necessary");
-      return;
-    }
+     // console.log(error1);
+     if (formData.name.trim() === "") {
+       setError1("This field is necessary");
+       return;
+     }
 
-    // Validate contact field
-    if (formData.contact.trim() === "") {
-      setError2("This field is necessary");
-      return;
-    }
+     // Validate contact field
+     if (formData.contact.trim() === "") {
+       setError2("This field is necessary");
+       return;
+     }
 
-    // Validate email field
-    if (formData.email.trim() === "") {
-      setError3("This field is necessary");
-      return;
-    }
+     // Validate email field
+     if (formData.email.trim() === "") {
+       setError3("This field is necessary");
+       return;
+     }
 
-    // Validate type field
-    if (formData.type.trim() === "" && accountType === "Hire Team") {
-      setError5("This field is necessary");
-      return;
-    }
+     // Validate type field
+     if (formData.type.trim() === "" && accountType === "Hire Team") {
+       setError5("This field is necessary");
+       return;
+     }
 
-    // Validate duration field
-    if (formData.duration.trim() === "" && accountType === "Hire Team") {
-      setError6("This field is necessary");
-      return;
-    }
+     // Validate duration field
+     if (formData.duration.trim() === "" && accountType === "Hire Team") {
+       setError6("This field is necessary");
+       return;
+     }
+     // Validate required field
+     if (formData.required.trim() === "" && accountType !== "Hire Team") {
+       setError7("This field is necessary");
+       return;
+     }
 
-    console.log(formData);
-    setError1("");
-    setError2("");
-    setError3("");
-    setError5("");
-    setError6("");
+     if (accountType === "Hire Team") {
+       const formDataSent = {
+         name: formData.name,
+         contact: formData.contact,
+         email: formData.email,
+         type: formData.type,
+         duration: formData.duration,
+         summery: formData.summery,
+         file: formData.file,
+       };
+       try {
+         const response = await axios.post(
+           "http://localhost:3000/send-email-hire-team",
+           formDataSent,
+           {
+             headers: {
+               "Content-Type": "multipart/form-data",
+             },
+           }
+         );
+         if (response.status === 200) {
+           console.log("Form data sent successfully");
+           // Reset the form
+           toast.success("Email sent successfully");
+           setFormData({
+             name: "",
+             contact: "",
+             email: "",
+             required: "",
+             file: "",
+             type: "",
+             duration: "",
+             summery: "",
+           });
+         } else {
+           toast.error("Email not sent");
+         }
+       } catch (error) {
+         toast.error("Email not sent");
+         // Handle error
+         console.error("Error:", error);
+       }
+     } else {
+       const formDataSent = {
+         name: formData.name,
+         contact: formData.contact,
+         email: formData.email,
+         required: formData.required,
+         summery: formData.summery,
+       };
+       try {
+         const response = await axios.post(
+           "http://localhost:3000/send-email-individual",
+           formDataSent
+         );
+         if (response.status === 200) {
+           console.log("Form data sent successfully");
+           // Reset the form
+           toast.success("Email sent successfully");
+           setFormData({
+             name: "",
+             contact: "",
+             email: "",
+             required: "",
+             file: "",
+             type: "",
+             duration: "",
+             summery: "",
+           });
+         } else {
+           toast.error("Email not sent");
+         }
+       } catch (error) {
+         toast.error("Email not sent");
+         // Handle error
+         console.error("Error:", error);
+       }
+     }
+     // console.log(formData);
+     errorHandler();
 
-    setFormData({
-      name: "",
-      contact: "",
-      email: "",
-      file: "",
-      required: "",
-      type: "",
-      duration: "",
-      summery: "",
-    });
-  };
+     // setFormData({
+     //   name: "",
+     //   contact: "",
+     //   email: "",
+     //   file: "",
+     //   required: "",
+     //   type: "",
+     //   duration: "",
+     //   summery: "",
+     //   formId: accountType,
+     // });
+   };
   const errorHandler = () => {
     setError1("");
     setError2("");
     setError3("");
     setError5("");
     setError6("");
+    setError7("");
   };
 
   const [accountType, setAccountType] = useState("Hire Team");
@@ -115,17 +198,18 @@ const GetHiredMobile = () => {
   return (
     <div className="w-screen h-scree relative z-30">
       <div className="w-[90%] mx-auto bg-white text-center rounded-3xl relative">
-        <img src={ellips1} alt="" className="absolute right-0 top-[50%] z-0"/>
-        <img src={ellips2} alt="" className="absolute bottom-0 z-0"/>
+        <img src={ellips1} alt="" className="absolute right-0 top-[50%] z-0" />
+        <img src={ellips2} alt="" className="absolute bottom-0 z-0" />
         <div className="flex items-center justify-center w-[90%] mx-auto flex-col">
           <div className="mt-10 flex gap-4 flex-col">
             <h2 className="text-4xl font-poppins text-transparent bg-gradient-to-b from-primary to-secondary bg-clip-text">
               Get In Touch
             </h2>
             <p className="text-sm font-poppins300 text-transparent bg-gradient-to-b from-primary to-secondary bg-clip-text">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+              Boost your project's success with our IT solutions. Whether you
+              need individual or team developers, or flexible contract-based
+              talent, we deliver top-notch expertise for seamless development
+              experiences.
             </p>
           </div>
           <div className="bg-white w-[100%] flex items-center justify-center p-1 gap-x-1 my-4 mb-10 rounded-full shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
@@ -213,18 +297,25 @@ const GetHiredMobile = () => {
                 )}
               </div>
               {accountType !== "Hire Team" && (
-                <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                  <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                  <RxDividerVertical className="text-4xl" />
-                  <input
-                    type="text"
-                    name="required"
-                    onChange={changeHandler}
-                    placeholder="Required Skills"
-                    value={formData.required}
-                    onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
-                  />
+                <div>
+                  <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                    <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                    <RxDividerVertical className="text-4xl" />
+                    <input
+                      type="text"
+                      name="required"
+                      onChange={changeHandler}
+                      placeholder="Required Skills"
+                      value={formData.required}
+                      onClick={errorHandler}
+                      className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent appearance-none custom-input"
+                    />
+                  </div>
+                  {error7.length !== 0 && (
+                    <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                      {error7}
+                    </p>
+                  )}
                 </div>
               )}
               {accountType === "Hire Team" && (
@@ -323,7 +414,6 @@ const GetHiredMobile = () => {
                     className="h-full w-screen focus:outline-none text-lg resize-none"
                   />
                 </div>
-                
               </div>
               <button
                 type="submit"

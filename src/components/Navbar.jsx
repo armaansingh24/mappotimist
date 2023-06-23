@@ -6,17 +6,54 @@ import logo from "../assets/navbar/logo.png";
 import eclips1 from "../assets/navbar/eclips1.png";
 import eclips2 from "../assets/navbar/eclips2.png";
 import eclips3 from "../assets/navbar/eclips3.png";
+import { VscNotebook } from "react-icons/vsc";
 // import { HashLink as Link } from "react-router-hash-link";
+import GetHired from "./GetHired";
+import GetHire from "./GetHire";
+import GetHiredMobile from "./GetHiredMobile";
+import HireMobile from "./HireMobile";
+import { SlClose } from "react-icons/sl";
+import { useEffect } from "react";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const genericHamburgerLine = `h-1 w-6 rounded-full bg-black transition ease transform duration-300`;
+
+  const [showForm, setShowForm] = useState(false);
+  const [showForm2, setShowForm2] = useState(false);
+  const [showForm3, setShowForm3] = useState(false);
+  const [showForm4, setShowForm4] = useState(false);
+
+  const handleGetHired = () => {
+    setShowForm(!showForm);
+  };
+
+  const handleGetHire = () => {
+    setShowForm2(!showForm2);
+  };
+  const handleGetHired1 = () => {
+    setShowForm3(!showForm3);
+  };
+
+  const handleGetHire1 = () => {
+    setShowForm4(!showForm4);
+  };
+  useEffect(() => {
+    if (showForm || showForm2) {
+      // Add the class to disable scrolling
+      document.documentElement.classList.add("disable-scrolling");
+    } else {
+      // Remove the class to enable scrolling
+      document.documentElement.classList.remove("disable-scrolling");
+    }
+  }, [showForm, showForm2]);
+
   return (
     <>
       <nav
         className={
-          " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black"
+          " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 top-0 left-0 right-0 sm:relative z-10 text-black"
         }
       >
         <div className="w-full flex justify-between items-start  mx-auto ">
@@ -41,25 +78,129 @@ const Navbar = () => {
               MappOptimist
             </p>
           </Link>
-          <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center">
-            {navLinks.map((link) => (
-              <li
-                key={link.id}
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+          <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center z-50 relative">
+            <li
+              className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
                 "
+            >
+              <Link
+                className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                to={`Home`}
+                // spy={true}
+                smooth={true}
+                offset={100}
+                duration={1000}
               >
+                Home
+              </Link>
+            </li>
+            <li
+              className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                "
+            >
+              <Link
+                className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                to={`Portfolio`}
+                // spy={true}
+                smooth={true}
+                offset={100}
+                duration={1000}
+              >
+                Portfolio
+              </Link>
+            </li>
+            <li
+              className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                "
+            >
+              <div className="group">
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  to={`${link.id}`}
+                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white relative z-10 group"
+                  to={`Developer`}
                   // spy={true}
                   smooth={true}
-                  offset={100}
+                  offset={50}
                   duration={1000}
                 >
-                  {link.title}
+                  Developer
                 </Link>
-              </li>
-            ))}
+                <div className="hidden group-hover:block transition-all ease-in duration-300 z-0">
+                  <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-8 z-0"></div>
+                  <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-14 -translate-y-6">
+                    <ul className="list-none">
+                      <li>
+                        <button
+                          className="px-4 py-2 text-gray-800 flex items-center justify-center gap-6"
+                          onClick={() => {
+                            setToggle(!toggle);
+                            setIsOpen(!isOpen);
+                            handleGetHired();
+                          }}
+                        >
+                          <span>
+                            <VscNotebook />
+                          </span>
+                          <span>Recruit Us</span>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2"
+                          onClick={() => {
+                            setToggle(!toggle);
+                            setIsOpen(!isOpen);
+                            handleGetHire();
+                          }}
+                        >
+                          <span>
+                            <VscNotebook />
+                          </span>
+                          <span>Get Employed</span>
+                        </button>
+                      </li>
+                      <li>
+                        <p className="px-4 py-2 text-gray-800 flex items-center justify-center gap-6">
+                          <span>
+                            <VscNotebook />
+                          </span>
+                          <span>OCR/ICR</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                "
+            >
+              <Link
+                className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                to={`Expertise`}
+                // spy={true}
+                smooth={true}
+                offset={450}
+                duration={1000}
+              >
+                Expertise
+              </Link>
+            </li>
+            <li
+              className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                "
+            >
+              <Link
+                className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                to={`Contact Us`}
+                // spy={true}
+                smooth={true}
+                offset={10}
+                duration={1000}
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
 
           {/* Nav Modal */}
@@ -168,15 +309,75 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="logo"
-                  className={`${
-                    toggle === false ? "hidden" : "w-[80%] block"
-                  }`}
+                  className={`${toggle === false ? "hidden" : "w-[80%] block"}`}
                 />
               </Link>
             </div>
           </div>
         </div>
       </nav>
+      <div className="absolute -top-7 z-1">
+        {showForm && (
+          <div>
+            <div className="hidden midFM:block">
+              <div className="absolute top-20 right-20 text-[50px] text-white z-50">
+                <button onClick={()=>{
+                  setToggle(!toggle);
+                  setIsOpen(!isOpen);
+                  handleGetHired();
+                }}>
+                  <SlClose />
+                </button>
+              </div>
+              <GetHired />
+            </div>
+            <div className="block midFM:hidden mt-20">
+              <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
+                <button onClick={handleGetHired}>
+                  <SlClose />
+                </button>
+              </div>
+              <GetHiredMobile />
+            </div>
+            <div
+              className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
+              onClick={handleGetHired1}
+            ></div>
+          </div>
+        )}
+      </div>
+      <div className="absolute -top-5 z-1 ">
+        {showForm2 && (
+          <div>
+            <div className="hidden midFM:block">
+              <div className="absolute mt-3 right-20 text-[50px] text-white z-40">
+                <button onClick={()=>{
+                  setToggle(!toggle);
+                  setIsOpen(!isOpen);
+                  handleGetHire();
+                }}>
+                  <SlClose />
+                </button>
+              </div>
+              <GetHire />
+            </div>
+            <div className="block midFM:hidden mt-[45rem]">
+              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-50">
+                <button onClick={handleGetHire1}>
+                  <SlClose />
+                </button>
+              </div>
+              <HireMobile />
+            </div>
+            <div className="hidden midFM:block">
+              <div
+                className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
+                onClick={handleGetHire}
+              ></div>
+            </div>
+          </div>
+        )}
+      </div>
       <div
         className={`${
           toggle === false

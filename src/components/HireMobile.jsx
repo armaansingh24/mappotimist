@@ -28,7 +28,6 @@ const HireMobile = () => {
      expertise: "",
      experience: "",
      bio: "",
-     formId:"hire"
    });
 
    function changeHandler(event) {
@@ -84,17 +83,11 @@ const HireMobile = () => {
         return;
       }
 
-      setError1("");
-      setError2("");
-      setError3("");
-      setError4("");
-      setError5("");
-      setError6("");
-      setError7("");
+      errorHandler();
 
       try {
         const response = await axios.post(
-          "http://localhost:3000/send-email",
+          "http://localhost:3000/send-email-hire",
           formData,
           {
             headers: {
@@ -123,8 +116,8 @@ const HireMobile = () => {
         // Handle error
         console.error("Error:", error);
       }
-      // Handle successful response from the server
-    };  
+      errorHandler();
+    }; 
    const errorHandler = () => {
      setError1("");
      setError2("");
@@ -155,9 +148,9 @@ const HireMobile = () => {
               Get In Touch
             </h2>
             <p className="text-sm font-poppins300 text-transparent bg-gradient-to-b from-primary to-secondary bg-clip-text">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+              Unlock endless opportunities as a freelancer with our MappOptimist
+              company. We connect talented professionals with exciting projects,
+              fostering growth, creativity, and success in the digital world.
             </p>
           </div>
 

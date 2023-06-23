@@ -9,8 +9,6 @@ import image2 from "../assets/portfolio/image2.png";
 import image3 from "../assets/portfolio/image3.png";
 import image4 from "../assets/portfolio/image4.png";
 import image5 from "../assets/portfolio/image5.png";
-import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
-import background2 from "../assets/portfolio/background2.jpg";
 
 // portfolio Images
 
@@ -148,7 +146,7 @@ export const carouselItems = [
 export const about = [
   {
     id: 1,
-    number: "5 ",
+    number: "10 ",
     symbol: "+",
     title: "years of experience",
     description:
@@ -182,7 +180,6 @@ export const portfolioImages = [
   {
     id: 1,
     css: "mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
-    bgimage: backgroudPortfolio,
     image: bobble2,
     title: "Bobble",
     mainImage: bobble4,
@@ -242,7 +239,6 @@ export const portfolioImages = [
     id: 2,
     image: FTL2,
     css: "mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[40%] mt-14 middleXmd:-mt-48 middleXmd:mr-[18%]",
-    bgimage: background2,
     title: "FTL: Fantasy trading league",
     mainImage: FTL4,
     feature: FTLmain,
@@ -295,8 +291,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 3,
-    css: "mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
-    bgimage: backgroudPortfolio,
+    css: "mx-auto scale-[2] mt-36 midms:w-[95%] xsm:w-[89%] sm:w-[100%] sm:scale-[2.5] sm:-mr-24 sm:mt-44 midFM:mt-10 midFM:scale-[2.2] xmd:-mt-[70%] midxmd:w-[75%] middleXmd:-mt-32 middleXmd:scale-[2] middleXmd:mr-[1%]",
     image: Fetch2,
     title: "GoFetch",
     mainImage: Fetch4,
@@ -352,7 +347,7 @@ export const portfolioImages = [
   {
     id: 4,
     image: onemain,
-    bgimage: background2,
+    css: "mx-auto mt-[45%] midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-[60%] midFM:mt-32 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-[10%] middleXmd:mr-[1%]",
     title: "Website",
     mainImage: one3,
     feature: onemain,
@@ -406,10 +401,10 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 5,
-    bgimage: background2,
+    css: "mx-auto w-full scale-[2.2] ml-6 mt-[65%] midms:w-[95%] xsm:w-[89%] xsm:mt-52 sm:w-[60%] sm:scale-[4]  sm:ml-24 sm:mt-[100%] midFM:mt-[62%] xmd:-mt-[98%] xmd:scale-[2.4] xmd:ml-44 midxmd:w-[75%] middleXmd:-mt-[10%] middleXmd:mr-[1%]",
     image: two2,
     title: "Website",
-    mainImage: two4,
+    mainImage: two1,
     feature: twomain,
     onhover:
       "This website offers room sales services, facilitating seamless transactions and providing a user-friendly experience for buyers and sellers.",
@@ -445,7 +440,7 @@ export const portfolioImages = [
     feature10: "",
     feature10Desc: "",
     leftImage: two3,
-    rightImage: two1,
+    rightImage: two4,
     rightImage1: "SEO Friendly",
     rightImage1Desc:
       "To build an SEO-friendly website, we focused on keyword research, optimized content, meta tags, proper URL structure, mobile-friendliness, and link building strategies.",
@@ -461,7 +456,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 6,
-    bgimage: background2,
+    css: "mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:mt-8 middleXmd:ml-[18%]", 
     image: medi2,
     title: "MediHelp",
     mainImage: medi4,
@@ -515,6 +510,7 @@ export const portfolioImages = [
   {
     id: 7,
     image: Happy2,
+    css: "mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[65%] mt-14 middleXmd:-mt-32 middleXmd:mr-[6%]",
     title: "Happy Ride",
     mainImage: Happy4,
     feature: Happymain,

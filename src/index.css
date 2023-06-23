@@ -16,6 +16,12 @@
     padding: 0;
 }
 
+/* styles.css (or styles.scss) */
+
+.disable-scrolling {
+    overflow-y: hidden !important;
+}
+
 .custom-input::-webkit-inner-spin-button,
 .custom-input::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -33,11 +39,11 @@
 }
 
 @media screen and (min-width: 1000px) {
-    .bg-gradient-curve{
+    .bg-gradient-curve {
         background-image: radial-gradient(ellipse at bottom left, #1CB5E0, #1CB5E0, #1CB5E0, #F7F5F8, #F7F5F8, #F7F5F8, #F7F5F8);
-    background-repeat: no-repeat;
+        background-repeat: no-repeat;
     }
-    
+
 }
 
 .waves {
@@ -377,15 +383,13 @@ body {
 
 .card {
     animation-name: rotate;
-    width: 10.3em;
-    /* height: 6.8em; */
-    transform: translate3d(0, 0, 0);
-}
-
-.card-texture {
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+}
+
+.card:hover{
+    animation: none;
 }
 
 @keyframes rotate {
@@ -393,41 +397,17 @@ body {
     from,
     to {
         animation-timing-function: ease-in;
-        box-shadow:
-            0 0 0 hsl(0, 0%, 80%),
-            0.1rem 0 0 hsl(0, 0%, 100%),
-            -0.2rem 0 0.75rem 0 hsla(0, 0%, 0%, 0.3);
-        transform: rotateY(-10deg);
+        transform: rotateY(-35deg);
     }
 
     25%,
     75% {
         animation-timing-function: ease-out;
-        box-shadow:
-            0 0 0 hsl(0, 0%, 80%),
-            0 0 0 hsl(0, 0%, 100%),
-            -0.25rem -0.05rem 1rem 0.15rem hsla(0, 0%, 0%, 0.3);
         transform: rotateY(0deg);
     }
 
     50% {
         animation-timing-function: ease-in;
-        box-shadow:
-            -0.1rem 0 0 hsl(0, 0%, 80%),
-            0 0 0 hsl(0, 0%, 100%),
-            -0.3rem -0.1rem 1.5rem 0.3rem hsla(0, 0%, 0%, 0.3);
-        transform: rotateY(10deg);
-    }
-}
-
-@keyframes texture {
-
-    from,
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-
-    50% {
-        transform: translate3d(-50%, 0, 0);
+        transform: rotateY(35deg);
     }
 }

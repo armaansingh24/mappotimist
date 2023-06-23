@@ -20,7 +20,7 @@ const CarouselItem = ({ item }) => {
             </p>
             <p
               color="black"
-              className="mt-[-0.4rem] sm:mt-0 text-[0.4rem] leading-[0.6rem] xsm:text-[.5rem] xsm:leading-[.8rme] xsm:w-[210px] w-[169.6px] sm:w-[300px] sm:text-[.8rem] sm:leading-[1.1rem] md:text-[1rem] md:leading-[1.1rem] md:w-full xxmd:text-[22px] xxmd:leading-[25px] font-Poppins"
+              className="mt-[-0.4rem] sm:mt-0 text-[0.4rem] leading-[0.6rem] xsm:text-[.5rem] xsm:leading-[.8rme] xsm:w-[210px] w-[169.6px] sm:w-[300px] sm:text-[.8rem] sm:leading-[1.1rem] md:text-[1rem] md:leading-[1.1rem] md:w-full xxmd:text-[22px] xxmd:leading-[25px] font-Poppins italic"
             >
               {item.description}
             </p>

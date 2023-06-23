@@ -10,6 +10,7 @@ import R4 from "../assets/portfolio/R4.png";
 import lower from "../assets/expertise/lower.png";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
+import message from "../assets/portfolio/message.png";
 
 const PortfolioPage = (props) => {
   const location = useLocation();
@@ -42,7 +43,7 @@ const PortfolioPage = (props) => {
                   src={item.mainImage}
                   alt=""
                   className={`${item.css}`}
-                  // className="mx-auto scale-[2] mt-36 midms:w-[95%] xsm:w-[89%] sm:w-[100%] sm:mt-44 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-48 middleXmd:mr-[1%]"
+                  // className=""
                 />
                 {/* <p>{item.title}</p> */}
               </div>
@@ -165,15 +166,26 @@ const PortfolioPage = (props) => {
           {/* ................................................... */}
           {/* desktop view cards */}
           {/* ................................................... */}
-          <div className="hidden middleXmd:block relative p-10">
-            <div className="mb-1 mt-20">
+          <div
+            className={`${
+              item.id === 4 || item.id === 5 ? "h-[28rem]" : "h-auto"
+            } hidden middleXmd:block relative p-10`}
+          >
+            <div className={`${item.id === 5 ? "mt-44" : "mt-20"} mb-1 `}>
               <img
                 src={item.feature}
                 alt=""
-                className="w-[50%] mx-auto sm:w-[13%] "
+                className={`${
+                  item.id === 5 ? "scale-[3]" : ""
+                } w-[50%] mx-auto sm:w-[13%]`}
               />
             </div>
             <div className=" bg-white w-[20rem] top-10 left-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute">
+              <img
+                src={message}
+                alt=""
+                className="absolute -right-4 h-[4.5rem]"
+              />
               <img
                 src={Group}
                 alt=""
@@ -189,6 +201,11 @@ const PortfolioPage = (props) => {
               </div>
             </div>
             <div className="bg-white w-[20rem] top-10 right-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute">
+              <img
+                src={message}
+                alt=""
+                className="absolute -left-4 h-[4.5rem] transform scale-x-[-1]"
+              />
               <img
                 src={Group}
                 alt=""
@@ -235,6 +252,11 @@ const PortfolioPage = (props) => {
             </div>
             <div className="bg-white w-[20rem] -bottom-5 left-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute">
               <img
+                src={message}
+                alt=""
+                className="absolute -right-4 h-[4.5rem] rotate-180 transform scale-x-[-1]"
+              />
+              <img
                 src={Group}
                 alt=""
                 className="w-[50%] h-[50%] sm:w-[30%] sm:h-[30%] ml-2"
@@ -249,6 +271,11 @@ const PortfolioPage = (props) => {
               </div>
             </div>
             <div className="bg-white w-[20rem] -bottom-5 right-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute ">
+              <img
+                src={message}
+                alt=""
+                className="absolute -left-4 h-[4.5rem] rotate-180"
+              />
               <img
                 src={Group}
                 alt=""
@@ -268,9 +295,6 @@ const PortfolioPage = (props) => {
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
-                // onFocus={handleFocus}
-                // onBlur={handleBlur}
-                // tabIndex={0}
               >
                 <img src={Group} alt="" className="mx-auto" />
                 <div className="">

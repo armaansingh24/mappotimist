@@ -84,14 +84,7 @@ const GetHired = () => {
       return;
     }
 
-    setError1("");
-    setError2("");
-    setError3("");
-    setError4("");
-    setError5("");
-    setError6("");
-    setError7("");
-
+   errorHandler();
     try {
       const response = await axios.post(
         "http://localhost:3000/send-email-hire",
@@ -151,9 +144,10 @@ const GetHired = () => {
             <div className="text-center flex flex-col gap-4 w-[60%] p-10">
               <h2 className="text-2xl font-bold text-white">Get In Touch</h2>
               <p className="text-white text-lg">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
+                Unlock endless opportunities as a freelancer with our
+                MappOptimist company. We connect talented professionals with
+                exciting projects, fostering growth, creativity, and success in
+                the digital world.
               </p>
             </div>
 
@@ -167,8 +161,9 @@ const GetHired = () => {
                 <div className="font-medium">
                   <p className="text-lg">Contact information</p>
                   <p className="text-[13px] leading-[19px]">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. V
+                    Contact us today to forge a deeper understanding and create
+                    a strong bond. Let's collaborate and achieve remarkable
+                    results together!
                   </p>
                 </div>
                 <div className="mt-10 flex gap-3 items-center">
