@@ -411,3 +411,19 @@ body {
         transform: rotateY(35deg);
     }
 }
+
+/* got to top */
+
+.topBtn{
+    animation: gototop .8s linear infinite alternate-reverse;
+}
+@keyframes gototop {
+    0% {
+        transform: translateY(-0.3rem);
+    }
+
+    100% {
+        transform: translateY(0.3rem);
+    }
+}
+

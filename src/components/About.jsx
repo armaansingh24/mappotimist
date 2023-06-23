@@ -7,8 +7,9 @@ import CarouselItem from "./CarouselItem";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 const About = () => {
+  const [isVisiable, setIsVisiable] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -19,6 +20,23 @@ const About = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
+  const listenToScroll = () => {
+    let heightToHidden = 250;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > heightToHidden) {
+      setIsVisiable(true);
+    } else {
+      setIsVisiable(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => {
+      window.removeEventListener("scroll", listenToScroll);
+    };
+  }, []);
   return (
     <>
       <div className="mt-6 relative z-0">
@@ -56,7 +74,7 @@ const About = () => {
               transition={{ duration: 1.6 }}
             >
               <Carousel
-                emulateTouch="true"
+                emulateTouch={true}
                 statusFormatter={() => {}}
                 autoPlay="true"
                 infiniteLoop="true"
@@ -123,7 +141,11 @@ const About = () => {
                   key={item.id}
                 >
                   <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
-                    <CountUp start={0} end={item.number} /> {item.symbol}
+                    {isVisiable && (
+                      <div>
+                        <CountUp start={0} end={item.number} /> {item.symbol}
+                      </div>
+                    )}
                   </p>
                   <p className="text-[25px] font-medium ">{item.title}</p>
                   <p className="text-[9px] leading-[12px] capitalize font-medium xxmd:text-[12.25px] xxmd:leading-[18.37px]">

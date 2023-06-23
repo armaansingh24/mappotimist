@@ -53,7 +53,7 @@ const Navbar = () => {
     <>
       <nav
         className={
-          " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 top-0 left-0 right-0 sm:relative z-10 text-black"
+          " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-40 text-black"
         }
       >
         <div className="w-full flex justify-between items-start  mx-auto ">

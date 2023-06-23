@@ -7,7 +7,7 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-
+import GoToTop from './components/GoToTop';
 
 import Footer from './components/Footer';
 import { useEffect } from 'react';
@@ -24,6 +24,7 @@ function App() {
               <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
             </Routes>
           </>
+          <GoToTop />
           <Footer />
         </div>
       </div>
