@@ -7,7 +7,7 @@ import linkedin from "../assets/footer/linkedin.png";
 const Footer = () => {
   return (
     <>
-      <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[23rem] relative z-40">
+      <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[23rem] relative z-20">
         <div className="w-[90%] mx-auto flex h-full p-0">
           {/* <p className=''>MappOptimist</p> */}
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
