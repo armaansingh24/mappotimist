@@ -113,9 +113,9 @@ const Navbar = () => {
               className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
                 "
             >
-              <div className="group">
+              <div className="group gap-0 transition-all duration-500">
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white relative z-10 group"
+                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white relative z-10 group overflow-hidden"
                   to={`Developer`}
                   // spy={true}
                   smooth={true}
@@ -124,7 +124,7 @@ const Navbar = () => {
                 >
                   Developer
                 </Link>
-                <div className="hidden group-hover:block transition-all ease-in duration-300 z-0">
+                <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-full">
                   <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-8 z-0"></div>
                   <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-14 -translate-y-6">
                     <ul className="list-none">
@@ -320,7 +320,7 @@ const Navbar = () => {
         {showForm && (
           <div>
             <div className="hidden midFM:block">
-              <div className="absolute top-20 right-20 text-[50px] text-white z-50">
+              <div className="absolute top-20 right-20 text-[50px] text-white z-[80]">
                 <button onClick={()=>{
                   setToggle(!toggle);
                   setIsOpen(!isOpen);
@@ -350,7 +350,7 @@ const Navbar = () => {
         {showForm2 && (
           <div>
             <div className="hidden midFM:block">
-              <div className="absolute mt-3 right-20 text-[50px] text-white z-40">
+              <div className="absolute mt-3 right-20 text-[50px] text-white z-[80]">
                 <button onClick={()=>{
                   setToggle(!toggle);
                   setIsOpen(!isOpen);
@@ -362,7 +362,7 @@ const Navbar = () => {
               <GetHire />
             </div>
             <div className="block midFM:hidden mt-[45rem]">
-              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-50">
+              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[80]">
                 <button onClick={handleGetHire1}>
                   <SlClose />
                 </button>
