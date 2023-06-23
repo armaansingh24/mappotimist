@@ -9,6 +9,7 @@ import image4 from "../assets/hero-section/image4.png";
 import image5 from "../assets/hero-section/image5.png";
 import { motion, useInView, useAnimation } from "framer-motion";
 import  Comp1  from "../assets/hero-section/Comp1.mp4";
+import {Link} from "react-scroll"
 
 const HeroSection = () => {
   const [activeParagraph, setActiveParagraph] = useState(0);
@@ -89,12 +90,17 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
-              <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500">
-                Hire Talent
-                <span>
-                  <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
-                </span>
-              </button>
+              <Link to="Developer"
+              smooth={true}
+                offset={70}
+                duration={1000}>
+                <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500">
+                  Hire Talent
+                  <span>
+                    <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
+                  </span>
+                </button>
+              </Link>
               <div className=" flex ml-10 mt-4 lmd:mt-2">
                 <span className=" left-[-10px] ml-[-18px] z-1">
                   <img src={image1} alt="" className=" w-12" />
