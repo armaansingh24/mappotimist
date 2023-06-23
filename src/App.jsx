@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import PortfolioPage from './pages/PortfolioPage';
+import OcrIcr from './pages/OcrIcr';
 import {
   
   Route,
@@ -22,6 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
+              <Route path="/orc-icr" element={<OcrIcr />} />
             </Routes>
           </>
           <GoToTop />

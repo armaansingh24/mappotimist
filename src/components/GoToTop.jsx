@@ -11,6 +11,7 @@ const GoToTop = () => {
     const listenToScroll = () => {
         let heightToHidden=250;
         const winScroll=document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(winScroll);
         if(winScroll > heightToHidden){
             setIsVisiable(true);
         }else{
@@ -29,7 +30,7 @@ const GoToTop = () => {
     <>
       {isVisiable && (
         <div
-          className="w-16 h-16 bg-gradient-to-b from-secondary to-primary flex justify-center items-center rounded-full fixed bottom-20 right-4 z-50 cursor-pointer"
+          className="w-16 h-16 bg-gradient-to-b from-secondary to-primary flex justify-center items-center rounded-full fixed bottom-20 right-4 z-10 cursor-pointer"
           onClick={goToBtn}
         >
           <BsArrowUp className="text-white text-3xl topBtn" />

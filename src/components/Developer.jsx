@@ -9,6 +9,8 @@ import GetHiredMobile from "./GetHiredMobile";
 import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import { Tilt } from "react-tilt";
+import { Link } from "react-scroll";
+import {Link as HLink} from "react-router-dom"
 
 const Developer = () => {
   const [showForm, setShowForm] = useState(false);
@@ -77,12 +79,14 @@ const Developer = () => {
                     bring expertise and efficiency to your project. Contact us
                     for details!
                   </p>
-                  <button
-                    className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
-                    onClick={handleGetHired}
-                  >
-                    Recruit
-                  </button>
+                  <Link to="Developer">
+                    <button
+                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
+                      onClick={handleGetHired}
+                    >
+                      Recruit
+                    </button>
+                  </Link>
                   <button
                     className="block midFM:hidden bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                     onClick={handleGetHired1}
@@ -109,12 +113,14 @@ const Developer = () => {
                     If you are a freelancer seeking engaging projects, let's
                     collaborate and bring your vision to life!
                   </p>
-                  <button
-                    className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
-                    onClick={handleGetHire}
-                  >
-                    Get Hired
-                  </button>
+                  <Link to="Developer">
+                    <button
+                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
+                      onClick={handleGetHire}
+                    >
+                      Get Hired
+                    </button>
+                  </Link>
                   <button
                     className="block midFM:hidden bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                     onClick={handleGetHire1}
@@ -141,15 +147,17 @@ const Developer = () => {
                     Unlock the power of automation with our cutting-edge OCR/ICR
                     solutions and enhance your productivity effortlessly.
                   </p>
-                  <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
-                    View More
-                  </button>
+                  <HLink to="/orc-icr">
+                    <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
+                      View More
+                    </button>
+                  </HLink>
                 </div>
               </Tilt>
             </div>
           </div>
         </div>
-        <div className="absolute top-0 z-1">
+        <div className="absolute -top-6 z-1">
           {showForm && (
             <div>
               <div className="hidden midFM:block">
