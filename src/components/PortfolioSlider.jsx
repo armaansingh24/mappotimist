@@ -56,7 +56,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
               animate={mainControls}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <p className="text-lg xxmd:text-3xl font-bold text-white transition delay-1000 ease-in-out p-2 midFM:p-0 mx-auto text-center">
+              <p className="text-lg xxmd:text-3xl font-bold text-white transition delay-1000 ease-in-out p-2 midFM:p-0 mx-auto text-center mt-2">
                 {item.title}
               </p>
             </motion.div>
