@@ -261,7 +261,7 @@ export const portfolioImages = [
       "Gameplay offers an immersive experience, to simulate real-world trading scenarios, strategies, and gain financial knowledge while enjoying the thrill of virtual trading.",
     feature5: "Charts for market analysis",
     feature5Desc:
-      "Charts provide visual representation of market data, to analyze price patterns, trends, and indicators, aiding in informed decision-making for effective market analysis.",
+      "Charts provide visual representation of market data, to analyze price patterns, aiding in informed decision-making for effective market analysis.",
     feature6: "Reward system",
     feature6Desc:
       "Reward system incentivizes users with bonuses or  exclusive perks or active participation, enhancing user motivation, and overall trading experience.",
@@ -347,7 +347,7 @@ export const portfolioImages = [
   {
     id: 4,
     image: onemain,
-    css: "mx-auto mt-[45%] midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-[60%] midFM:mt-32 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-[10%] middleXmd:mr-[1%]",
+    css: "mx-auto mt-[45%] midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-[60%] midFM:mt-32 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-[1%] rotate-[4deg] middleXmd:mr-[2%]",
     title: "Website",
     mainImage: one3,
     feature: onemain,
@@ -456,7 +456,7 @@ export const portfolioImages = [
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: 6,
-    css: "mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:mt-8 middleXmd:ml-[18%]", 
+    css: "mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:-mt-32 middleXmd:scale-[1.7]  middleXmd:ml-[18%]",
     image: medi2,
     title: "MediHelp",
     mainImage: medi4,

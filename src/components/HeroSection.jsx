@@ -38,7 +38,17 @@ const HeroSection = () => {
           className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center "
           id="home"
         >
-          <div className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0">
+          <motion.div
+            className="md:order-2 flex items-center justify-center w-full mt-6 lmd:mt-0"
+            ref={ref}
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 1.9 }}
+          >
             <div className="w-full mx-auto flex items-center justify-center">
               <video
                 autoPlay
@@ -50,7 +60,7 @@ const HeroSection = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-          </div>
+          </motion.div>
 
           <motion.div
             className="flex flex-col gap-4 w-full lmd:gap-6"

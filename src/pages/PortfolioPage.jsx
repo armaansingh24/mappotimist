@@ -61,12 +61,12 @@ const PortfolioPage = (props) => {
             </p>
           </div>
 
-          <div className="mt-10 sm:mt-28 block middleXmd:hidden">
+          <div className="mt-10 sm:mt-28 block middleXmd:hidden midFM:w-full">
             <div className="">
               <img
                 src={item.feature}
                 alt=""
-                className="w-[50%] mx-auto sm:w-[20%] "
+                className="w-[50%] mx-auto sm:w-[20%] midFM:w-[100%]"
               />
             </div>
             {/* mobile view cards */}
@@ -177,7 +177,7 @@ const PortfolioPage = (props) => {
                 alt=""
                 className={`${
                   item.id === 5 ? "scale-[3]" : ""
-                } w-[50%] mx-auto sm:w-[13%]`}
+                } w-[50%] mx-auto sm:w-[13%] midFM:w-[14%]`}
               />
             </div>
             <div className=" bg-white w-[20rem] top-10 left-56 flex gap-5 rounded-lg p-1 items-center justify-center absolute">
