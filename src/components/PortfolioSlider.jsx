@@ -45,7 +45,7 @@ const PortfolioSlider = ({ image, index, currentSlideIndex,item }) => {
               : ""
           } h-[35rem] mt-1 absolute inset-0 transition-all delay-75 ease-in-out rounded-[3rem] overflow-hidden w-full xl:w-[64%] midXl:w-[59.8%] xxl:w-[58.6%] midlg:w-[66%] midxmd:ml-[4rem] hidden middleXmd:block`}
         >
-          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto  border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[50%] mr-4 gap-4 overflow-hidden">
+          <div className="w-[80%] xxmd:w-[90%] h-[90%] md:h-auto flex items-center justify-center flex-col mx-auto  border-white border-2 rounded-2xl mt-[10%] md:mt-[16%] xxmd:mt-[50%] mr-[0.9rem] gap-4 overflow-hidden">
             <motion.div
               ref={ref}
               variants={{
