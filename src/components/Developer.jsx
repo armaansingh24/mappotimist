@@ -148,7 +148,7 @@ const Developer = () => {
                     solutions and enhance your productivity effortlessly.
                   </p>
                   <HLink to="/orc-icr">
-                    <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
+                    <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-4 py-1 rounded-full text-white mb-2">
                       View More
                     </button>
                   </HLink>
