@@ -74,8 +74,9 @@ const Navbar = () => {
               }`}
               loading="lazy"
             />
-            <p className="text-[18px] font-bold cursor-pointer xmd:flex hidden mdd:w-0">
-              MappOptimist
+            <p className="text-[18px] font-bold cursor-pointer xmd:flex xmd:flex-col xmd:gap-0 hidden mdd:w-0">
+              <span className="mt-6">MappOptimist</span>
+              <span className="text-[10px] -translate-y-4 text-black opacity-[0.5] italic">We code the future</span>
             </p>
           </Link>
           <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center z-50 relative">
@@ -321,11 +322,13 @@ const Navbar = () => {
           <div>
             <div className="hidden midFM:block">
               <div className="absolute top-20 right-20 text-[50px] text-white z-[80]">
-                <button onClick={()=>{
-                  setToggle(!toggle);
-                  setIsOpen(!isOpen);
-                  handleGetHired();
-                }}>
+                <button
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setIsOpen(!isOpen);
+                    handleGetHired();
+                  }}
+                >
                   <SlClose />
                 </button>
               </div>
@@ -351,11 +354,13 @@ const Navbar = () => {
           <div>
             <div className="hidden midFM:block">
               <div className="absolute mt-3 right-20 text-[50px] text-white z-[80]">
-                <button onClick={()=>{
-                  setToggle(!toggle);
-                  setIsOpen(!isOpen);
-                  handleGetHire();
-                }}>
+                <button
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setIsOpen(!isOpen);
+                    handleGetHire();
+                  }}
+                >
                   <SlClose />
                 </button>
               </div>
