@@ -8,7 +8,7 @@ import image3 from "../assets/hero-section/image3.png";
 import image4 from "../assets/hero-section/image4.png";
 import image5 from "../assets/hero-section/image5.png";
 import { motion, useInView, useAnimation } from "framer-motion";
-import  Comp1  from "../assets/hero-section/Comp1.mp4";
+import mainVideo from "../assets/hero-section/mainVideo.gif";
 import {Link} from "react-scroll"
 
 const HeroSection = () => {
@@ -51,15 +51,7 @@ const HeroSection = () => {
             transition={{ duration: 1.9 }}
           >
             <div className="w-full mx-auto flex items-center justify-center">
-              <video
-                autoPlay
-                muted
-                loop
-                className="mt-10 midFM:ml-[30%] midFM:-mt-24 z-1"
-              >
-                <source src={Comp1} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <img src={mainVideo} alt="" />
             </div>
           </motion.div>
 
