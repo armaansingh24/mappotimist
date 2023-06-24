@@ -19,7 +19,9 @@ const PortfolioPage = (props) => {
   return (
     <>
       <div className="w-full relative ">
-        <PortfolioNavbar />
+        <div className="absolute bg-white z-40 opacity-[0.7]">
+          <PortfolioNavbar />
+        </div>
         <div className="">
           <div className="relative z-0 bg-gradient-to-r from-secondary via-secondary to-white">
             <img

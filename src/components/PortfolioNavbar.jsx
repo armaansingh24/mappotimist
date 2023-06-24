@@ -80,7 +80,7 @@ const Navbar = () => {
               loading="lazy"
             />
             <p className="text-[18px] font-bold cursor-pointer xmd:flex xmd:flex-col xmd:gap-0 hidden mdd:w-0">
-              <span className="mt-6">MappOptimist</span>
+              <span className="mt-2">MappOptimist</span>
               <span className="text-[10px] -translate-y-1 text-black opacity-[0.5] italic">
                 We code the future
               </span>

@@ -32,9 +32,9 @@ module.exports = {
         secondary: "#1CB5E0",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        poppins500: ["Poppins", "sans-serif"],
-        poppins300: ["Poppins", "sans-serif"],
+        poppins: ["Roboto Slab", "sans-serif"],
+        poppins500: ["Roboto Slab", "sans-serif"],
+        poppins300: ["Roboto Slab", "sans-serif"],
       },
     },
   },

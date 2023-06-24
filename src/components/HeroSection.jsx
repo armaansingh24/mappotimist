@@ -8,7 +8,7 @@ import image3 from "../assets/hero-section/image3.png";
 import image4 from "../assets/hero-section/image4.png";
 import image5 from "../assets/hero-section/image5.png";
 import { motion, useInView, useAnimation } from "framer-motion";
-import mainVideo from "../assets/hero-section/mainVideo.gif";
+import  Comp1  from "../assets/hero-section/Comp1.mp4";
 import {Link} from "react-scroll"
 
 const HeroSection = () => {
@@ -51,7 +51,15 @@ const HeroSection = () => {
             transition={{ duration: 1.9 }}
           >
             <div className="w-full mx-auto flex items-center justify-center">
-              <img src={mainVideo} alt="" />
+              <video
+                autoPlay
+                muted
+                loop
+                className="mt-10 midFM:ml-[30%] midFM:-mt-24 z-1"
+              >
+                <source src={Comp1} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </motion.div>
 
@@ -67,7 +75,7 @@ const HeroSection = () => {
             transition={{ duration: 1.9 }}
           >
             <div className="w-[300px] sm:w-full md:w-[392px] font-poppins lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
-              <h1 className="font-Poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
+              <h1 className="font-RobotoSlab text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
                 <>Hire the perfect</> <>talent for your</>
               </h1>
               <div className="text-[#DF9507] lmd:text-[48px] -z-1 font-poppins ">
