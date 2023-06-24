@@ -88,13 +88,12 @@ import Salesforce from "../assets/expertise/Salesforce.png";
 import Golang from "../assets/expertise/Golang.png";
 
 // OCR ICR Images
-import ai from "../assets/OcrIcr/ai.png";
-import arrow from "../assets/OcrIcr/arrow.png";
 import adhaar from "../assets/OcrIcr/adhaar.png";
 import adhaarJson from "../assets/OcrIcr/adhaarJson.png";
 import document from "../assets/OcrIcr/document.png";
 import documentJson from "../assets/OcrIcr/documentJson.png";
 import passport from "../assets/OcrIcr/passport.png";
+import passportJaon from "../assets/OcrIcr/passportJaon.png";
 
 export const navLinks = [
   {
@@ -839,3 +838,22 @@ export const expertiseItem = [
       "Go (Golang), Gorilla/Mux, Gin, Revel, Echo, GORM, PostgreSQL, MySQL, MongoDB, Redis, gRPC, RESTful APIs, JWT (JSON Web Tokens), Docker, Kubernetes, Prometheus, GraphQL, Kafka, RabbitMQ, AWS SDK,etc",
   },
 ];
+
+
+export const Ai=[
+  {
+    id: 1,
+    image: adhaar,
+    json: adhaarJson
+  },
+  {
+    id: 2,
+    image: passport,
+    json: passportJaon
+  },
+  {
+    id: 3,
+    image: document,
+    json: documentJson
+  }
+]

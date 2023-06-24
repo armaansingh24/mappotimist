@@ -7,6 +7,7 @@ import eclips1 from "../assets/navbar/eclips1.png";
 import eclips2 from "../assets/navbar/eclips2.png";
 import eclips3 from "../assets/navbar/eclips3.png";
 import { HashLink as Link } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 import { VscNotebook } from "react-icons/vsc";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
@@ -166,12 +167,14 @@ const Navbar = () => {
                         </button>
                       </li>
                       <li>
-                        <p className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2">
-                          <span>
-                            <VscNotebook />
-                          </span>
-                          <span>OCR/ICR</span>
-                        </p>
+                        <NavLink to="/orc-icr">
+                          <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2">
+                            <span>
+                              <VscNotebook />
+                            </span>
+                            <span>OCR/ICR</span>
+                          </button>
+                        </NavLink>
                       </li>
                     </ul>
                   </div>

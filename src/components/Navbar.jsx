@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { HashRouter as Link  } from "react-router-dom";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.png";
 import eclips1 from "../assets/navbar/eclips1.png";
@@ -82,7 +83,9 @@ const Navbar = () => {
             />
             <p className="text-[18px] font-bold cursor-pointer xmd:flex xmd:flex-col xmd:gap-0 hidden mdd:w-0">
               <span className="mt-6">MappOptimist</span>
-              <span className="text-[10px] -translate-y-4 text-black opacity-[0.5] italic">We code the future</span>
+              <span className="text-[10px] -translate-y-4 text-black opacity-[0.5] italic">
+                We code the future
+              </span>
             </p>
           </Link>
           <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center z-50 relative">
@@ -166,12 +169,14 @@ const Navbar = () => {
                         </button>
                       </li>
                       <li>
-                        <p className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2">
-                          <span>
-                            <VscNotebook />
-                          </span>
-                          <span>OCR/ICR</span>
-                        </p>
+                        <NavLink to="/orc-icr">
+                          <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2">
+                            <span>
+                              <VscNotebook />
+                            </span>
+                            <span>OCR/ICR</span>
+                          </button>
+                        </NavLink>
                       </li>
                     </ul>
                   </div>

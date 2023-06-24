@@ -3,12 +3,22 @@ import PortfolioNavbar from "../components/PortfolioNavbar";
 import First from "../assets/OcrIcr/First.png";
 import second from "../assets/OcrIcr/second.png";
 import third from "../assets/OcrIcr/third.png";
-import ai from "../assets/OcrIcr/ai.png";
+import { Ai } from "../constants/index";
+import { useEffect, useState } from "react";
 import arrow from "../assets/OcrIcr/arrow.png";
-import adhaar from "../assets/OcrIcr/adhaar.png";
-import adhaarJson from "../assets/OcrIcr/adhaarJson.png";
+import ai from "../assets/OcrIcr/ai.png";
+import { Link } from "react-scroll"
 
 const OcrIcr = () => {
+  const data = Ai;
+  const [activeIndex, setActiveIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [data.length]);
   return (
     <>
       <PortfolioNavbar />
@@ -113,9 +123,17 @@ const OcrIcr = () => {
                 </p>
               </li>
             </ul>
-            <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1">
-              View a Demo
-            </button>
+            <Link
+              to="demo"
+              // spy={true}
+              smooth={true}
+              offset={-20}
+              duration={1000}
+            >
+              <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1">
+                View a Demo
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -255,30 +273,39 @@ const OcrIcr = () => {
               reports, invoices, KYCs etc.
             </p>
           </div>
-
-          <div className="bg-gradient-to-r from-primary to-secondary w-[100%] h-[70%] mx-auto mt-10 mb-32">
-            <div className="flex items-center justify-between px-2 py-20 sm:p-10 sm:py-44">
-              <div className="w-[30%]">
-                <img src={adhaar} alt="" />
+          <div
+            className="bg-gradient-to-r from-primary to-secondary w-[100%] h-[70%] mx-auto mt-10 mb-32"
+            id="demo"
+          >
+            {data.map((item, index) => (
+              <div
+                key={index}
+                style={{ display: activeIndex === index ? "block" : "none" }}
+              >
+                <div className="flex items-center justify-between px-2 py-20 sm:p-10 sm:py-44">
+                  <div className="w-[30%]">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <div className="h-[10%] w-[15%]">
+                    {" "}
+                    <img
+                      src={arrow}
+                      alt=""
+                      className="translate-x-3 midlg:translate-x-9"
+                    />
+                  </div>
+                  <div className="w-[30%]">
+                    <img src={ai} alt="" />
+                  </div>
+                  <div className="h-[10%] w-[15%]">
+                    <img src={arrow} alt="" className="-translate-x-4" />
+                  </div>
+                  <div className="w-[25%]">
+                    <img src={item.json} alt="" />
+                  </div>
+                </div>
               </div>
-              <div className="h-[10%] w-[15%]">
-                {" "}
-                <img
-                  src={arrow}
-                  alt=""
-                  className="translate-x-3 midlg:translate-x-9"
-                />
-              </div>
-              <div className="w-[30%]">
-                <img src={ai} alt="" />
-              </div>
-              <div className="h-[10%] w-[15%]">
-                <img src={arrow} alt="" className="-translate-x-4" />
-              </div>
-              <div className="w-[25%]">
-                <img src={adhaarJson} alt="" />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
