@@ -7,7 +7,7 @@ import { Ai } from "../constants/index";
 import { useEffect, useState } from "react";
 import arrow from "../assets/OcrIcr/arrow.png";
 import ai from "../assets/OcrIcr/ai.png";
-import { Link } from "react-scroll"
+import { Link } from "react-scroll";
 
 const OcrIcr = () => {
   const data = Ai;
@@ -21,7 +21,9 @@ const OcrIcr = () => {
   }, [data.length]);
   return (
     <>
-      <PortfolioNavbar />
+      <div className="absolute bg-white z-40">
+        <PortfolioNavbar />
+      </div>
       <div className="bg-white w-screen">
         <div className="w-[90%] mt-32 mx-auto sm:mt-0">
           {/* First Section */}

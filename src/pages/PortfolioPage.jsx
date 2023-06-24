@@ -19,7 +19,7 @@ const PortfolioPage = (props) => {
   return (
     <>
       <div className="w-full relative ">
-        <div className="absolute bg-white z-40 opacity-[0.7]">
+        <div className="absolute z-40">
           <PortfolioNavbar />
         </div>
         <div className="">

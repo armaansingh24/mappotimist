@@ -40,21 +40,25 @@ const Developer = () => {
   const handleGetHire1 = () => {
     setShowForm4(!showForm4);
   };
+
   useEffect(() => {
-    const handleScroll = (event) => {
+    function handleScroll(event) {
       if (showForm || showForm2) {
         event.preventDefault();
         event.stopPropagation();
-        event.returnValue = false;
         return false;
       }
-    };
+    }
 
+    // Chrome and other browsers
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    
+    // Safari
     window.addEventListener("mousewheel", handleScroll, { passive: false });
     window.addEventListener("DOMMouseScroll", handleScroll, { passive: false });
     window.addEventListener("touchmove", handleScroll, { passive: false });
-
     return () => {
+      window.removeEventListener("wheel", handleScroll, { passive: false });
       window.removeEventListener("mousewheel", handleScroll);
       window.removeEventListener("DOMMouseScroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
