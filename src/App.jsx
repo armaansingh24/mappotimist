@@ -9,7 +9,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import GoToTop from './components/GoToTop';
-
+import Whatsapp from './components/Whatsapp';
 import Footer from './components/Footer';
 import { useEffect } from 'react';
 
@@ -27,6 +27,7 @@ function App() {
             </Routes>
           </>
           <GoToTop />
+          <Whatsapp />
           <Footer />
         </div>
       </div>

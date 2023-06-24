@@ -10,7 +10,15 @@ import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import { Tilt } from "react-tilt";
 import { Link } from "react-scroll";
-import {Link as HLink} from "react-router-dom"
+import { Link as HLink } from "react-router-dom";
+
+import ellips1 from "../assets/developer/ellips1.png";
+import ellips2 from "../assets/developer/ellips2.png";
+import ellips3 from "../assets/developer/ellips3.png";
+import ellips4 from "../assets/developer/ellips4.png";
+import ellips5 from "../assets/developer/ellips5.png";
+import ellips6 from "../assets/developer/ellips6.png";
+import ellips7 from "../assets/developer/ellips7.png";
 
 const Developer = () => {
   const [showForm, setShowForm] = useState(false);
@@ -50,19 +58,54 @@ const Developer = () => {
             autoPlay
             muted
             loop
-            className="bg-transparent w-screen mb-24 hidden midFM:h-screen midFM:block scale-[1.3]"
+            className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block scale-[1.3]"
           >
             <source src={bgVideo} type="video/mp4" className="z-0 relative" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="midFM:absolute midFM:inset-0 w-[90%] mx-auto mt-14">
-          <h2 className="text-black midFM:text-white font-poppins500 text-[30px] lmd:text-[48px]">
+        <div className="midlg:absolute midlg:inset-0 w-[90%] mx-auto mt-14 mb-24">
+          <img
+            src={ellips1}
+            alt=""
+            className="absolute left-0 top-4 z-10 block midlg:hidden"
+          />
+          <img
+            src={ellips2}
+            alt=""
+            className="absolute right-3 top-16 z-10 block midlg:hidden"
+          />
+          <img
+            src={ellips3}
+            alt=""
+            className="absolute right-0 top-[33%] z-10 block midlg:hidden"
+          />
+          <img
+            src={ellips4}
+            alt=""
+            className="absolute left-0 top-[43%] z-10 block midlg:hidden"
+          />
+          <img
+            src={ellips5}
+            alt=""
+            className="absolute right-0 bottom-[28%] z-10 block midlg:hidden"
+          />
+          <img
+            src={ellips6}
+            alt=""
+            className="absolute left-0 bottom-[15%] z-10 block midlg:hidden"
+          />
+          <img
+            src={ellips7}
+            alt=""
+            className="absolute right-0 bottom-[0%] z-10 block midlg:hidden"
+          />
+          <h2 className="text-black midlg:text-white font-poppins text-[30px] lmd:text-[48px]">
             Developer
           </h2>
           {/* First Card */}
-          <div className="w-full flex flex-col midFM:flex-row gap-10 items-center justify-evenly mt-[10%]">
-            <div className="midFM:w-[25%]">
+          <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
+            <div className="midlg:w-[25%]">
               <Tilt
                 options={{
                   max: 45,
@@ -97,7 +140,7 @@ const Developer = () => {
               </Tilt>
             </div>
             {/* second card */}
-            <div className="midFM:w-[25%] ">
+            <div className="midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,
@@ -106,16 +149,16 @@ const Developer = () => {
                 }}
                 className="card"
               >
-                <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midFM:h-[31.7rem]">
+                <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem]">
                   <p className="text-2xl font-poppins500">Get Employed</p>
                   <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
-                  <p className="text-center text-lg font-poppins500 mt-9">
+                  <p className="text-center text-lg font-poppins500 mt-9 mb-3">
                     If you are a freelancer seeking engaging projects, let's
                     collaborate and bring your vision to life!
                   </p>
                   <Link to="Developer">
                     <button
-                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
+                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 mt-4 py-1 rounded-full text-white "
                       onClick={handleGetHire}
                     >
                       Get Hired
@@ -131,7 +174,7 @@ const Developer = () => {
               </Tilt>
             </div>
             {/* Third card */}
-            <div className="midFM:w-[25%] ">
+            <div className="midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,
@@ -140,15 +183,15 @@ const Developer = () => {
                 }}
                 className="card"
               >
-                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3  h-full midFM:h-[31.5rem]">
+                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3  h-full midlg:h-[32.5rem]">
                   <p className="text-2xl font-poppins500"> OCR/ICR</p>
                   <img src={three} alt="" className="mt-12 midFM:w-[80%]" />
-                  <p className="text-center text-lg font-poppins500 mt-9">
+                  <p className="text-center text-lg font-poppins500 mt-6">
                     Unlock the power of automation with our cutting-edge OCR/ICR
                     solutions and enhance your productivity effortlessly.
                   </p>
                   <HLink to="/orc-icr">
-                    <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-4 py-1 rounded-full text-white mb-2">
+                    <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-4 py-1 rounded-full text-white mt-2 mb-2">
                       View More
                     </button>
                   </HLink>
@@ -185,7 +228,7 @@ const Developer = () => {
             </div>
           )}
 
-          <div className="absolute -top-2 z-10">
+          <div className="absolute -top-2 z-30">
             {showForm2 && (
               <div>
                 <div className="hidden midFM:block">

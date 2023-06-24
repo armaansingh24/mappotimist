@@ -20,6 +20,7 @@
 
 .disable-scrolling {
     overflow-y: hidden !important;
+    position: relative;
 }
 
 .custom-input::-webkit-inner-spin-button,
