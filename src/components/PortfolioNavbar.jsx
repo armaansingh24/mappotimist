@@ -38,17 +38,24 @@ const Navbar = () => {
     setShowForm4(!showForm4);
   };
   useEffect(() => {
-    const handleScroll = (event) => {
-      if (showForm || showForm2) {
-        event.preventDefault();
-      }
-    };
+  function handleScroll(event) {
+    if (showForm || showForm2) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    }
+  }
 
-    window.addEventListener("wheel", handleScroll, { passive: false });
-    window.addEventListener("touchmove", handleScroll, { passive: false });
+  // Chrome and other browsers
+  window.addEventListener("wheel", handleScroll, { passive: false });
 
+  // Safari
+  window.addEventListener("mousewheel", handleScroll, { passive: false });
+  window.addEventListener("DOMMouseScroll", handleScroll, { passive: false });
+  window.addEventListener("touchmove", handleScroll, { passive: false });
     return () => {
-      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("mousewheel", handleScroll);
+      window.removeEventListener("DOMMouseScroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
     };
   }, [showForm, showForm2]);

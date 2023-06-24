@@ -41,19 +41,24 @@ const Developer = () => {
     setShowForm4(!showForm4);
   };
   useEffect(() => {
-      const handleScroll = (event) => {
-        if (showForm || showForm2) {
-          event.preventDefault();
-        }
-      };
+    const handleScroll = (event) => {
+      if (showForm || showForm2) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.returnValue = false;
+        return false;
+      }
+    };
 
-      window.addEventListener("wheel", handleScroll, { passive: false });
-      window.addEventListener("touchmove", handleScroll, { passive: false });
+    window.addEventListener("mousewheel", handleScroll, { passive: false });
+    window.addEventListener("DOMMouseScroll", handleScroll, { passive: false });
+    window.addEventListener("touchmove", handleScroll, { passive: false });
 
-      return () => {
-        window.removeEventListener("wheel", handleScroll);
-        window.removeEventListener("touchmove", handleScroll);
-      };
+    return () => {
+      window.removeEventListener("mousewheel", handleScroll);
+      window.removeEventListener("DOMMouseScroll", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
+    };
   }, [showForm, showForm2]);
 
   return (
