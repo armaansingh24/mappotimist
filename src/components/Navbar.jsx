@@ -40,13 +40,19 @@ const Navbar = () => {
     setShowForm4(!showForm4);
   };
   useEffect(() => {
-    if (showForm || showForm2) {
-      // Add the class to disable scrolling
-      document.documentElement.classList.add("disable-scrolling");
-    } else {
-      // Remove the class to enable scrolling
-      document.documentElement.classList.remove("disable-scrolling");
-    }
+    const handleScroll = (event) => {
+      if (showForm || showForm2) {
+        event.preventDefault();
+      }
+    };
+
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    window.addEventListener("touchmove", handleScroll, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
+    };
   }, [showForm, showForm2]);
 
   return (

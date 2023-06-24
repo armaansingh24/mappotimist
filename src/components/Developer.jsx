@@ -41,13 +41,19 @@ const Developer = () => {
     setShowForm4(!showForm4);
   };
   useEffect(() => {
-    if (showForm || showForm2) {
-      // Add the class to disable scrolling
-      document.documentElement.classList.add("disable-scrolling");
-    } else {
-      // Remove the class to enable scrolling
-      document.documentElement.classList.remove("disable-scrolling");
-    }
+      const handleScroll = (event) => {
+        if (showForm || showForm2) {
+          event.preventDefault();
+        }
+      };
+
+      window.addEventListener("wheel", handleScroll, { passive: false });
+      window.addEventListener("touchmove", handleScroll, { passive: false });
+
+      return () => {
+        window.removeEventListener("wheel", handleScroll);
+        window.removeEventListener("touchmove", handleScroll);
+      };
   }, [showForm, showForm2]);
 
   return (
@@ -152,13 +158,13 @@ const Developer = () => {
                 <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem]">
                   <p className="text-2xl font-poppins500">Get Employed</p>
                   <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
-                  <p className="text-center text-lg font-poppins500 mt-9 mb-3">
+                  <p className="text-center text-lg font-poppins500 mt-9">
                     If you are a freelancer seeking engaging projects, let's
                     collaborate and bring your vision to life!
                   </p>
                   <Link to="Developer">
                     <button
-                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 mt-4 py-1 rounded-full text-white "
+                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white"
                       onClick={handleGetHire}
                     >
                       Get Hired

@@ -19,7 +19,8 @@
 /* styles.css (or styles.scss) */
 
 .disable-scrolling {
-    overflow-y: hidden !important;
+    /* overflow: hidden ;  */
+    /* transform: translateZ(0); */
     position: relative;
 }
 

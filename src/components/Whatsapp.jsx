@@ -12,7 +12,7 @@ const Whatsapp = () => {
           <img
             src={whatsapp}
             alt=""
-            className="w-20 flex justify-center items-center rounded-full fixed bottom-20 left-4 z-40 cursor-pointer"
+            className="w-20 flex justify-center items-center rounded-full fixed bottom-20 left-6 z-40 cursor-pointer"
           />
         </a>
       </div>
