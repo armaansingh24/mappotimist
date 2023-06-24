@@ -4,7 +4,11 @@ const Whatsapp = () => {
   return (
     <>
       <div>
-        <a href="https://wa.me/918171977577?text=" target='_blank'>
+        <a
+          href="https://wa.me/918171977577?text="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={whatsapp}
             alt=""
