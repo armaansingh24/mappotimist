@@ -26,8 +26,8 @@ function App() {
               <Route path="/orc-icr" element={<OcrIcr />} />
             </Routes>
           </>
-          <GoToTop />
-          <Whatsapp />
+          {/* <GoToTop />
+          <Whatsapp /> */}
           <Footer />
         </div>
       </div>

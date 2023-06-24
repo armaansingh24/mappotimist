@@ -30,10 +30,10 @@ const GoToTop = () => {
     <>
       {isVisiable && (
         <div
-          className="w-16 h-16 bg-gradient-to-b from-secondary to-primary flex justify-center items-center rounded-full fixed bottom-20 right-4 z-40 cursor-pointer"
+          className="w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-b from-secondary to-primary flex justify-center items-center rounded-full fixed bottom-12 sm:bottom-20 right-4 z-40 cursor-pointer"
           onClick={goToBtn}
         >
-          <BsArrowUp className="text-white text-3xl topBtn" />
+          <BsArrowUp className="text-white sm:text-3xl topBtn" />
         </div>
       )}
     </>

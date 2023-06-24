@@ -224,7 +224,7 @@ const Developer = () => {
             </div>
           )}
           {showForm3 && (
-            <div className="block midFM:hidden mt-20">
+            <div className="block midlg:hidden mt-20">
               <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
                 <button onClick={handleGetHired1}>
                   <SlClose />
@@ -237,14 +237,14 @@ const Developer = () => {
           <div className="absolute -top-2 z-30">
             {showForm2 && (
               <div>
-                <div className="hidden midFM:block">
+                <div className="hidden midlg:block">
                   <div className="absolute mt-3 right-20 text-[50px] text-white z-[70]">
                     <button onClick={handleGetHire}>
                       <SlClose />
                     </button>
                   </div>
                   <GetHire />
-                  <div className="hidden midFM:block">
+                  <div className="hidden midlg::block">
                     <div
                       className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
                       onClick={handleGetHire}
@@ -254,7 +254,7 @@ const Developer = () => {
               </div>
             )}
             {showForm4 && (
-              <div className="block midFM:hidden mt-[45rem]">
+              <div className="block midlg:hidden mt-[45rem]">
                 <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[70]">
                   <button onClick={handleGetHire1}>
                     <SlClose />
