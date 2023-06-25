@@ -1,6 +1,5 @@
 // import bgVideo from "../assets/developer/bgVideo.mp4";
 import background from "../assets/developer/background.webm";
-
 import one from "../assets/developer/one.webp";
 import two from "../assets/developer/two.webp";
 import three from "../assets/developer/three.webp";
