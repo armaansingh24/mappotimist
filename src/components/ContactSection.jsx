@@ -200,7 +200,7 @@ const ContactSection = () => {
                       Mobile App Development
                     </button>
                   </div>
-                  <div className="anim-btn">
+                  <div className="anime">
                     <button
                       className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                       onClick={() =>
