@@ -70,11 +70,10 @@ const Developer = () => {
       <div id="Developer" className="w-screen relative z-0">
         <div className="relative z-0 w-full">
           <video
-            data-src={background}
             autoPlay
             muted
             loop
-            className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block scale-[1.3] lazyload"
+            className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block scale-[1.3]"
           >
             <source
               src={background}

@@ -152,7 +152,11 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                   >
                     <img src={image1} alt="" className="" />
-                    <img src={linkedin} alt="" className="-mt-7 ml-12 w-[39%]" />
+                    <img
+                      src={linkedin}
+                      alt=""
+                      className="-mt-7 ml-12 w-[39%]"
+                    />
                   </a>
                 </div>
                 <div className="">
@@ -173,7 +177,7 @@ const ContactSection = () => {
               <div className="flex flex-col flex-wrap mt-8 midxmd:mt-0 w-full font-poppins500">
                 <span className="midxmd:text-5xl">Hey there!</span>
                 <div className="flex flex-wrap gap-1 items-baseline">
-                  <span className=" midxmd:text-5xl">Do you have a {" "} </span>
+                  <span className=" midxmd:text-5xl">Do you have a </span>
                   <span className="text-[#DF9507] lmd:text-[48px] -z-1 inline midxmd:text-5xl midlg:ml-2">
                     {text}
                   </span>
@@ -185,21 +189,27 @@ const ContactSection = () => {
                 <p className="text-sm sm:text-lg font-poppins500">
                   What services you need?
                 </p>
-                <div className="h-fit flex flex-wrap justify-start items-center gap-2 midxmd:w-[90%]">
-                  <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
-                    onClick={() =>
-                      handleSelectedService("Mobile App Development")
-                    }
-                  >
-                    Mobile App Development
-                  </span>
-                  <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
-                    onClick={() => handleSelectedService("Website Development")}
-                  >
-                    Website Development
-                  </span>
+                <div className="h-fit flex flex-wrap justify-start items-center gap-2 midxmd:w-[80%]">
+                  <div className="anim-btn">
+                    <button
+                      className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                      onClick={() =>
+                        handleSelectedService("Mobile App Development")
+                      }
+                    >
+                      Mobile App Development
+                    </button>
+                  </div>
+                  <div className="anim-btn">
+                    <button
+                      className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                      onClick={() =>
+                        handleSelectedService("Website Development")
+                      }
+                    >
+                      Website Development
+                    </button>
+                  </div>
                   <span
                     className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
                     onClick={() => handleSelectedService("Website Design")}
