@@ -755,7 +755,7 @@ export const reviews = [
   },
   {
     id: 4,
-    image: image3,
+    image: image4,
     name: "Wilton Hou",
     date: "12/06/19",
     description:
@@ -763,7 +763,7 @@ export const reviews = [
   },
   {
     id: 5,
-    image: image3,
+    image: image5,
     name: "Olive Kogo",
     date: "1/1/2022",
     description:

@@ -31,30 +31,26 @@ const GetHired = () => {
     bio: "",
   });
 
-  
-
- const handleFlieInput = () => {
-   setError4("File size should be less than 5 MB");
- };
- function changeHandler(event) {
-   if (event.target.name === "file") {
-     if (event.target.files[0].size > 5242880) {
-       handleFlieInput();
-       return;
-     }
-     setFormData((prevData) => ({
-       ...prevData,
-       file: event.target.files[0], // Update file value with the selected file
-     }));
-   } else {
-     setFormData((prevData) => ({
-       ...prevData,
-       [event.target.name]: event.target.value,
-     }));
-   }
- }
-
-
+  const handleFlieInput = () => {
+    setError4("File size should be less than 5 MB");
+  };
+  function changeHandler(event) {
+    if (event.target.name === "file") {
+      if (event.target.files[0].size > 5242880) {
+        handleFlieInput();
+        return;
+      }
+      setFormData((prevData) => ({
+        ...prevData,
+        file: event.target.files[0], // Update file value with the selected file
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [event.target.name]: event.target.value,
+      }));
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,7 +89,7 @@ const GetHired = () => {
       return;
     }
 
-   errorHandler();
+    errorHandler();
     try {
       const response = await axios.post(
         "http://localhost:8080/v1/send-email-hire",
@@ -145,7 +141,7 @@ const GetHired = () => {
 
   return (
     <>
-      <div className="w-screen h-screen relative z-[60]">
+      <div className="w-screen relative z-[60]">
         <div className="w-[97%] h-auto mx-auto mt-[2.5%] bg-gradient-to-r from-[#000046] to-[#1CB5E0] rounded-xl">
           <div className="flex items-center flex-col w-[100%] mx-auto">
             <div className="text-center flex flex-col gap-4 w-[60%] p-10">

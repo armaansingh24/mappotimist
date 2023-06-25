@@ -41,35 +41,35 @@ const ClientReviews = () => {
        setActiveIndex1((prevIndex) => (prevIndex + 1) % reviewImages1.length);
      }, 5000);
      return () => clearInterval(interval);
-   }, [reviewImages1.length]);
+   }, []);
 
    useEffect(() => {
      const interval = setInterval(() => {
        setActiveIndex2((prevIndex) => (prevIndex + 1) % reviewImages3.length);
      }, 7000);
      return () => clearInterval(interval);
-   }, [reviewImages3.length]);
+   }, []);
 
    useEffect(() => {
      const interval = setInterval(() => {
        setActiveIndex3((prevIndex) => (prevIndex + 1) % reviewImages4.length);
      }, 6000);
      return () => clearInterval(interval);
-   }, [reviewImages4.length]);
+   }, []);
 
    useEffect(() => {
      const interval = setInterval(() => {
        setActiveIndex4((prevIndex) => (prevIndex + 1) % reviewImages5.length);
      }, 8000);
      return () => clearInterval(interval);
-   }, [reviewImages5.length]);
+   }, []);
 
    useEffect(() => {
      const interval = setInterval(() => {
        setActiveIndex5((prevIndex) => (prevIndex + 1) % reviewImages2.length);
      }, 5000);
      return () => clearInterval(interval);
-   }, [reviewImages2.length]);
+   }, []);
   return (
     <>
       <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
