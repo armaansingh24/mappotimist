@@ -112,7 +112,7 @@ const PortfolioCarausel = ({ props, page }) => {
       <div className="w-[90%] mx-auto slider">
         <div className="container hidden sm:block mb-10">
           <Swiper
-            modules={[EffectCoverflow, Pagination, Navigation]}
+            modules={[EffectCoverflow, Pagination, Navigation, Virtual]}
             effect={"coverflow"}
             onSlideChange={handleSlideChange}
             centeredSlides={true}
