@@ -1,14 +1,14 @@
 // about Section carsaul images
-import slider1 from "../assets/about/slider1.png";
-import slider2 from "../assets/about/slider2.png";
-import slider3 from "../assets/about/slider3.png";
+import slider1 from "../assets/about/slider1.webp";
+import slider2 from "../assets/about/slider2.webp";
+import slider3 from "../assets/about/slider3.webp";
 
 // Portfolio Images
-import image1 from "../assets/portfolio/image1.png";
-import image2 from "../assets/portfolio/image2.png";
-import image3 from "../assets/portfolio/image3.png";
-import image4 from "../assets/portfolio/image4.png";
-import image5 from "../assets/portfolio/image5.png";
+import image1 from "../assets/portfolio/image1.webp";
+import image2 from "../assets/portfolio/image2.webp";
+import image3 from "../assets/portfolio/image3.webp";
+import image4 from "../assets/portfolio/image4.webp";
+import image5 from "../assets/portfolio/image5.webp";
 
 // portfolio Images
 
@@ -20,80 +20,80 @@ import bobble4 from "../assets/portfolio/bobble/bobble4.webp";
 import bobblemain from "../assets/portfolio/bobble/bobblemain.webp";
 
 // Go Fetch Images
-import Fetch1 from "../assets/portfolio/Fetch/Fetch1.png";
-import Fetch2 from "../assets/portfolio/Fetch/Fetch2.png";
-import Fetch3 from "../assets/portfolio/Fetch/Fetch3.png";
-import Fetch4 from "../assets/portfolio/Fetch/Fetch4.png";
-import Fetchmain from "../assets/portfolio/Fetch/Fetchmain.png";
+import Fetch1 from "../assets/portfolio/Fetch/Fetch1.webp";
+import Fetch2 from "../assets/portfolio/Fetch/Fetch2.webp";
+import Fetch3 from "../assets/portfolio/Fetch/Fetch3.webp";
+import Fetch4 from "../assets/portfolio/Fetch/Fetch4.webp";
+import Fetchmain from "../assets/portfolio/Fetch/Fetchmain.webp";
 
 // FTL Images
-import FTL1 from "../assets/portfolio/FTL/FTL1.png";
-import FTL2 from "../assets/portfolio/FTL/FTL2.png";
-import FTL3 from "../assets/portfolio/FTL/FTL3.png";
-import FTL4 from "../assets/portfolio/FTL/FTL4.png";
-import FTLmain from "../assets/portfolio/FTL/FTLmain.png";
+import FTL1 from "../assets/portfolio/FTL/FTL1.webp";
+import FTL2 from "../assets/portfolio/FTL/FTL2.webp";
+import FTL3 from "../assets/portfolio/FTL/FTL3.webp";
+import FTL4 from "../assets/portfolio/FTL/FTL4.webp";
+import FTLmain from "../assets/portfolio/FTL/FTLmain.webp";
 
 // Happy Images
-import Happy1 from "../assets/portfolio/happy/Happy1.png";
-import Happy2 from "../assets/portfolio/happy/Happy2.png";
-import Happy3 from "../assets/portfolio/happy/Happy3.png";
-import Happy4 from "../assets/portfolio/happy/Happy4.png";
-import Happymain from "../assets/portfolio/happy/Happymain.png";
+import Happy1 from "../assets/portfolio/happy/Happy1.webp";
+import Happy2 from "../assets/portfolio/happy/Happy2.webp";
+import Happy3 from "../assets/portfolio/happy/Happy3.webp";
+import Happy4 from "../assets/portfolio/happy/Happy4.webp";
+import Happymain from "../assets/portfolio/happy/Happymain.webp";
 
 // MediHelp Images
-import medi1 from "../assets/portfolio/mediHelp/medi1.png";
-import medi2 from "../assets/portfolio/mediHelp/medi2.png";
-import medi3 from "../assets/portfolio/mediHelp/medi3.png";
-import medi4 from "../assets/portfolio/mediHelp/medi4.png";
-import medimain from "../assets/portfolio/mediHelp/medimain.png";
+import medi1 from "../assets/portfolio/mediHelp/medi1.webp";
+import medi2 from "../assets/portfolio/mediHelp/medi2.webp";
+import medi3 from "../assets/portfolio/mediHelp/medi3.webp";
+import medi4 from "../assets/portfolio/mediHelp/medi4.webp";
+import medimain from "../assets/portfolio/mediHelp/medimain.webp";
 
 // Website 1 Images
-import onemain from "../assets/portfolio/one/onemain.png";
-import one1 from "../assets/portfolio/one/one1.png";
-import one2 from "../assets/portfolio/one/one2.png";
-import one3 from "../assets/portfolio/one/one3.png";
+import onemain from "../assets/portfolio/one/onemain.webp";
+import one1 from "../assets/portfolio/one/one1.webp";
+import one2 from "../assets/portfolio/one/one2.webp";
+import one3 from "../assets/portfolio/one/one3.webp";
 
 // Website 2 Images
-import twomain from "../assets/portfolio/two/twomain.png";
-import two1 from "../assets/portfolio/two/two1.png";
-import two2 from "../assets/portfolio/two/two2.png";
-import two3 from "../assets/portfolio/two/two3.png";
-import two4 from "../assets/portfolio/two/two4.png";
+import twomain from "../assets/portfolio/two/twomain.webp";
+import two1 from "../assets/portfolio/two/two1.webp";
+import two2 from "../assets/portfolio/two/two2.webp";
+import two3 from "../assets/portfolio/two/two3.webp";
+import two4 from "../assets/portfolio/two/two4.webp";
 
 // Agencies Images
-import behance from "../assets/agencies/behance.png";
-import dribble from "../assets/agencies/dribble.png";
-import fiverr from "../assets/agencies/fiverr.png";
-import upwork from "../assets/agencies/upwork.png";
-import freelancer from "../assets/agencies/freelancer.png";
-import pangian from "../assets/agencies/pangian.png";
-import indeed from "../assets/agencies/indeed.png";
-import flexjobs from "../assets/agencies/flexjobs.png";
+import behance from "../assets/agencies/behance.webp";
+import dribble from "../assets/agencies/dribble.webp";
+import fiverr from "../assets/agencies/fiverr.webp";
+import upwork from "../assets/agencies/upwork.webp";
+import freelancer from "../assets/agencies/freelancer.webp";
+import pangian from "../assets/agencies/pangian.webp";
+import indeed from "../assets/agencies/indeed.webp";
+import flexjobs from "../assets/agencies/flexjobs.webp";
 
 // Expertise Images
-import ios from "../assets/expertise/ios.png";
-import Android from "../assets/expertise/Android.png";
-import Flutter from "../assets/expertise/Flutter.png";
-import React_Native from "../assets/expertise/React_Native.png";
-import Python from "../assets/expertise/Python.png";
-import HTML from "../assets/expertise/HTML.png";
-import Node from "../assets/expertise/Node.png";
-import JAVA from "../assets/expertise/JAVA.png";
-import Blockchain from "../assets/expertise/Blockchain.png";
-import Amazon from "../assets/expertise/Amazon.png";
-import IoT from "../assets/expertise/IoT.png";
-import Oracle from "../assets/expertise/Oracle.png";
-import SQL from "../assets/expertise/SQL.png";
-import Salesforce from "../assets/expertise/Salesforce.png";
-import Golang from "../assets/expertise/Golang.png";
+import ios from "../assets/expertise/ios.webp";
+import Android from "../assets/expertise/Android.webp";
+import Flutter from "../assets/expertise/Flutter.webp";
+import React_Native from "../assets/expertise/React_Native.webp";
+import Python from "../assets/expertise/Python.webp";
+import HTML from "../assets/expertise/HTML.webp";
+import Node from "../assets/expertise/Node.webp";
+import JAVA from "../assets/expertise/JAVA.webp";
+import Blockchain from "../assets/expertise/Blockchain.webp";
+import Amazon from "../assets/expertise/Amazon.webp";
+import IoT from "../assets/expertise/IoT.webp";
+import Oracle from "../assets/expertise/Oracle.webp";
+import SQL from "../assets/expertise/SQL.webp";
+import Salesforce from "../assets/expertise/Salesforce.webp";
+import Golang from "../assets/expertise/Golang.webp";
 
 // OCR ICR Images
-import adhaar from "../assets/OcrIcr/adhaar.png";
-import adhaarJson from "../assets/OcrIcr/adhaarJson.png";
-import document from "../assets/OcrIcr/document.png";
-import documentJson from "../assets/OcrIcr/documentJson.png";
-import passport from "../assets/OcrIcr/passport.png";
-import passportJaon from "../assets/OcrIcr/passportJaon.png";
+import adhaar from "../assets/OcrIcr/adhaar.webp";
+import adhaarJson from "../assets/OcrIcr/adhaarJson.webp";
+import document from "../assets/OcrIcr/document.webp";
+import documentJson from "../assets/OcrIcr/documentJson.webp";
+import passport from "../assets/OcrIcr/passport.webp";
+import passportJaon from "../assets/OcrIcr/passportJaon.webp";
 
 export const navLinks = [
   {

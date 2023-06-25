@@ -6,7 +6,7 @@ import { RxDividerVertical } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
 import { GrAttachment } from "react-icons/gr";
 import { useState, useRef } from "react";
-import ellips from "../assets/contactUs/ellipes.png";
+import ellips from "../assets/contactUs/ellipes.webp";
 import { MdOutlineMessage } from "react-icons/md";
 import axios from "axios";
 import { toast } from "react-hot-toast";

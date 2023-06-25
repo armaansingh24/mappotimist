@@ -1,9 +1,9 @@
 // import bgVideo from "../assets/developer/bgVideo.mp4";
 import background from "../assets/developer/background.webm";
 
-import one from "../assets/developer/one.png";
-import two from "../assets/developer/two.png";
-import three from "../assets/developer/three.png";
+import one from "../assets/developer/one.webp";
+import two from "../assets/developer/two.webp";
+import three from "../assets/developer/three.webp";
 import { useState, useEffect } from "react";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
@@ -14,13 +14,13 @@ import { Tilt } from "react-tilt";
 import { Link } from "react-scroll";
 import { Link as HLink } from "react-router-dom";
 
-import ellips1 from "../assets/developer/ellips1.png";
-import ellips2 from "../assets/developer/ellips2.png";
-import ellips3 from "../assets/developer/ellips3.png";
-import ellips4 from "../assets/developer/ellips4.png";
-import ellips5 from "../assets/developer/ellips5.png";
-import ellips6 from "../assets/developer/ellips6.png";
-import ellips7 from "../assets/developer/ellips7.png";
+import ellips1 from "../assets/developer/ellips1.webp";
+import ellips2 from "../assets/developer/ellips2.webp";
+import ellips3 from "../assets/developer/ellips3.webp";
+import ellips4 from "../assets/developer/ellips4.webp";
+import ellips5 from "../assets/developer/ellips5.webp";
+import ellips6 from "../assets/developer/ellips6.webp";
+import ellips7 from "../assets/developer/ellips7.webp";
 
 const Developer = () => {
   const [showForm, setShowForm] = useState(false);

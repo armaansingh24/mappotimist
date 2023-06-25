@@ -1,11 +1,11 @@
 import React from "react";
-import pattern from "../assets/clientReviews/pattern.png";
-import pattern1 from "../assets/clientReviews/pattern1.png";
-import pattern2 from "../assets/clientReviews/pattern2.png";
-import pattern3 from "../assets/clientReviews/pattern3.png";
-import pattern4 from "../assets/clientReviews/pattern4.png";
-import  curve1  from "../assets/clientReviews/curve1.png";
-import  curve2  from "../assets/clientReviews/curve2.png";
+import pattern from "../assets/clientReviews/pattern.webp";
+import pattern1 from "../assets/clientReviews/pattern1.webp";
+import pattern2 from "../assets/clientReviews/pattern2.webp";
+import pattern3 from "../assets/clientReviews/pattern3.webp";
+import pattern4 from "../assets/clientReviews/pattern4.webp";
+import curve1 from "../assets/clientReviews/curve1.webp";
+import curve2 from "../assets/clientReviews/curve2.webp";
 import { useEffect, useState } from "react";
 import { reviews } from "../constants/index";
 import ClientReviewsItem from "./ClientReviewsItem";

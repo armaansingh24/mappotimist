@@ -5,8 +5,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { GrAttachment } from "react-icons/gr";
 import { MdOutlineMessage } from "react-icons/md";
 import { useState, useRef } from "react";
-import ellips1 from "../assets/contactUs/ellips1.png";
-import ellips2 from "../assets/contactUs/ellips2.png";
+import ellips1 from "../assets/contactUs/ellips1.webp";
+import ellips2 from "../assets/contactUs/ellips2.webp";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 

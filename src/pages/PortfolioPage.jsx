@@ -1,16 +1,16 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.webp";
-import featureIcon from "../assets/portfolio/featureIcon.png";
-import Group from "../assets/portfolio/Group.png";
-import R1 from "../assets/portfolio/R1.png";
-import R2 from "../assets/portfolio/R2.png";
-import R3 from "../assets/portfolio/R3.png";
-import R4 from "../assets/portfolio/R4.png";
-import lower from "../assets/expertise/lower.png";
+import featureIcon from "../assets/portfolio/featureIcon.webp";
+import Group from "../assets/portfolio/Group.webp";
+import R1 from "../assets/portfolio/R1.webp";
+import R2 from "../assets/portfolio/R2.webp";
+import R3 from "../assets/portfolio/R3.webp";
+import R4 from "../assets/portfolio/R4.webp";
+import lower from "../assets/expertise/lower.webp";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
-import message from "../assets/portfolio/message.png";
+import message from "../assets/portfolio/message.webp";
 
 const PortfolioPage = (props) => {
   const location = useLocation();

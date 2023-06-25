@@ -1,8 +1,8 @@
 import React from "react";
-import insta from "../assets/footer/insta.png";
-import fb from "../assets/footer/fb.png";
-import slack from "../assets/footer/slack.png";
-import linkedin from "../assets/footer/linkedin.png";
+import insta from "../assets/footer/insta.webp";
+import fb from "../assets/footer/fb.webp";
+import slack from "../assets/footer/slack.webp";
+import linkedin from "../assets/footer/linkedin.webp";
 import { Link } from "react-scroll";
 
 const Footer = () => {

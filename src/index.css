@@ -8,7 +8,7 @@
 @import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
 
 :root {
-    --wav1: url("./assets/about/wave.png");
+    --wav1: url("./assets/about/wave.webp");
 }
 
 * {

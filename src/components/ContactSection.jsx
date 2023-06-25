@@ -1,8 +1,8 @@
 import { useTypewriter } from "react-simple-typewriter";
 import { useState, useRef } from "react";
-import image1 from "../assets/contactUs/image1.png";
-import R2 from "../assets/contactUs/R2.png";
-import linkedin from "../assets/contactUs/linkedin.png";
+import image1 from "../assets/contactUs/image1.webp";
+import R2 from "../assets/contactUs/R2.webp";
+import linkedin from "../assets/contactUs/linkedin.webp";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 

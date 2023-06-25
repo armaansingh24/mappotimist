@@ -3,12 +3,12 @@ import { expertiseItem } from "../constants/index";
 import ExpertiseItem from "./ExpertiseItem";
 import { useState, useEffect } from "react";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
-import upper from "../assets/expertise/upper.png";
-import lower from "../assets/expertise/lower.png";
-import Ellipse1 from "../assets/expertise/Ellipse1.png";
-import Ellipse2 from "../assets/expertise/Ellipse2.png";
-import Ellipse3 from "../assets/expertise/Ellipse3.png";
-import R1 from "../assets/expertise/R1.png";
+import upper from "../assets/expertise/upper.webp";
+import lower from "../assets/expertise/lower.webp";
+import Ellipse1 from "../assets/expertise/Ellipse1.webp";
+import Ellipse2 from "../assets/expertise/Ellipse2.webp";
+import Ellipse3 from "../assets/expertise/Ellipse3.webp";
+import R1 from "../assets/expertise/R1.webp";
 const Experties = () => {
   const [expanded, setExpanded] = useState(false);
 

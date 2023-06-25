@@ -1,7 +1,7 @@
 import React from "react";
 import { agencies } from "../constants/index";
 import "../index.css";
-import wave1 from "../assets/agencies/wave1.png";
+import wave1 from "../assets/agencies/wave1.webp";
 
 const Agencies = () => {
   return (

@@ -2,11 +2,11 @@ import React from "react";
 import TypeWritter from "typewriter-effect";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useState, useEffect, useRef } from "react";
-import image1 from "../assets/hero-section/image1.png";
-import image2 from "../assets/hero-section/image2.png";
-import image3 from "../assets/hero-section/image3.png";
-import image4 from "../assets/hero-section/image4.png";
-import image5 from "../assets/hero-section/image5.png";
+import image1 from "../assets/hero-section/image1.webp";
+import image2 from "../assets/hero-section/image2.webp";
+import image3 from "../assets/hero-section/image3.webp";
+import image4 from "../assets/hero-section/image4.webp";
+import image5 from "../assets/hero-section/image5.webp";
 import { motion, useInView, useAnimation } from "framer-motion";
 import  Comp1  from "../assets/hero-section/Comp1.webm";
 import {Link} from "react-scroll"

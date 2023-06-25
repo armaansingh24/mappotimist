@@ -1,21 +1,21 @@
 import React from "react";
 import PortfolioNavbar from "../components/PortfolioNavbar";
-import First from "../assets/OcrIcr/First.png";
-import second from "../assets/OcrIcr/second.png";
-import third from "../assets/OcrIcr/third.png";
+import First from "../assets/OcrIcr/First.webp";
+import second from "../assets/OcrIcr/second.webp";
+import third from "../assets/OcrIcr/third.webp";
 import { Ai } from "../constants/index";
 import { useEffect, useState } from "react";
-import arrow from "../assets/OcrIcr/arrow.png";
-import ai from "../assets/OcrIcr/ai.png";
+import arrow from "../assets/OcrIcr/arrow.webp";
+import ai from "../assets/OcrIcr/ai.webp";
 import { Link } from "react-scroll";
-import R1 from "../assets/OcrIcr/R1.png";
-import R2 from "../assets/OcrIcr/R2.png";
-import R3 from "../assets/OcrIcr/R3.png";
-import ellips1 from "../assets/OcrIcr/ellips1.png";
-import ellips2 from "../assets/OcrIcr/ellips2.png";
-import ellips3 from "../assets/OcrIcr/ellips3.png";
-import ellips4 from "../assets/OcrIcr/ellips4.png";
-import ellips5 from "../assets/OcrIcr/ellips5.png";
+import R1 from "../assets/OcrIcr/R1.webp";
+import R2 from "../assets/OcrIcr/R2.webp";
+import R3 from "../assets/OcrIcr/R3.webp";
+import ellips1 from "../assets/OcrIcr/ellips1.webp";
+import ellips2 from "../assets/OcrIcr/ellips2.webp";
+import ellips3 from "../assets/OcrIcr/ellips3.webp";
+import ellips4 from "../assets/OcrIcr/ellips4.webp";
+import ellips5 from "../assets/OcrIcr/ellips5.webp";
 
 const OcrIcr = () => {
   const data = Ai;
