@@ -41,7 +41,7 @@
     /* background-image: linear-gradient(380deg, #1CB5E0,#F3F4F5,#F3F4F5); */
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1030px) {
     .bg-gradient-curve {
         background-image: radial-gradient(ellipse at bottom left, #1CB5E0, #1CB5E0, #1CB5E0, #F7F5F8, #F7F5F8, #F7F5F8, #F7F5F8);
         background-repeat: no-repeat;
