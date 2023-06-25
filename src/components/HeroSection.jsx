@@ -125,7 +125,7 @@ const HeroSection = () => {
               </div>
               <div className="">
                 {activeParagraph === 0 && (
-                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium ">
+                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD] ">
                     Hire top-notch remote developers, designers, and product
                     managers with exceptional technical expertise and effective
                     communication skills. Our rigorous screening process
@@ -136,7 +136,7 @@ const HeroSection = () => {
                   </p>
                 )}
                 {activeParagraph === 1 && (
-                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium">
+                  <p className="font-poppins500 text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-[#A0A3BD]">
                     Witness the realisation of your ideas into tangible success
                     as we guide your path from technologies to solutions. Our
                     team of trained experts provides cost-effective web and

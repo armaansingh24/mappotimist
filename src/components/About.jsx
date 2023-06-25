@@ -57,7 +57,7 @@ const About = () => {
               transition={{ duration: 1.6 }}
               className="order-1 w-full"
             >
-              <h2 className="w-full text-[30px] font-poppins500 leading-8 xxmd:text-[46px] xxmd:leading-[72px]">
+              <h2 className="w-[90%] text-[30px] font-poppins500 leading-8 xxmd:text-[40px] xxmd:leading-[72px]">
                 Unleash your idea's potential with our comprehensive, innovative
                 and creative digital solutions.
               </h2>

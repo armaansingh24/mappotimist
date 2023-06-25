@@ -165,15 +165,15 @@ export const about = [
     id: 1,
     number: "10 ",
     symbol: "+",
-    title: "years of experience",
+    title: "Years of Experience",
     description:
-      "we have experienced professionals to help you build great projects.",
+      "We have experienced professionals to help you build great projects.",
   },
   {
     id: 2,
     number: "25 ",
     symbol: "+",
-    title: "projects completed",
+    title: "Projects Completed",
     description: "In our team can help you build your project.",
   },
   {
@@ -181,14 +181,14 @@ export const about = [
     number: "100",
     symbol: "%",
     title: "Happy Clients",
-    description: "our clients satisfaction is our first priority.",
+    description: "Our clients satisfaction is our first priority.",
   },
   {
     id: 4,
     number: "100",
     symbol: "%",
-    title: "on-time delivery",
-    description: "we have a good record of delivering projects before time.",
+    title: "On-time Delivery",
+    description: "We have a good record of delivering projects before time.",
   },
 ];
 
