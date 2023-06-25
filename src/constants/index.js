@@ -2,6 +2,9 @@
 import slider1 from "../assets/about/slider1.webp";
 import slider2 from "../assets/about/slider2.webp";
 import slider3 from "../assets/about/slider3.webp";
+import bg1 from "../assets/about/bg1.webp";
+import bg2 from "../assets/about/bg2.webp";
+import bg3 from "../assets/about/bg3.webp";
 
 // Portfolio Images
 import image1 from "../assets/portfolio/image1.webp";
@@ -120,8 +123,7 @@ export const navLinks = [
 
 export const carouselItems = [
   {
-    backgroudImage:
-      "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    backgroudImage: bg1,
     id: 1,
     step: "Step1",
     title: "Thinking",
@@ -130,8 +132,7 @@ export const carouselItems = [
     image: slider1,
   },
   {
-    backgroudImage:
-      "https://img.freepik.com/free-photo/modern-3d-white-paper-style-background_24972-2010.jpg?w=1060&t=st=1685251645~exp=1685252245~hmac=c5527b86fe4a619574cee5e0813186618bfd56cb336cad2a35cdab1be68d5600",
+    backgroudImage: bg2,
     id: 2,
     step: "Step2",
     title: "Develop",
@@ -140,8 +141,7 @@ export const carouselItems = [
     image: slider2,
   },
   {
-    backgroudImage:
-      "https://img.freepik.com/free-photo/abstract-blue-geometric-shapes-background_24972-1841.jpg?w=1060&t=st=1684932147~exp=1684932747~hmac=d2625ef7bd40079dd5e0f224a61318a2cf6f7efd69ba12f788fa28c8a6900f9f",
+    backgroudImage: bg3,
     id: 3,
     step: "Step3",
     title: "Deliver and Scale",
@@ -839,21 +839,20 @@ export const expertiseItem = [
   },
 ];
 
-
-export const Ai=[
+export const Ai = [
   {
     id: 1,
     image: adhaar,
-    json: adhaarJson
+    json: adhaarJson,
   },
   {
     id: 2,
     image: passport,
-    json: passportJaon
+    json: passportJaon,
   },
   {
     id: 3,
     image: document,
-    json: documentJson
-  }
-]
+    json: documentJson,
+  },
+];
