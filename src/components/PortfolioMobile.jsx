@@ -5,7 +5,6 @@ const PortfolioMobile = ({ item }) => {
   const navigate = useNavigate();
 
   const handleReadMore = () => {
-    console.log(item.id);
     navigate(`/portfolio/${item.id}`, { state: { item } });
   };
 

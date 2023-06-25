@@ -31,19 +31,12 @@ const GetHired = () => {
     type: "",
     duration: "",
     summery: "",
-    // formId: accountType,
   });
-  const handleFormId = (str) => {
-    setAccountType(str);
-    // formData.formId = str;
-    // console.log(formData.formId);
-  };
 
    const handleFlieInput = () => {
      setError4("File size should be less than 5 MB");
    };
    function changeHandler(event) {
-     // console.log(formData);
      if (event.target.name === "file") {
        if (event.target.files[0].size > 5242880) {
          handleFlieInput();
@@ -66,7 +59,6 @@ const GetHired = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // console.log(error1);
     if (formData.name.trim() === "") {
       setError1("This field is necessary");
       return;
@@ -122,7 +114,6 @@ const GetHired = () => {
           }
         );
         if (response.status === 200) {
-          console.log("Form data sent successfully");
           // Reset the form
           toast.success("Email sent successfully");
           setFormData({
@@ -141,7 +132,6 @@ const GetHired = () => {
       } catch (error) {
         toast.error("Email not sent");
         // Handle error
-        console.error("Error:", error);
       }
     } else {
       const formDataSent = {
@@ -157,7 +147,6 @@ const GetHired = () => {
           formDataSent,
         );
         if (response.status === 200) {
-          console.log("Form data sent successfully");
           // Reset the form
           toast.success("Email sent successfully");
           setFormData({
@@ -176,23 +165,9 @@ const GetHired = () => {
       } catch (error) {
         toast.error("Email not sent");
         // Handle error
-        console.error("Error:", error);
       }
     }
-    // console.log(formData);
     errorHandler();
-
-    // setFormData({
-    //   name: "",
-    //   contact: "",
-    //   email: "",
-    //   file: "",
-    //   required: "",
-    //   type: "",
-    //   duration: "",
-    //   summery: "",
-    //   formId: accountType,
-    // });
   };
   const errorHandler = () => {
     setError1("");
@@ -232,7 +207,7 @@ const GetHired = () => {
                     ? "bg-gradient-to-r from-[#000046] to-[#1CB5E0] text-white font-semibold"
                     : "bg-white text-black"
                 } py-2 px-5 rounded-full transition-all duration-200 w-full text-2xl`}
-                onClick={() => handleFormId("Hire Team")}
+                onClick={() =>setAccountType("Hire Team")}
               >
                 Hire Team
               </button>
@@ -242,7 +217,7 @@ const GetHired = () => {
                     ? "bg-gradient-to-r to-[#000046] from-[#1CB5E0] text-white font-semibold"
                     : "bg-white text-black"
                 } py-2 px-5 rounded-full transition-all duration-200 w-full text-2xl`}
-                onClick={() => handleFormId("Hire Individual Developer")}
+                onClick={() =>setAccountType("Hire Individual Developer")}
               >
                 Hire Individual Developer
               </button>

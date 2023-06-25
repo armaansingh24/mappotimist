@@ -35,7 +35,6 @@ const GetHiredMobile = () => {
       setError4("File size should be less than 5 MB");
     };
     function changeHandler(event) {
-      // console.log(formData);
       if (event.target.name === "file") {
         if (event.target.files[0].size > 5242880) {
           handleFlieInput();
@@ -57,7 +56,6 @@ const GetHiredMobile = () => {
    const handleSubmit = async (e) => {
      e.preventDefault();
 
-     // console.log(error1);
      if (formData.name.trim() === "") {
        setError1("This field is necessary");
        return;
@@ -113,7 +111,6 @@ const GetHiredMobile = () => {
            }
          );
          if (response.status === 200) {
-           console.log("Form data sent successfully");
            // Reset the form
            toast.success("Email sent successfully");
            setFormData({
@@ -132,7 +129,6 @@ const GetHiredMobile = () => {
        } catch (error) {
          toast.error("Email not sent");
          // Handle error
-         console.error("Error:", error);
        }
      } else {
        const formDataSent = {
@@ -148,7 +144,6 @@ const GetHiredMobile = () => {
            formDataSent
          );
          if (response.status === 200) {
-           console.log("Form data sent successfully");
            // Reset the form
            toast.success("Email sent successfully");
            setFormData({
@@ -167,23 +162,9 @@ const GetHiredMobile = () => {
        } catch (error) {
          toast.error("Email not sent");
          // Handle error
-         console.error("Error:", error);
        }
      }
-     // console.log(formData);
      errorHandler();
-
-     // setFormData({
-     //   name: "",
-     //   contact: "",
-     //   email: "",
-     //   file: "",
-     //   required: "",
-     //   type: "",
-     //   duration: "",
-     //   summery: "",
-     //   formId: accountType,
-     // });
    };
   const errorHandler = () => {
     setError1("");

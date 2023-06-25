@@ -37,7 +37,6 @@ const GetHired = () => {
    setError4("File size should be less than 5 MB");
  };
  function changeHandler(event) {
-   // console.log(formData);
    if (event.target.name === "file") {
      if (event.target.files[0].size > 5242880) {
        handleFlieInput();
@@ -59,7 +58,6 @@ const GetHired = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
     if (formData.name.trim() === "") {
       setError1("This field is necessary");
       return;
@@ -98,7 +96,7 @@ const GetHired = () => {
    errorHandler();
     try {
       const response = await axios.post(
-        "http://localhost:3000/send-email-hire",
+        "http://localhost:8080/v1/send-email-hire",
         formData,
         {
           headers: {
@@ -107,7 +105,6 @@ const GetHired = () => {
         }
       );
       if (response.status === 200) {
-        console.log("Form data sent successfully");
         // Reset the form
         toast.success("Email sent successfully");
         setFormData({
@@ -125,7 +122,6 @@ const GetHired = () => {
     } catch (error) {
       toast.error("Email not sent");
       // Handle error
-      console.error("Error:", error);
     }
     errorHandler();
   };

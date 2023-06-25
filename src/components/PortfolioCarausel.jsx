@@ -32,7 +32,6 @@ const PortfolioCarausel = ({ props, page }) => {
       }
     }
   }, [page]);
-  // console.log(page);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -101,7 +100,6 @@ const PortfolioCarausel = ({ props, page }) => {
 
   const handleSlideChange = (swiper) => {
     setCurrentSlideIndex(swiper.realIndex);
-    //  console.log(swiper.activeIndex);
   };
   //  const handleClickItem = (index) => {
   //    if (swiperRef.current) {
@@ -114,7 +112,7 @@ const PortfolioCarausel = ({ props, page }) => {
       <div className="w-[90%] mx-auto slider">
         <div className="container hidden sm:block mb-10">
           <Swiper
-            modules={[EffectCoverflow, Pagination, Navigation, Virtual]}
+            modules={[EffectCoverflow, Pagination, Navigation]}
             effect={"coverflow"}
             onSlideChange={handleSlideChange}
             centeredSlides={true}

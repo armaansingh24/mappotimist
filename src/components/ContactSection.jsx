@@ -69,7 +69,6 @@ const ContactSection = () => {
         formData,
       );
       if (response.status === 200) {
-        console.log("Form data sent successfully");
         // Reset the form
         toast.success("Email sent successfully");
         setFormData({
@@ -85,9 +84,7 @@ const ContactSection = () => {
     } catch (error) {
       toast.error("Email not sent");
       // Handle error
-      console.error("Error:", error);
     }
-    console.log(formData);
   };
 
   const errorHandler = () => {
@@ -139,7 +136,7 @@ const ContactSection = () => {
           </h2>
           <div className="flex middlesm:mt-32 gap-10">
             <div className="hidden midxmd:flex flex-col items-center justify-start w-[25%] relative z-10  -ml-10">
-              <div className="">
+              <div className="ml-4">
                 <p className="text-sm text-center font-poppins500">
                   You can email us at
                 </p>
@@ -148,16 +145,22 @@ const ContactSection = () => {
                 </p>
               </div>
               <div className="mt-12 flex items-center gap-6">
-                <div>
-                  <img src={image1} alt="" className="" />
-                  <img src={linkedin} alt="" className="-mt-7 ml-12" />
+                <div className="">
+                  <a
+                    href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={image1} alt="" className="" />
+                    <img src={linkedin} alt="" className="-mt-7 ml-12" />
+                  </a>
                 </div>
                 <div className="">
                   <p className="text-lg font-poppins text-center">
-                    Arpit Dwivedi
+                    Yashvant Sikarvar
                   </p>
                   <p className="text-lg text-[#CCCCCC] font-poppins mx-auto text-center">
-                    Position Name
+                    Founder & CEO
                   </p>
                 </div>
               </div>
