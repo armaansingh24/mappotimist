@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className="bg-gradient-curve  w-screen midlg:h-[85vh] relative -z-1">
+      <div className="bg-gradient-curve  w-screen midlg:h-[86vh] relative -z-1">
         <div
           className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center "
           id="home"

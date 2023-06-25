@@ -21,7 +21,7 @@ const Agencies = () => {
           </h2>
         </div>
         <div className="w-[70%]  mx-auto  xxmd:mt-24 z-0 ">
-          <div className="grid grid-cols-2 h-[60vh]  xsm:h-[50vh]  middlesm:h-[120vh] md:h-[120vh] lmd:h-[45vh] midxmd:h-[70vh] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)] rounded-md  justify-between gap-6 p-8 mb-16 xxmd:grid-cols-4  ">
+          <div className="grid grid-cols-2 gap-12 shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)] rounded-md  justify-between  p-8 mb-16 xxmd:grid-cols-4">
             {agencies.map((agency) => (
               <div
                 className="flex items-center justify-center w-full "

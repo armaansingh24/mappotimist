@@ -39,10 +39,10 @@ const About = () => {
   }, []);
   return (
     <>
-      <div className="mt-10 lg:mt-6 relative z-0" id="About">
-        <div className="waves bg-gradient-to-bl to-secondary from-gray-100 via-gray-100 mt-[60%] xms:mt-[51%] sm:mt-[46%] lmd:mt-[47%] md:mt-[33%] xmd:mt-[1.8%] w-screen">
+      <div className="w-screen -mt-12 sm:-mt-6 relative z-0" id="About">
+        {/* <div className="waves bg-gradient-to-bl to-secondary from-gray-100 via-gray-100 mt-[60%] xms:mt-[51%] sm:mt-[46%] lmd:mt-[47%] md:mt-[33%] xmd:mt-[1.8%] w-screen">
           <div className="wave wave3"></div>
-        </div>
+        </div> */}
 
         <div className="bg-[#DBDCE6]">
           <div className="max-w-[90%] mx-auto grid grid-cols-1 xxmd:grid-cols-2 gap-5 ">
@@ -58,8 +58,8 @@ const About = () => {
               className="order-1 w-full"
             >
               <h2 className="w-full text-[30px] font-poppins500 leading-8 xxmd:text-[46px] xxmd:leading-[72px]">
-                Unleash your idea's potential with our comprehensive,
-                innovative and creative digital solutions.
+                Unleash your idea's potential with our comprehensive, innovative
+                and creative digital solutions.
               </h2>
             </motion.div>
             <motion.div
