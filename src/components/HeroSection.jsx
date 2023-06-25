@@ -8,7 +8,7 @@ import image3 from "../assets/hero-section/image3.png";
 import image4 from "../assets/hero-section/image4.png";
 import image5 from "../assets/hero-section/image5.png";
 import { motion, useInView, useAnimation } from "framer-motion";
-import  Comp1  from "../assets/hero-section/Comp1.mp4";
+import  Comp1  from "../assets/hero-section/Comp1.webm";
 import {Link} from "react-scroll"
 
 const HeroSection = () => {
@@ -57,7 +57,7 @@ const HeroSection = () => {
                 loop
                 className="mt-10 midFM:ml-[30%] midFM:-mt-24 z-1"
               >
-                <source src={Comp1} type="video/mp4" />
+                <source src={Comp1} type="video/webm" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -90,10 +90,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
-              <Link to="Developer"
-              smooth={true}
-                offset={70}
-                duration={1000}>
+              <Link to="Developer" smooth={true} offset={70} duration={1000}>
                 <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500">
                   Hire Talent
                   <span>
