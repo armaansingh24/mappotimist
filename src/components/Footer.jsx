@@ -3,6 +3,7 @@ import insta from "../assets/footer/insta.png";
 import fb from "../assets/footer/fb.png";
 import slack from "../assets/footer/slack.png";
 import linkedin from "../assets/footer/linkedin.png";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -14,7 +15,9 @@ const Footer = () => {
             <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around midFM:mr-40">
               <p className="text-2xl sm:text-3xl">MappOptimist</p>
               <ul className="text-xl flex gap-1 flex-col sm:text-2xl mt-5">
-                <li className="cursor-pointer">about</li>
+                <Link to={"About"} smooth={true} offset={0} duration={1000}>
+                  <li className="cursor-pointer">about</li>
+                </Link>
                 <li className="cursor-pointer">careers</li>
                 <li className="cursor-pointer">privacy policies</li>
                 <li className="cursor-pointer">terms & conditions</li>
