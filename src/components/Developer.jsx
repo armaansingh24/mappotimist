@@ -185,7 +185,7 @@ const Developer = () => {
                     </button>
                   </Link>
                   <button
-                    className="block midFM:hidden bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
+                    className="block midFM:hidden bg-gradient-to-l text-xlfrom-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                     onClick={handleGetHire1}
                   >
                     Get Hired
