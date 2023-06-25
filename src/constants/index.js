@@ -7,11 +7,20 @@ import bg2 from "../assets/about/bg2.webp";
 import bg3 from "../assets/about/bg3.webp";
 
 // Portfolio Images
-import image1 from "../assets/portfolio/image1.webp";
-import image2 from "../assets/portfolio/image2.webp";
-import image3 from "../assets/portfolio/image3.webp";
-import image4 from "../assets/portfolio/image4.webp";
-import image5 from "../assets/portfolio/image5.webp";
+import image1 from "../assets/clientReviews/image1.webp";
+import image2 from "../assets/clientReviews/image2.webp";
+import image3 from "../assets/clientReviews/image3.webp";
+import image4 from "../assets/clientReviews/image4.webp";
+import image5 from "../assets/clientReviews/image5.webp";
+import image6 from "../assets/clientReviews/image6.webp";
+import image7 from "../assets/clientReviews/image7.webp";
+import image8 from "../assets/clientReviews/image8.webp";
+import image9 from "../assets/clientReviews/image9.webp";
+import image10 from "../assets/clientReviews/image10.webp";
+import image11 from "../assets/clientReviews/image11.webp";
+import image12 from "../assets/clientReviews/image12.webp";
+import image13 from "../assets/clientReviews/image13.webp";
+import image14 from "../assets/clientReviews/image14.webp";
 
 // portfolio Images
 
@@ -605,71 +614,117 @@ export const agencies = [
 export const reviewImages1 = [
   {
     id: 1,
-    image: image1,
+    image: image6,
   },
   {
     id: 2,
-    image: image2,
+    image: image7,
   },
   {
     id: 3,
-    image: image3,
+    image: image8,
   },
   {
     id: 4,
-    image: image4,
+    image: image9,
   },
   {
     id: 5,
-    image: image5,
+    image: image10,
   },
 ];
 
 export const reviewImages2 = [
   {
     id: 1,
-    image: image4,
+    image: image12,
   },
   {
     id: 2,
-    image: image5,
+    image: image13,
   },
   {
     id: 3,
-    image: image3,
+    image: image14,
   },
   {
     id: 4,
 
-    image: image1,
+    image: image6,
   },
   {
     id: 5,
-    image: image2,
+    image: image7,
   },
 ];
 
 export const reviewImages3 = [
   {
     id: 1,
-    image: image4,
+    image: image8,
   },
   {
     id: 2,
-    image: image3,
+    image: image9,
   },
   {
     id: 3,
 
-    image: image2,
+    image: image10,
   },
   {
     id: 4,
-    image: image1,
+    image: image11,
   },
   {
     id: 5,
-    image: image5,
+    image: image12,
+  },
+];
+export const reviewImages4 = [
+  {
+    id: 1,
+    image: image13,
+  },
+  {
+    id: 2,
+    image: image14,
+  },
+  {
+    id: 3,
+
+    image: image10,
+  },
+  {
+    id: 4,
+    image: image6,
+  },
+  {
+    id: 5,
+    image: image9,
+  },
+];
+export const reviewImages5 = [
+  {
+    id: 1,
+    image: image10,
+  },
+  {
+    id: 2,
+    image: image13,
+  },
+  {
+    id: 3,
+
+    image: image9,
+  },
+  {
+    id: 4,
+    image: image12,
+  },
+  {
+    id: 5,
+    image: image8,
   },
 ];
 
@@ -677,39 +732,39 @@ export const reviews = [
   {
     id: 1,
     image: image1,
-    name: "John Doe",
-    date: "12/12/2020",
+    name: "Olivia Diniz",
+    date: "03/04/20",
     description:
       " The IT services and solutions provided by this company are top-notch. Their expertise, reliability, and efficiency have greatly enhanced our business operations. Enthusiastically endorsed!",
   },
   {
     id: 2,
     image: image2,
-    name: "Karan Singh",
-    date: "1/1/2022",
+    name: "Renato Weiser",
+    date: "23/09/20",
     description:
       "Reliable and efficient IT services provider; their solutions transformed our operations. The team's expertise, responsiveness, and commitment to excellence made them an invaluable partner.",
   },
   {
     id: 3,
     image: image3,
-    name: "Arpit Devedi",
-    date: "1/1/2022",
+    name: "Sofia Coasta",
+    date: "20/07/22",
     description:
       "Exceptional IT services! The company's expertise and efficient solutions have transformed our business. Their prompt support and innovative approach make them a reliable partner. Highly recommended!",
   },
   {
     id: 4,
     image: image3,
-    name: "Amit Kumar",
-    date: "1/1/2022",
+    name: "Wilton Hou",
+    date: "12/06/19",
     description:
       " Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism, and timely delivery exceeded our expectations. Highly recommended!",
   },
   {
     id: 5,
     image: image3,
-    name: "Armaan Singh",
+    name: "Olive Kogo",
     date: "1/1/2022",
     description:
       "Exceptional Android development services; they built an impressive app that perfectly catered to our needs. Their team's expertise, attention to detail, and prompt support made the experience seamless.",

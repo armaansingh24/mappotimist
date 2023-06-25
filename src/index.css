@@ -3,10 +3,35 @@
 @tailwind utilities;
 /* @import "react-alice-carousel/lib/alice-carousel.css"; */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@600&display=swap');
-@import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@500&display=swap');
-@import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap'); */
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@600&display=swap');
+}
+
+@font-face {
+    font-family: 'Roboto Slab500';
+    src: url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@500&display=swap');
+}
+
+@font-face {
+    font-family: 'Roboto Slab300';
+    src: url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
+}
+
+@font-face {
+    font-family: 'Roboto Slab300';
+    src: url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
+}
+
+@font-face {
+    font-family: 'Roboto Slab100';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600&display=swap');
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@600&display=swap'); */
+/* @import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@500&display=swap'); */
+/* @import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap'); */
+/* @import  */
 
 :root {
     --wav1: url("./assets/about/wave.webp");
@@ -364,7 +389,6 @@ body {
 /* Agensies */
 
 .agencies {
-    /* background-image: url("https: //img.freepik.com/free-photo/abstract-blue-geometric-shapes-background_24972-1841.jpg?w=1060&t=st=1684932147~exp=1684932747~hmac=d2625ef7bd40079dd5e0f224a61318a2cf6f7efd69ba12f788fa28c8a6900f9f"); */
     background-position: 60% 60%;
     background-repeat: no-repeat;
 }
@@ -413,6 +437,10 @@ body {
         animation-timing-function: ease-in;
         transform: rotateY(35deg);
     }
+}
+
+.changeCard{
+    background-image: linear-gradient(180deg, #000046 0%, #1CB5E0 100%);
 }
 
 /* got to top */

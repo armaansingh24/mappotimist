@@ -174,16 +174,20 @@ const Navbar = () => {
                             <span className="hover:text-primary">
                               <VscNotebook />
                             </span>
-                            <span>Get Employed</span>
+                            <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
+                              Get Employed
+                            </span>
                           </button>
                         </li>
                         <li className="font-roboto100">
                           <NavLink to="/orc-icr">
-                            <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2">
+                            <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 ">
                               <span className="hover:text-primary">
                                 <VscNotebook />
                               </span>
-                              <span>OCR/ICR</span>
+                              <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
+                                OCR/ICR
+                              </span>
                             </button>
                           </NavLink>
                         </li>

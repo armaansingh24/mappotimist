@@ -94,12 +94,12 @@ const OcrIcr = () => {
                     <p className="text-sm midxmd:text-lg font-poppins mt-1">
                       Our OCR and ICR technologies recognise printed or
                       handwritten text in digital images of physical documents.
-                      They convert scanned paper documents, PDFs and images
-                      into editable and searchable data.
+                      They convert scanned paper documents, PDFs and images into
+                      editable and searchable data.
                     </p>
                   </li>
-                  <li className="flex gap-1 items-center justify-center">
-                    <p className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                  <li className="flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary mt-2">
                       ✔
                     </p>
                     <p className="text-sm midxmd:text-lg font-poppins mt-1">
@@ -109,8 +109,8 @@ const OcrIcr = () => {
                       efficiency.
                     </p>
                   </li>
-                  <li className="flex gap-1 items-center justify-center">
-                    <p className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                  <li className="flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary mt-2">
                       ✔
                     </p>
                     <p className="text-sm midxmd:text-lg font-poppins mt-1">
@@ -120,8 +120,8 @@ const OcrIcr = () => {
                       international communication and document management.
                     </p>
                   </li>
-                  <li className="flex gap-1 items-center justify-center">
-                    <p className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                  <li className="flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary mt-2">
                       ✔
                     </p>
                     <p className="text-sm midxmd:text-lg font-poppins mt-1">
@@ -132,8 +132,8 @@ const OcrIcr = () => {
                       and accuracy.
                     </p>
                   </li>
-                  <li className="flex gap-1 items-center justify-center">
-                    <p className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                  <li className="flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary mt-2">
                       ✔
                     </p>
                     <p className="text-sm midxmd:text-lg font-poppins mt-1">
@@ -194,8 +194,11 @@ const OcrIcr = () => {
                 </div>
 
                 <div className="mt-10 flex flex-col gap-10">
-                  <div className="text-sm midFM:text-lg font-poppins">
-                    <p>
+                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                      ✔
+                    </p>
+                    <p className="font-poppins">
                       OCR (Optical Character Recognition) and ICR (Intelligent
                       Character Recognition) are both technologies used to
                       convert different types of documents into editable and
@@ -204,8 +207,11 @@ const OcrIcr = () => {
                       complexity in their operation.
                     </p>
                   </div>
-                  <div className="text-sm midFM:text-lg font-poppins">
-                    <p>
+                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                      ✔
+                    </p>
+                    <p className="font-poppins">
                       OCR is primarily used for reading printed text. It works
                       by analyzing the shapes and patterns of the letters in the
                       scanned image of a document. The OCR software compares
@@ -218,8 +224,11 @@ const OcrIcr = () => {
                       when used to read handwriting.
                     </p>
                   </div>
-                  <div className="text-sm midFM:text-lg font-poppins">
-                    <p>
+                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                      ✔
+                    </p>
+                    <p className="font-poppins">
                       ICR, on the other hand, is a more advanced version of OCR
                       that is designed to read and learn from handwriting. ICR
                       uses artificial intelligence and machine learning to
@@ -231,8 +240,11 @@ const OcrIcr = () => {
                       variety of handwriting styles and its accuracy improves.
                     </p>
                   </div>
-                  <div className="text-sm midFM:text-lg font-poppins">
-                    <p>
+                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                      ✔
+                    </p>
+                    <p className="font-poppins">
                       Both OCR and ICR technologies utilize image processing
                       techniques to enhance the quality and clarity of the input
                       images. They can handle various formats such as scanned

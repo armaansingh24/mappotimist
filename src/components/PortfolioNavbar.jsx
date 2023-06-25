@@ -89,7 +89,7 @@ const Navbar = () => {
                 }`}
                 loading="lazy"
               />
-              <p className="text-[18px] font-bold cursor-pointer xmd:flex xmd:flex-col xmd:gap-0 hidden mdd:w-0">
+              <p className="text-[18px] font-poppins cursor-pointer xmd:flex xmd:flex-col xmd:gap-0 hidden mdd:w-0">
                 <span className="mt-2">MappOptimist</span>
                 <span className="text-[10px] -translate-y-1 text-black opacity-[0.5] italic">
                   We code the future
@@ -146,43 +146,49 @@ const Navbar = () => {
                     <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-8 z-0"></div>
                     <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-14 -translate-y-6">
                       <ul className="list-none flex flex-col items-start justify-center">
-                        <li>
+                        <li className="font-roboto100">
                           <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2"
+                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 text-xl"
                             onClick={() => {
                               setToggle(!toggle);
                               setIsOpen(!isOpen);
                               handleGetHired();
                             }}
                           >
-                            <span>
+                            <span className="hover:text-primary">
                               <VscNotebook />
                             </span>
-                            <span>Recruit Us</span>
+                            <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
+                              Recruit Us
+                            </span>
                           </button>
                         </li>
-                        <li>
+                        <li className="font-roboto100">
                           <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2"
+                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 "
                             onClick={() => {
                               setToggle(!toggle);
                               setIsOpen(!isOpen);
                               handleGetHire();
                             }}
                           >
-                            <span>
+                            <span className="hover:text-primary">
                               <VscNotebook />
                             </span>
-                            <span>Get Employed</span>
+                            <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
+                              Get Employed
+                            </span>
                           </button>
                         </li>
-                        <li>
+                        <li className="font-roboto100">
                           <NavLink to="/orc-icr">
-                            <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2">
-                              <span>
+                            <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 ">
+                              <span className="hover:text-primary">
                                 <VscNotebook />
                               </span>
-                              <span>OCR/ICR</span>
+                              <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
+                                OCR/ICR
+                              </span>
                             </button>
                           </NavLink>
                         </li>
@@ -339,72 +345,72 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-        <div className="absolute -top-7 z-1">
-          {showForm && (
-            <div>
-              <div className="hidden midFM:block">
-                <div className="absolute top-20 right-20 text-[50px] text-white z-[80]">
-                  <button
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setIsOpen(!isOpen);
-                      handleGetHired();
-                    }}
-                  >
-                    <SlClose />
-                  </button>
-                </div>
-                <GetHired />
+      <div className="absolute -top-7 z-1">
+        {showForm && (
+          <div>
+            <div className="hidden midFM:block">
+              <div className="absolute top-20 right-20 text-[50px] text-white z-[80]">
+                <button
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setIsOpen(!isOpen);
+                    handleGetHired();
+                  }}
+                >
+                  <SlClose />
+                </button>
               </div>
-              <div className="block midFM:hidden mt-20">
-                <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
-                  <button onClick={handleGetHired}>
-                    <SlClose />
-                  </button>
-                </div>
-                <GetHiredMobile />
+              <GetHired />
+            </div>
+            <div className="block midFM:hidden mt-20">
+              <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
+                <button onClick={handleGetHired}>
+                  <SlClose />
+                </button>
               </div>
+              <GetHiredMobile />
+            </div>
+            <div
+              className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
+              onClick={handleGetHired1}
+            ></div>
+          </div>
+        )}
+      </div>
+      <div className="absolute -top-5 z-1 ">
+        {showForm2 && (
+          <div>
+            <div className="hidden midFM:block">
+              <div className="absolute mt-3 right-20 text-[50px] text-white z-[80]">
+                <button
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setIsOpen(!isOpen);
+                    handleGetHire();
+                  }}
+                >
+                  <SlClose />
+                </button>
+              </div>
+              <GetHire />
+            </div>
+            <div className="block midFM:hidden mt-[45rem]">
+              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[80]">
+                <button onClick={handleGetHire1}>
+                  <SlClose />
+                </button>
+              </div>
+              <HireMobile />
+            </div>
+            <div className="hidden midFM:block">
               <div
                 className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                onClick={handleGetHired1}
+                onClick={handleGetHire}
               ></div>
             </div>
-          )}
-        </div>
-        <div className="absolute -top-5 z-1 ">
-          {showForm2 && (
-            <div>
-              <div className="hidden midFM:block">
-                <div className="absolute mt-3 right-20 text-[50px] text-white z-[80]">
-                  <button
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setIsOpen(!isOpen);
-                      handleGetHire();
-                    }}
-                  >
-                    <SlClose />
-                  </button>
-                </div>
-                <GetHire />
-              </div>
-              <div className="block midFM:hidden mt-[45rem]">
-                <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[80]">
-                  <button onClick={handleGetHire1}>
-                    <SlClose />
-                  </button>
-                </div>
-                <HireMobile />
-              </div>
-              <div className="hidden midFM:block">
-                <div
-                  className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                  onClick={handleGetHire}
-                ></div>
-              </div>
-            </div>
-          )}
-        </div>
+          </div>
+        )}
+      </div>
       {/* <div
         className={`${
           toggle === false

@@ -12,6 +12,8 @@ import ClientReviewsItem from "./ClientReviewsItem";
 import { reviewImages1 } from "../constants/index";
 import { reviewImages3 } from "../constants/index";
 import { reviewImages2 } from "../constants/index";
+import { reviewImages4 } from "../constants/index";
+import { reviewImages5 } from "../constants/index";
 
 // icons
 import { AiFillInstagram } from "react-icons/ai";
@@ -22,13 +24,52 @@ import { RiSlackFill } from "react-icons/ri";
 const ClientReviews = () => {
   const data = reviews;
   const [activeIndex, setActiveIndex] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 9000);
+  const [activeIndex1, setActiveIndex1] = useState(2);
+  const [activeIndex2, setActiveIndex2] = useState(4);
+  const [activeIndex3, setActiveIndex3] = useState(1);
+  const [activeIndex4, setActiveIndex4] = useState(3);
+  const [activeIndex5, setActiveIndex5] = useState(5);
+   useEffect(() => {
+     const interval = setInterval(() => {
+       setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
+     }, 9000);
+     return () => clearInterval(interval);
+   }, [data.length]);
 
-    return () => clearInterval(interval);
-  }, [data.length]);
+   useEffect(() => {
+     const interval = setInterval(() => {
+       setActiveIndex1((prevIndex) => (prevIndex + 1) % reviewImages1.length);
+     }, 5000);
+     return () => clearInterval(interval);
+   }, [reviewImages1.length]);
+
+   useEffect(() => {
+     const interval = setInterval(() => {
+       setActiveIndex2((prevIndex) => (prevIndex + 1) % reviewImages3.length);
+     }, 7000);
+     return () => clearInterval(interval);
+   }, [reviewImages3.length]);
+
+   useEffect(() => {
+     const interval = setInterval(() => {
+       setActiveIndex3((prevIndex) => (prevIndex + 1) % reviewImages4.length);
+     }, 6000);
+     return () => clearInterval(interval);
+   }, [reviewImages4.length]);
+
+   useEffect(() => {
+     const interval = setInterval(() => {
+       setActiveIndex4((prevIndex) => (prevIndex + 1) % reviewImages5.length);
+     }, 8000);
+     return () => clearInterval(interval);
+   }, [reviewImages5.length]);
+
+   useEffect(() => {
+     const interval = setInterval(() => {
+       setActiveIndex5((prevIndex) => (prevIndex + 1) % reviewImages2.length);
+     }, 5000);
+     return () => clearInterval(interval);
+   }, [reviewImages2.length]);
   return (
     <>
       <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
@@ -50,11 +91,11 @@ const ClientReviews = () => {
             <div className="relative w-[715px] hidden midxmd:block midlg:hidden lg:block z-4">
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {/* upper left image*/}
-                {reviewImages2.map((item, index) => (
+                {reviewImages1.map((item, index) => (
                   <div
                     key={index}
                     style={{
-                      display: activeIndex === index ? "block" : "none",
+                      display: activeIndex1 === index ? "block" : "none",
                     }}
                   >
                     <img
@@ -67,11 +108,11 @@ const ClientReviews = () => {
               </div>
               {/* 3 rd row left */}
               <div className="absolute right-4 top-[17.1rem] rounded-full">
-                {reviewImages1.map((item, index) => (
+                {reviewImages3.map((item, index) => (
                   <div
                     key={index}
                     style={{
-                      display: activeIndex === index ? "block" : "none",
+                      display: activeIndex2 === index ? "block" : "none",
                     }}
                   >
                     <img
@@ -84,11 +125,11 @@ const ClientReviews = () => {
               </div>
               {/* 3 rd row right */}
               <div className="absolute right-20 top-[49.8%] ">
-                {reviewImages1.map((item, index) => (
+                {reviewImages4.map((item, index) => (
                   <div
                     key={index}
                     style={{
-                      display: activeIndex === index ? "block" : "none",
+                      display: activeIndex3 === index ? "block" : "none",
                     }}
                   >
                     <img
@@ -109,11 +150,11 @@ const ClientReviews = () => {
               </div>
               {/* 2nd row imaage */}
               <div className="absolute -right-[22%] top-[31.3%] rounded-full">
-                {reviewImages3.map((item, index) => (
+                {reviewImages5.map((item, index) => (
                   <div
                     key={index}
                     style={{
-                      display: activeIndex === index ? "block" : "none",
+                      display: activeIndex4 === index ? "block" : "none",
                     }}
                   >
                     <img
@@ -126,11 +167,11 @@ const ClientReviews = () => {
               </div>
               {/* Fourth row image */}
               <div className="absolute -right-[16.3rem] bottom-0 z-10">
-                {reviewImages1.map((item, index) => (
+                {reviewImages2.map((item, index) => (
                   <div
                     key={index}
                     style={{
-                      display: activeIndex === index ? "block" : "none",
+                      display: activeIndex5 === index ? "block" : "none",
                     }}
                   >
                     <img

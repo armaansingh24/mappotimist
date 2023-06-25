@@ -33,9 +33,9 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Roboto Slab", "sans-serif"],
-        poppins500: ["Roboto Slab", "sans-serif"],
-        poppins300: ["Roboto Slab", "sans-serif"],
-        // roboto100: ["Roboto Slab", "sans-serif"],
+        poppins500: ["Roboto Slab500", "sans-serif"],
+        poppins300: ["Roboto Slab300", "sans-serif"],
+        roboto100: ["Roboto Slab100", "sans-serif"],
       },
     },
   },
