@@ -35,6 +35,7 @@ module.exports = {
         poppins: ["Roboto Slab", "sans-serif"],
         poppins500: ["Roboto Slab", "sans-serif"],
         poppins300: ["Roboto Slab", "sans-serif"],
+        // roboto100: ["Roboto Slab", "sans-serif"],
       },
     },
   },

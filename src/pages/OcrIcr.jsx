@@ -29,9 +29,9 @@ const OcrIcr = () => {
   }, [data.length]);
   return (
     <>
-        <div className="">
-          <PortfolioNavbar />
-        </div>
+      <div className="">
+        <PortfolioNavbar />
+      </div>
       <div className="bg-white relative z-10">
         <div className="bg-white w-screen relative z-10">
           <img
@@ -41,25 +41,25 @@ const OcrIcr = () => {
           />
           <div className="w-[90%] mt-44  mx-auto sm:mt-0">
             {/* First Section */}
-            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 midlg:h-screen">
+            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 midlg:h-[80vh]">
               <div className="midxmd:order-2 midxmd:w-full ocr">
                 <img src={First} alt="" className="midxmd:w-full" />
               </div>
               <div className="flex flex-col gap-2 midxmd:w-full">
                 <div>
-                  <h2 className="text-2xl midxmd:text-4xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                    OCR & ICR(Handwritten)
+                  <h2 className="text-2xl midxmd:text-5xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    OCR & ICR (Handwritten)
                   </h2>
-                  <p className="text-sm midxmd:text-lg font-poppins mt-1">
+                  <p className="text-sm midxmd:text-2xl font-poppins mt-4">
                     Utilizing OCR/ICR technology to elevate the process
                     experience.
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm midxmd:text-lg font-poppins">
+                  <p className="text-sm midxmd:text-lg font-poppins300">
                     Use our OCR/ICR technology to enhance the efficiency,
-                    accuracy, and accessibility of document processing, data
-                    extraction, and information management across various
+                    accuracy and accessibility of document processing, data
+                    extraction and information management across various
                     industries and domains.
                   </p>
                 </div>
@@ -72,13 +72,13 @@ const OcrIcr = () => {
                 <img src={second} alt="" className="mx-auto" />
               </div>
               <div className="midFM:order-1 col-span-2">
-                <h2 className="text-2xl midxmd:text-4xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="text-2xl midxmd:text-5xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Key Features of OCR/ICR (Handwritten)
                 </h2>
-                <p className="text-sm midxmd:text-lg font-poppins mt-1">
+                <p className="text-sm midxmd:text-lg font-poppins mt-4">
                   Our platform offers the opportunity for insurance, banking,
                   and finance companies to transform their documents, including
-                  PDFs, scans, images, and handwritten notes, into a digital
+                  PDFs, scans, images and handwritten notes into a digital
                   format. We have created an AI model tailored explicitly for
                   Indian eKYC identification and verification. With an
                   impressive accuracy rate of 90% or above, our model's greatest
@@ -87,14 +87,14 @@ const OcrIcr = () => {
               </div>
               <div className="midFM:order-2 flex flex-col items-center justify-between gap-5">
                 <ul>
-                  <li className="flex gap-1 items-center justify-center">
-                    <p className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
+                  <li className="flex gap-1 items-start justify-center">
+                    <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary mt-2">
                       ✔
                     </p>
                     <p className="text-sm midxmd:text-lg font-poppins mt-1">
                       Our OCR and ICR technologies recognise printed or
                       handwritten text in digital images of physical documents.
-                      They convert scanned paper documents, PDFs, and images
+                      They convert scanned paper documents, PDFs and images
                       into editable and searchable data.
                     </p>
                   </li>
@@ -151,7 +151,7 @@ const OcrIcr = () => {
                   offset={-20}
                   duration={1000}
                 >
-                  <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1">
+                  <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1 relative z-10">
                     View a Demo
                   </button>
                 </Link>
@@ -225,10 +225,10 @@ const OcrIcr = () => {
                       uses artificial intelligence and machine learning to
                       recognize and learn different handwriting styles. It works
                       by analyzing the unique features of each character in a
-                      piece of handwriting, such as the curves, slants, and
+                      piece of handwriting, such as the curves, slants and
                       proportions. Over time, as the ICR software processes more
                       handwriting samples, it learns to recognize a wider
-                      variety of handwriting styles, and its accuracy improves.
+                      variety of handwriting styles and its accuracy improves.
                     </p>
                   </div>
                   <div className="text-sm midFM:text-lg font-poppins">
@@ -322,7 +322,7 @@ const OcrIcr = () => {
               />
               <div className="w-[90%]">
                 <h2 className="text-2xl midxmd:text-4xl font-poppins500 text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  watch a demo video
+                  Watch a demo video
                 </h2>
               </div>
               <div className="order-3 w-[90%] midFM:order-4 midFM:col-span-2 mt-5">
@@ -344,7 +344,7 @@ const OcrIcr = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <div className="flex items-center justify-between px-2 py-20 sm:p-10 sm:py-44">
+                    <div className="flex  px-2 py-20 sm:p-10 sm:py-44">
                       <div className="w-[30%]">
                         <img src={item.image} alt="" />
                       </div>
@@ -353,14 +353,18 @@ const OcrIcr = () => {
                         <img
                           src={arrow}
                           alt=""
-                          className="translate-x-3 midlg:translate-x-9"
+                          className="translate-x-3 midlg:translate-x-9 mt-20"
                         />
                       </div>
                       <div className="w-[30%]">
                         <img src={ai} alt="" />
                       </div>
                       <div className="h-[10%] w-[15%]">
-                        <img src={arrow} alt="" className="-translate-x-4" />
+                        <img
+                          src={arrow}
+                          alt=""
+                          className="-translate-x-4 mt-20"
+                        />
                       </div>
                       <div className="w-[25%]">
                         <img src={item.json} alt="" />

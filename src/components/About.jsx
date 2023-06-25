@@ -59,7 +59,7 @@ const About = () => {
             >
               <h2 className="w-full text-[30px] font-poppins500 leading-8 xxmd:text-[46px] xxmd:leading-[72px]">
                 Unleash your idea's potential with our comprehensive,
-                innovative, and creative digital solutions.
+                innovative and creative digital solutions.
               </h2>
             </motion.div>
             <motion.div

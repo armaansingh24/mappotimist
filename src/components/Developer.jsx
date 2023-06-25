@@ -134,7 +134,7 @@ const Developer = () => {
                 }}
                 className="card"
               >
-                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3">
+                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3 midlg:h-[32.7rem]">
                   <p className="text-2xl font-poppins500">Recruit Us</p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
@@ -172,13 +172,13 @@ const Developer = () => {
                 <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem]">
                   <p className="text-2xl font-poppins500">Get Employed</p>
                   <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
-                  <p className="text-center text-lg font-poppins500 mt-9">
+                  <p className="text-center text-lg font-poppins500">
                     If you are a freelancer seeking engaging projects, let's
                     collaborate and bring your vision to life!
                   </p>
                   <Link to="Developer">
                     <button
-                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white"
+                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                       onClick={handleGetHire}
                     >
                       Get Hired

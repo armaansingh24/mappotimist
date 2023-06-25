@@ -8,7 +8,7 @@ import axios from "axios";
 
 const ContactSection = () => {
   const [text] = useTypewriter({
-    words: ["Project?", "Idea?"],
+    words: [" Project?", "Idea?"],
     loop: {},
     typeSpeed: 200,
     delaySpeed: 200,
@@ -144,7 +144,7 @@ const ContactSection = () => {
                   info@mappoptimist.com
                 </p>
               </div>
-              <div className="mt-12 flex items-center gap-6">
+              <div className="mt-12 flex items-center gap-3">
                 <div className="">
                   <a
                     href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
@@ -152,14 +152,14 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                   >
                     <img src={image1} alt="" className="" />
-                    <img src={linkedin} alt="" className="-mt-7 ml-12" />
+                    <img src={linkedin} alt="" className="-mt-7 ml-12 w-[39%]" />
                   </a>
                 </div>
                 <div className="">
                   <p className="text-lg font-poppins text-center">
                     Yashvant Sikarvar
                   </p>
-                  <p className="text-lg text-[#CCCCCC] font-poppins mx-auto text-center">
+                  <p className="text-lg text-[#7e7c7c] font-poppins mx-auto text-center">
                     Founder & CEO
                   </p>
                 </div>
@@ -173,8 +173,8 @@ const ContactSection = () => {
               <div className="flex flex-col flex-wrap mt-8 midxmd:mt-0 w-full font-poppins500">
                 <span className="midxmd:text-5xl">Hey there!</span>
                 <div className="flex flex-wrap gap-1 items-baseline">
-                  <span className=" midxmd:text-5xl">Do you have a </span>
-                  <span className="text-[#DF9507] lmd:text-[48px] -z-1 inline midxmd:text-5xl">
+                  <span className=" midxmd:text-5xl">Do you have a {" "} </span>
+                  <span className="text-[#DF9507] lmd:text-[48px] -z-1 inline midxmd:text-5xl midlg:ml-2">
                     {text}
                   </span>
                 </div>

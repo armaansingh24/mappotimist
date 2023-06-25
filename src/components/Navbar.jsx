@@ -127,12 +127,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                className="text-[20px]  cursor-pointer leading-[30px] group 
                 "
               >
                 <div className="group gap-0 transition-all duration-500">
                   <Link
-                    className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white relative z-10 group overflow-hidden"
+                    className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white relative z-10 group overflow-hidden font-poppins "
                     to={`Developer`}
                     // spy={true}
                     smooth={true}
@@ -145,40 +145,42 @@ const Navbar = () => {
                     <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-8 z-0"></div>
                     <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-14 -translate-y-6">
                       <ul className="list-none flex flex-col items-start justify-center">
-                        <li>
+                        <li className="font-roboto100">
                           <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2"
+                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 text-xl"
                             onClick={() => {
                               setToggle(!toggle);
                               setIsOpen(!isOpen);
                               handleGetHired();
                             }}
                           >
-                            <span>
+                            <span className="hover:text-primary">
                               <VscNotebook />
                             </span>
-                            <span>Recruit Us</span>
+                            <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
+                              Recruit Us
+                            </span>
                           </button>
                         </li>
-                        <li>
+                        <li className="font-roboto100">
                           <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2"
+                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 "
                             onClick={() => {
                               setToggle(!toggle);
                               setIsOpen(!isOpen);
                               handleGetHire();
                             }}
                           >
-                            <span>
+                            <span className="hover:text-primary">
                               <VscNotebook />
                             </span>
                             <span>Get Employed</span>
                           </button>
                         </li>
-                        <li>
+                        <li className="font-roboto100">
                           <NavLink to="/orc-icr">
                             <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2">
-                              <span>
+                              <span className="hover:text-primary">
                                 <VscNotebook />
                               </span>
                               <span>OCR/ICR</span>

@@ -158,21 +158,21 @@ export const about = [
     symbol: "+",
     title: "years of experience",
     description:
-      "we have experienced professionals to help you build great projects",
+      "we have experienced professionals to help you build great projects.",
   },
   {
     id: 2,
     number: "25 ",
     symbol: "+",
     title: "projects completed",
-    description: "In our team can help you build your project",
+    description: "In our team can help you build your project.",
   },
   {
     id: 3,
     number: "100",
     symbol: "%",
     title: "Happy Clients",
-    description: "out clints satisfaction is our first priority.",
+    description: "our clients satisfaction is our first priority.",
   },
   {
     id: 4,
