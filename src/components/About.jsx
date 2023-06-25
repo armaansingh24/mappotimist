@@ -98,7 +98,7 @@ const About = () => {
                     opacity: "0.8",
                   };
                   const style = isSelected
-                    ? { ...defStyle, color: "#1CB5E0" }
+                    ? { ...defStyle, color: "#000046" }
                     : { ...defStyle };
                   return (
                     <span
