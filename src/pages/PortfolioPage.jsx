@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.png";
+import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.webp";
 import featureIcon from "../assets/portfolio/featureIcon.png";
 import Group from "../assets/portfolio/Group.png";
 import R1 from "../assets/portfolio/R1.png";

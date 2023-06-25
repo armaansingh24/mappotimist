@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { BsPersonFill } from "react-icons/bs";
 import { RxDividerVertical } from "react-icons/rx";
 import { HiOutlineMail } from "react-icons/hi";
@@ -11,134 +11,138 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 const HireMobile = () => {
-   const fileInputRef = useRef(null);
-   const [error1, setError1] = useState("");
-   const [error2, setError2] = useState("");
-   const [error3, setError3] = useState("");
-   const [error4, setError4] = useState("");
-   const [error5, setError5] = useState("");
-   const [error6, setError6] = useState("");
-   const [error7, setError7] = useState("");
+  const fileInputRef = useRef(null);
+  const [error1, setError1] = useState("");
+  const [error2, setError2] = useState("");
+  const [error3, setError3] = useState("");
+  const [error4, setError4] = useState("");
+  const [error5, setError5] = useState("");
+  const [error6, setError6] = useState("");
+  const [error7, setError7] = useState("");
 
-   const [formData, setFormData] = useState({
-     name: "",
-     contact: "",
-     email: "",
-     file: "",
-     expertise: "",
-     experience: "",
-     bio: "",
-   });
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    email: "",
+    file: "",
+    expertise: "",
+    experience: "",
+    bio: "",
+  });
 
-    function changeHandler(event) {
-      // console.log(formData);
-      if (event.target.name === "file") {
-        if (event.target.files[0].size > 5242880) {
-          setError7("File size should be less than 5 MB");
-          return;
-        }
-        setFormData((prevData) => ({
-          ...prevData,
-          file: event.target.files[0], // Update file value with the selected file
-        }));
-      } else {
-        setFormData((prevData) => ({
-          ...prevData,
-          [event.target.name]: event.target.value,
-        }));
+  const handleFlieInput = () => {
+    setError4("File size should be less than 5 MB");
+  };
+  function changeHandler(event) {
+    // console.log(formData);
+    if (event.target.name === "file") {
+      if (event.target.files[0].size > 5242880) {
+        handleFlieInput();
+        return;
       }
+      setFormData((prevData) => ({
+        ...prevData,
+        file: event.target.files[0], // Update file value with the selected file
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [event.target.name]: event.target.value,
+      }));
     }
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      console.log(formData);
-      if (formData.name.trim() === "") {
-        setError1("This field is necessary");
-        return;
-      }
+  }
 
-      if (formData.contact.trim() === "") {
-        setError2("This field is necessary");
-        return;
-      }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+    if (formData.name.trim() === "") {
+      setError1("This field is necessary");
+      return;
+    }
 
-      if (formData.email.trim() === "") {
-        setError3("This field is necessary");
-        return;
-      }
+    if (formData.contact.trim() === "") {
+      setError2("This field is necessary");
+      return;
+    }
 
-      if (!formData.file) {
-        setError4("This field is necessary");
-        return;
-      }
+    if (formData.email.trim() === "") {
+      setError3("This field is necessary");
+      return;
+    }
 
-      if (formData.expertise.trim() === "") {
-        setError5("This field is necessary");
-        return;
-      }
+    if (!formData.file) {
+      setError4("This field is necessary");
+      return;
+    }
 
-      if (formData.experience.trim() === "") {
-        setError6("This field is necessary");
-        return;
-      }
+    if (formData.expertise.trim() === "") {
+      setError5("This field is necessary");
+      return;
+    }
 
-      if (formData.bio.trim() === "") {
-        setError7("This field is necessary");
-        return;
-      }
+    if (formData.experience.trim() === "") {
+      setError6("This field is necessary");
+      return;
+    }
 
-      errorHandler();
+    if (formData.bio.trim() === "") {
+      setError7("This field is necessary");
+      return;
+    }
 
-      try {
-        const response = await axios.post(
-          "http://localhost:3000/send-email-hire",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
-        if (response.status === 200) {
-          console.log("Form data sent successfully");
-          // Reset the form
-          toast.success("Email sent successfully");
-          setFormData({
-            name: "",
-            contact: "",
-            email: "",
-            file: "",
-            expertise: "",
-            experience: "",
-            bio: "",
-          });
-        } else {
-          toast.error("Email not sent");
+    errorHandler();
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/send-email-hire",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         }
-      } catch (error) {
+      );
+      if (response.status === 200) {
+        console.log("Form data sent successfully");
+        // Reset the form
+        toast.success("Email sent successfully");
+        setFormData({
+          name: "",
+          contact: "",
+          email: "",
+          file: "",
+          expertise: "",
+          experience: "",
+          bio: "",
+        });
+      } else {
         toast.error("Email not sent");
-        // Handle error
-        console.error("Error:", error);
       }
-      errorHandler();
-    }; 
-   const errorHandler = () => {
-     setError1("");
-     setError2("");
-     setError3("");
-     setError4("");
-     setError5("");
-     setError6("");
-     setError7("");
-   };
+    } catch (error) {
+      toast.error("Email not sent");
+      // Handle error
+      console.error("Error:", error);
+    }
+    errorHandler();
+  };
+  const errorHandler = () => {
+    setError1("");
+    setError2("");
+    setError3("");
+    setError4("");
+    setError5("");
+    setError6("");
+    setError7("");
+  };
 
-   const handleFileReset = () => {
-     fileInputRef.current.value = ""; // Reset the value of the file input element
-     setFormData((prevData) => ({
-       ...prevData,
-       file: "", // Reset the file value in the form data
-     }));
-   };
 
+  const handleFileReset = () => {
+    fileInputRef.current.value = ""; // Reset the value of the file input element
+    setFormData((prevData) => ({
+      ...prevData,
+      file: "", // Reset the file value in the form data
+    }));
+  };
 
   return (
     <div className="w-screen h-scree relative z-30 ">
@@ -339,4 +343,4 @@ const HireMobile = () => {
   );
 };
 
-export default HireMobile
+export default HireMobile;

@@ -33,24 +33,29 @@ const GetHired = () => {
 
   
 
-  function changeHandler(event) {
-    // console.log(formData);
-    if (event.target.name === "file") {
-      if (event.target.files[0].size > 5242880){
-        setError7("File size should be less than 5 MB");
-        return;
-      }
-        setFormData((prevData) => ({
-          ...prevData,
-          file: event.target.files[0], // Update file value with the selected file
-        }));
-    } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        [event.target.name]: event.target.value,
-      }));
-    }
-  }
+ const handleFlieInput = () => {
+   setError4("File size should be less than 5 MB");
+ };
+ function changeHandler(event) {
+   // console.log(formData);
+   if (event.target.name === "file") {
+     if (event.target.files[0].size > 5242880) {
+       handleFlieInput();
+       return;
+     }
+     setFormData((prevData) => ({
+       ...prevData,
+       file: event.target.files[0], // Update file value with the selected file
+     }));
+   } else {
+     setFormData((prevData) => ({
+       ...prevData,
+       [event.target.name]: event.target.value,
+     }));
+   }
+ }
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

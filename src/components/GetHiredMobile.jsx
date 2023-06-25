@@ -15,6 +15,7 @@ const GetHiredMobile = () => {
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
   const [error3, setError3] = useState("");
+  const [error4, setError4] = useState("");
   const [error5, setError5] = useState("");
   const [error6, setError6] = useState("");
   const [error7, setError7] = useState("");
@@ -30,24 +31,28 @@ const GetHiredMobile = () => {
     summery: "",
   });
 
-   function changeHandler(event) {
-     // console.log(formData);
-     if (event.target.name === "file") {
-       if (event.target.files[0].size > 5242880) {
-         setError7("File size should be less than 5 MB");
-         return;
-       }
-       setFormData((prevData) => ({
-         ...prevData,
-         file: event.target.files[0], // Update file value with the selected file
-       }));
-     } else {
-       setFormData((prevData) => ({
-         ...prevData,
-         [event.target.name]: event.target.value,
-       }));
-     }
-   }
+    const handleFlieInput = () => {
+      setError4("File size should be less than 5 MB");
+    };
+    function changeHandler(event) {
+      // console.log(formData);
+      if (event.target.name === "file") {
+        if (event.target.files[0].size > 5242880) {
+          handleFlieInput();
+          return;
+        }
+        setFormData((prevData) => ({
+          ...prevData,
+          file: event.target.files[0], // Update file value with the selected file
+        }));
+      } else {
+        setFormData((prevData) => ({
+          ...prevData,
+          [event.target.name]: event.target.value,
+        }));
+      }
+    }
+
 
    const handleSubmit = async (e) => {
      e.preventDefault();
@@ -357,6 +362,11 @@ const GetHiredMobile = () => {
                       )}
                     </div>
                   </div>
+                    {error4.length !== 0 && (
+                      <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                        {error4}
+                      </p>
+                    )}
                 </div>
               )}
 
