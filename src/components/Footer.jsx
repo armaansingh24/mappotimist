@@ -39,7 +39,7 @@ const Footer = () => {
               <img
                 src={linkedin}
                 alt=""
-                className="cursor-pointer h-[66%] sm:h-[89%] sm:w-[80%]"
+                className="cursor-pointer h-[66%] sm:h-[89%] sm:w-[80%] mt-2 sm:mt-0"
               />
             </div>
           </div>

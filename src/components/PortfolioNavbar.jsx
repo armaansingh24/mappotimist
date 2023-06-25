@@ -8,13 +8,14 @@ import eclips2 from "../assets/navbar/eclips2.png";
 import eclips3 from "../assets/navbar/eclips3.png";
 import { HashLink as Link } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
-import { VscNotebook } from "react-icons/vsc";
+import { VscNotebook } from "react-icons/vsc";  
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
 import GetHiredMobile from "./GetHiredMobile";
 import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import { useEffect } from "react";
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -38,34 +39,33 @@ const Navbar = () => {
     setShowForm4(!showForm4);
   };
 
-  useEffect(() => {
-    function handleScroll(event) {
-      if (showForm || showForm2) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      }
-    }
+    useEffect(() => {
+      const handleScroll = (event) => {
+        if (showForm || showForm2) {
+          event.preventDefault();
+          event.stopPropagation();
+          event.returnValue = false;
+          return false;
+        }
+      };
 
-    // Chrome and other browsers
-    window.addEventListener("wheel", handleScroll, { passive: false });
+      window.addEventListener("mousewheel", handleScroll, { passive: false });
+      window.addEventListener("DOMMouseScroll", handleScroll, {
+        passive: false,
+      });
+      window.addEventListener("touchmove", handleScroll, { passive: false });
 
-    // Safari
-    window.addEventListener("mousewheel", handleScroll, { passive: false });
-    window.addEventListener("DOMMouseScroll", handleScroll, { passive: false });
-    window.addEventListener("touchmove", handleScroll, { passive: false });
-    return () => {
-      window.removeEventListener("wheel", handleScroll, { passive: false });
-      window.removeEventListener("mousewheel", handleScroll);
-      window.removeEventListener("DOMMouseScroll", handleScroll);
-      window.removeEventListener("touchmove", handleScroll);
-    };
-  }, [showForm, showForm2]);
+      return () => {
+        window.removeEventListener("mousewheel", handleScroll);
+        window.removeEventListener("DOMMouseScroll", handleScroll);
+        window.removeEventListener("touchmove", handleScroll);
+      };
+    }, [showForm, showForm2]);
 
   const genericHamburgerLine = `h-1 w-6 rounded-full bg-black transition ease transform duration-300`;
   return (
     <>
-      <div className="opacity-[0.8] bg-white -mt-6 ">
+      <div className="sm:opacity-[0.8] sm:bg-white -mt-6 ">
         <nav
           className={
             "flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-2 left-0 right-0 sm:relative z-50  text-black"

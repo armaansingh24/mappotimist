@@ -41,29 +41,28 @@ const Developer = () => {
     setShowForm4(!showForm4);
   };
 
-  useEffect(() => {
-    function handleScroll(event) {
-      if (showForm || showForm2) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      }
-    }
+   useEffect(() => {
+     const handleScroll = (event) => {
+       if (showForm || showForm2) {
+         event.preventDefault();
+         event.stopPropagation();
+         event.returnValue = false;
+         return false;
+       }
+     };
 
-    // Chrome and other browsers
-    window.addEventListener("wheel", handleScroll, { passive: false });
-    
-    // Safari
-    window.addEventListener("mousewheel", handleScroll, { passive: false });
-    window.addEventListener("DOMMouseScroll", handleScroll, { passive: false });
-    window.addEventListener("touchmove", handleScroll, { passive: false });
-    return () => {
-      window.removeEventListener("wheel", handleScroll, { passive: false });
-      window.removeEventListener("mousewheel", handleScroll);
-      window.removeEventListener("DOMMouseScroll", handleScroll);
-      window.removeEventListener("touchmove", handleScroll);
-    };
-  }, [showForm, showForm2]);
+     window.addEventListener("mousewheel", handleScroll, { passive: false });
+     window.addEventListener("DOMMouseScroll", handleScroll, {
+       passive: false,
+     });
+     window.addEventListener("touchmove", handleScroll, { passive: false });
+
+     return () => {
+       window.removeEventListener("mousewheel", handleScroll);
+       window.removeEventListener("DOMMouseScroll", handleScroll);
+       window.removeEventListener("touchmove", handleScroll);
+     };
+   }, [showForm, showForm2]);
 
   return (
     <>

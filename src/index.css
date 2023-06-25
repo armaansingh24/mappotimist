@@ -390,7 +390,7 @@ body {
     animation-iteration-count: infinite;
 }
 
-.card:hover{
+.card:hover {
     animation: none;
 }
 
@@ -416,9 +416,10 @@ body {
 
 /* got to top */
 
-.topBtn{
+.topBtn {
     animation: gototop .8s linear infinite alternate-reverse;
 }
+
 @keyframes gototop {
     0% {
         transform: translateY(-0.3rem);
@@ -437,5 +438,32 @@ body {
 
     to {
         opacity: 1;
+    }
+}
+
+.ocr {
+    animation-name: slowmo;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slowmo {
+
+    from,
+    to {
+        animation-timing-function: ease-in;
+        transform: rotateZ(-2deg);
+    }
+
+    25%,
+    75% {
+        animation-timing-function: ease-out;
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        animation-timing-function: ease-in;
+        transform: rotateZ(2deg);
     }
 }
