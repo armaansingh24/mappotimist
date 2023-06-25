@@ -40,6 +40,12 @@
     background-image: none;
     /* background-image: linear-gradient(380deg, #1CB5E0,#F3F4F5,#F3F4F5); */
 }
+.bg-gradient-curve2 {
+    background-image: none;
+    background-image: linear-gradient(-270deg, #1CB5E0,#1CB5E0,#1CB5E0,
+        #1CB5E0,
+            #1CB5E0,#F3F4F5,#F3F4F5,#F3F4F5);
+}
 
 @media screen and (min-width: 1030px) {
     .bg-gradient-curve {
@@ -49,21 +55,20 @@
 }
 
 .waves {
-     position: relative;
-     height: 200px;
-     overflow: hidden;
- }
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
 
- .wave {
-     position: relative;
-     width: 100%;
-     height: 200px;
-     background: var(--wav1);
-     background-size: 1453px 220px;
-     animation: animate1 15s linear infinite;
-     opacity: 1;
-     animation-delay: 0s;
- }
+.wave {
+    position: absolute;
+    inset: 0;
+    background: var(--wav1);
+    background-size: 1453px 220px;
+    animation: animate1 15s linear infinite;
+    opacity: 1;
+    animation-delay: 0s;
+}
 
 @keyframes animate1 {
     0% {
@@ -462,3 +467,63 @@ body {
 }
 
 
+/* .anim-btn {
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.anim-btn__button {
+    padding: 16px 32px 13px;
+    background-color: ;
+    border: 1px solid #534e4a;
+    color: #534e4a;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 300ms ease, transform 300ms ease;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &:hover+.anim-btn__overlay,
+    &:focus+.anim-btn__overlay {
+        transform: translateY(calc(-100% + 2px));
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
+
+    &:active+.anim-btn__overlay {
+        transform: translateY(calc(-100% + 2px)) scale(0.8);
+    }
+} */
+/* .anim-btn__overlay {
+    background-color: #534e4a;
+    height: calc(100% + 2px);
+    width: 100%;
+    position: absolute;
+    bottom: calc(-100% - 2px);
+    left: 0;
+    z-index: -1;
+    transition: transform 300ms ease;
+} */
+
+.anime {
+    animation: anime 300ms ease,
+        transform 300ms ease;
+}
+
+@keyframes animateButton {
+    0%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+}
