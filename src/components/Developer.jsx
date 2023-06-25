@@ -1,4 +1,6 @@
-import bgVideo from "../assets/developer/bgVideo.mp4";
+// import bgVideo from "../assets/developer/bgVideo.mp4";
+import background from "../assets/developer/background.webm";
+
 import one from "../assets/developer/one.png";
 import two from "../assets/developer/two.png";
 import three from "../assets/developer/three.png";
@@ -41,28 +43,28 @@ const Developer = () => {
     setShowForm4(!showForm4);
   };
 
-   useEffect(() => {
-     const handleScroll = (event) => {
-       if (showForm || showForm2) {
-         event.preventDefault();
-         event.stopPropagation();
-         event.returnValue = false;
-         return false;
-       }
-     };
+  useEffect(() => {
+    const handleScroll = (event) => {
+      if (showForm || showForm2) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.returnValue = false;
+        return false;
+      }
+    };
 
-     window.addEventListener("mousewheel", handleScroll, { passive: false });
-     window.addEventListener("DOMMouseScroll", handleScroll, {
-       passive: false,
-     });
-     window.addEventListener("touchmove", handleScroll, { passive: false });
+    window.addEventListener("mousewheel", handleScroll, { passive: false });
+    window.addEventListener("DOMMouseScroll", handleScroll, {
+      passive: false,
+    });
+    window.addEventListener("touchmove", handleScroll, { passive: false });
 
-     return () => {
-       window.removeEventListener("mousewheel", handleScroll);
-       window.removeEventListener("DOMMouseScroll", handleScroll);
-       window.removeEventListener("touchmove", handleScroll);
-     };
-   }, [showForm, showForm2]);
+    return () => {
+      window.removeEventListener("mousewheel", handleScroll);
+      window.removeEventListener("DOMMouseScroll", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
+    };
+  }, [showForm, showForm2]);
 
   return (
     <>
@@ -74,7 +76,11 @@ const Developer = () => {
             loop
             className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block scale-[1.3]"
           >
-            <source src={bgVideo} type="video/mp4" className="z-0 relative" />
+            <source
+              src={background}
+              type="video/webm"
+              className="z-0 relative"
+            />
             Your browser does not support the video tag.
           </video>
         </div>

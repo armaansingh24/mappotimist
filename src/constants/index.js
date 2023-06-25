@@ -13,11 +13,11 @@ import image5 from "../assets/portfolio/image5.png";
 // portfolio Images
 
 // Bobble Images
-import bobble1 from "../assets/portfolio/bobble/bobble1.png";
-import bobble2 from "../assets/portfolio/bobble/bobble2.png";
-import bobble3 from "../assets/portfolio/bobble/bobble3.png";
-import bobble4 from "../assets/portfolio/bobble/bobble4.png";
-import bobblemain from "../assets/portfolio/bobble/bobblemain.png";
+import bobble1 from "../assets/portfolio/bobble/bobble1.webp";
+import bobble2 from "../assets/portfolio/bobble/bobble2.webp";
+import bobble3 from "../assets/portfolio/bobble/bobble3.webp";
+import bobble4 from "../assets/portfolio/bobble/bobble4.webp";
+import bobblemain from "../assets/portfolio/bobble/bobblemain.webp";
 
 // Go Fetch Images
 import Fetch1 from "../assets/portfolio/Fetch/Fetch1.png";
