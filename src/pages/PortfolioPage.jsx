@@ -18,8 +18,8 @@ const PortfolioPage = (props) => {
 
   return (
     <>
-      <div className="w-full relative ">
-        <div className="relative z-40">
+      <div className="w-full relative z-10">
+        <div className="relative sm:absolute z-40">
           <PortfolioNavbar />
         </div>
         <div className="">

@@ -64,10 +64,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div>
+      <div className="bg-[#F7F5F8] w-screen -mt-10">
         <nav
           className={
-            " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black"
+            " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black sm:mt-10"
           }
         >
           <div className="w-full flex justify-between items-start  mx-auto ">
@@ -338,72 +338,72 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-        <div className="absolute -top-7 z-1">
-          {showForm && (
-            <div>
-              <div className="hidden midFM:block">
-                <div className="absolute top-20 right-20 text-[50px] text-white z-[80]">
-                  <button
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setIsOpen(!isOpen);
-                      handleGetHired();
-                    }}
-                  >
-                    <SlClose />
-                  </button>
-                </div>
-                <GetHired />
+      <div className="absolute -top-7 z-1">
+        {showForm && (
+          <div>
+            <div className="hidden midFM:block">
+              <div className="absolute top-20 right-20 text-[50px] text-white z-[80]">
+                <button
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setIsOpen(!isOpen);
+                    handleGetHired();
+                  }}
+                >
+                  <SlClose />
+                </button>
               </div>
-              <div className="block midFM:hidden mt-20">
-                <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
-                  <button onClick={handleGetHired}>
-                    <SlClose />
-                  </button>
-                </div>
-                <GetHiredMobile />
+              <GetHired />
+            </div>
+            <div className="block midFM:hidden mt-20">
+              <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
+                <button onClick={handleGetHired}>
+                  <SlClose />
+                </button>
               </div>
+              <GetHiredMobile />
+            </div>
+            <div
+              className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
+              onClick={handleGetHired1}
+            ></div>
+          </div>
+        )}
+      </div>
+      <div className="absolute -top-5 z-1 ">
+        {showForm2 && (
+          <div>
+            <div className="hidden midFM:block">
+              <div className="absolute mt-3 right-20 text-[50px] text-white z-[80]">
+                <button
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setIsOpen(!isOpen);
+                    handleGetHire();
+                  }}
+                >
+                  <SlClose />
+                </button>
+              </div>
+              <GetHire />
+            </div>
+            <div className="block midFM:hidden mt-[45rem]">
+              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[80]">
+                <button onClick={handleGetHire1}>
+                  <SlClose />
+                </button>
+              </div>
+              <HireMobile />
+            </div>
+            <div className="hidden midFM:block">
               <div
                 className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                onClick={handleGetHired1}
+                onClick={handleGetHire}
               ></div>
             </div>
-          )}
-        </div>
-        <div className="absolute -top-5 z-1 ">
-          {showForm2 && (
-            <div>
-              <div className="hidden midFM:block">
-                <div className="absolute mt-3 right-20 text-[50px] text-white z-[80]">
-                  <button
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setIsOpen(!isOpen);
-                      handleGetHire();
-                    }}
-                  >
-                    <SlClose />
-                  </button>
-                </div>
-                <GetHire />
-              </div>
-              <div className="block midFM:hidden mt-[45rem]">
-                <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[80]">
-                  <button onClick={handleGetHire1}>
-                    <SlClose />
-                  </button>
-                </div>
-                <HireMobile />
-              </div>
-              <div className="hidden midFM:block">
-                <div
-                  className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                  onClick={handleGetHire}
-                ></div>
-              </div>
-            </div>
-          )}
-        </div>
+          </div>
+        )}
+      </div>
       <div
         className={`${
           toggle === false

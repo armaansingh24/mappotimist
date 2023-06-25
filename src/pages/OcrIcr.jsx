@@ -29,10 +29,10 @@ const OcrIcr = () => {
   }, [data.length]);
   return (
     <>
-      <div className="bg-white relative">
-        <div className="absolute">
+        <div className="">
           <PortfolioNavbar />
         </div>
+      <div className="bg-white relative z-10">
         <div className="bg-white w-screen relative z-10">
           <img
             src={R1}

@@ -65,7 +65,7 @@ const Navbar = () => {
   const genericHamburgerLine = `h-1 w-6 rounded-full bg-black transition ease transform duration-300`;
   return (
     <>
-      <div className="opacity-[0.8] bg-white -mt-6 relative z-50">
+      <div className="sm:opacity-[0.8] bg-white -mt-6 ">
         <nav
           className={
             "flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-2 left-0 right-0 sm:relative z-50  text-black"
@@ -405,7 +405,7 @@ const Navbar = () => {
             </div>
           )}
         </div>
-      <div
+      {/* <div
         className={`${
           toggle === false
             ? "opacity-0 h-0"
@@ -415,7 +415,7 @@ const Navbar = () => {
           setToggle(!toggle);
           setIsOpen(!isOpen);
         }}
-      ></div>
+      ></div> */}
     </>
   );
 };

@@ -16,7 +16,7 @@ import { useEffect } from 'react';
 function App() {
   return (
     <>
-      <div className="w-full mx-auto relative overflow-hidden scroll-smooth">
+      <div className="w-full mx-auto relative overflow-hidden scroll-smooth bg-white">
         <div className=" mx-auto">
           <>
             <ScrollToTop />
