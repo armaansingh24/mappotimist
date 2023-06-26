@@ -326,11 +326,11 @@ const OcrIcr = () => {
             </div>
 
             {/*Fifth Section*/}
-            <div className="mt-10 midFM:mt-72 relative w-screen">
+            <div className="mt-10 midFM:mt-72 relative w-screen z-20">
               <img
                 src={R3}
                 alt=""
-                className="absolute -top-[100%] -left-32 w-screen scale-[1.2] hidden midFM:block"
+                className="absolute -top-[100%] -left-32 w-screen scale-[1.2] hidden midFM:block z-10"
               />
               <div className="w-[90%]">
                 <h2 className="text-2xl midxmd:text-4xl font-poppins500 text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -346,7 +346,7 @@ const OcrIcr = () => {
                 </p>
               </div>
               <div
-                className="bg-gradient-to-r from-primary to-secondary h-[15rem]  sm:h-[40rem] mx-auto mt-10 mb-32 w-[80%] ml-4 midFM:ml-20 "
+                className="bg-gradient-to-r from-primary to-secondary h-[15rem]  sm:h-[40rem] mx-auto mt-10 mb-32 w-[80%] ml-4 midFM:ml-20 relative z-40"
                 id="demo"
               >
                 {data.map((item, index) => (
@@ -356,7 +356,7 @@ const OcrIcr = () => {
                       display: activeIndex === index ? "block" : "none",
                     }}
                   >
-                    <div className="flex  px-2 py-20 sm:p-10 sm:py-44">
+                    <div className="flex items-center justify-center px-2 py-20 sm:p-10 sm:py-44">
                       <div className="w-[30%]">
                         <img src={item.image} alt="" />
                       </div>
@@ -365,7 +365,7 @@ const OcrIcr = () => {
                         <img
                           src={arrow}
                           alt=""
-                          className="translate-x-3 midlg:translate-x-9 mt-20"
+                          className="translate-x-3 midlg:translate-x-9 "
                         />
                       </div>
                       <div className="w-[30%]">
@@ -375,7 +375,7 @@ const OcrIcr = () => {
                         <img
                           src={arrow}
                           alt=""
-                          className="-translate-x-4 mt-20"
+                          className="-translate-x-4 "
                         />
                       </div>
                       <div className="w-[25%]">
