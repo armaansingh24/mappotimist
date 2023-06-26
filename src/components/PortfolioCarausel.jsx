@@ -147,18 +147,19 @@ const PortfolioCarausel = ({ page }) => {
             // goToSlide={handleClickItem}
           >
             {portfolioImages.map((item, index) => {
-              if (item.id === 4) {
+              if (item.id === "Website1") {
                 return (
                   <SwiperSlide virtualIndex={index} key={index}>
                     <DesktopCarausel
                       index={index}
                       item={item}
+                     
                       currentSlideIndex={currentSlideIndex}
                     />
                   </SwiperSlide>
                 );
               }
-              if (item.id === 5) {
+              if (item.id === "Website2") {
                 return (
                   <SwiperSlide virtualIndex={index} key={index}>
                     <DesktopCarauselTwo
@@ -175,6 +176,7 @@ const PortfolioCarausel = ({ page }) => {
                   <PortfolioSlider
                     index={index}
                     item={item}
+                    id={item.id}
                     currentSlideIndex={currentSlideIndex}
                   />
                 </SwiperSlide>

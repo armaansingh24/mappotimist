@@ -198,7 +198,7 @@ export const about = [
 export const portfolioImages = [
   // Bobble
   {
-    id: 1,
+    id: "Bobble",
     css: "hidden sm:block mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
     image: bobble2,
     title: "Bobble",
@@ -256,7 +256,7 @@ export const portfolioImages = [
   //  Project 2 FTL
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
-    id: 2,
+    id: "FTL",
     image: FTL2,
     css: "hidden sm:block mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[40%] mt-14 middleXmd:-mt-48 middleXmd:mr-[18%]",
     title: "FTL: Fantasy trading league",
@@ -310,7 +310,7 @@ export const portfolioImages = [
   // Project 3 GO FETCH
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
-    id: 3,
+    id: "GoFetch",
     css: "hidden sm:block mx-auto scale-[2] mt-36 midms:w-[95%] xsm:w-[89%] sm:w-[100%] sm:scale-[2.5] sm:-mr-24 sm:mt-44 midFM:mt-10 midFM:scale-[2.2] xmd:-mt-[70%] midxmd:w-[75%] middleXmd:-mt-32 middleXmd:scale-[2] middleXmd:mr-[1%]",
     image: Fetch2,
     title: "GoFetch",
@@ -365,7 +365,7 @@ export const portfolioImages = [
   // Project 4 Wbsite 1
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
-    id: 4,
+    id: "Website1",
     image: onemain,
     css: "hidden sm:block mx-auto mt-[45%] midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-[60%] midFM:mt-32 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-[1%] rotate-[4deg] middleXmd:mr-[2%]",
     title: "Website",
@@ -420,7 +420,7 @@ export const portfolioImages = [
   // Project 5 Wbsite 2
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
-    id: 5,
+    id: "Website2",
     css: "hidden sm:block mx-auto w-full scale-[2.2] ml-6 mt-[65%] midms:w-[95%] xsm:w-[89%] xsm:mt-52 sm:w-[60%] sm:scale-[4]  sm:ml-24 sm:mt-[100%] midFM:mt-[62%] xmd:-mt-[98%] xmd:scale-[2.4] xmd:ml-44 midxmd:w-[75%] middleXmd:-mt-[10%] middleXmd:mr-[1%]",
     image: two2,
     title: "Website",
@@ -475,7 +475,7 @@ export const portfolioImages = [
   // Project 6 MediHelp
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
-    id: 6,
+    id: "MediHelp",
     css: "hidden sm:block mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:-mt-32 middleXmd:scale-[1.7]  middleXmd:ml-[18%]",
     image: medi2,
     title: "MediHelp",
@@ -528,7 +528,7 @@ export const portfolioImages = [
   // Project 7 Happy Ride
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
-    id: 7,
+    id: "Happy Ride",
     image: Happy2,
     css: "hidden sm:block mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[65%] mt-14 middleXmd:-mt-32 middleXmd:mr-[6%]",
     title: "Happy Ride",

@@ -9,7 +9,7 @@ const DesktopCarauselTwo = ({ image, index, currentSlideIndex, item }) => {
   const navigate = useNavigate();
 
   const handleReadMore = () => {
-    navigate(`/portfolio/${item.id}`, { state: { item } });
+    navigate(`/portfolio/${item.id}`);
   };
   const handleHover = () => {
     mainControls.start("visible");

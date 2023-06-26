@@ -8,7 +8,8 @@ const DesktopCarausel = ({ image, index, currentSlideIndex, item }) => {
   const mainControls = useAnimation();
   const navigate = useNavigate();
 
-  const handleReadMore = () => {    navigate(`/portfolio/${item.id}`, { state: { item } });
+  const handleReadMore = () => {
+    navigate(`/portfolio/${item.id}`);
   };
 
   const handleHover = () => {

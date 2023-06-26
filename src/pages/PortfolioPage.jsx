@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.webp";
 import featureIcon from "../assets/portfolio/featureIcon.webp";
@@ -11,19 +11,26 @@ import lower from "../assets/expertise/lower.webp";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import message from "../assets/portfolio/message.webp";
-import { portfolioImages } from "../constants";
+import { portfolioImages } from "../constants/index";
 
 const PortfolioPage = (props) => {
-    const { id } = useParams(); 
-  const [item, setItem] = useState(id);
-  useEffect(()=>{
-    const SelectedItem=portfolioImages.find((item)=>item.id===id.id);
-    setItem(SelectedItem);
-  },[id])
+ const id = useParams();
+ const [item, setItem] = useState({});
+ useEffect(() => {
+  console.log(id);
+   const SelectedItem = portfolioImages.filter((item) => item.id === id.itemId);
+
+   if (SelectedItem) {
+     setItem(SelectedItem[0]);
+      console.log(item);
+   } else {
+     console.log("Item not found");
+   }
+ }, [id]);
+
 
   return (
     <>
-
       <div className="w-full relative z-10">
         <div className="relative sm:absolute z-40">
           <PortfolioNavbar />
@@ -176,15 +183,17 @@ const PortfolioPage = (props) => {
           {/* ................................................... */}
           <div
             className={`${
-              item.id === 4 || item.id === 5 ? "h-[28rem]" : "h-auto"
+              item.id === "Website1" || item.id === "Website2"
+                ? "h-[28rem]"
+                : "h-auto"
             } hidden middleXmd:block relative p-10`}
           >
-            <div className={`${item.id === 5 ? "mt-44" : "mt-20"} mb-1 `}>
+            <div className={`${item.id === "Website2" ? "mt-44" : "mt-20"} mb-1 `}>
               <img
                 src={item.feature}
                 alt=""
                 className={`${
-                  item.id === 5 ? "scale-[3]" : ""
+                  item.id === "Website2" ? "scale-[3]" : ""
                 } w-[50%] mx-auto sm:w-[13%] midFM:w-[14%]`}
               />
             </div>
@@ -298,7 +307,7 @@ const PortfolioPage = (props) => {
                 </p>
               </div>
             </div>
-            {item.feature7.length !== 0 && (
+            {item.feature7 !== "" && (
               <div
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] top-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
@@ -315,7 +324,7 @@ const PortfolioPage = (props) => {
                 </div>
               </div>
             )}
-            {item.feature8.length !== 0 && (
+            {item.feature8 !== "" && (
               <div
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] bottom-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
@@ -335,7 +344,7 @@ const PortfolioPage = (props) => {
                 </div>
               </div>
             )}
-            {item.feature9.length !== 0 && (
+            {item.feature9 !== "" && (
               <div
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] top-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
@@ -355,7 +364,7 @@ const PortfolioPage = (props) => {
                 </div>
               </div>
             )}
-            {item.feature10.length !== 0 && (
+            {item.feature10 !== "" && (
               <div
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] bottom-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
