@@ -14,20 +14,16 @@ import message from "../assets/portfolio/message.webp";
 import { portfolioImages } from "../constants/index";
 
 const PortfolioPage = (props) => {
- const id = useParams();
- const [item, setItem] = useState({});
- useEffect(() => {
-  console.log(id);
-   const SelectedItem = portfolioImages.filter((item) => item.id === id.itemId);
+  const id = useParams();
+  const [item, setItem] = useState({});
+  useEffect(() => {
+    console.log(id);
+    const SelectedItem = portfolioImages.filter(
+      (item) => item.id === id.itemId
+    );
 
-   if (SelectedItem) {
-     setItem(SelectedItem[0]);
-      console.log(item);
-   } else {
-     console.log("Item not found");
-   }
- }, [id, item]);
-
+    setItem(SelectedItem[0]);
+  }, [id, item]);
 
   return (
     <>
@@ -188,7 +184,9 @@ const PortfolioPage = (props) => {
                 : "h-auto"
             } hidden middleXmd:block relative p-10`}
           >
-            <div className={`${item.id === "Website2" ? "mt-44" : "mt-20"} mb-1 `}>
+            <div
+              className={`${item.id === "Website2" ? "mt-44" : "mt-20"} mb-1 `}
+            >
               <img
                 src={item.feature}
                 alt=""
