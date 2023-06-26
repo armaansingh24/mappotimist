@@ -15,6 +15,10 @@ import GetHiredMobile from "./GetHiredMobile";
 import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import { useEffect } from "react";
+import recruit from "../assets/developer/recruit.png";
+import getHired from "../assets/developer/getHired.png";
+import ocr from "../assets/developer/ocr.png";
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -154,8 +158,8 @@ const Navbar = () => {
                               handleGetHired();
                             }}
                           >
-                            <span className="hover:text-primary">
-                              <VscNotebook />
+                            <span className="w-[15%]">
+                              <img src={recruit} alt="" />
                             </span>
                             <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
                               Recruit Us
@@ -171,8 +175,8 @@ const Navbar = () => {
                               handleGetHire();
                             }}
                           >
-                            <span className="hover:text-primary">
-                              <VscNotebook />
+                            <span className="w-[15%]">
+                              <img src={getHired} alt="" />
                             </span>
                             <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
                               Get Employed
@@ -182,8 +186,8 @@ const Navbar = () => {
                         <li className="font-roboto100">
                           <NavLink to="/orc-icr">
                             <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 ">
-                              <span className="hover:text-primary">
-                                <VscNotebook />
+                              <span className="w-[15%]">
+                                <img src={ocr} alt="" />
                               </span>
                               <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
                                 OCR/ICR
