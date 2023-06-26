@@ -8,7 +8,6 @@ import Whatsapp from "./components/Whatsapp";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
-import Loader from "./components/Loader";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);

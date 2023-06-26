@@ -25,6 +25,7 @@ const PortfolioPage = (props) => {
       (item) => item.id === id.itemId
     );
     setItem(SelectedItem[0]);
+
     setLoading(false);
   }, [id, item]);
 
