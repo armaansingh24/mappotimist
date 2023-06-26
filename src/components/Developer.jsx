@@ -124,7 +124,7 @@ const Developer = () => {
           </h2>
           {/* First Card */}
           <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
-            <div className="midlg:w-[25%]">
+            <div className="sm:w-[70%] midlg:w-[25%]">
               <Tilt
                 options={{
                   max: 45,
@@ -159,7 +159,7 @@ const Developer = () => {
               </Tilt>
             </div>
             {/* second card */}
-            <div className="midlg:w-[25%] ">
+            <div className="sm:w-[70%] midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,
@@ -193,7 +193,7 @@ const Developer = () => {
               </Tilt>
             </div>
             {/* Third card */}
-            <div className="midlg:w-[25%] ">
+            <div className="sm:w-[70%] midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,

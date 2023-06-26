@@ -4,8 +4,9 @@ import fb from "../assets/footer/fb.webp";
 import slack from "../assets/footer/slack.webp";
 import linkedin from "../assets/footer/linkedin.webp";
 import { Link } from "react-scroll";
-
+import PrivacyPolicy from "../assets/footer/PrivacyPolicy.pdf";
 const Footer = () => {
+  
   return (
     <>
       <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[23rem] relative z-30">
@@ -19,7 +20,11 @@ const Footer = () => {
                   <li className="cursor-pointer">about</li>
                 </Link>
                 <li className="cursor-pointer">careers</li>
-                <li className="cursor-pointer">privacy policies</li>
+                <li className="cursor-pointer">
+                  <a href={PrivacyPolicy} target="_blank" 
+                  rel="noopener noreferrer"
+                  >privacy policies</a>
+                </li>
                 <li className="cursor-pointer">terms & conditions</li>
               </ul>
             </div>

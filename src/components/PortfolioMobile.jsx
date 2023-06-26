@@ -5,9 +5,16 @@ const PortfolioMobile = ({ item }) => {
   const navigate = useNavigate();
 
   const handleReadMore = () => {
-    navigate(`/portfolio/${item.id}`, { state: { item } });
-  };
+    // mainControls.start("visible");
+    navigate("/splash");
+    const timer = setTimeout(() => {
+      navigate(`/portfolio/${item.id}`, { state: { item } });
+    }, 4000);
 
+    return () => {
+      clearTimeout(timer);
+    };
+  };
   return (
     <div className="relative z-60">
       <img

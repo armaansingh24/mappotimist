@@ -11,13 +11,25 @@ import lower from "../assets/expertise/lower.webp";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import message from "../assets/portfolio/message.webp";
-
+// import { useEffect, useState } from "react";
+// import SplashScreen from "../components/SplashScreen";
 const PortfolioPage = (props) => {
   const location = useLocation();
   const item = location.state?.item;
+  //  const [showSplash, setShowSplash] = useState(true);
 
+  //  useEffect(() => {
+  //    // Simulate a delay before hiding the splash screen
+  //    const timeout = setTimeout(() => {
+  //      setShowSplash(false);
+  //    }, 4000);
+
+  //    // Cleanup the timeout when the component unmounts
+  //    return () => clearTimeout(timeout);
+  //  }, []);
   return (
     <>
+      {/* {showSplash && <SplashScreen />} */}
       <div className="w-full relative z-10">
         <div className="relative sm:absolute z-40">
           <PortfolioNavbar />

@@ -28,12 +28,13 @@ function App() {
   }, []);
   return (
     <>
-      {showSplash && <SplashScreen/>}
+      {showSplash && <SplashScreen />}
       <div className="w-full mx-auto relative overflow-hidden scroll-smooth bg-white">
-        <div className={`mx-auto ${showSplash?"opacity-0":"opacity-[1]"}`}>
+        <div className={`mx-auto ${showSplash ? "opacity-0" : "opacity-[1]"}`}>
           <>
             <ScrollToTop />
             <Routes>
+              <Route path="/splash" element={<SplashScreen />} />
               <Route path="/" element={<Home />} />
               <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
               <Route path="/orc-icr" element={<OcrIcr />} />

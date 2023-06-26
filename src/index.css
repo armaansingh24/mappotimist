@@ -481,7 +481,7 @@ body {
 
 
 
-@keyframes pop-up {
+/* @keyframes pop-up {
     0% {
         transform: scale(0);
     }
@@ -509,5 +509,5 @@ body {
 }
 .animate-pop-out{
     animation: pop-out 2s ease infinite;
-}
+} */
 
