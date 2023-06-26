@@ -1,4 +1,4 @@
-import React, {  useLayoutEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.webp";
 import featureIcon from "../assets/portfolio/featureIcon.webp";
@@ -11,21 +11,17 @@ import lower from "../assets/expertise/lower.webp";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import message from "../assets/portfolio/message.webp";
-import Loader from "../components/Loader";
+import { portfolioImages } from "../constants";
+
 const PortfolioPage = (props) => {
-  const [loading,setLoading] =useState(false);
   const location = useLocation();
-  const item = location.state?.item;
+  const id = location.state?.item;
+  const [item, setItem] = useState(id);
+  useEffect(()=>{
+    const SelectedItem=portfolioImages.find((item)=>item.id===id.id);
+    setItem(SelectedItem);
+  })
 
-  useLayoutEffect(()=>{
-    setLoading(true);
-    setLoading(false);
-  },[item])
-
-  if(loading){
-    return <Loader/>
-  }
- 
   return (
     <>
 

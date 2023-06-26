@@ -9,14 +9,7 @@ const DesktopCarauselTwo = ({ image, index, currentSlideIndex, item }) => {
   const navigate = useNavigate();
 
   const handleReadMore = () => {
-    navigate("/splash");
-    const timer = setTimeout(() => {
-      navigate(`/portfolio/${item.id}`, { state: { item } });
-    }, 4000);
-
-    return () => {
-      clearTimeout(timer);
-    };
+    navigate(`/portfolio/${item.id}`, { state: { item } });
   };
   const handleHover = () => {
     mainControls.start("visible");
