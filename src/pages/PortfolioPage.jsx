@@ -12,21 +12,25 @@ import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import message from "../assets/portfolio/message.webp";
 import { portfolioImages } from "../constants/index";
+import Loader  from "../components/Loader";
 
 const PortfolioPage = (props) => {
   const id = useParams();
   const [item, setItem] = useState({});
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     console.log(id);
+    setLoading(true);
     const SelectedItem = portfolioImages.filter(
       (item) => item.id === id.itemId
     );
-
     setItem(SelectedItem[0]);
+    setLoading(false);
   }, [id, item]);
 
   return (
     <>
+      {loading && <Loader />}
       <div className="w-full relative z-10">
         <div className="relative sm:absolute z-40">
           <PortfolioNavbar />

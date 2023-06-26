@@ -30,7 +30,6 @@ function App() {
           <>
             <ScrollToTop />
             <Routes>
-              <Route path="/splash" element={<Loader />} />
               <Route path="/" element={<Home />} />
               <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
               <Route path="/orc-icr" element={<OcrIcr />} />
