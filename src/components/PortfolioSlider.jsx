@@ -13,7 +13,7 @@ const PortfolioSlider = ({  index, currentSlideIndex, item }) => {
     // navigate("/splash");
     // const timer = setTimeout(() => {
     // }, 4000);
-    navigate(`/portfolio/${item.id}`, { state: { item } });
+    navigate(`/portfolio/${item.id}`);
 
     // return () => {
     //   clearTimeout(timer);

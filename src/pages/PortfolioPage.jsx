@@ -1,5 +1,5 @@
 import React, {  useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.webp";
 import featureIcon from "../assets/portfolio/featureIcon.webp";
 import Group from "../assets/portfolio/Group.webp";
@@ -14,8 +14,7 @@ import message from "../assets/portfolio/message.webp";
 import { portfolioImages } from "../constants";
 
 const PortfolioPage = (props) => {
-  const location = useLocation();
-  const id = location.state?.item;
+    const { id } = useParams(); 
   const [item, setItem] = useState(id);
   useEffect(()=>{
     const SelectedItem=portfolioImages.find((item)=>item.id===id.id);
