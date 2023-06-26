@@ -26,7 +26,7 @@ const PortfolioPage = (props) => {
    } else {
      console.log("Item not found");
    }
- }, [id]);
+ }, [id, item]);
 
 
   return (
