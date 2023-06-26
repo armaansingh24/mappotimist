@@ -102,7 +102,7 @@ const GetHiredMobile = () => {
        };
        try {
          const response = await axios.post(
-           "http://localhost:3000/send-email-hire-team",
+           "http://128.199.17.62/v1/send-email-hire-team",
            formDataSent,
            {
              headers: {
@@ -140,7 +140,7 @@ const GetHiredMobile = () => {
        };
        try {
          const response = await axios.post(
-           "http://localhost:3000/send-email-individual",
+           "http://128.199.17.62/v1/send-email-individual",
            formDataSent
          );
          if (response.status === 200) {

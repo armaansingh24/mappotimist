@@ -105,7 +105,7 @@ const GetHired = () => {
       };
       try {
         const response = await axios.post(
-          "http://localhost:3000/send-email-hire-team",
+          "http://128.199.17.62/v1/send-email-hire-team",
           formDataSent,
           {
             headers: {
@@ -143,8 +143,8 @@ const GetHired = () => {
       };
       try {
         const response = await axios.post(
-          "http://localhost:3000/send-email-individual",
-          formDataSent,
+          "http://128.199.17.62/v1/send-email-individual",
+          formDataSent
         );
         if (response.status === 200) {
           // Reset the form
