@@ -5,7 +5,7 @@ const Wave = () => {
     <>
       <div className="w-screen bg-[#F7F5F8] ">
         <div className="">
-          <div className="wave wave3"></div>
+          <div className="wave"></div>
         </div>
       </div>
     </>
