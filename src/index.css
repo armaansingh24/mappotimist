@@ -505,9 +505,9 @@ body {
 }
 
 .animate-pop-up {
-    animation: pop-up 2s ease infinite;
+    animation: pop-up 3s ease infinite;
 }
 .animate-pop-out{
-    animation: pop-out 2s ease infinite;
+    animation: pop-out 3s ease infinite;
 }
 
