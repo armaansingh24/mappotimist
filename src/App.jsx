@@ -1,18 +1,14 @@
-import React from 'react';
-import Home from './pages/Home';
-import PortfolioPage from './pages/PortfolioPage';
-import OcrIcr from './pages/OcrIcr';
-import {
-  
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
-import GoToTop from './components/GoToTop';
-import Whatsapp from './components/Whatsapp';
-import Footer from './components/Footer';
-import { useEffect,useState } from 'react';
+import React from "react";
+import Home from "./pages/Home";
+import PortfolioPage from "./pages/PortfolioPage";
+import OcrIcr from "./pages/OcrIcr";
+import { Route, Routes, useLocation } from "react-router-dom";
+import GoToTop from "./components/GoToTop";
+import Whatsapp from "./components/Whatsapp";
+import Footer from "./components/Footer";
+import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
+import Loader from "./components/Loader";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -21,7 +17,7 @@ function App() {
     // Simulate a delay before hiding the splash screen
     const timeout = setTimeout(() => {
       setShowSplash(false);
-    }, 4000);
+    }, 1000);
 
     // Cleanup the timeout when the component unmounts
     return () => clearTimeout(timeout);
@@ -34,7 +30,7 @@ function App() {
           <>
             <ScrollToTop />
             <Routes>
-              <Route path="/splash" element={<SplashScreen />} />
+              <Route path="/splash" element={<Loader />} />
               <Route path="/" element={<Home />} />
               <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
               <Route path="/orc-icr" element={<OcrIcr />} />

@@ -4,20 +4,20 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 // import SplashScreen from "./SplashScreen";
 
-const PortfolioSlider = ({ image, index, currentSlideIndex, item }) => {
+const PortfolioSlider = ({  index, currentSlideIndex, item }) => {
   const ref = useRef(null);
   const mainControls = useAnimation();
   const navigate = useNavigate();
   const handleReadMore = () => {
     mainControls.start("visible");
-    navigate("/splash");
-    const timer = setTimeout(() => {
-      navigate(`/portfolio/${item.id}`, { state: { item } });
-    }, 4000);
+    // navigate("/splash");
+    // const timer = setTimeout(() => {
+    // }, 4000);
+    navigate(`/portfolio/${item.id}`, { state: { item } });
 
-    return () => {
-      clearTimeout(timer);
-    };
+    // return () => {
+    //   clearTimeout(timer);
+    // };
   };
 
   const handleHover = () => {
