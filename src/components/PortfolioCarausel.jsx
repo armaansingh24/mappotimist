@@ -19,7 +19,7 @@ import DesktopCarausel from "./DesktopCarausel";
 import DesktopCarauselTwo from "./DesktopCarauselTwo";
 SwiperCore.use([Pagination]);
 
-const PortfolioCarausel = ({ props, page }) => {
+const PortfolioCarausel = ({ page }) => {
   useEffect(() => {
     if (page === "portfolio") {
       const elements = document.getElementsByClassName(

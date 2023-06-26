@@ -1,4 +1,4 @@
-import React from "react";
+import React, {  useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import backgroudPortfolio from "../assets/portfolio/backgroudPortfolio.webp";
 import featureIcon from "../assets/portfolio/featureIcon.webp";
@@ -11,25 +11,24 @@ import lower from "../assets/expertise/lower.webp";
 import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import message from "../assets/portfolio/message.webp";
-// import { useEffect, useState } from "react";
-// import SplashScreen from "../components/SplashScreen";
+import Loader from "../components/Loader";
 const PortfolioPage = (props) => {
+  const [loading,setLoading] =useState(false);
   const location = useLocation();
   const item = location.state?.item;
-  //  const [showSplash, setShowSplash] = useState(true);
 
-  //  useEffect(() => {
-  //    // Simulate a delay before hiding the splash screen
-  //    const timeout = setTimeout(() => {
-  //      setShowSplash(false);
-  //    }, 4000);
+  useLayoutEffect(()=>{
+    setLoading(true);
+    setLoading(false);
+  },[item])
 
-  //    // Cleanup the timeout when the component unmounts
-  //    return () => clearTimeout(timeout);
-  //  }, []);
+  if(loading){
+    return <Loader/>
+  }
+ 
   return (
     <>
-      {/* {showSplash && <SplashScreen />} */}
+
       <div className="w-full relative z-10">
         <div className="relative sm:absolute z-40">
           <PortfolioNavbar />
