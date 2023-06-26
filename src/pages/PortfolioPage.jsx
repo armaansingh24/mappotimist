@@ -20,7 +20,7 @@ const PortfolioPage = (props) => {
   useEffect(()=>{
     const SelectedItem=portfolioImages.find((item)=>item.id===id.id);
     setItem(SelectedItem);
-  })
+  },[id])
 
   return (
     <>
