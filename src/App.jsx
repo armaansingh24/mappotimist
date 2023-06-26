@@ -11,13 +11,26 @@ import {
 import GoToTop from './components/GoToTop';
 import Whatsapp from './components/Whatsapp';
 import Footer from './components/Footer';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
+import SplashScreen from "./components/SplashScreen";
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    // Simulate a delay before hiding the splash screen
+    const timeout = setTimeout(() => {
+      setShowSplash(false);
+    }, 4000);
+
+    // Cleanup the timeout when the component unmounts
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <>
       <div className="w-full mx-auto relative overflow-hidden scroll-smooth bg-white">
-        <div className=" mx-auto">
+      {showSplash && <SplashScreen/>}
+        <div className={`mx-auto ${showSplash?"opacity-0":"opacity-[1]"}`}>
           <>
             <ScrollToTop />
             <Routes>

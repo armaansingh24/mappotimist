@@ -3,8 +3,8 @@ import React from 'react'
 const Wave = () => {
   return (
     <>
-      <div className="w-screen z-0 relative bg-[#F7F5F8] ">
-        <div className="waves w-screen">
+      <div className="w-screen bg-[#F7F5F8] ">
+        <div className="waves">
           <div className="wave wave3"></div>
         </div>
       </div>
