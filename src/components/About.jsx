@@ -21,7 +21,7 @@ const About = () => {
   }, [isInView]);
 
   const listenToScroll = () => {
-    let heightToHidden = 150;
+    let heightToHidden = 110;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > heightToHidden) {
