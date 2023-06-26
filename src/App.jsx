@@ -13,12 +13,9 @@ function App() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    // Simulate a delay before hiding the splash screen
     const timeout = setTimeout(() => {
       setShowSplash(false);
     }, 1000);
-
-    // Cleanup the timeout when the component unmounts
     return () => clearTimeout(timeout);
   }, []);
   return (
@@ -42,14 +39,4 @@ function App() {
     </>
   );
 }
-function ScrollToTop() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [location]);
-
-  return null;
-}
-
 export default App;

@@ -102,7 +102,6 @@ const HireMobile = () => {
         }
       );
       if (response.status === 200) {
-        // Reset the form
         toast.success("Email sent successfully");
         setFormData({
           name: "",
@@ -118,7 +117,6 @@ const HireMobile = () => {
       }
     } catch (error) {
       toast.error("Email not sent");
-      // Handle error
     }
     errorHandler();
   };
@@ -134,10 +132,10 @@ const HireMobile = () => {
 
 
   const handleFileReset = () => {
-    fileInputRef.current.value = ""; // Reset the value of the file input element
+    fileInputRef.current.value = "";
     setFormData((prevData) => ({
       ...prevData,
-      file: "", // Reset the file value in the form data
+      file: "",
     }));
   };
 
@@ -239,9 +237,7 @@ const HireMobile = () => {
                       handleFileReset();
                       fileInputRef.current.click();
                       errorHandler();
-                    }} // Open file selection dialog
-                    // htmlFor="fileInput"
-                    // className="w-full h-full cursor-pointer ml-3"
+                    }}
                   >
                     {formData.file !== "" ? (
                       <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">

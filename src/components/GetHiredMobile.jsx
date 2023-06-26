@@ -42,7 +42,7 @@ const GetHiredMobile = () => {
         }
         setFormData((prevData) => ({
           ...prevData,
-          file: event.target.files[0], // Update file value with the selected file
+          file: event.target.files[0]
         }));
       } else {
         setFormData((prevData) => ({
@@ -61,30 +61,22 @@ const GetHiredMobile = () => {
        return;
      }
 
-     // Validate contact field
      if (formData.contact.trim() === "") {
        setError2("This field is necessary");
        return;
      }
-
-     // Validate email field
      if (formData.email.trim() === "") {
        setError3("This field is necessary");
        return;
      }
-
-     // Validate type field
      if (formData.type.trim() === "" && accountType === "Hire Team") {
        setError5("This field is necessary");
        return;
      }
-
-     // Validate duration field
      if (formData.duration.trim() === "" && accountType === "Hire Team") {
        setError6("This field is necessary");
        return;
      }
-     // Validate required field
      if (formData.required.trim() === "" && accountType !== "Hire Team") {
        setError7("This field is necessary");
        return;
@@ -111,7 +103,6 @@ const GetHiredMobile = () => {
            }
          );
          if (response.status === 200) {
-           // Reset the form
            toast.success("Email sent successfully");
            setFormData({
              name: "",
@@ -128,7 +119,6 @@ const GetHiredMobile = () => {
          }
        } catch (error) {
          toast.error("Email not sent");
-         // Handle error
        }
      } else {
        const formDataSent = {
@@ -144,7 +134,6 @@ const GetHiredMobile = () => {
            formDataSent
          );
          if (response.status === 200) {
-           // Reset the form
            toast.success("Email sent successfully");
            setFormData({
              name: "",
@@ -161,7 +150,6 @@ const GetHiredMobile = () => {
          }
        } catch (error) {
          toast.error("Email not sent");
-         // Handle error
        }
      }
      errorHandler();
@@ -178,10 +166,10 @@ const GetHiredMobile = () => {
   const [accountType, setAccountType] = useState("Hire Team");
 
   const handleFileReset = () => {
-    fileInputRef.current.value = ""; // Reset the value of the file input element
+    fileInputRef.current.value = "";
     setFormData((prevData) => ({
       ...prevData,
-      file: "", // Reset the file value in the form data
+      file: "", 
     }));
   };
 
@@ -328,9 +316,7 @@ const GetHiredMobile = () => {
                         handleFileReset();
                         fileInputRef.current.click();
                         errorHandler();
-                      }} // Open file selection dialog
-                      // htmlFor="fileInput"
-                      // className="w-full h-full cursor-pointer ml-3"
+                      }}
                     >
                       {formData.file !== "" ? (
                         <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import { HashRouter as Link  } from "react-router-dom";
-// import { Link } from "react-scroll";
 import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.webp";
 import eclips1 from "../assets/navbar/eclips1.webp";
@@ -107,7 +105,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
                   to={`/#Home`}
-                  // spy={true}
                   smooth={true}
                   offset={100}
                   duration={1000}
@@ -122,7 +119,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
                   to={`/#Portfolio`}
-                  // spy={true}
                   smooth={true}
                   offset={100}
                   duration={1000}
@@ -138,7 +134,6 @@ const Navbar = () => {
                   <Link
                     className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white relative z-10 group overflow-hidden"
                     to={`/#Developer`}
-                    // spy={true}
                     smooth={true}
                     offset={50}
                     duration={1000}
@@ -207,7 +202,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
                   to={`/#Expertise`}
-                  // spy={true}
                   smooth={true}
                   offset={450}
                   duration={1000}
@@ -222,7 +216,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
                   to={`/#Contact Us`}
-                  // spy={true}
                   smooth={true}
                   offset={10}
                   duration={1000}
@@ -232,7 +225,6 @@ const Navbar = () => {
               </li>
             </ul>
 
-            {/* Nav Modal */}
             <div
               className={`${
                 isOpen === true
@@ -312,7 +304,6 @@ const Navbar = () => {
                     >
                       <Link
                         to={`/#${link.id}`}
-                        // spy={true}
                         smooth={true}
                         offset={100}
                         duration={1000}
@@ -414,17 +405,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      {/* <div
-        className={`${
-          toggle === false
-            ? "opacity-0 h-0"
-            : "opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-10 overflow-hidden cursor-pointer transition-all w-screen h-full duration-[2000ms] ease-in-out"
-        }`}
-        onClick={() => {
-          setToggle(!toggle);
-          setIsOpen(!isOpen);
-        }}
-      ></div> */}
     </>
   );
 };

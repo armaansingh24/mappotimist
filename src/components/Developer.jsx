@@ -1,4 +1,3 @@
-// import bgVideo from "../assets/developer/bgVideo.mp4";
 import background from "../assets/developer/background.webm";
 import one from "../assets/developer/one.webp";
 import two from "../assets/developer/two.webp";
@@ -122,7 +121,6 @@ const Developer = () => {
           <h2 className="text-black midlg:text-white font-poppins text-[30px] lmd:text-[48px]">
             Developer
           </h2>
-          {/* First Card */}
           <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
             <div className="sm:w-[70%] midlg:w-[25%]">
               <Tilt
@@ -158,7 +156,6 @@ const Developer = () => {
                 </div>
               </Tilt>
             </div>
-            {/* second card */}
             <div className="sm:w-[70%] midlg:w-[25%] ">
               <Tilt
                 options={{
@@ -192,7 +189,6 @@ const Developer = () => {
                 </div>
               </Tilt>
             </div>
-            {/* Third card */}
             <div className="sm:w-[70%] midlg:w-[25%] ">
               <Tilt
                 options={{

@@ -3,10 +3,7 @@ import logo from "../assets/navbar/logo.webp";
 
 function SplashScreen() {
   useEffect(() => {
-    // Disable scrolling on mount
     document.body.style.overflow = "hidden";
-
-    // Enable scrolling on unmount
     return () => {
       document.body.style.overflow = "auto";
     };

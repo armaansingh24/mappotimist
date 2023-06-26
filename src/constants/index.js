@@ -1,12 +1,9 @@
-// about Section carsaul images
 import slider1 from "../assets/about/slider1.webp";
 import slider2 from "../assets/about/slider2.webp";
 import slider3 from "../assets/about/slider3.webp";
 import bg1 from "../assets/about/bg1.webp";
 import bg2 from "../assets/about/bg2.webp";
 import bg3 from "../assets/about/bg3.webp";
-
-// Portfolio Images
 import image1 from "../assets/clientReviews/image1.webp";
 import image2 from "../assets/clientReviews/image2.webp";
 import image3 from "../assets/clientReviews/image3.webp";
@@ -21,58 +18,40 @@ import image11 from "../assets/clientReviews/image11.webp";
 import image12 from "../assets/clientReviews/image12.webp";
 import image13 from "../assets/clientReviews/image13.webp";
 import image14 from "../assets/clientReviews/image14.webp";
-
-// portfolio Images
-
-// Bobble Images
 import bobble1 from "../assets/portfolio/bobble/bobble1.webp";
 import bobble2 from "../assets/portfolio/bobble/bobble2.webp";
 import bobble3 from "../assets/portfolio/bobble/bobble3.webp";
 import bobble4 from "../assets/portfolio/bobble/bobble4.webp";
 import bobblemain from "../assets/portfolio/bobble/bobblemain.webp";
-
-// Go Fetch Images
 import Fetch1 from "../assets/portfolio/Fetch/Fetch1.webp";
 import Fetch2 from "../assets/portfolio/Fetch/Fetch2.webp";
 import Fetch3 from "../assets/portfolio/Fetch/Fetch3.webp";
 import Fetch4 from "../assets/portfolio/Fetch/Fetch4.webp";
 import Fetchmain from "../assets/portfolio/Fetch/Fetchmain.webp";
-
-// FTL Images
 import FTL1 from "../assets/portfolio/FTL/FTL1.webp";
 import FTL2 from "../assets/portfolio/FTL/FTL2.webp";
 import FTL3 from "../assets/portfolio/FTL/FTL3.webp";
 import FTL4 from "../assets/portfolio/FTL/FTL4.webp";
 import FTLmain from "../assets/portfolio/FTL/FTLmain.webp";
-
-// Happy Images
 import Happy1 from "../assets/portfolio/happy/Happy1.webp";
 import Happy2 from "../assets/portfolio/happy/Happy2.webp";
 import Happy3 from "../assets/portfolio/happy/Happy3.webp";
 import Happy4 from "../assets/portfolio/happy/Happy4.webp";
 import Happymain from "../assets/portfolio/happy/Happymain.webp";
-
-// MediHelp Images
 import medi1 from "../assets/portfolio/mediHelp/medi1.webp";
 import medi2 from "../assets/portfolio/mediHelp/medi2.webp";
 import medi3 from "../assets/portfolio/mediHelp/medi3.webp";
 import medi4 from "../assets/portfolio/mediHelp/medi4.webp";
 import medimain from "../assets/portfolio/mediHelp/medimain.webp";
-
-// Website 1 Images
 import onemain from "../assets/portfolio/one/onemain.webp";
 import one1 from "../assets/portfolio/one/one1.webp";
 import one2 from "../assets/portfolio/one/one2.webp";
 import one3 from "../assets/portfolio/one/one3.webp";
-
-// Website 2 Images
 import twomain from "../assets/portfolio/two/twomain.webp";
 import two1 from "../assets/portfolio/two/two1.webp";
 import two2 from "../assets/portfolio/two/two2.webp";
 import two3 from "../assets/portfolio/two/two3.webp";
 import two4 from "../assets/portfolio/two/two4.webp";
-
-// Agencies Images
 import behance from "../assets/agencies/behance.webp";
 import dribble from "../assets/agencies/dribble.webp";
 import fiverr from "../assets/agencies/fiverr.webp";
@@ -81,8 +60,6 @@ import freelancer from "../assets/agencies/freelancer.webp";
 import pangian from "../assets/agencies/pangian.webp";
 import indeed from "../assets/agencies/indeed.webp";
 import flexjobs from "../assets/agencies/flexjobs.webp";
-
-// Expertise Images
 import ios from "../assets/expertise/ios.webp";
 import Android from "../assets/expertise/Android.webp";
 import Flutter from "../assets/expertise/Flutter.webp";
@@ -101,8 +78,6 @@ import Golang from "../assets/expertise/Golang.webp";
 import dotnet from "../assets/expertise/dotnet.webp";
 import DevOps from "../assets/expertise/DevOps.webp";
 import uiux from "../assets/expertise/uiux.webp";
-
-// OCR ICR Images
 import adhaar from "../assets/OcrIcr/adhaar.webp";
 import adhaarJson from "../assets/OcrIcr/adhaarJson.webp";
 import document from "../assets/OcrIcr/document.webp";
@@ -196,7 +171,6 @@ export const about = [
 ];
 
 export const portfolioImages = [
-  // Bobble
   {
     id: "Bobble",
     css: "hidden sm:block mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[75%] mt-14 middleXmd:-mt-48 middleXmd:mr-[1%]",
@@ -252,9 +226,6 @@ export const portfolioImages = [
     rightImage3Desc:
       "The content suggestion drawer utilized various APIs, with responses parsed using protocols, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
   },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  //  Project 2 FTL
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: "FTL",
     image: FTL2,
@@ -306,9 +277,6 @@ export const portfolioImages = [
     rightImage3Desc:
       "The content suggestion drawer utilized various APIs, with responses parsed using protocols, serialization, etc. The obtained data was seamlessly integrated into the designed UI/UX.",
   },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 3 GO FETCH
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: "GoFetch",
     css: "hidden sm:block mx-auto scale-[2] mt-36 midms:w-[95%] xsm:w-[89%] sm:w-[100%] sm:scale-[2.5] sm:-mr-24 sm:mt-44 midFM:mt-10 midFM:scale-[2.2] xmd:-mt-[70%] midxmd:w-[75%] middleXmd:-mt-32 middleXmd:scale-[2] middleXmd:mr-[1%]",
@@ -361,9 +329,6 @@ export const portfolioImages = [
     rightImage3Desc:
       "Our app utilizes highly optimized algorithms like Tries, Hashing, and more to deliver a swift and seamless filtering experience.",
   },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 4 Wbsite 1
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: "Website1",
     image: onemain,
@@ -416,9 +381,6 @@ export const portfolioImages = [
     rightImage3Desc:
       "To build website's animations, define animation goals, we planned key interactions, use CSS or JavaScript frameworks, optimize performance, and test across browsers.",
   },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 5 Wbsite 2
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: "Website2",
     css: "hidden sm:block mx-auto w-full scale-[2.2] ml-6 mt-[65%] midms:w-[95%] xsm:w-[89%] xsm:mt-52 sm:w-[60%] sm:scale-[4]  sm:ml-24 sm:mt-[100%] midFM:mt-[62%] xmd:-mt-[98%] xmd:scale-[2.4] xmd:ml-44 midxmd:w-[75%] middleXmd:-mt-[10%] middleXmd:mr-[1%]",
@@ -471,9 +433,6 @@ export const portfolioImages = [
     rightImage3Desc:
       "To build analytics and tracking capabilities, we have integrated tracking codes, set up conversion goals, configure event tracking, and analyze data for insights and optimization.",
   },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 6 MediHelp
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: "MediHelp",
     css: "hidden sm:block mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:-mt-32 middleXmd:scale-[1.7]  middleXmd:ml-[18%]",
@@ -524,9 +483,6 @@ export const portfolioImages = [
     rightImage3Desc:
       "The prescription is personalized with dropdown options and allows selecting dates from a calendar, tailoring medication instructions to individual needs for enhanced convenience and accuracy.",
   },
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // Project 7 Happy Ride
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   {
     id: "Happy Ride",
     image: Happy2,

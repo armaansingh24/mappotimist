@@ -11,7 +11,6 @@ const Footer = () => {
     <>
       <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[23rem] relative z-30">
         <div className="w-[90%] mx-auto flex h-full p-0">
-          {/* <p className=''>MappOptimist</p> */}
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
             <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around midFM:mr-40">
               <p className="text-2xl sm:text-3xl">MappOptimist</p>

@@ -4,7 +4,7 @@ import { carouselItems } from "../constants/index";
 import { about } from "../constants/index";
 import CountUp from "./CountUp";
 import CarouselItem from "./CarouselItem";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -40,10 +40,6 @@ const About = () => {
   return (
     <>
       <div className="w-screen -mt-12 sm:-mt-6 relative z-0" id="About">
-        {/* <div className="waves bg-gradient-to-bl to-secondary from-gray-100 via-gray-100 mt-[60%] xms:mt-[51%] sm:mt-[46%] lmd:mt-[47%] md:mt-[33%] xmd:mt-[1.8%] w-screen">
-          <div className="wave wave3"></div>
-        </div> */}
-
         <div className="bg-[#DBDCE6]">
           <div className="max-w-[90%] mx-auto grid grid-cols-1 xxmd:grid-cols-2 gap-5 ">
             <motion.div
@@ -116,7 +112,6 @@ const About = () => {
                   );
                 }}
                 className="-z-9"
-                // numberOfSlides={4}
               >
                 {carouselItems.map((item) => (
                   <CarouselItem key={item.id} item={item} />

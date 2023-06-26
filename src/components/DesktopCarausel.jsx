@@ -17,10 +17,10 @@ const DesktopCarausel = ({ image, index, currentSlideIndex, item }) => {
   };
 
   useEffect(() => {
-    mainControls.start("hidden"); // Start with the hidden state
+    mainControls.start("hidden");
 
     return () => {
-      mainControls.stop(); // Clean up the animation when the component unmounts
+      mainControls.stop();
     };
   }, [mainControls, index, currentSlideIndex]);
   return (

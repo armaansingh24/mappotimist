@@ -12,14 +12,13 @@ import PortfolioCarausel from "../components/PortfolioCarausel";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import message from "../assets/portfolio/message.webp";
 import { portfolioImages } from "../constants/index";
-import Loader  from "../components/Loader";
+import Loader from "../components/Loader";
 
 const PortfolioPage = (props) => {
   const id = useParams();
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    console.log(id);
     setLoading(true);
     const SelectedItem = portfolioImages.filter(
       (item) => item.id === id.itemId
@@ -54,18 +53,11 @@ const PortfolioPage = (props) => {
                 </p>
               </div>
               <div className="w-full">
-                <img
-                  src={item.mainImage}
-                  alt=""
-                  className={`${item.css}`}
-                  // className=""
-                />
-                {/* <p>{item.title}</p> */}
+                <img src={item.mainImage} alt="" className={`${item.css}`} />
               </div>
             </div>
           </div>
         </div>
-        {/* Feature section */}
         <div className="bg-gradient-to-br from-primary to-primary via-secondary w-screen pb-16">
           <div className="flex flex-col items-center justify-center p-1">
             <p className="text-lg sm:text-3xl font-poppins text-center text-white mt-10 midFM:mt-10">
@@ -84,7 +76,6 @@ const PortfolioPage = (props) => {
                 className="w-[50%] mx-auto sm:w-[20%] midFM:w-[100%]"
               />
             </div>
-            {/* mobile view cards */}
             <div className="grid grid-cols-2 gap-5 w-[90%] mx-auto items-center justify-center mt-10">
               <div className="skew-x-6 bg-white w-full flex gap-2 rounded-lg p-2 items-center justify-center shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)] ">
                 <img
@@ -178,9 +169,6 @@ const PortfolioPage = (props) => {
               </div>
             </div>
           </div>
-          {/* ................................................... */}
-          {/* desktop view cards */}
-          {/* ................................................... */}
           <div
             className={`${
               item.id === "Website1" || item.id === "Website2"
@@ -331,9 +319,6 @@ const PortfolioPage = (props) => {
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] bottom-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
-                // onFocus={handleFocus}
-                // onBlur={handleBlur}
-                // tabIndex={0}
               >
                 <img src={Group} alt="" className="mx-auto" />
                 <div className="">
@@ -351,9 +336,6 @@ const PortfolioPage = (props) => {
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] top-24 right-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
-                // onFocus={handleFocus}
-                // onBlur={handleBlur}
-                // tabIndex={0}
               >
                 <img src={Group} alt="" className="mx-auto" />
                 <div className="">
@@ -371,9 +353,6 @@ const PortfolioPage = (props) => {
                 className={`skew-x-12 hover:skew-x-0 bg-[#EAEAEA] w-[10rem] bottom-24 left-9 flex flex-col gap-2 rounded-lg p-1  absolute transition-all duration-1000 ease-in-out  
                   h-16 overflow-hidden hover:h-40 shadow-[-9px_13px_10px_0px_rgba(0,0,0,0.6)]
                 `}
-                // onFocus={handleFocus}
-                // onBlur={handleBlur}
-                // tabIndex={0}
               >
                 <img src={Group} alt="" className="mx-auto" />
                 <div className="">
@@ -388,11 +367,6 @@ const PortfolioPage = (props) => {
             )}
           </div>
         </div>
-
-        {/* ................................................ */}
-        {/* left image section */}
-        {/* ................................................ */}
-
         <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row sm:h-screen relative">
           <img
             src={R1}
@@ -443,11 +417,6 @@ const PortfolioPage = (props) => {
             </div>
           </div>
         </div>
-
-        {/* ................................... */}
-        {/* Right image section */}
-        {/* .................................... */}
-
         <div className="relative">
           <img
             src={R4}
@@ -490,10 +459,6 @@ const PortfolioPage = (props) => {
             </div>
           </div>
         </div>
-
-        {/* ................................................ */}
-        {/* other portfolio */}
-        {/* ................................................ */}
         <div className="relative w-screen" id="Portfolio">
           <img
             src={lower}

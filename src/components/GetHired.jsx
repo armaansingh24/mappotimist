@@ -44,7 +44,7 @@ const GetHired = () => {
        }
        setFormData((prevData) => ({
          ...prevData,
-         file: event.target.files[0], // Update file value with the selected file
+         file: event.target.files[0],
        }));
      } else {
        setFormData((prevData) => ({
@@ -63,31 +63,22 @@ const GetHired = () => {
       setError1("This field is necessary");
       return;
     }
-
-    // Validate contact field
     if (formData.contact.trim() === "") {
       setError2("This field is necessary");
       return;
     }
-
-    // Validate email field
     if (formData.email.trim() === "") {
       setError3("This field is necessary");
       return;
     }
-
-    // Validate type field
     if (formData.type.trim() === "" && accountType === "Hire Team") {
       setError5("This field is necessary");
       return;
     }
-
-    // Validate duration field
     if (formData.duration.trim() === "" && accountType === "Hire Team") {
       setError6("This field is necessary");
       return;
     }
-    // Validate required field
     if (formData.required.trim() === "" && accountType !== "Hire Team") {
       setError7("This field is necessary");
       return;
@@ -114,7 +105,6 @@ const GetHired = () => {
           }
         );
         if (response.status === 200) {
-          // Reset the form
           toast.success("Email sent successfully");
           setFormData({
             name: "",
@@ -131,7 +121,6 @@ const GetHired = () => {
         }
       } catch (error) {
         toast.error("Email not sent");
-        // Handle error
       }
     } else {
       const formDataSent = {
@@ -147,7 +136,6 @@ const GetHired = () => {
           formDataSent
         );
         if (response.status === 200) {
-          // Reset the form
           toast.success("Email sent successfully");
           setFormData({
             name: "",
@@ -164,7 +152,6 @@ const GetHired = () => {
         }
       } catch (error) {
         toast.error("Email not sent");
-        // Handle error
       }
     }
     errorHandler();
@@ -179,10 +166,10 @@ const GetHired = () => {
   };
 
   const handleFileReset = () => {
-    fileInputRef.current.value = ""; // Reset the value of the file input element
+    fileInputRef.current.value = "";
     setFormData((prevData) => ({
       ...prevData,
-      file: "", // Reset the file value in the form data
+      file: "",
     }));
   };
 

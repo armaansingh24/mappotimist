@@ -18,7 +18,6 @@ const ContactSection = () => {
     name: "",
     email: "",
     idea: "",
-    // formId: "Contact Us",
   });
   const [error, setError] = useState("");
   const [error1, setError1] = useState("");
@@ -48,13 +47,10 @@ const ContactSection = () => {
       setError("This field is necessary");
       return;
     }
-    // Validate email field
     if (formData.email.trim() === "") {
       setError1("This field is necessary");
       return;
     }
-
-    // Validate idea field
     if (formData.idea.trim() === "") {
       setError2("This field is necessary");
       return;
@@ -69,7 +65,6 @@ const ContactSection = () => {
         formData
       );
       if (response.status === 200) {
-        // Reset the form
         toast.success("Email sent successfully");
         setFormData({
           name: "",
@@ -83,7 +78,6 @@ const ContactSection = () => {
       }
     } catch (error) {
       toast.error("Email not sent");
-      // Handle error
     }
   };
 

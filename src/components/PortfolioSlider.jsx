@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-// import SplashScreen from "./SplashScreen";
 
 const PortfolioSlider = ({ index, currentSlideIndex, item }) => {
   const ref = useRef(null);
@@ -18,10 +17,10 @@ const PortfolioSlider = ({ index, currentSlideIndex, item }) => {
   };
 
   useEffect(() => {
-    mainControls.start("hidden"); // Start with the hidden state
+    mainControls.start("hidden");
 
     return () => {
-      mainControls.stop(); // Clean up the animation when the component unmounts
+      mainControls.stop();
     };
   }, [mainControls, index, currentSlideIndex]);
   return (

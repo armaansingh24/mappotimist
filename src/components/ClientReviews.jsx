@@ -14,8 +14,6 @@ import { reviewImages3 } from "../constants/index";
 import { reviewImages2 } from "../constants/index";
 import { reviewImages4 } from "../constants/index";
 import { reviewImages5 } from "../constants/index";
-
-// icons
 import { AiFillInstagram } from "react-icons/ai";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import { BsFacebook } from "react-icons/bs";
@@ -90,7 +88,6 @@ const ClientReviews = () => {
             </div>
             <div className="relative w-[715px] hidden midxmd:block midlg:hidden lg:block z-4">
               <div className="absolute left-[-3rem] top-4 rounded-full">
-                {/* upper left image*/}
                 {reviewImages1.map((item, index) => (
                   <div
                     key={index}
@@ -106,7 +103,6 @@ const ClientReviews = () => {
                   </div>
                 ))}
               </div>
-              {/* 3 rd row left */}
               <div className="absolute right-4 top-[17.1rem] rounded-full">
                 {reviewImages3.map((item, index) => (
                   <div
@@ -123,7 +119,6 @@ const ClientReviews = () => {
                   </div>
                 ))}
               </div>
-              {/* 3 rd row right */}
               <div className="absolute right-20 top-[49.8%] ">
                 {reviewImages4.map((item, index) => (
                   <div
@@ -140,7 +135,6 @@ const ClientReviews = () => {
                   </div>
                 ))}
               </div>
-              {/* 3rd row right image curve */}
               <div>
                 <img
                   src={curve1}
@@ -148,7 +142,6 @@ const ClientReviews = () => {
                   className="absolute right-20 top-[49.8%] w-[140px] z-30"
                 />
               </div>
-              {/* 2nd row imaage */}
               <div className="absolute -right-[22%] top-[31.3%] rounded-full">
                 {reviewImages5.map((item, index) => (
                   <div
@@ -165,7 +158,6 @@ const ClientReviews = () => {
                   </div>
                 ))}
               </div>
-              {/* Fourth row image */}
               <div className="absolute -right-[16.3rem] bottom-0 z-10">
                 {reviewImages2.map((item, index) => (
                   <div
@@ -182,7 +174,6 @@ const ClientReviews = () => {
                   </div>
                 ))}
               </div>
-              {/* fourth image curve */}
               <div>
                 <img
                   src={curve2}
@@ -190,31 +181,26 @@ const ClientReviews = () => {
                   className="absolute right-[9.4rem] -bottom-1 w-[10%] z-30"
                 />
               </div>
-              {/* Red Circle */}
               <img
                 src={pattern1}
                 alt=""
                 className="absolute top-[-7rem] left-[35%]"
               />
-              {/* red circle -inner circle */}
               <img
                 src={pattern4}
                 alt=""
                 className="absolute top-[-5rem] left-[39.5%]"
               />
-              {/* yellow pattern */}
               <img
                 src={pattern2}
                 alt=""
                 className="absolute top-[-8rem] right-[12%]"
               />
-              {/* yellow pattern inner circle */}
               <img
                 src={pattern4}
                 alt=""
                 className="absolute top-[-5.5rem] right-[16%] rounded-lg"
               />
-              {/* Red Curve pattern */}
               <img
                 src={pattern3}
                 alt=""

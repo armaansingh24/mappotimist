@@ -36,17 +36,17 @@ const PortfolioCarausel = ({ page }) => {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 6,
-      slidesToSlide: 4, // optional, default to 1.
+      slidesToSlide: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      slidesToSlide: 2, 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1,
     },
   };
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
@@ -96,16 +96,12 @@ const PortfolioCarausel = ({ page }) => {
     );
   };
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  // const swiperRef = useRef(null);
+
 
   const handleSlideChange = (swiper) => {
     setCurrentSlideIndex(swiper.realIndex);
   };
-  //  const handleClickItem = (index) => {
-  //    if (swiperRef.current) {
-  //      swiperRef.current.swiper.slideTo(index);
-  //    }
-  //  };
+  
 
   return (
     <>
@@ -123,8 +119,6 @@ const PortfolioCarausel = ({ page }) => {
               depth: 100,
               modifier: 2.5,
             }}
-            // slideToClickedSlide={true}
-            // loopPreventsSliding={true}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -137,14 +131,9 @@ const PortfolioCarausel = ({ page }) => {
               stopOnLastSlide: false,
               waitForTransition: true,
             }}
-            // modules={[Autoplay]}
             pagination={{ clickable: true }}
-            // virtual={true}
-            // direction="rtl"
             slidesPerView={3}
-            // direction="ltr"
             className="swiper_container mr-20"
-            // goToSlide={handleClickItem}
           >
             {portfolioImages.map((item, index) => {
               if (item.id === "Website1") {
@@ -211,9 +200,7 @@ const PortfolioCarausel = ({ page }) => {
               arrows={false}
               renderButtonGroupOutside={true}
               customButtonGroup={<ButtonGroup className="z-10" />}
-              // autoPlay={props.deviceType !== "mobile" ? true : false}
               infinite={true}
-              // autoPlaySpeed={9000}
               sliderClass={true}
               showDots={true}
               dotListClass={
@@ -224,7 +211,7 @@ const PortfolioCarausel = ({ page }) => {
               {portfolioImages.map((item, index) => {
                 return (
                   <PortfolioMobile
-                    // image={image.image}
+
                     key={index}
                     index={index}
                     item={item}

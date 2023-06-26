@@ -40,7 +40,6 @@ const OcrIcr = () => {
             className="absolute w-[50%] -top-7 -left-[30%] z-30 hidden midFM:block"
           />
           <div className="w-[90%] mt-44  mx-auto sm:mt-0">
-            {/* First Section */}
             <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 midlg:h-[80vh]">
               <div className="midxmd:order-2 midxmd:w-full ocr">
                 <img src={First} alt="" className="midxmd:w-full" />
@@ -65,8 +64,6 @@ const OcrIcr = () => {
                 </div>
               </div>
             </div>
-
-            {/* Second Section */}
             <div className="mt-10 grid grid-cols-1 gap-3 midFM:grid-cols-2 items-center justify-center mb-10">
               <div className="order1 midFM:order-3 ocr  ">
                 <img src={second} alt="" className="mx-auto" />
@@ -146,7 +143,6 @@ const OcrIcr = () => {
                 </ul>
                 <Link
                   to="demo"
-                  // spy={true}
                   smooth={true}
                   offset={-20}
                   duration={1000}
@@ -157,8 +153,6 @@ const OcrIcr = () => {
                 </Link>
               </div>
             </div>
-
-            {/* Third Section */}
             <div className="midFM:mt-64 relative w-screen">
               <img
                 src={R2}
@@ -258,8 +252,6 @@ const OcrIcr = () => {
                 </div>
               </div>
             </div>
-
-            {/*Fourth Section*/}
             <div className="mt-10 midFM:mt-32 relative">
               <img src={ellips3} alt="" className="absolute -left-16" />
               <img src={ellips5} alt="" className="absolute top-64 -left-28" />
@@ -324,8 +316,6 @@ const OcrIcr = () => {
                 </div>
               </div>
             </div>
-
-            {/*Fifth Section*/}
             <div className="mt-10 midFM:mt-72 relative w-screen z-20">
               <img
                 src={R3}

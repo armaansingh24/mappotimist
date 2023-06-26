@@ -5,7 +5,6 @@ const PortfolioMobile = ({ item }) => {
   const navigate = useNavigate();
 
   const handleReadMore = () => {
-    // mainControls.start("visible");
     navigate("/splash");
     const timer = setTimeout(() => {
       navigate(`/portfolio/${item.id}`, { state: { item } });
