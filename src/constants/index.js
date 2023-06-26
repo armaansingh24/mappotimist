@@ -98,6 +98,9 @@ import Oracle from "../assets/expertise/Oracle.webp";
 import SQL from "../assets/expertise/SQL.webp";
 import Salesforce from "../assets/expertise/Salesforce.webp";
 import Golang from "../assets/expertise/Golang.webp";
+import dotnet from "../assets/expertise/dotnet.webp";
+import DevOps from "../assets/expertise/DevOps.webp";
+import uiux from "../assets/expertise/uiux.webp";
 
 // OCR ICR Images
 import adhaar from "../assets/OcrIcr/adhaar.webp";
@@ -891,6 +894,30 @@ export const expertiseItem = [
     desc: "We specialize in Go development, offering comprehensive services and solutions. Our expert team creates efficient and scalable applications using Go. Trust us for reliable and high-performance Go solutions tailored to your specific needs, including web development, microservices, and system programming.",
     hoverDesc:
       "Go (Golang), Gorilla/Mux, Gin, Revel, Echo, GORM, PostgreSQL, MySQL, MongoDB, Redis, gRPC, RESTful APIs, JWT (JSON Web Tokens), Docker, Kubernetes, Prometheus, GraphQL, Kafka, RabbitMQ, AWS SDK,etc",
+  },
+  {
+    id: 16,
+    image: dotnet,
+    name: "Dot Net",
+    desc: "Experience the power of Dot Net technology with our innovative IT solutions. From application development to integration and support, we deliver reliable, secure and scalable solutions tailored to your business needs. Partner with us for accelerated growth and digital transformation.",
+    hoverDesc:
+      "Technologies -: ASP.NET, C#, VB.NET, .NET Framework, .NET Core, Entity Framework, ASP.NET MVC, WPF (Windows Presentation Foundation), WinForms (Windows Forms), Xamarin, ASP.NET Web API etc.",
+  },
+  {
+    id: 17,
+    image: DevOps,
+    name: "DevOps",
+    desc: "Accelerate your software delivery with our DevOps services. Streamline workflows, automate deployments, and enhance collaboration. Leverage cutting-edge tools like Docker, Kubernetes, Jenkins, and Ansible for seamless integration and continuous improvement. Drive innovation and achieve faster time to market.",
+    hoverDesc:
+      "Technologies -: Docker, Kubernetes, Jenkins, Ansible, Git, Puppet, Chef, Terraform, Prometheus, ELK Stack, Nagios, Grafana, AWS, Azure DevOps, GitLab, Jira, Slack, Selenium, SonarQube, Docker Compose",
+  },
+  {
+    id: 18,
+    image: uiux,
+    name: "UI/UX",
+    desc: "Deliver exceptional user experiences with our UI/UX services. We combine creativity and technology to design intuitive interfaces that engage users. Let's transform your digital presence together!",
+    hoverDesc:
+      "Technologies -: Adobe XD, Sketch, InVision, Figma, Zeplin, Axure RP, Marvel, Balsamiq, Principle, Proto.io, Sketchbook, UXPin, Flinto, Justinmind, Protopie.",
   },
 ];
 

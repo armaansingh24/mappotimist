@@ -66,7 +66,7 @@ const ContactSection = () => {
     try {
       const response = await axios.post(
         "http://localhost:3000/send-email-contact",
-        formData,
+        formData
       );
       if (response.status === 200) {
         // Reset the form
@@ -200,36 +200,36 @@ const ContactSection = () => {
                       Mobile App Development
                     </button>
                   </div>
-                  <div className="anime">
-                    <button
-                      className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
-                      onClick={() =>
-                        handleSelectedService("Website Development")
-                      }
-                    >
-                      Website Development
-                    </button>
-                  </div>
+
+                  <button
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    onClick={() => handleSelectedService("Website Development")}
+                  >
+                    Website Development
+                  </button>
+
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     onClick={() => handleSelectedService("Website Design")}
                   >
                     Website Design
                   </span>
+
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     onClick={() => handleSelectedService("Mobile App Design")}
                   >
                     Mobile App Design
                   </span>
+
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     onClick={() => handleSelectedService("Product strategy")}
                   >
                     Product strategy
                   </span>
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     ref={inputRef}
                     onClick={handleButtonClick}
                   >

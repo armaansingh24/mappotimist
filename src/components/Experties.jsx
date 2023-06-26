@@ -1,7 +1,7 @@
 import React from "react";
 import { expertiseItem } from "../constants/index";
 import ExpertiseItem from "./ExpertiseItem";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import upper from "../assets/expertise/upper.webp";
 import lower from "../assets/expertise/lower.webp";
@@ -15,21 +15,6 @@ const Experties = () => {
   const toggleDivHeight = () => {
     setExpanded(!expanded);
   };
-  const [isAbove640px, setIsAbove640px] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsAbove640px(window.innerWidth > 640);
-    };
-
-    handleResize(); // Check initial screen size
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <>
@@ -62,22 +47,15 @@ const Experties = () => {
         <div
           className={`w-[90%] mx-auto grid grid-cols-2 gap-6 sm:grid-cols-3 p-5 sm:p-10 justify-between items-center mt-10 overflow-hidden transition-h duration-[1000ms] ease-in-out ${
             expanded
-              ? "h-[133rem] msm:h-[127rem] ssm:h-[123rem] sm:h-[86rem] lmd:h-[83rem] xxmd:h-[75rem]"
+              ? "h-[203rem] msm:h-[157rem] ssm:h-[143rem] sm:h-[106rem] lmd:h-[103rem] xxmd:h-[87rem]"
               : "h-[60.4rem] msm:h-[51.6rem] ssm:h-[50rem] midxs:h-[65rem] sm:h-[35.8rem] lmd:h-[51rem] xxmd:h-[45rem] xmd:h-[45rem]"
           }`}
         >
           {expertiseItem.map(
             (item, index) =>
-              item.id !== 15 && (
+          (
                 <ExpertiseItem key={item.id} item={item} index={index} />
               )
-          )}
-          {isAbove640px && (
-            <ExpertiseItem
-              key={expertiseItem[14].id}
-              item={expertiseItem[14]}
-              index={14}
-            />
           )}
         </div>
         <div className="mt-10 mx-auto w-full">

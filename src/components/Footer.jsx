@@ -39,11 +39,14 @@ const Footer = () => {
                 alt=""
                 className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]"
               />
-              <img
-                src={linkedin}
-                alt=""
+              <a
+                href="https://www.linkedin.com/company/mappoptimist-technologies/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer h-[66%] sm:h-[89%] sm:w-[80%] mt-2 sm:mt-0"
-              />
+              >
+                <img src={linkedin} alt="" />
+              </a>
             </div>
           </div>
         </div>

@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className="bg-[#F7F5F8] bg-gradient-curve w-screen relative -z-1">
+      <div className="sm:bg-[#F7F5F8] bg-gradient-curve w-screen relative -z-1">
         <div
           className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center "
           id="home"
@@ -121,7 +121,7 @@ const HeroSection = () => {
             </div>
             <div className="flex gap-5 xsm:gap-2 items-center justify-between w-full mt-6 mb-10">
               <div>
-                <div className="w-[2px] h-10 lmd:h-16 bg-[#6F6C90]"></div>
+                <div className="w-[2px] h-10 lmd:h-14 bg-[#6F6C90]"></div>
               </div>
               <div className="">
                 {activeParagraph === 0 && (

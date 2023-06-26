@@ -29,47 +29,47 @@ const ClientReviews = () => {
   const [activeIndex3, setActiveIndex3] = useState(1);
   const [activeIndex4, setActiveIndex4] = useState(3);
   const [activeIndex5, setActiveIndex5] = useState(5);
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
-     }, 9000);
-     return () => clearInterval(interval);
-   }, [data.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
+    }, 9000);
+    return () => clearInterval(interval);
+  }, [data.length]);
 
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setActiveIndex1((prevIndex) => (prevIndex + 1) % reviewImages1.length);
-     }, 5000);
-     return () => clearInterval(interval);
-   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex1((prevIndex) => (prevIndex + 1) % reviewImages1.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setActiveIndex2((prevIndex) => (prevIndex + 1) % reviewImages3.length);
-     }, 7000);
-     return () => clearInterval(interval);
-   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex2((prevIndex) => (prevIndex + 1) % reviewImages3.length);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, []);
 
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setActiveIndex3((prevIndex) => (prevIndex + 1) % reviewImages4.length);
-     }, 6000);
-     return () => clearInterval(interval);
-   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex3((prevIndex) => (prevIndex + 1) % reviewImages4.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
 
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setActiveIndex4((prevIndex) => (prevIndex + 1) % reviewImages5.length);
-     }, 8000);
-     return () => clearInterval(interval);
-   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex4((prevIndex) => (prevIndex + 1) % reviewImages5.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
 
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setActiveIndex5((prevIndex) => (prevIndex + 1) % reviewImages2.length);
-     }, 5000);
-     return () => clearInterval(interval);
-   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex5((prevIndex) => (prevIndex + 1) % reviewImages2.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
@@ -231,7 +231,13 @@ const ClientReviews = () => {
             </div>
             <RiSlackFill className="text-[#7F838D] hover:text-primary relative z-10" />
             <AiFillInstagram className="text-[#7F838D] hover:text-primary relative z-10" />
-            <RiLinkedinBoxFill className="text-[#7F838D] hover:text-primary relative z-10" />
+            <a
+              href="https://www.linkedin.com/company/mappoptimist-technologies/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiLinkedinBoxFill className="text-[#7F838D] hover:text-primary relative z-10" />
+            </a>
           </div>
         </div>
       </div>
