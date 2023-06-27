@@ -72,13 +72,10 @@ const Developer = () => {
             autoPlay
             muted
             loop
-            className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block scale-[1.3]"
+            className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block
+      scale-[1.3]"
           >
-            <source
-              src={background}
-              type="video/webm"
-              className="z-0 relative"
-            />
+            <source src={background} type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>

@@ -211,12 +211,22 @@ const ClientReviews = () => {
           </div>
           <div className="flex gap-10 mt-14 mb-[-11%]">
             <div className="relative group rounded-full">
-              <span className="relative ">
+              <a
+                href="https://www.facebook.com/profile.php?id=100093856182734&sk=about_details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BsFacebook className="text-[#7F838D] hover:text-primary relative z-10" />
-              </span>
+              </a>
             </div>
             <RiSlackFill className="text-[#7F838D] hover:text-primary relative z-10" />
-            <AiFillInstagram className="text-[#7F838D] hover:text-primary relative z-10" />
+            <a
+              href="https://www.instagram.com/mappoptimist_technologies/?igshid=MjAxZDBhZDhlNA%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiFillInstagram className="text-[#7F838D] hover:text-primary relative z-10" />
+            </a>
             <a
               href="https://www.linkedin.com/company/mappoptimist-technologies/"
               target="_blank"
