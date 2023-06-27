@@ -871,9 +871,9 @@ export const expertiseItem = [
     id: 18,
     image: uiux,
     name: "UI/UX",
-    desc: "Deliver exceptional user experiences with our UI/UX services. We combine creativity and technology to design intuitive interfaces that engage users. Let's transform your digital presence together!",
+    desc: "Enhance user engagement with our UI/UX services. Our skilled team crafts intuitive interfaces, seamless interactions, and visually stunning designs to create memorable digital experiences. Let's create a user-centric journey that captivates your audience and drives business growth.",
     hoverDesc:
-      "Adobe XD, Sketch, InVision, Figma, Zeplin, Axure RP, Marvel, Balsamiq, Principle, Proto.io, Sketchbook, UXPin, Flinto, Justinmind, Protopie.",
+      "Adobe XD, Sketch, InVision, Figma, Zeplin, Axure RP, Marvel, Balsamiq, Principle, Proto.io, Sketchbook, UXPin, Flinto, Justinmind, Protopie, Adobe Photoshop, Adobe Illustrator, Adobe After Effects, HTML/CSS, JavaScript, React, Vue.js, Angular, Sass, Bootstrap, etc.",
   },
 ];
 

@@ -175,10 +175,10 @@ const GetHired = () => {
 
   return (
     <>
-      <div className="w-screen relative z-[60]">
-        <div className="w-[97%]  mx-auto mt-[2.5%] bg-gradient-to-r from-[#000046] to-[#1CB5E0] rounded-xl">
-          <div className="flex items-center flex-col w-[100%] mx-auto">
-            <div className="text-center flex flex-col gap-4 w-[60%] p-4">
+      <div className=" relative z-[60]">
+        <div className=" mx-auto mt-[2.5%] bg-gradient-to-r from-[#000046] to-[#1CB5E0] rounded-xl">
+          <div className="flex items-center flex-col mx-auto w-[100%]">
+            <div className="text-center flex flex-col gap-4 w-[80%] p-4">
               <h2 className="text-2xl font-bold text-white">Get In Touch</h2>
               <p className="text-white text-lg">
                 Boost your project's success with our IT solutions. Whether you

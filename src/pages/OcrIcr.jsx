@@ -39,14 +39,14 @@ const OcrIcr = () => {
             alt=""
             className="absolute w-[50%] -top-7 -left-[30%] z-30 hidden midFM:block"
           />
-          <div className="w-[90%] mt-44  mx-auto sm:mt-0">
+          <div className="w-[90%] mt-44  mx-auto sm:mt-0 relative z-40">
             <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 midlg:h-[80vh]">
               <div className="midxmd:order-2 midxmd:w-full ocr">
                 <img src={First} alt="" className="midxmd:w-full" />
               </div>
               <div className="flex flex-col gap-2 midxmd:w-full">
                 <div>
-                  <h2 className="text-2xl midxmd:text-5xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  <h2 className="text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                     OCR & ICR (Handwritten)
                   </h2>
                   <p className="text-sm midxmd:text-2xl font-poppins mt-4">
@@ -69,7 +69,7 @@ const OcrIcr = () => {
                 <img src={second} alt="" className="mx-auto" />
               </div>
               <div className="midFM:order-1 col-span-2">
-                <h2 className="text-2xl midxmd:text-5xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="mx-auto  h-[4rem] z-30 relative text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Key Features of OCR/ICR (Handwritten)
                 </h2>
                 <p className="text-sm midxmd:text-lg font-poppins mt-4">
@@ -141,12 +141,7 @@ const OcrIcr = () => {
                     </p>
                   </li>
                 </ul>
-                <Link
-                  to="demo"
-                  smooth={true}
-                  offset={-20}
-                  duration={1000}
-                >
+                <Link to="demo" smooth={true} offset={-20} duration={1000}>
                   <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1 relative z-10">
                     View a Demo
                   </button>
@@ -182,7 +177,7 @@ const OcrIcr = () => {
                   className="absolute bottom-0 right-0"
                 />
                 <div>
-                  <h2 className="text-2xl midxmd:text-4xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  <h2 className="relative text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                     Difference between OCR & ICR
                   </h2>
                 </div>
@@ -256,7 +251,7 @@ const OcrIcr = () => {
               <img src={ellips3} alt="" className="absolute -left-16" />
               <img src={ellips5} alt="" className="absolute top-64 -left-28" />
               <div>
-                <h2 className="text-2xl midxmd:text-4xl font-poppins500 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="mx-auto  h-[4rem] z-30 text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Document Recognition & Data Extraction
                 </h2>
               </div>
@@ -323,7 +318,7 @@ const OcrIcr = () => {
                 className="absolute -top-[100%] -left-32 w-screen scale-[1.2] hidden midFM:block z-10"
               />
               <div className="w-[90%]">
-                <h2 className="text-2xl midxmd:text-4xl font-poppins500 text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="text-2xl midxmd:text-5xl font-poppins text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Watch a demo video
                 </h2>
               </div>
@@ -362,11 +357,7 @@ const OcrIcr = () => {
                         <img src={ai} alt="" />
                       </div>
                       <div className="h-[10%] w-[15%]">
-                        <img
-                          src={arrow}
-                          alt=""
-                          className="-translate-x-4 "
-                        />
+                        <img src={arrow} alt="" className="-translate-x-4 " />
                       </div>
                       <div className="w-[25%]">
                         <img src={item.json} alt="" />

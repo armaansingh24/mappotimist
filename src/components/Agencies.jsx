@@ -20,7 +20,7 @@ const Agencies = () => {
             Available On Top Rated Agencies
           </h2>
         </div>
-        <div className="w-[70%]  mx-auto  xxmd:mt-24 z-0 ">
+        <div className="w-[70%]  mx-auto  xxmd:mt-16 z-0 ">
           <div className="grid grid-cols-2 gap-12 midFM:h-[20rem] midlg:h-[30rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)] rounded-md  justify-between  p-8 mb-16 xxmd:grid-cols-4">
             {agencies.map((agency) => (
               <div

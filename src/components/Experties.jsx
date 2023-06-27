@@ -41,7 +41,7 @@ const Experties = () => {
           className="absolute top-[11%] right-1 z-5 hidden xxmd:block"
         />
         <img src={upper} alt="" className="w-full scale-[1.1] relative z-10" />
-        <h2 className="text-bold w-[79%] font-poppins500  text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mx-auto mb-[8%] xxmd:mt-[-9%] relative z-30">
+        <h2 className="text-bold w-[79%] font-poppins500  text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mx-auto mb-[8%] xxmd:mt-[-9%] relative z-30 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
           Expertise
         </h2>
         <div
@@ -51,12 +51,9 @@ const Experties = () => {
               : "h-[60.4rem] msm:h-[51.6rem] ssm:h-[50rem] midxs:h-[65rem] sm:h-[35.8rem] lmd:h-[51rem] xxmd:h-[45rem] xmd:h-[45rem]"
           }`}
         >
-          {expertiseItem.map(
-            (item, index) =>
-          (
-                <ExpertiseItem key={item.id} item={item} index={index} />
-              )
-          )}
+          {expertiseItem.map((item, index) => (
+            <ExpertiseItem key={item.id} item={item} index={index} />
+          ))}
         </div>
         <div className="mt-10 mx-auto w-full">
           <p
@@ -76,7 +73,11 @@ const Experties = () => {
             )}
           </p>
         </div>
-        <img src={lower} alt="" className="w-full scale-[1.1] relative mt-[-10%]" />  
+        <img
+          src={lower}
+          alt=""
+          className="w-full scale-[1.1] relative mt-[-10%]"
+        />
       </div>
     </>
   );

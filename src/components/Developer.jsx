@@ -43,25 +43,17 @@ const Developer = () => {
   };
 
   useEffect(() => {
-    const handleScroll = (event) => {
-      if (showForm || showForm2) {
-        event.preventDefault();
-        event.stopPropagation();
-        event.returnValue = false;
-        return false;
-      }
-    };
+    const body = document.body;
+    const modalOpen = showForm || showForm2;
 
-    window.addEventListener("mousewheel", handleScroll, { passive: false });
-    window.addEventListener("DOMMouseScroll", handleScroll, {
-      passive: false,
-    });
-    window.addEventListener("touchmove", handleScroll, { passive: false });
+    if (modalOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
 
     return () => {
-      window.removeEventListener("mousewheel", handleScroll);
-      window.removeEventListener("DOMMouseScroll", handleScroll);
-      window.removeEventListener("touchmove", handleScroll);
+      body.style.overflow = "auto";
     };
   }, [showForm, showForm2]);
 
@@ -116,7 +108,7 @@ const Developer = () => {
             alt=""
             className="absolute right-0 bottom-[0%] z-10 block midlg:hidden"
           />
-          <h2 className="text-black midlg:text-white font-poppins text-[30px] lmd:text-[48px]">
+          <h2 className="text-black midlg:text-white font-poppins text-[30px] lmd:text-[48px] text-left midlg:ml-20">
             Developer
           </h2>
           <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
@@ -213,65 +205,66 @@ const Developer = () => {
             </div>
           </div>
         </div>
-        <div className="absolute -top-6 z-1">
-          {showForm && (
+      </div>
+      <div
+        className={`fixed inset-0 z-50 ${
+          showForm ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+      >
+        {showForm && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 overflow-x-hidden overflow-y-auto">
+            <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
+              <button onClick={handleGetHired}>
+                <SlClose />
+              </button>
+            </div>
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
+              <GetHired />
+            </div>
+          </div>
+        )}
+
+        {/* {showForm3 && (
+          <div className="block midlg:hidden mt-20">
+            <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
+              <button onClick={handleGetHired1}>
+                <SlClose />
+              </button>
+            </div>
+            <GetHiredMobile />
+          </div>
+        )}
+
+        <div className="absolute -top-2 z-30">
+          {showForm2 && (
             <div>
-              <div className="hidden midFM:block">
-                <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
-                  <button onClick={handleGetHired}>
+              <div className="hidden midlg:block">
+                <div className="absolute mt-3 right-20 text-[50px] text-white z-[70]">
+                  <button onClick={handleGetHire}>
                     <SlClose />
                   </button>
                 </div>
-                <GetHired />
-                <div
-                  className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                  onClick={handleGetHired}
-                ></div>
+                <GetHire />
+                <div className="hidden midlg::block">
+                  <div
+                    className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
+                    onClick={handleGetHire}
+                  ></div>
+                </div>
               </div>
             </div>
           )}
-          {showForm3 && (
-            <div className="block midlg:hidden mt-20">
-              <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
-                <button onClick={handleGetHired1}>
+          {showForm4 && (
+            <div className="block midlg:hidden mt-[45rem]">
+              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[70]">
+                <button onClick={handleGetHire1}>
                   <SlClose />
                 </button>
               </div>
-              <GetHiredMobile />
+              <HireMobile />
             </div>
           )}
-
-          <div className="absolute -top-2 z-30">
-            {showForm2 && (
-              <div>
-                <div className="hidden midlg:block">
-                  <div className="absolute mt-3 right-20 text-[50px] text-white z-[70]">
-                    <button onClick={handleGetHire}>
-                      <SlClose />
-                    </button>
-                  </div>
-                  <GetHire />
-                  <div className="hidden midlg::block">
-                    <div
-                      className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                      onClick={handleGetHire}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            )}
-            {showForm4 && (
-              <div className="block midlg:hidden mt-[45rem]">
-                <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[70]">
-                  <button onClick={handleGetHire1}>
-                    <SlClose />
-                  </button>
-                </div>
-                <HireMobile />
-              </div>
-            )}
-          </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

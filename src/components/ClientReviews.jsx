@@ -14,10 +14,10 @@ import { reviewImages3 } from "../constants/index";
 import { reviewImages2 } from "../constants/index";
 import { reviewImages4 } from "../constants/index";
 import { reviewImages5 } from "../constants/index";
-import { AiFillInstagram } from "react-icons/ai";
-import { RiLinkedinBoxFill } from "react-icons/ri";
-import { BsFacebook } from "react-icons/bs";
-import { RiSlackFill } from "react-icons/ri";
+import insta from "../assets/footer/insta.webp";
+import fb from "../assets/footer/fb.webp";
+import slack from "../assets/footer/slack.webp";
+import linkedin from "../assets/footer/linkedin.webp";
 
 const ClientReviews = () => {
   const data = reviews;
@@ -71,7 +71,7 @@ const ClientReviews = () => {
   return (
     <>
       <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
-        <h2 className="font-poppins500 text-[30px] lmd:text-[48px] flex gap-2 flex-wrap sm:mt-24 ">
+        <h2 className="font-poppins500 text-[30px] lmd:text-[48px] flex gap-2 flex-wrap sm:mt-24 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
           Client Reviews
         </h2>
         <div className="w-full mt-[10%]">
@@ -209,30 +209,35 @@ const ClientReviews = () => {
               <img src={pattern} alt="" className="" />
             </div>
           </div>
-          <div className="flex gap-10 mt-14 mb-[-11%]">
-            <div className="relative group rounded-full">
-              <a
-                href="https://www.facebook.com/profile.php?id=100093856182734&sk=about_details"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <BsFacebook className="text-[#7F838D] hover:text-primary relative z-10" />
-              </a>
-            </div>
-            <RiSlackFill className="text-[#7F838D] hover:text-primary relative z-10" />
+          <div className="flex gap-6 sm:gap-4 self-end justify-items-end h-full mt-5 sm:mt-4">
+            <a
+              href="https://www.facebook.com/profile.php?id=100093856182734&sk=about_details"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]"
+            >
+              <img src={fb} alt="" />
+            </a>
+            <img
+              src={slack}
+              alt=""
+              className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]"
+            />
             <a
               href="https://www.instagram.com/mappoptimist_technologies/?igshid=MjAxZDBhZDhlNA%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[80%]"
             >
-              <AiFillInstagram className="text-[#7F838D] hover:text-primary relative z-10" />
+              <img src={insta} alt="" />
             </a>
             <a
               href="https://www.linkedin.com/company/mappoptimist-technologies/"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-pointer h-[66%] sm:h-[89%] sm:w-[80%] mt-2 sm:mt-0"
             >
-              <RiLinkedinBoxFill className="text-[#7F838D] hover:text-primary relative z-10" />
+              <img src={linkedin} alt="" />
             </a>
           </div>
         </div>
