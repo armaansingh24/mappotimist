@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import PortfolioPage from "./pages/PortfolioPage";
 import OcrIcr from "./pages/OcrIcr";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes,useLocation } from "react-router-dom";
 import GoToTop from "./components/GoToTop";
 import Whatsapp from "./components/Whatsapp";
 import Footer from "./components/Footer";
@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowSplash(false);
-    }, 1000);
+    }, 1500);
     return () => clearTimeout(timeout);
   }, []);
   return (
@@ -40,3 +40,13 @@ function App() {
   );
 }
 export default App;
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+      window.scrollTo({ top: 0, left: 0});
+  }, [pathname]);
+
+  return null;
+}

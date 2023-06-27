@@ -455,7 +455,7 @@ body {
     0% {
         transform: scale(1);
     }
-    50% {
+    100% {
         transform: scale(1.5);
         opacity: 0;
     }

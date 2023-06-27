@@ -857,7 +857,7 @@ export const expertiseItem = [
     name: "Dot Net",
     desc: "Experience the power of Dot Net technology with our innovative IT solutions. From application development to integration and support, we deliver reliable, secure and scalable solutions tailored to your business needs. Partner with us for accelerated growth and digital transformation.",
     hoverDesc:
-      "Technologies -: ASP.NET, C#, VB.NET, .NET Framework, .NET Core, Entity Framework, ASP.NET MVC, WPF (Windows Presentation Foundation), WinForms (Windows Forms), Xamarin, ASP.NET Web API etc.",
+      "ASP.NET, C#, VB.NET, .NET Framework, .NET Core, Entity Framework, ASP.NET MVC, WPF (Windows Presentation Foundation), WinForms (Windows Forms), Xamarin, ASP.NET Web API etc.",
   },
   {
     id: 17,
@@ -865,7 +865,7 @@ export const expertiseItem = [
     name: "DevOps",
     desc: "Accelerate your software delivery with our DevOps services. Streamline workflows, automate deployments, and enhance collaboration. Leverage cutting-edge tools like Docker, Kubernetes, Jenkins, and Ansible for seamless integration and continuous improvement. Drive innovation and achieve faster time to market.",
     hoverDesc:
-      "Technologies -: Docker, Kubernetes, Jenkins, Ansible, Git, Puppet, Chef, Terraform, Prometheus, ELK Stack, Nagios, Grafana, AWS, Azure DevOps, GitLab, Jira, Slack, Selenium, SonarQube, Docker Compose",
+      "Docker, Kubernetes, Jenkins, Ansible, Git, Puppet, Chef, Terraform, Prometheus, ELK Stack, Nagios, Grafana, AWS, Azure DevOps, GitLab, Jira, Slack, Selenium, SonarQube, Docker Compose",
   },
   {
     id: 18,
@@ -873,7 +873,7 @@ export const expertiseItem = [
     name: "UI/UX",
     desc: "Deliver exceptional user experiences with our UI/UX services. We combine creativity and technology to design intuitive interfaces that engage users. Let's transform your digital presence together!",
     hoverDesc:
-      "Technologies -: Adobe XD, Sketch, InVision, Figma, Zeplin, Axure RP, Marvel, Balsamiq, Principle, Proto.io, Sketchbook, UXPin, Flinto, Justinmind, Protopie.",
+      "Adobe XD, Sketch, InVision, Figma, Zeplin, Axure RP, Marvel, Balsamiq, Principle, Proto.io, Sketchbook, UXPin, Flinto, Justinmind, Protopie.",
   },
 ];
 

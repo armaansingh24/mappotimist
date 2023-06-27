@@ -14,7 +14,7 @@ import message from "../assets/portfolio/message.webp";
 import { portfolioImages } from "../constants/index";
 import Loader from "../components/Loader";
 
-const PortfolioPage = (props) => {
+const PortfolioPage = () => {
   const id = useParams();
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(true);
@@ -53,7 +53,11 @@ const PortfolioPage = (props) => {
                 </p>
               </div>
               <div className="w-full">
-                <img src={item.mainImage} alt="" className={`${item.css}`} />
+              { item && item.mainImage && <img
+                  src={item.mainImage}
+                  alt=""
+                  className={`${item.css}`}
+                />}
               </div>
             </div>
           </div>
@@ -476,7 +480,7 @@ const PortfolioPage = (props) => {
             </h2>
           </div>
           <div className="mx-auto relative z-10">
-            <PortfolioCarausel props={props} page={"portfolio"} />
+            <PortfolioCarausel  page={"portfolio"} />
           </div>
         </div>
       </div>

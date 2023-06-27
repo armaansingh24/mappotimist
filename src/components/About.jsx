@@ -135,13 +135,13 @@ const About = () => {
                   className="font-poppins500 xxmd:text-[36.75px]"
                   key={item.id}
                 >
-                  <p className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
+                  <div className="text-[25px] font-medium xxmd:text-[36.75px] xxmd:leading-[55.12px]">
                     {isVisiable && (
                       <div>
                         <CountUp start={0} end={item.number} /> {item.symbol}
                       </div>
                     )}
-                  </p>
+                  </div>
                   <p className="text-[25px] font-medium ">{item.title}</p>
                   <p className="text-[9px] leading-[12px] capitalize font-medium xxmd:text-[12.25px] xxmd:leading-[18.37px]">
                     {item.description}

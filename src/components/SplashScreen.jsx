@@ -3,6 +3,7 @@ import logo from "../assets/navbar/logo.webp";
 
 function SplashScreen() {
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0});
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "auto";

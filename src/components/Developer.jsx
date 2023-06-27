@@ -122,7 +122,7 @@ const Developer = () => {
             Developer
           </h2>
           <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
-            <div className="sm:w-[70%] midlg:w-[25%]">
+            <div className="sm:w-[70%] midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,
@@ -131,7 +131,7 @@ const Developer = () => {
                 }}
                 className="card"
               >
-                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3 midlg:h-[32.7rem]">
+                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3 midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
                   <p className="text-2xl font-poppins500">Recruit Us</p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
@@ -165,7 +165,7 @@ const Developer = () => {
                 }}
                 className="card"
               >
-                <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem]">
+                <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
                   <p className="text-2xl font-poppins500">Get Employed</p>
                   <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
@@ -198,7 +198,7 @@ const Developer = () => {
                 }}
                 className="card"
               >
-                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3  h-full midlg:h-[32.5rem]">
+                <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3  h-full midlg:h-[32.5rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
                   <p className="text-2xl font-poppins500"> OCR/ICR</p>
                   <img src={three} alt="" className="mt-12 midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500 mt-6">

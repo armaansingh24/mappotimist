@@ -175,7 +175,7 @@ const GetHired = () => {
 
   return (
     <>
-      <div className="w-full relative z-[60]">
+      <div className="w-screen relative z-[60]">
         <div className="w-[97%]  mx-auto mt-[2.5%] bg-gradient-to-r from-[#000046] to-[#1CB5E0] rounded-xl">
           <div className="flex items-center flex-col w-[100%] mx-auto">
             <div className="text-center flex flex-col gap-4 w-[60%] p-4">
