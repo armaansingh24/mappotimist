@@ -1,4 +1,5 @@
-import background from "../assets/developer/background.webm";
+// import background from "../assets/developer/background.webm";
+import bgVideo from "../assets/developer/bgVideo.mp4";
 import one from "../assets/developer/one.webp";
 import two from "../assets/developer/two.webp";
 import three from "../assets/developer/three.webp";
@@ -75,7 +76,7 @@ const Developer = () => {
             className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block
       scale-[1.3]"
           >
-            <source src={background} type="video/webm" />
+            <source src={bgVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
