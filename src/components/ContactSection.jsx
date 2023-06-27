@@ -61,7 +61,7 @@ const ContactSection = () => {
     setError2("");
     try {
       const response = await axios.post(
-        "http://localhost:3000/send-email-contact",
+        "http://128.199.17.62:8080/v1/send-email-contact",
         formData
       );
       if (response.status === 200) {
