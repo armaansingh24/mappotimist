@@ -785,7 +785,7 @@ export const expertiseItem = [
     name: "Node JS",
     desc: "Our specialized team offering comprehensive services and solutions in Node.js and PHP. With our skilled team we create robust and scalable applications for you. Whether it's building APIs, handling databases, or implementing server-side logic, trust us for reliable backend solutions to your specific needs.",
     hoverDesc:
-      "Dart , Flutter Framewrok , Flutterflow , Cupertino, State Management Tools (Provider, Redux,etc),  flutter_test, Mockito, Widget libraries, Firebase Cloud Messaging, In-App Purchases,Bloc, RxDart, Firestore, etc",
+      "Node.js, Express.js, MongoDB, MySQL, PostgreSQL, Redis, GraphQL, RESTful APIs, JWT (JSON Web Tokens), Sequelize, Mongoose, Socket.IO, Passport.js, PHP, Laravel, Symfony, CodeIgniter, MySQLi, Composer, PHPUnit, etc",
   },
   {
     id: 8,
@@ -801,7 +801,7 @@ export const expertiseItem = [
     name: "Blockchain",
     desc: "Our specialized team in Blockchain development, offering comprehensive services and solutions. We create secure and decentralized applications. From smart contract development to cryptocurrency solutions and blockchain consulting, trust us for reliable and innovative solutions tailored to your needs.",
     hoverDesc:
-      "Internet of Things (IoT), MQTT, CoAP, Zigbee, Z-Wave, Bluetooth, LoRaWAN, WiFi, RFID, Edge Computing, Sensor Networks, Cloud Platforms, Arduino, Raspberry Pi, Node-RED, AWS IoT, Microsoft Azure IoT, Google Cloud IoT, IBM Watson IoT, ThingSpeak, etc",
+      "Smart Contracts, Ethereum, Solidity, Hyperledger Fabric, Web3.js, Truffle, Ganache, Remix, IPFS, Consensus Algorithms, Cryptography, DApps, Tokenization, Decentralized Finance (DeFi), Wallet Development, Chainlink, Quorum, Corda, Bitcoin, Ripple, etc",
   },
   {
     id: 10,
