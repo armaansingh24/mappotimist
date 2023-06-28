@@ -6,7 +6,6 @@ import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
 import { HashLink as Link } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
-import { VscNotebook } from "react-icons/vsc";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
 import GetHiredMobile from "./GetHiredMobile";

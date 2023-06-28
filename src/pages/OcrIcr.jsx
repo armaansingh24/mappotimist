@@ -288,7 +288,9 @@ const OcrIcr = () => {
                   Document Recognition & Data Extraction
                 </h2>
               </div>
-              <div className="mt-5 grid grid-cols-1 gap-5 items-center justify-center midFM:grid-cols-2">
+              <div
+                className="mt-5 grid grid-cols-1 gap-5 items-center justify-center midFM:grid-cols-2 relative z-50"
+              >
                 <div className="order-1 midFM:col-span-2">
                   <p className="font-poppins500 text-lg">
                     At MappOptimist Technologies, We have developed a
@@ -301,7 +303,7 @@ const OcrIcr = () => {
                     following types:
                   </p>
                 </div>
-                <div className="text-lg order-2 midFM:order-2">
+                <div className="text-lg order-2 midFM:order-2 relative z-40">
                   <ul>
                     <li className="flex gap-1 items-center justify-start font-poppins500">
                       <span>1.</span>

@@ -112,7 +112,7 @@ const Developer = () => {
             Developer
           </h2>
           <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
-            <div className="sm:w-[70%] midlg:w-[25%] ">
+            <div className="sm:w-[50%]  midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,
@@ -146,7 +146,7 @@ const Developer = () => {
                 </div>
               </Tilt>
             </div>
-            <div className="sm:w-[70%] midlg:w-[25%] ">
+            <div className="sm:w-[50%]  midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,
@@ -179,7 +179,7 @@ const Developer = () => {
                 </div>
               </Tilt>
             </div>
-            <div className="sm:w-[70%] midlg:w-[25%] ">
+            <div className="sm:w-[50%] midlg:w-[25%] ">
               <Tilt
                 options={{
                   max: 45,

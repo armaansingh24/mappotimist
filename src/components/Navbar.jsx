@@ -7,7 +7,6 @@ import logo from "../assets/navbar/logo.webp";
 import eclips1 from "../assets/navbar/eclips1.webp";
 import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
-import { VscNotebook } from "react-icons/vsc";
 // import { HashLink as Link } from "react-router-hash-link";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
