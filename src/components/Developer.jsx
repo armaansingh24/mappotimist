@@ -44,7 +44,7 @@ const Developer = () => {
 
   useEffect(() => {
     const body = document.body;
-    const modalOpen = showForm || showForm2;
+    const modalOpen = showForm || showForm2 || showForm3|| showForm4;
 
     if (modalOpen) {
       body.style.overflow = "hidden";
@@ -55,7 +55,7 @@ const Developer = () => {
     return () => {
       body.style.overflow = "auto";
     };
-  }, [showForm, showForm2]);
+  }, [showForm, showForm2, showForm3, showForm4]);
 
   return (
     <>
@@ -167,14 +167,14 @@ const Developer = () => {
                       className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                       onClick={handleGetHire}
                     >
-                      Get Hired
+                      Get Hire
                     </button>
                   </Link>
                   <button
-                    className="block midFM:hidden bg-gradient-to-l text-xlfrom-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
+                    className="block midFM:hidden bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
                     onClick={handleGetHire1}
                   >
-                    Get Hired
+                    Get Hire
                   </button>
                 </div>
               </Tilt>
@@ -207,12 +207,14 @@ const Developer = () => {
         </div>
       </div>
       <div
-        className={`fixed inset-0 z-50 ${
-          showForm ? "pointer-events-auto" : "pointer-events-none"
-        }`}
+        className={`absolute inset-0 z-[60] ${
+          showForm || showForm2 || showForm3 || showForm4
+            ? "pointer-events-auto"
+            : "pointer-events-none"
+        } `}
       >
         {showForm && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 overflow-x-hidden overflow-y-auto">
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
             <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
               <button onClick={handleGetHired}>
                 <SlClose />
@@ -224,47 +226,43 @@ const Developer = () => {
           </div>
         )}
 
-        {/* {showForm3 && (
-          <div className="block midlg:hidden mt-20">
-            <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
+        {showForm3 && (
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
+            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
               <button onClick={handleGetHired1}>
                 <SlClose />
               </button>
             </div>
-            <GetHiredMobile />
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
+              <GetHiredMobile />
+            </div>
           </div>
         )}
 
-        <div className="absolute -top-2 z-30">
-          {showForm2 && (
-            <div>
-              <div className="hidden midlg:block">
-                <div className="absolute mt-3 right-20 text-[50px] text-white z-[70]">
-                  <button onClick={handleGetHire}>
-                    <SlClose />
-                  </button>
-                </div>
-                <GetHire />
-                <div className="hidden midlg::block">
-                  <div
-                    className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                    onClick={handleGetHire}
-                  ></div>
-                </div>
-              </div>
+        {showForm2 && (
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto w-full">
+            <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
+              <button onClick={handleGetHire}>
+                <SlClose />
+              </button>
             </div>
-          )}
-          {showForm4 && (
-            <div className="block midlg:hidden mt-[45rem]">
-              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[70]">
-                <button onClick={handleGetHire1}>
-                  <SlClose />
-                </button>
-              </div>
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
+              <GetHire />
+            </div>
+          </div>
+        )}
+        {showForm4 && (
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
+            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
+              <button onClick={handleGetHire1}>
+                <SlClose />
+              </button>
+            </div>
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
               <HireMobile />
             </div>
-          )}
-        </div> */}
+          </div>
+        )}
       </div>
     </>
   );

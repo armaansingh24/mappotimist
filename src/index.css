@@ -222,32 +222,8 @@ body {
     color: white;
 }
 
-@media (min-width: 768px) {
-    .slider-controler .swiper-button-next {
-        transform: translateX(20%);
-    }
 
-    .swiper_container {
-        height: 35rem;
-        width: 100%;
-    }
-}
 
-@media (min-width: 830px) {
-    .slider-controler .swiper-button-next {
-        left: 55% !important;
-        transform: translateY(1%);
-    }
-
-    .slider-controler .swiper-button-prev {
-        left: 34% !important;
-        transform: translateY(2%);
-    }
-
-    .swiper_container {
-        height: 42rem;
-    }
-}
 
 @media (min-width: 1250px) {
     .slider-controler .swiper-button-next {
@@ -260,31 +236,12 @@ body {
     }
 
     .swiper_container {
-        height: 44rem;
+        height:40rem;
+        /* width: 80%; */
     }
 }
 
 
-@media (max-width: 450px) {
-    .slider-controler .swiper-button-next {
-        left: 80% !important;
-        transform: translateX(-80%) !important;
-    }
-}
-
-@media (max-width: 990px) {
-    .slider-controler .swiper-button-prev {
-        left: 30% !important;
-        transform: translateX(-30%) !important;
-    }
-}
-
-@media (max-width: 450px) {
-    .slider-controler .swiper-button-prev {
-        left: 20% !important;
-        transform: translateX(-20%) !important;
-    }
-}
 
 .slider-controler .slider-arrow {
     width: 4.5rem;
@@ -334,11 +291,6 @@ body {
     background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 400px) {
-    .agencies {
-        background-size: -1% 100%;
-    }
-}
 
 @media screen and (min-width: 1023px) {
     .agencies {
@@ -473,3 +425,22 @@ body {
     animation: pop-out 3s ease infinite;
 }
 
+
+.scrollbar-hide {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+    background-color: transparent;
+}

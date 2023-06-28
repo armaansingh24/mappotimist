@@ -6,6 +6,7 @@ import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
 import { HashLink as Link } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
+import { VscNotebook } from "react-icons/vsc";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
 import GetHiredMobile from "./GetHiredMobile";
@@ -16,7 +17,7 @@ import recruit from "../assets/developer/recruit.png";
 import getHired from "../assets/developer/getHired.png";
 import ocr from "../assets/developer/ocr.png";
 
-const Navbar = () => {
+const Navbar = ({page}) => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -39,33 +40,29 @@ const Navbar = () => {
     setShowForm4(!showForm4);
   };
 
-    useEffect(() => {
-      const handleScroll = (event) => {
-        if (showForm || showForm2) {
-          event.preventDefault();
-          event.stopPropagation();
-          event.returnValue = false;
-          return false;
-        }
-      };
+  useEffect(() => {
+    const body = document.body;
+    const modalOpen = showForm || showForm2 || showForm3 || showForm4;
 
-      window.addEventListener("mousewheel", handleScroll, { passive: false });
-      window.addEventListener("DOMMouseScroll", handleScroll, {
-        passive: false,
-      });
-      window.addEventListener("touchmove", handleScroll, { passive: false });
+    if (modalOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
 
-      return () => {
-        window.removeEventListener("mousewheel", handleScroll);
-        window.removeEventListener("DOMMouseScroll", handleScroll);
-        window.removeEventListener("touchmove", handleScroll);
-      };
-    }, [showForm, showForm2]);
+    return () => {
+      body.style.overflow = "auto";
+    };
+  }, [showForm, showForm2, showForm3, showForm4]);
 
   const genericHamburgerLine = `h-1 w-6 rounded-full bg-black transition ease transform duration-300`;
   return (
     <>
-      <div className="sm:opacity-[0.8] bg-white -mt-6 ">
+      <div
+        className={`bg-white -mt-6 ${
+          page === "portfolio" ? "sm:absolute sm:opacity-[0.7]" : ""
+        }`}
+      >
         <nav
           className={
             "flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-2 left-0 right-0 sm:relative z-50  text-black"
@@ -139,7 +136,7 @@ const Navbar = () => {
                   >
                     Developer
                   </Link>
-                  <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-full  opacity-[2]">
+                  <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-full  ">
                     <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-8 z-0"></div>
                     <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-14 -translate-y-6">
                       <ul className="list-none flex flex-col items-start justify-center">
@@ -147,7 +144,6 @@ const Navbar = () => {
                           <button
                             className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 text-xl"
                             onClick={() => {
-                              setToggle(!toggle);
                               setIsOpen(!isOpen);
                               handleGetHired();
                             }}
@@ -164,7 +160,6 @@ const Navbar = () => {
                           <button
                             className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 "
                             onClick={() => {
-                              setToggle(!toggle);
                               setIsOpen(!isOpen);
                               handleGetHire();
                             }}
@@ -338,68 +333,60 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-      <div className="absolute -top-7 z-1">
+      <div
+        className={`absolute inset-0 z-[60] ${
+          showForm || showForm2 || showForm3 || showForm4
+            ? "pointer-events-auto"
+            : "pointer-events-none"
+        } `}
+      >
         {showForm && (
-          <div>
-            <div className="hidden midFM:block">
-              <div className="absolute top-20 right-20 text-[50px] text-white z-[80]">
-                <button
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setIsOpen(!isOpen);
-                    handleGetHired();
-                  }}
-                >
-                  <SlClose />
-                </button>
-              </div>
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
+            <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
+              <button onClick={handleGetHired}>
+                <SlClose />
+              </button>
+            </div>
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
               <GetHired />
             </div>
-            <div className="block midFM:hidden mt-20">
-              <div className="absolute top-24 right-8 text-[28px] text-secondary z-40">
-                <button onClick={handleGetHired}>
-                  <SlClose />
-                </button>
-              </div>
-              <GetHiredMobile />
-            </div>
-            <div
-              className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-              onClick={handleGetHired1}
-            ></div>
           </div>
         )}
-      </div>
-      <div className="absolute -top-5 z-1 ">
+
+        {showForm3 && (
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
+            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
+              <button onClick={handleGetHired1}>
+                <SlClose />
+              </button>
+            </div>
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
+              <GetHiredMobile />
+            </div>
+          </div>
+        )}
+
         {showForm2 && (
-          <div>
-            <div className="hidden midFM:block">
-              <div className="absolute mt-3 right-20 text-[50px] text-white z-[80]">
-                <button
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setIsOpen(!isOpen);
-                    handleGetHire();
-                  }}
-                >
-                  <SlClose />
-                </button>
-              </div>
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
+            <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
+              <button onClick={handleGetHire}>
+                <SlClose />
+              </button>
+            </div>
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
               <GetHire />
             </div>
-            <div className="block midFM:hidden mt-[45rem]">
-              <div className="absolute mt-3 right-8 text-[28px] text-secondary z-[80]">
-                <button onClick={handleGetHire1}>
-                  <SlClose />
-                </button>
-              </div>
-              <HireMobile />
+          </div>
+        )}
+        {showForm4 && (
+          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
+            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
+              <button onClick={handleGetHire1}>
+                <SlClose />
+              </button>
             </div>
-            <div className="hidden midFM:block">
-              <div
-                className="opacity-1 absolute left-0 top-0 bottom-0 right-0  bg-gradient-to-tl from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.8)] z-9 overflow-hidden cursor-pointer transition-all w-screen h-[200vh] duration-[2000ms] ease-in-out"
-                onClick={handleGetHire}
-              ></div>
+            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
+              <HireMobile />
             </div>
           </div>
         )}

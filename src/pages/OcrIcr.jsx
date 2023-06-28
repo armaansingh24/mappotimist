@@ -16,6 +16,10 @@ import ellips2 from "../assets/OcrIcr/ellips2.webp";
 import ellips3 from "../assets/OcrIcr/ellips3.webp";
 import ellips4 from "../assets/OcrIcr/ellips4.webp";
 import ellips5 from "../assets/OcrIcr/ellips5.webp";
+import ellips6 from "../assets/OcrIcr/ellips6.webp";
+import ellips7 from "../assets/OcrIcr/ellips7.webp";
+import ellips8 from "../assets/OcrIcr/ellips8.webp";
+import ellips9 from "../assets/OcrIcr/ellips9.webp";
 
 const OcrIcr = () => {
   const data = Ai;
@@ -29,18 +33,33 @@ const OcrIcr = () => {
   }, [data.length]);
   return (
     <>
-      <div className="">
-        <PortfolioNavbar />
+      <div className="sm:relative z-50">
+        <PortfolioNavbar page={"OCR"} />
       </div>
       <div className="bg-white relative z-10">
         <div className="bg-white w-screen relative z-10">
           <img
             src={R1}
             alt=""
-            className="absolute w-[50%] -top-7 -left-[30%] z-30 hidden midFM:block"
+            className="absolute w-[50%] -top-7 -left-[30%] z-0 hidden midFM:block"
+          />
+          <img
+            src={ellips6}
+            alt=""
+            className="absolute  top-4 right-0 hidden midFM:block z-50"
+          />
+          <img
+            src={ellips7}
+            alt=""
+            className="absolute  top-[43rem] right-72 hidden midFM:block z-0"
+          />
+          <img
+            src={ellips7}
+            alt=""
+            className="absolute  top-[43rem] left-0 hidden midFM:block z-0"
           />
           <div className="w-[90%] mt-44  mx-auto sm:mt-0 relative z-40">
-            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 midlg:h-[80vh]">
+            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 midlg:h-[90vh]">
               <div className="midxmd:order-2 midxmd:w-full ocr">
                 <img src={First} alt="" className="midxmd:w-full" />
               </div>
@@ -64,11 +83,21 @@ const OcrIcr = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 grid grid-cols-1 gap-3 midFM:grid-cols-2 items-center justify-center mb-10">
-              <div className="order1 midFM:order-3 ocr  ">
+            <div className="mt-10 grid grid-cols-1 gap-3 midFM:grid-cols-2 items-center justify-center mb-10 relative z-40">
+              <img
+                src={ellips8}
+                alt=""
+                className="absolute  left-44 hidden midFM:block z-0"
+              />
+              <img
+                src={ellips9}
+                alt=""
+                className="absolute bottom-0 left-0 hidden midFM:block z-0"
+              />
+              <div className="order1 midFM:order-3 ocr">
                 <img src={second} alt="" className="mx-auto" />
               </div>
-              <div className="midFM:order-1 col-span-2">
+              <div className="midFM:order-1 col-span-2 relative z-50">
                 <h2 className="mx-auto  h-[4rem] z-30 relative text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Key Features of OCR/ICR (Handwritten)
                 </h2>
@@ -82,7 +111,7 @@ const OcrIcr = () => {
                   advantage is its ability to adapt effectively.
                 </p>
               </div>
-              <div className="midFM:order-2 flex flex-col items-center justify-between gap-5">
+              <div className="midFM:order-2 flex flex-col items-center justify-between gap-5 relative z-50">
                 <ul>
                   <li className="flex gap-1 items-start justify-center">
                     <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary mt-2">
@@ -142,42 +171,42 @@ const OcrIcr = () => {
                   </li>
                 </ul>
                 <Link to="demo" smooth={true} offset={-20} duration={1000}>
-                  <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1 relative z-10">
+                  <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1 relative z-50">
                     View a Demo
                   </button>
                 </Link>
               </div>
             </div>
-            <div className="midFM:mt-64 relative w-screen">
+            <div className="midFM:mt-64 relative w-screen z-30">
               <img
                 src={R2}
                 alt=""
-                className="absolute -top-[80%] w-screen -left-20"
+                className="absolute -top-[80%] w-screen -left-20 z-0"
               />
               <div className="w-[90%]">
-                <img src={ellips1} alt="" className="absolute right-0" />
+                <img src={ellips1} alt="" className="absolute right-0 z-0" />
                 <img
                   src={ellips2}
                   alt=""
-                  className="absolute top-44 -left-20"
+                  className="absolute top-44 -left-20 z-0"
                 />
                 <img
                   src={ellips3}
                   alt=""
-                  className="absolute top-[30%] right-[30%]"
+                  className="absolute top-[30%] right-[30%] z-0"
                 />
                 <img
                   src={ellips3}
                   alt=""
-                  className="absolute bottom-[10%] left-[20%]"
+                  className="absolute bottom-[10%] left-[20%] z-0"
                 />
                 <img
                   src={ellips4}
                   alt=""
-                  className="absolute bottom-0 right-0"
+                  className="absolute bottom-0 right-0 z-0"
                 />
                 <div>
-                  <h2 className="relative text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  <h2 className="relative text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary  z-40">
                     Difference between OCR & ICR
                   </h2>
                 </div>
@@ -247,11 +276,15 @@ const OcrIcr = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-10 midFM:mt-32 relative">
-              <img src={ellips3} alt="" className="absolute -left-16" />
-              <img src={ellips5} alt="" className="absolute top-64 -left-28" />
-              <div>
-                <h2 className="mx-auto  h-[4rem] z-30 text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <div className="mt-10 midFM:mt-32 relative z-40">
+              <img src={ellips3} alt="" className="absolute -left-16 z-0" />
+              <img
+                src={ellips5}
+                alt=""
+                className="absolute top-64 -left-28 z-0"
+              />
+              <div className="relative z-50">
+                <h2 className="mx-auto  h-[4rem] text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Document Recognition & Data Extraction
                 </h2>
               </div>
@@ -317,12 +350,12 @@ const OcrIcr = () => {
                 alt=""
                 className="absolute -top-[100%] -left-32 w-screen scale-[1.2] hidden midFM:block z-10"
               />
-              <div className="w-[90%]">
+              <div className="w-[90%] relative z-30">
                 <h2 className="text-2xl midxmd:text-5xl font-poppins text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Watch a demo video
                 </h2>
               </div>
-              <div className="order-3 w-[90%] midFM:order-4 midFM:col-span-2 mt-5">
+              <div className="order-3 w-[90%] midFM:order-4 midFM:col-span-2 mt-5 relative z-30">
                 <p className="font-poppins500 text-lg text-center mx-auto">
                   OCR/ICR helps businesses in extracting, classifying and
                   automating documents for all processes starting from customer

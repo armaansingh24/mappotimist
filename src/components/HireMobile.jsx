@@ -140,9 +140,9 @@ const HireMobile = () => {
   };
 
   return (
-    <div className="w-screen h-scree relative z-30 ">
-      <div className="w-[90%] mx-auto bg-white text-center rounded-3xl relative">
-        <img src={ellips1} alt="" className="absolute right-0 top-[30%] z-0" />
+      <div className=" relative z-[60]">
+      <div className=" mx-auto mt-[2.5%] bg-gradient-to-r from-white to-white rounded-xl">
+        <img src={ellips1} alt="" className="absolute right-0 top-[50%] z-0" />
         <img src={ellips2} alt="" className="absolute bottom-0 z-0" />
         <div className="flex items-center justify-center w-[90%] mx-auto flex-col">
           <div className="mt-10 flex gap-4 flex-col">

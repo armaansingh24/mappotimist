@@ -14,7 +14,9 @@ const PortfolioMobile = ({ item }) => {
         src={item.image}
         alt="slide_image"
         className={`${
-          item.id === 4 || item.id === 5 ? "w-[68%] mt-44 mx-auto" : " w-[80%]  p-5 mr-0 ml-7  z-50"
+          item.id === "Website1" || item.id === "Website2"
+            ? "w-[68%] mt-44 mx-auto"
+            : " w-[80%]  p-5 mr-0 ml-7  z-50"
         }`}
         onClick={handleReadMore}
       />

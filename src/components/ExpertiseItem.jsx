@@ -3,14 +3,12 @@ import React from "react";
 const ExpertiseItem = ({ item }) => {
  
   return (
-    <div
-      className="w-full p-[0.15rem] group  rounded-lg  relative "
-    >
+    <div className="w-full p-[0.15rem] group  rounded-lg  relative ">
       <div
         className="w-full h-full opacity-0 group-hover:opacity-100 absolute z-0 bg-gradient-to-bl from-secondary to-primary transition-all 
     ease duration-[500ms] inset-0 rounded-lg shadow-[1px_1px_10px_0px_#1CB5E0] "
       ></div>
-      <div className="flex mx-auto items-center flex-col gap-0 bg-white rounded-lg relative z-1 overflow-hidden">
+      <div className="flex mx-auto items-center flex-col gap-0 bg-[#F7F5F8] rounded-lg relative z-1 overflow-hidden">
         <img
           src={item.image}
           alt=""

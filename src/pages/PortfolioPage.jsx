@@ -30,10 +30,10 @@ const PortfolioPage = () => {
   return (
     <>
       {loading && <Loader />}
+      <div className="w-full relative z-50">
+        <PortfolioNavbar page={"portfolio"} />
+      </div>
       <div className="w-full relative z-10">
-        <div className="relative sm:absolute z-40">
-          <PortfolioNavbar />
-        </div>
         <div className="">
           <div className="relative z-0 bg-gradient-to-r from-secondary via-secondary to-white">
             <img
@@ -44,7 +44,7 @@ const PortfolioPage = () => {
           </div>
           <div className="absolute inset-0 mt-32">
             <div className="flex items-center justify-center flex-col sm:flex-row w-[90%] mx-auto midxmd:h-[25%]">
-              <div className="w-full xmd:-mt-[35%] middleXmd:-mt-[10%]">
+              <div className="w-full mt-32 sm:mt-0 xmd:-mt-[35%] middleXmd:-mt-[10%]">
                 <p className="font-poppins text-[30px] lmd:text-[48px] text-white">
                   We Provide{" "}
                 </p>
@@ -53,11 +53,9 @@ const PortfolioPage = () => {
                 </p>
               </div>
               <div className="w-full">
-              { item && item.mainImage && <img
-                  src={item.mainImage}
-                  alt=""
-                  className={`${item.css}`}
-                />}
+                {item && item.mainImage && (
+                  <img src={item.mainImage} alt="" className={`${item.css}`} />
+                )}
               </div>
             </div>
           </div>
@@ -480,7 +478,7 @@ const PortfolioPage = () => {
             </h2>
           </div>
           <div className="mx-auto relative z-10">
-            <PortfolioCarausel  page={"portfolio"} />
+            <PortfolioCarausel page={"portfolio"} />
           </div>
         </div>
       </div>

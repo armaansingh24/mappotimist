@@ -35,12 +35,12 @@ const PortfolioCarausel = ({ page }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 6,
-      slidesToSlide: 4,
+      items: 3,
+      slidesToSlide: 2,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
       slidesToSlide: 2, 
     },
     mobile: {
@@ -49,7 +49,7 @@ const PortfolioCarausel = ({ page }) => {
       slidesToSlide: 1,
     },
   };
-  const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+  const ButtonGroup = ({ next, previous }) => {
     return (
       <div
         className="absolute carousel-button-group mb-4 gap-4 flex justify-end 
@@ -106,7 +106,7 @@ const PortfolioCarausel = ({ page }) => {
   return (
     <>
       <div className="w-[90%] mx-auto slider">
-        <div className="container hidden sm:block mb-10">
+        <div className="container hidden middleXmd:block mb-10">
           <Swiper
             modules={[EffectCoverflow, Pagination, Navigation, Virtual]}
             effect={"coverflow"}
@@ -133,7 +133,7 @@ const PortfolioCarausel = ({ page }) => {
             }}
             pagination={{ clickable: true }}
             slidesPerView={3}
-            className="swiper_container mr-20"
+            className="swiper_container mr-20 "
           >
             {portfolioImages.map((item, index) => {
               if (item.id === "Website1") {
@@ -193,7 +193,7 @@ const PortfolioCarausel = ({ page }) => {
             </div>
           </Swiper>
         </div>
-        <div className="sm:hidden mb-12 ">
+        <div className="middleXmd:hidden mb-12 ">
           <div className="mx-1 relative flex flex-col-reverse group z-50">
             <Carousel
               responsive={responsive}
