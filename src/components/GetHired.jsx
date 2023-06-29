@@ -199,10 +199,11 @@ const GetHired = () => {
             summery: "",
           });
         } else {
-          toast.error("Email not sent");
+          toast.error("email not sent");
         }
       } catch (error) {
         toast.error("Email not sent");
+        console.log(error);
       }
     }
     errorHandler();
