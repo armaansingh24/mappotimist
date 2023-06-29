@@ -123,8 +123,8 @@ const HireMobile = () => {
       setError7("Expertise should be atleast 3 characters");
       return;
     }
-    if (formData.bio.trim().length > 50) {
-      setError7("Expertise should be less than 50 characters");
+    if (formData.bio.trim().length > 300) {
+      setError7("Expertise should be less than 300 characters");
       return;
     }
 

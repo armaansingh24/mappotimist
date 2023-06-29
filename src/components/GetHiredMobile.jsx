@@ -19,6 +19,7 @@ const GetHiredMobile = () => {
   const [error5, setError5] = useState("");
   const [error6, setError6] = useState("");
   const [error7, setError7] = useState("");
+  const [error8, setError8] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -123,6 +124,10 @@ const GetHiredMobile = () => {
     setError7("Required should be less than 50 characters");
     return;
   } 
+  if(formData.summery.trim().length > 300){
+    setError8("Summery should be less than 300 characters");
+    return;
+  }
      if (accountType === "Hire Team") {
        const formDataSent = {
          name: formData.name,
@@ -202,6 +207,7 @@ const GetHiredMobile = () => {
     setError5("");
     setError6("");
     setError7("");
+    setError8("");
   };
 
   const [accountType, setAccountType] = useState("Hire Team");
@@ -434,10 +440,14 @@ const GetHiredMobile = () => {
                     placeholder="Summary of project"
                     value={formData.summery}
                     minLength={10}
-                    maxLength={300}
                     className="h-full w-screen focus:outline-none text-lg resize-none"
                   />
                 </div>
+                {error8.length !== 0 && (
+                  <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                    {error8}
+                  </p>
+                )}
               </div>
               <button
                 type="submit"
