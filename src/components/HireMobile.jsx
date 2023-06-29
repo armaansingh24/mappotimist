@@ -34,7 +34,6 @@ const HireMobile = () => {
     setError4("File size should be less than 5 MB");
   };
   function changeHandler(event) {
-
     if (event.target.name === "file") {
       if (event.target.files[0].size > 5242880) {
         handleFlieInput();
@@ -58,9 +57,25 @@ const HireMobile = () => {
       setError1("This field is necessary");
       return;
     }
+    if (formData.name.trim().length < 3) {
+      setError1("Name should be atleast 3 characters long");
+      return;
+    }
+    if (formData.name.trim().length > 25) {
+      setError1("Name should be less than 25 characters");
+      return;
+    }
 
     if (formData.contact.trim() === "") {
       setError2("This field is necessary");
+      return;
+    }
+    if (formData.contact.trim().length < 3) {
+      setError2("Contact should be atleast 3");
+      return;
+    }
+    if (formData.contact.trim().length > 13) {
+      setError2("Contact should be less than 13");
       return;
     }
 
@@ -78,14 +93,38 @@ const HireMobile = () => {
       setError5("This field is necessary");
       return;
     }
+    if (formData.expertise.trim().length < 3) {
+      setError5("Expertise should be atleast 3 characters");
+      return;
+    }
+    if (formData.expertise.trim().length > 20) {
+      setError5("Expertise should be less than 20 characters");
+      return;
+    }
 
     if (formData.experience.trim() === "") {
       setError6("This field is necessary");
       return;
     }
+    if (formData.experience.trim().length < 3) {
+      setError6("Expertise should be atleast 3 characters");
+      return;
+    }
+    if (formData.experience.trim().length > 20) {
+      setError6("Expertise should be less than 20 characters");
+      return;
+    }
 
     if (formData.bio.trim() === "") {
       setError7("This field is necessary");
+      return;
+    }
+    if (formData.bio.trim().length < 3) {
+      setError7("Expertise should be atleast 3 characters");
+      return;
+    }
+    if (formData.bio.trim().length > 50) {
+      setError7("Expertise should be less than 50 characters");
       return;
     }
 
@@ -130,7 +169,6 @@ const HireMobile = () => {
     setError7("");
   };
 
-
   const handleFileReset = () => {
     fileInputRef.current.value = "";
     setFormData((prevData) => ({
@@ -140,7 +178,7 @@ const HireMobile = () => {
   };
 
   return (
-      <div className=" relative z-[60]">
+    <div className=" relative z-[60]">
       <div className=" mx-auto mt-[2.5%] bg-gradient-to-r from-white to-white rounded-xl">
         <img src={ellips1} alt="" className="absolute right-0 top-[50%] z-0" />
         <img src={ellips2} alt="" className="absolute bottom-0 z-0" />

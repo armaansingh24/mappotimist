@@ -59,13 +59,13 @@ const OcrIcr = () => {
             className="absolute  top-[43rem] left-0 hidden midFM:block z-0"
           />
           <div className="w-[90%] mt-44  mx-auto sm:mt-0 relative z-40">
-            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 midlg:h-[90vh]">
+            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 sm:h-[90vh]">
               <div className="midxmd:order-2 midxmd:w-full ocr">
                 <img src={First} alt="" className="midxmd:w-full" />
               </div>
               <div className="flex flex-col gap-2 midxmd:w-full">
                 <div>
-                  <h2 className="text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  <h2 className="text-2xl sm:text-3xl midFM:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                     OCR & ICR (Handwritten)
                   </h2>
                   <p className="text-sm midxmd:text-2xl font-poppins mt-4">
@@ -98,7 +98,7 @@ const OcrIcr = () => {
                 <img src={second} alt="" className="mx-auto" />
               </div>
               <div className="midFM:order-1 col-span-2 relative z-50">
-                <h2 className="mx-auto  h-[4rem] z-30 relative text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="mx-auto  h-[4rem] z-30 relative text-2xl sm:text-3xl midFM:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Key Features of OCR/ICR (Handwritten)
                 </h2>
                 <p className="text-sm midxmd:text-lg font-poppins mt-4">
@@ -206,7 +206,7 @@ const OcrIcr = () => {
                   className="absolute bottom-0 right-0 z-0"
                 />
                 <div>
-                  <h2 className="relative text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary  z-40">
+                  <h2 className="relative text-2xl sm:text-3xl midFM:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary  z-40">
                     Difference between OCR & ICR
                   </h2>
                 </div>
@@ -284,13 +284,11 @@ const OcrIcr = () => {
                 className="absolute top-64 -left-28 z-0"
               />
               <div className="relative z-50">
-                <h2 className="mx-auto  h-[4rem] text-2xl midxmd:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="mx-auto  h-[4rem] text-2xl sm:text-3xl midFM:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Document Recognition & Data Extraction
                 </h2>
               </div>
-              <div
-                className="mt-5 grid grid-cols-1 gap-5 items-center justify-center midFM:grid-cols-2 relative z-50"
-              >
+              <div className="mt-5 grid grid-cols-1 gap-5 items-center justify-center midFM:grid-cols-2 relative z-50">
                 <div className="order-1 midFM:col-span-2">
                   <p className="font-poppins500 text-lg">
                     At MappOptimist Technologies, We have developed a
@@ -331,7 +329,7 @@ const OcrIcr = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="order-3 midFM:order-4 midFM:col-span-2">
+                <div className="order-3 midFM:order-4 midFM:col-span-2 midFM:mt-10">
                   <p className="font-poppins500 text-lg">
                     Post document recognition, the software tool ensures that
                     field detection is done before Optical Character Recognition
@@ -353,7 +351,7 @@ const OcrIcr = () => {
                 className="absolute -top-[100%] -left-32 w-screen scale-[1.2] hidden midFM:block z-10"
               />
               <div className="w-[90%] relative z-30">
-                <h2 className="text-2xl midxmd:text-5xl font-poppins text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="text-2xl sm:text-3xl midlg:text-5xl font-poppins text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Watch a demo video
                 </h2>
               </div>

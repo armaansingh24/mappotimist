@@ -58,9 +58,25 @@ const GetHired = () => {
       setError1("This field is necessary");
       return;
     }
+    if(formData.name.trim().length < 3){
+      setError1("Name should be atleast 3 characters long");
+      return;
+    }
+    if(formData.name.trim().length > 25){
+      setError1("Name should be less than 25 characters");
+      return;
+    }
 
     if (formData.contact.trim() === "") {
       setError2("This field is necessary");
+      return;
+    }
+    if(formData.contact.trim().length < 3){
+      setError2("Contact should be atleast 3");
+      return;
+    }
+    if(formData.contact.trim().length > 13){
+      setError2("Contact should be less than 13");
       return;
     }
 
@@ -78,14 +94,38 @@ const GetHired = () => {
       setError5("This field is necessary");
       return;
     }
+    if(formData.expertise.trim().length < 3){
+      setError5("Expertise should be atleast 3 characters");
+      return;
+    }
+    if(formData.expertise.trim().length > 20){
+      setError5("Expertise should be less than 20 characters");
+      return;
+    }
 
     if (formData.experience.trim() === "") {
       setError6("This field is necessary");
       return;
     }
+    if (formData.experience.trim().length < 3) {
+      setError6("Expertise should be atleast 3 characters");
+      return;
+    }
+    if (formData.experience.trim().length > 20) {
+      setError6("Expertise should be less than 20 characters");
+      return;
+    }
 
     if (formData.bio.trim() === "") {
       setError7("This field is necessary");
+      return;
+    }
+    if (formData.bio.trim().length < 3) {
+      setError7("Expertise should be atleast 3 characters");
+      return;
+    }
+    if (formData.bio.trim().length > 50) {
+      setError7("Expertise should be less than 50 characters");
       return;
     }
 
@@ -139,7 +179,7 @@ const GetHired = () => {
 
   return (
     <>
-     <div className=" relative z-[60]">
+      <div className=" relative z-[60]">
         <div className=" mx-auto mt-[2.5%] bg-gradient-to-r from-[#000046] to-[#1CB5E0] rounded-xl">
           <div className="flex items-center flex-col mx-auto w-[100%]">
             <div className="text-center flex flex-col gap-4 w-[70%] p-4">
@@ -185,7 +225,7 @@ const GetHired = () => {
                   <span>
                     <IoLocationSharp />
                   </span>
-                  <p>New Delhi,India</p>
+                  <p>New Delhi, India, 110030</p>
                 </div>
               </div>
               <div className="w-full">
@@ -276,7 +316,7 @@ const GetHired = () => {
                       >
                         {formData.file !== "" ? (
                           <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">
-                            {formData.file.name}
+                            {formData.file.name.length > 20 ?(formData.file.name.slice(0, 15) + "..."):(formData.file.name)}
                           </span>
                         ) : (
                           <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">

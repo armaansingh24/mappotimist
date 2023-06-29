@@ -3,17 +3,17 @@ import logo from "../assets/navbar/logo.webp";
 
 function SplashScreen() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     const body = document.body;
-    body.style.overflow = "hidden";
+    window.scrollTo({ top: 0, left: 0 });
+    body.classList.add("no-scroll");
 
     return () => {
-      body.style.overflow = "auto";
+      body.classList.remove("no-scroll");
     };
   }, []);
 
   return (
-    <div className=" bg-gradient-to-br overflow-hidden from-secondary to-secondary via-white w-screen h-screen flex items-center justify-center">
+    <div className="splash-screen bg-gradient-to-br overflow-hidden from-secondary to-secondary via-white w-screen h-screen flex items-center justify-center">
       <div className="logo overflow-hidden">
         <img src={logo} alt="Logo" className="w-[30%] mx-auto" />
       </div>

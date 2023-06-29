@@ -44,7 +44,7 @@ const PortfolioPage = () => {
           </div>
           <div className="absolute inset-0 mt-32">
             <div className="flex items-center justify-center flex-col sm:flex-row w-[90%] mx-auto midxmd:h-[25%]">
-              <div className="w-full mt-32 sm:mt-0 xmd:-mt-[35%] middleXmd:-mt-[10%]">
+              <div className="w-full mt-32 sm:mt-0 xmd:-mt-[35%] midlg:-mt-[10%]">
                 <p className="font-poppins text-[30px] lmd:text-[48px] text-white">
                   We Provide{" "}
                 </p>
@@ -70,12 +70,12 @@ const PortfolioPage = () => {
             </p>
           </div>
 
-          <div className="mt-10 sm:mt-28 block middleXmd:hidden midFM:w-full">
+          <div className="mt-10 sm:mt-28 block midlg:hidden midFM:w-full">
             <div className="">
               <img
                 src={item.feature}
                 alt=""
-                className="w-[50%] mx-auto sm:w-[20%] midFM:w-[100%]"
+                className="w-[50%] mx-auto sm:w-[20%] midFM:w-[100%] xxmd:w-[20%]"
               />
             </div>
             <div className="grid grid-cols-2 gap-5 w-[90%] mx-auto items-center justify-center mt-10">
@@ -176,7 +176,7 @@ const PortfolioPage = () => {
               item.id === "Website1" || item.id === "Website2"
                 ? "h-[28rem]"
                 : "h-auto"
-            } hidden middleXmd:block relative p-10`}
+            } hidden midlg:block relative p-10`}
           >
             <div
               className={`${item.id === "Website2" ? "mt-44" : "mt-20"} mb-1 `}

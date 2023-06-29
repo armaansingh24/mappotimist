@@ -74,7 +74,7 @@ const ClientReviews = () => {
         <h2 className="font-poppins500 text-[30px] lmd:text-[48px] flex gap-2 flex-wrap sm:mt-24 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
           Client Reviews
         </h2>
-        <div className="w-full mt-[10%]">
+        <div className="w-full mt-[6%]">
           <div className="w-full flex justify-start items-end text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
             <div className="w-full midxmd:w-[45%] h-full midlg:w-full lg:w-[45%]">
               {data.map((item, index) => (
@@ -209,7 +209,7 @@ const ClientReviews = () => {
               <img src={pattern} alt="" className="" />
             </div>
           </div>
-          <div className="flex gap-6 sm:gap-4 self-end justify-items-end h-full mt-5 sm:mt-4">
+          <div className="flex gap-6 sm:gap-4 self-end justify-items-end h-full mt-1 sm:mt-4">
             <a
               href="https://www.facebook.com/profile.php?id=100093856182734&sk=about_details"
               target="_blank"

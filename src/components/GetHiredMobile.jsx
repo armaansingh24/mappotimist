@@ -55,33 +55,74 @@ const GetHiredMobile = () => {
 
    const handleSubmit = async (e) => {
      e.preventDefault();
+  if (formData.name.trim() === "") {
+    setError1("This field is necessary");
+    return;
+  }
+  if (formData.name.trim().length < 3) {
+    setError1("Name should be atleast 3 characters long");
+    return;
+  }
+  if (formData.name.trim().length > 25) {
+    setError1("Name should be less than 25 characters");
+    return;
+  }
 
-     if (formData.name.trim() === "") {
-       setError1("This field is necessary");
-       return;
-     }
+  if (formData.contact.trim() === "") {
+    setError2("This field is necessary");
+    return;
+  }
+  if (formData.contact.trim().length < 3) {
+    setError2("Contact should be atleast 3");
+    return;
+  }
+  if (formData.contact.trim().length > 13) {
+    setError2("Contact should be less than 13");
+    return;
+  }
 
-     if (formData.contact.trim() === "") {
-       setError2("This field is necessary");
-       return;
-     }
-     if (formData.email.trim() === "") {
-       setError3("This field is necessary");
-       return;
-     }
-     if (formData.type.trim() === "" && accountType === "Hire Team") {
-       setError5("This field is necessary");
-       return;
-     }
-     if (formData.duration.trim() === "" && accountType === "Hire Team") {
-       setError6("This field is necessary");
-       return;
-     }
-     if (formData.required.trim() === "" && accountType !== "Hire Team") {
-       setError7("This field is necessary");
-       return;
-     }
+  if (formData.email.trim() === "") {
+    setError3("This field is necessary");
+    return;
+  }
+  if (formData.type.trim() === "" && accountType === "Hire Team") {
+    setError5("This field is necessary");
+    return;
+  }
+  if (formData.type.trim().length < 3 && accountType === "Hire Team") {
+    setError5("Type should be atleast 3 characters");
+    return;
+  }
+  if (formData.type.trim().length > 50 && accountType === "Hire Team") {
+    setError5("Type should be less than 50 characters");
+    return;
+  }
 
+  if (formData.duration.trim() === "" && accountType === "Hire Team") {
+    setError6("This field is necessary");
+    return;
+  }
+  if (formData.duration.trim().length < 3 && accountType === "Hire Team") {
+    setError6("Duration should be atleast 3 characters");
+    return;
+  }
+  if (formData.duration.trim().length > 10 && accountType === "Hire Team") {
+    setError6("Duration should be less than 10 characters");
+    return;
+  }
+
+  if (formData.required.trim() === "" && accountType !== "Hire Team") {
+    setError7("This field is necessary");
+    return;
+  }
+  if (formData.required.trim().length < 3 && accountType !== "Hire Team") {
+    setError7("Required should be atleast 3 characters");
+    return;
+  }
+  if (formData.required.trim().length > 50 && accountType !== "Hire Team") {
+    setError7("Required should be less than 50 characters");
+    return;
+  } 
      if (accountType === "Hire Team") {
        const formDataSent = {
          name: formData.name,
@@ -320,7 +361,9 @@ const GetHiredMobile = () => {
                     >
                       {formData.file !== "" ? (
                         <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">
-                          {formData.file.name}
+                          {formData.file.name.length > 20
+                            ? formData.file.name.slice(0, 15) + "..."
+                            : formData.file.name}
                         </span>
                       ) : (
                         <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">

@@ -113,6 +113,7 @@ const PortfolioCarausel = ({ page }) => {
             onSlideChange={handleSlideChange}
             centeredSlides={true}
             loop={true}
+            autoWidth={false}
             coverflowEffect={{
               rotate: 14,
               stretch: 0,
@@ -142,7 +143,6 @@ const PortfolioCarausel = ({ page }) => {
                     <DesktopCarausel
                       index={index}
                       item={item}
-                     
                       currentSlideIndex={currentSlideIndex}
                     />
                   </SwiperSlide>
@@ -177,7 +177,9 @@ const PortfolioCarausel = ({ page }) => {
                 <AiOutlineArrowLeft
                   name="arrow-forward-outline"
                   className={`${
-                    page === "portfolio" ? "text-black" : "text-white"
+                    page === "portfolio"
+                      ? "text-black"
+                      : "text-white absolute top-[1.4rem] right-[.2rem]"
                   }`}
                 ></AiOutlineArrowLeft>
               </div>
@@ -186,7 +188,7 @@ const PortfolioCarausel = ({ page }) => {
                   name="arrow-back-outline"
                   className={`${
                     page === "portfolio" ? "text-black" : "text-white"
-                  } absolute top-[1.2rem] right-[.2rem]`}
+                  } absolute top-[1.2rem] right-[1rem]`}
                 ></AiOutlineArrowRight>
               </div>
               <div className="swiper-pagination" />
@@ -211,7 +213,6 @@ const PortfolioCarausel = ({ page }) => {
               {portfolioImages.map((item, index) => {
                 return (
                   <PortfolioMobile
-
                     key={index}
                     index={index}
                     item={item}

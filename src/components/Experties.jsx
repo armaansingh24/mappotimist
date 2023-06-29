@@ -18,7 +18,7 @@ const Experties = () => {
 
   return (
     <>
-      <div className="w-screen h-full relative" id="Expertise">
+      <div className="w-screen h-full relative -mt-44" id="Expertise">
         <img
           src={Ellipse1}
           alt=""
