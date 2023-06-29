@@ -87,7 +87,7 @@ const OcrIcr = () => {
               <img
                 src={ellips8}
                 alt=""
-                className="absolute  left-44 hidden midFM:block z-0"
+                className="absolute  left-44 hidden midFM:block w-[10%] middleXmd:w-[20%] z-0"
               />
               <img
                 src={ellips9}
@@ -166,7 +166,7 @@ const OcrIcr = () => {
                       Our OCR/ICR technologies seamlessly integrate with
                       document management, ERP, or CRM systems, enabling
                       efficient data flow and reducing manual data entry
-                      requirements.
+                      requirements.z
                     </p>
                   </li>
                 </ul>
@@ -352,7 +352,7 @@ const OcrIcr = () => {
               />
               <div className="w-[90%] relative z-30">
                 <h2 className="text-2xl sm:text-3xl midlg:text-5xl font-poppins text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Watch a demo video
+                  Watch a Demo Video
                 </h2>
               </div>
               <div className="order-3 w-[90%] midFM:order-4 midFM:col-span-2 mt-5 relative z-30">

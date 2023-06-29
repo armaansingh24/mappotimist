@@ -313,7 +313,7 @@ const Navbar = ({page}) => {
               </div>
               <div className="flex justify-end w-[13%]">
                 <Link
-                  to="#Home"
+                  to="/#Home"
                   className=""
                   onClick={() => {
                     window.scrollTo(0, 0);
