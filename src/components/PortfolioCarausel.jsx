@@ -179,7 +179,7 @@ const PortfolioCarausel = ({ page }) => {
                   className={`${
                     page === "portfolio"
                       ? "text-black"
-                      : "text-white absolute top-[1.4rem] right-[.2rem]"
+                      : "text-white absolute top-[1.3rem] right-[.6rem]"
                   }`}
                 ></AiOutlineArrowLeft>
               </div>
@@ -188,7 +188,7 @@ const PortfolioCarausel = ({ page }) => {
                   name="arrow-back-outline"
                   className={`${
                     page === "portfolio" ? "text-black" : "text-white"
-                  } absolute top-[1.2rem] right-[1rem]`}
+                  } absolute top-[1.2rem]`}
                 ></AiOutlineArrowRight>
               </div>
               <div className="swiper-pagination" />

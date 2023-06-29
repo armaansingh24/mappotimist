@@ -20,7 +20,7 @@ function App() {
   }, []);
   return (
     <>
-      <div className="w-full mx-auto relative overflow-hidden scroll-smooth bg-[#F7F5F8]">
+      <div className="w-full mx-auto relative overflow-hidden scroll-smooth bg-white">
         {showSplash && <SplashScreen />}
         <div className={`mx-auto ${showSplash ? "opacity-0" : "opacity-[1]"}`}>
           <>

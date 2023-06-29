@@ -41,17 +41,17 @@ const OcrIcr = () => {
           <img
             src={R1}
             alt=""
-            className="absolute w-[50%] -top-7 -left-[30%] z-0 hidden midFM:block"
+            className="absolute w-[50%] -top-7 -left-[30%] z-0 hidden sm:block"
           />
           <img
             src={ellips6}
             alt=""
-            className="absolute  top-4 right-0 hidden midFM:block z-50"
+            className="absolute  top-4 right-0 hidden sm:block z-50"
           />
           <img
             src={ellips7}
             alt=""
-            className="absolute  top-[43rem] right-72 hidden midFM:block z-0"
+            className="absolute  top-[43rem] right-72 hidden sm:block z-0"
           />
           <img
             src={ellips7}
@@ -181,7 +181,7 @@ const OcrIcr = () => {
               <img
                 src={R2}
                 alt=""
-                className="absolute -top-[80%] w-screen -left-20 z-0"
+                className="absolute -top-[80%] w-screen -left-20 z-0 hidden midFM:block"
               />
               <div className="w-[90%]">
                 <img src={ellips1} alt="" className="absolute right-0 z-0" />
