@@ -15,19 +15,19 @@ const Footer = () => {
               <p className="text-2xl sm:text-3xl">MappOptimist</p>
               <ul className="text-xl flex gap-1 flex-col sm:text-2xl mt-5">
                 <Link to={"About"} smooth={true} offset={0} duration={1000}>
-                  <li className="cursor-pointer">about</li>
+                  <li className="cursor-pointer">About</li>
                 </Link>
-                <li className="cursor-pointer">careers</li>
+                <li className="cursor-pointer">Careers</li>
                 <li className="cursor-pointer">
                   <a
                     href={PrivacyPolicy}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    privacy policies
+                    Privacy Policies
                   </a>
                 </li>
-                <li className="cursor-pointer">terms & conditions</li>
+                <li className="cursor-pointer">Terms & Conditions</li>
               </ul>
             </div>
             <div className="flex gap-6 sm:gap-4 self-end justify-items-end h-full mt-5 sm:mt-4">
