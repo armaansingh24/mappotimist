@@ -179,6 +179,7 @@ body {
     height: auto;
     /* position: relative; */
 }
+
 .swiper-slide {
     width: 50%;
 }
@@ -224,7 +225,7 @@ body {
     }
 
     .swiper_container {
-        height:40rem;
+        height: 40rem;
         /* width: 80%; */
     }
 }
@@ -275,7 +276,10 @@ body {
 
 
 .agencies {
-    background-position: 60% 15%;
+    /* background-position: 60% 15%; */
+    background-position: top 15px right 0px;
+    background-position-x: 60%;
+    background-position-y: 15%;
     background-repeat: no-repeat;
 }
 
@@ -285,6 +289,7 @@ body {
         background-size: 100% 100%;
     }
 }
+
 .card {
     animation-name: rotate;
     animation-duration: 5s;
@@ -387,14 +392,17 @@ body {
     0% {
         transform: scale(0);
     }
+
     50% {
         transform: scale(1);
     }
 }
+
 @keyframes pop-out {
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.5);
         opacity: 0;
@@ -409,7 +417,8 @@ body {
 .animate-pop-up {
     animation: pop-up 3s ease infinite;
 }
-.animate-pop-out{
+
+.animate-pop-out {
     animation: pop-out 3s ease infinite;
 }
 

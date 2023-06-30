@@ -51,7 +51,14 @@ const GetHired = () => {
        setFormData((prevData) => ({
          ...prevData,
          [event.target.name]: event.target.value,
-       }));
+        }));
+        if (
+          event.target.value.trim().length > 300 &&
+          event.target.name === "summery"
+        ) {
+          setError8("Summery should be less than 300 characters");
+          return;
+        }
      }
    }
 

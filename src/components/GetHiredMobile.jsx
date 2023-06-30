@@ -32,174 +32,180 @@ const GetHiredMobile = () => {
     summery: "",
   });
 
-    const handleFlieInput = () => {
-      setError4("File size should be less than 5 MB");
-    };
-    function changeHandler(event) {
-      if (event.target.name === "file") {
-        if (event.target.files[0].size > 5242880) {
-          handleFlieInput();
-          return;
-        }
-        setFormData((prevData) => ({
-          ...prevData,
-          file: event.target.files[0]
-        }));
-      } else {
-        setFormData((prevData) => ({
-          ...prevData,
-          [event.target.name]: event.target.value,
-        }));
+  const handleFlieInput = () => {
+    setError4("File size should be less than 5 MB");
+  };
+  function changeHandler(event) {
+    if (event.target.name === "file") {
+      if (event.target.files[0].size > 5242880) {
+        handleFlieInput();
+        return;
+      }
+      setFormData((prevData) => ({
+        ...prevData,
+        file: event.target.files[0],
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [event.target.name]: event.target.value,
+      }));
+      if (
+        event.target.value.trim().length > 300 &&
+        event.target.name === "summery"
+      ) {
+        setError8("Summery should be less than 300 characters");
+        return;
       }
     }
-
-
-   const handleSubmit = async (e) => {
-     e.preventDefault();
-  if (formData.name.trim() === "") {
-    setError1("This field is necessary");
-    return;
-  }
-  if (formData.name.trim().length < 3) {
-    setError1("Name should be atleast 3 characters long");
-    return;
-  }
-  if (formData.name.trim().length > 25) {
-    setError1("Name should be less than 25 characters");
-    return;
   }
 
-  if (formData.contact.trim() === "") {
-    setError2("This field is necessary");
-    return;
-  }
-  if (formData.contact.trim().length < 3) {
-    setError2("Contact should be atleast 3");
-    return;
-  }
-  if (formData.contact.trim().length > 13) {
-    setError2("Contact should be less than 13");
-    return;
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (formData.name.trim() === "") {
+      setError1("This field is necessary");
+      return;
+    }
+    if (formData.name.trim().length < 3) {
+      setError1("Name should be atleast 3 characters long");
+      return;
+    }
+    if (formData.name.trim().length > 25) {
+      setError1("Name should be less than 25 characters");
+      return;
+    }
 
-  if (formData.email.trim() === "") {
-    setError3("This field is necessary");
-    return;
-  }
-  if (formData.type.trim() === "" && accountType === "Hire Team") {
-    setError5("This field is necessary");
-    return;
-  }
-  if (formData.type.trim().length < 3 && accountType === "Hire Team") {
-    setError5("Type should be atleast 3 characters");
-    return;
-  }
-  if (formData.type.trim().length > 50 && accountType === "Hire Team") {
-    setError5("Type should be less than 50 characters");
-    return;
-  }
+    if (formData.contact.trim() === "") {
+      setError2("This field is necessary");
+      return;
+    }
+    if (formData.contact.trim().length < 3) {
+      setError2("Contact should be atleast 3");
+      return;
+    }
+    if (formData.contact.trim().length > 13) {
+      setError2("Contact should be less than 13");
+      return;
+    }
 
-  if (formData.duration.trim() === "" && accountType === "Hire Team") {
-    setError6("This field is necessary");
-    return;
-  }
-  if (formData.duration.trim().length < 3 && accountType === "Hire Team") {
-    setError6("Duration should be atleast 3 characters");
-    return;
-  }
-  if (formData.duration.trim().length > 10 && accountType === "Hire Team") {
-    setError6("Duration should be less than 10 characters");
-    return;
-  }
+    if (formData.email.trim() === "") {
+      setError3("This field is necessary");
+      return;
+    }
+    if (formData.type.trim() === "" && accountType === "Hire Team") {
+      setError5("This field is necessary");
+      return;
+    }
+    if (formData.type.trim().length < 3 && accountType === "Hire Team") {
+      setError5("Type should be atleast 3 characters");
+      return;
+    }
+    if (formData.type.trim().length > 50 && accountType === "Hire Team") {
+      setError5("Type should be less than 50 characters");
+      return;
+    }
 
-  if (formData.required.trim() === "" && accountType !== "Hire Team") {
-    setError7("This field is necessary");
-    return;
-  }
-  if (formData.required.trim().length < 3 && accountType !== "Hire Team") {
-    setError7("Required should be atleast 3 characters");
-    return;
-  }
-  if (formData.required.trim().length > 50 && accountType !== "Hire Team") {
-    setError7("Required should be less than 50 characters");
-    return;
-  } 
-  if(formData.summery.trim().length > 300){
-    setError8("Summery should be less than 300 characters");
-    return;
-  }
-     if (accountType === "Hire Team") {
-       const formDataSent = {
-         name: formData.name,
-         contact: formData.contact,
-         email: formData.email,
-         type: formData.type,
-         duration: formData.duration,
-         summery: formData.summery,
-         file: formData.file,
-       };
-       try {
-         const response = await axios.post(
-           "http://128.199.17.62:8080/v1/send-email-hire-team",
-           formDataSent,
-           {
-             headers: {
-               "Content-Type": "multipart/form-data",
-             },
-           }
-         );
-         if (response.status === 200) {
-           toast.success("Email sent successfully");
-           setFormData({
-             name: "",
-             contact: "",
-             email: "",
-             required: "",
-             file: "",
-             type: "",
-             duration: "",
-             summery: "",
-           });
-         } else {
-           toast.error("Email not sent");
-         }
-       } catch (error) {
-         toast.error("Email not sent");
-       }
-     } else {
-       const formDataSent = {
-         name: formData.name,
-         contact: formData.contact,
-         email: formData.email,
-         required: formData.required,
-         summery: formData.summery,
-       };
-       try {
-         const response = await axios.post(
-           "http://128.199.17.62/v1/send-email-individual",
-           formDataSent
-         );
-         if (response.status === 200) {
-           toast.success("Email sent successfully");
-           setFormData({
-             name: "",
-             contact: "",
-             email: "",
-             required: "",
-             file: "",
-             type: "",
-             duration: "",
-             summery: "",
-           });
-         } else {
-           toast.error("Email not sent");
-         }
-       } catch (error) {
-         toast.error("Email not sent");
-       }
-     }
-     errorHandler();
-   };
+    if (formData.duration.trim() === "" && accountType === "Hire Team") {
+      setError6("This field is necessary");
+      return;
+    }
+    if (formData.duration.trim().length < 3 && accountType === "Hire Team") {
+      setError6("Duration should be atleast 3 characters");
+      return;
+    }
+    if (formData.duration.trim().length > 10 && accountType === "Hire Team") {
+      setError6("Duration should be less than 10 characters");
+      return;
+    }
+
+    if (formData.required.trim() === "" && accountType !== "Hire Team") {
+      setError7("This field is necessary");
+      return;
+    }
+    if (formData.required.trim().length < 3 && accountType !== "Hire Team") {
+      setError7("Required should be atleast 3 characters");
+      return;
+    }
+    if (formData.required.trim().length > 50 && accountType !== "Hire Team") {
+      setError7("Required should be less than 50 characters");
+      return;
+    }
+    if (formData.summery.trim().length > 300) {
+      setError8("Summery should be less than 300 characters");
+      return;
+    }
+    if (accountType === "Hire Team") {
+      const formDataSent = {
+        name: formData.name,
+        contact: formData.contact,
+        email: formData.email,
+        type: formData.type,
+        duration: formData.duration,
+        summery: formData.summery,
+        file: formData.file,
+      };
+      try {
+        const response = await axios.post(
+          "http://128.199.17.62:8080/v1/send-email-hire-team",
+          formDataSent,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        if (response.status === 200) {
+          toast.success("Email sent successfully");
+          setFormData({
+            name: "",
+            contact: "",
+            email: "",
+            required: "",
+            file: "",
+            type: "",
+            duration: "",
+            summery: "",
+          });
+        } else {
+          toast.error("Email not sent");
+        }
+      } catch (error) {
+        toast.error("Email not sent");
+      }
+    } else {
+      const formDataSent = {
+        name: formData.name,
+        contact: formData.contact,
+        email: formData.email,
+        required: formData.required,
+        summery: formData.summery,
+      };
+      try {
+        const response = await axios.post(
+          "http://128.199.17.62/v1/send-email-individual",
+          formDataSent
+        );
+        if (response.status === 200) {
+          toast.success("Email sent successfully");
+          setFormData({
+            name: "",
+            contact: "",
+            email: "",
+            required: "",
+            file: "",
+            type: "",
+            duration: "",
+            summery: "",
+          });
+        } else {
+          toast.error("Email not sent");
+        }
+      } catch (error) {
+        toast.error("Email not sent");
+      }
+    }
+    errorHandler();
+  };
   const errorHandler = () => {
     setError1("");
     setError2("");
@@ -216,7 +222,7 @@ const GetHiredMobile = () => {
     fileInputRef.current.value = "";
     setFormData((prevData) => ({
       ...prevData,
-      file: "", 
+      file: "",
     }));
   };
 

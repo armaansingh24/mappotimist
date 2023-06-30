@@ -49,6 +49,13 @@ const GetHired = () => {
         ...prevData,
         [event.target.name]: event.target.value,
       }));
+      if (
+        event.target.value.trim().length > 300 &&
+        event.target.name === "bio"
+      ) {
+        setError7("Bio should be less than 300 characters");
+        return;
+      }
     }
   }
 
@@ -117,11 +124,11 @@ const GetHired = () => {
       return;
     }
     if (formData.bio.trim().length < 3) {
-      setError7("Expertise should be atleast 3 characters");
+      setError7("Bio should be atleast 3 characters");
       return;
     }
-    if (formData.bio.trim().length > 50) {
-      setError7("Expertise should be less than 50 characters");
+    if (formData.bio.trim().length > 300) {
+      setError7("Bio should be less than 300 characters");
       return;
     }
 
@@ -381,8 +388,6 @@ const GetHired = () => {
                         onChange={changeHandler}
                         placeholder="Bio"
                         value={formData.bio}
-                        minLength={10}
-                        maxLength={300}
                         onClick={errorHandler}
                         className="h-full w-full focus:outline-none text-lg mr-20 resize-none"
                       />

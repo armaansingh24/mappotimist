@@ -48,6 +48,13 @@ const HireMobile = () => {
         ...prevData,
         [event.target.name]: event.target.value,
       }));
+      if (
+        event.target.value.trim().length > 300 &&
+        event.target.name === "bio"
+      ) {
+        setError7("Bio should be less than 300 characters");
+        return;
+      }
     }
   }
 
@@ -120,11 +127,11 @@ const HireMobile = () => {
       return;
     }
     if (formData.bio.trim().length < 3) {
-      setError7("Expertise should be atleast 3 characters");
+      setError7("Bio should be atleast 3 characters");
       return;
     }
     if (formData.bio.trim().length > 300) {
-      setError7("Expertise should be less than 300 characters");
+      setError7("Bio should be less than 300 characters");
       return;
     }
 
@@ -349,7 +356,6 @@ const HireMobile = () => {
                     placeholder="Bio"
                     value={formData.bio}
                     minLength={10}
-                    maxLength={300}
                     onClick={errorHandler}
                     className="h-full w-full focus:outline-none text-lg  resize-none"
                   />
