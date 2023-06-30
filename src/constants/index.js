@@ -115,7 +115,7 @@ export const carouselItems = [
     step: "Step1",
     title: "Thinking",
     description:
-      "To ensure project success, it is important to understand the client's requirements, goals, and target audience. This involves proper thinking, conducting thorough market research, and competitor analysis. With this information in hand, we define the project scope, features, and deliverables. Finally, a comprehensive project plan is created, outlining timelines and resource allocations for smooth execution.",
+      "To ensure project success, it is important to understand the client's requirements, goals and target audience. This involves proper thinking, conducting thorough market research, and competitor analysis. With this information in hand, we define the project scope, features, and deliverables. Finally, a comprehensive project plan is created, outlining timelines and resource allocations for smooth execution.",
     image: slider1,
   },
   {
@@ -124,7 +124,7 @@ export const carouselItems = [
     step: "Step2",
     title: "Develop",
     description:
-      "With a plan ready then we assign tasks to our expert developer for execution as well as monazite regular progress. Maintain open communication and collaboration, implement quality assurance measures, and manage project risks. Continuously track progress, review and adapt the plan, and conduct a post-project evaluation for improvement.",
+      "With a plan ready then we assign tasks to our expert developer for execution as well as monazite regular progress. Maintain open communication and collaboration, implement quality assurance measures, and manage project risks. Continuously track progress, review and adapt the plan and conduct a post-project evaluation for improvement.",
     image: slider2,
   },
   {
@@ -133,7 +133,7 @@ export const carouselItems = [
     step: "Step3",
     title: "Deliver and Scale",
     description:
-      "After development, a deployment strategy is defined, accompanied by comprehensive testing and user acceptance testing. A detailed deployment plan is created, along with training and documentation. Incremental deployment is considered. Scalability is planned, performance is monitored, feedback is gathered for iteration, and post-deployment support is provided for long-term success.",
+      "After development, a deployment strategy is defined, accompanied by comprehensive testing and user acceptance testing. A detailed deployment plan is created, along with training and documentation. Incremental deployment is considered. Scalability is planned, performance is monitored, feedback is gathered for iteration and post-deployment support is provided for long-term success.",
     image: slider3,
   },
 ];
@@ -692,23 +692,23 @@ export const reviews = [
     id: 1,
     image: image1,
     name: "Olivia Diniz",
-    date: "03/04/20",
+    date: "03/04/2020",
     description:
-      " The IT services and solutions provided by this company are top-notch. Their expertise, reliability, and efficiency have greatly enhanced our business operations. Enthusiastically endorsed!",
+      " The IT services and solutions provided by this company are top-notch. Their expertise, reliability and efficiency have greatly enhanced our business operations. Enthusiastically endorsed!",
   },
   {
     id: 2,
     image: image2,
     name: "Renato Weiser",
-    date: "23/09/20",
+    date: "23/09/2020",
     description:
-      "Reliable and efficient IT services provider; their solutions transformed our operations. The team's expertise, responsiveness, and commitment to excellence made them an invaluable partner.",
+      "Reliable and efficient IT services provider; their solutions transformed our operations. The team's expertise, responsiveness and commitment to excellence made them an invaluable partner.",
   },
   {
     id: 3,
     image: image3,
     name: "Sofia Coasta",
-    date: "20/07/22",
+    date: "20/07/2022",
     description:
       "Exceptional IT services! The company's expertise and efficient solutions have transformed our business. Their prompt support and innovative approach make them a reliable partner. Highly recommended!",
   },
@@ -716,17 +716,17 @@ export const reviews = [
     id: 4,
     image: image4,
     name: "Wilton Hou",
-    date: "12/06/19",
+    date: "12/06/2019",
     description:
-      " Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism, and timely delivery exceeded our expectations. Highly recommended!",
+      " Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism and timely delivery exceeded our expectations. Highly recommended!",
   },
   {
     id: 5,
     image: image5,
     name: "Olive Kogo",
-    date: "1/1/2022",
+    date: "01/01/2022",
     description:
-      "Exceptional Android development services; they built an impressive app that perfectly catered to our needs. Their team's expertise, attention to detail, and prompt support made the experience seamless.",
+      "Exceptional Android development services; they built an impressive app that perfectly catered to our needs. Their team's expertise, attention to detail and prompt support made the experience seamless.",
   },
 ];
 

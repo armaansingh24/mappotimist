@@ -138,13 +138,13 @@ const Navbar = () => {
                   >
                     Developer
                   </Link>
-                  <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-full">
-                    <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-8 z-0"></div>
-                    <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-14 -translate-y-6">
+                  <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-[40%]">
+                    <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-7 z-0"></div>
+                    <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-16 -translate-y-6 w-[85%]">
                       <ul className="list-none flex flex-col items-start justify-center">
                         <li className="font-roboto100">
                           <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 text-xl"
+                            className="px-4 py-2 text-gray-800 flex items-center justify-start gap-2 transition-all duration-300 group hover:translate-x-4 text-xl"
                             onClick={() => {
                               setIsOpen(!isOpen);
                               handleGetHired();
@@ -160,7 +160,7 @@ const Navbar = () => {
                         </li>
                         <li className="font-roboto100">
                           <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 "
+                            className="px-4 py-2 text-gray-800 flex items-center justify-start gap-2 transition-all duration-300 group hover:translate-x-4 "
                             onClick={() => {
                               setIsOpen(!isOpen);
                               handleGetHire();
@@ -176,7 +176,7 @@ const Navbar = () => {
                         </li>
                         <li className="font-roboto100">
                           <NavLink to="/orc-icr">
-                            <button className="px-4 py-2 text-gray-800 flex items-center justify-center gap-2 transition-all duration-300 group hover:translate-x-4 ">
+                            <button className="px-4 py-2 text-gray-800 flex items-center justify-start gap-2 transition-all duration-300 group hover:translate-x-4 ">
                               <span className="w-[15%]">
                                 <img src={ocr} alt="" />
                               </span>

@@ -107,12 +107,8 @@ const GetHired = () => {
       setError6("This field is necessary");
       return;
     }
-    if (formData.experience.trim().length < 3) {
-      setError6("Expertise should be atleast 3 characters");
-      return;
-    }
     if (formData.experience.trim().length > 20) {
-      setError6("Expertise should be less than 20 characters");
+      setError6("Here should be less than 20 characters");
       return;
     }
 
