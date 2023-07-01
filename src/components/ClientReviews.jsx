@@ -209,37 +209,6 @@ const ClientReviews = () => {
               <img src={pattern} alt="" className="" />
             </div>
           </div>
-          <div className="flex gap-6 sm:gap-4 self-end justify-items-end h-full mt-1 sm:mt-4">
-            <a
-              href="https://www.facebook.com/profile.php?id=100093856182734&sk=about_details"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              <img src={fb} alt="" />
-            </a>
-            <img
-              src={slack}
-              alt=""
-              className="cursor-pointer"
-            />
-            <a
-              href="https://www.instagram.com/mappoptimist_technologies/?igshid=MjAxZDBhZDhlNA%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              <img src={insta} alt="" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/mappoptimist-technologies/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer mt-1"
-            >
-              <img src={linkedin} alt="" />
-            </a>
-          </div>
         </div>
       </div>
     </>
