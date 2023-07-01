@@ -26,9 +26,9 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4  sm:grid-cols-2 items-center justify-center">
+        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden  sm:grid-cols-2 items-center justify-center">
           <div className="sm:order-2 sm:w-full">
-            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-xl sm:text-3xl font-poppins">
+            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Building greater futures through innovation and collective
               knowledge
             </h3>
@@ -66,17 +66,17 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="w-[90%] mx-auto  flex-col gap-4 hidden xxmd:flex">
+        <div className="w-[90%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10">
           <div className="flex gap-10 items-center">
             <div className="w-[30%]">
               <img src={secondSection} alt="" className="w-full" />
             </div>
             <div className="w-[80%]">
-              <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-5xl h-[6.5rem]">
+              <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-5xl pb-2 font-poppins">
                 Building greater futures through innovation and collective
                 knowledge
               </h3>
-              <p className="text-base sm:text-2xl font-poppins300">
+              <p className="text-base sm:text-xl font-poppins300 mt-6">
                 MappOptimist is a leading IT & Fintech solution provider,
                 dedicated to empowering businesses with cutting-edge
                 technologies. We specialize in delivering end-to-end IT
