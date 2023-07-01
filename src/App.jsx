@@ -8,6 +8,7 @@ import Whatsapp from "./components/Whatsapp";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -29,6 +30,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio/:itemId" element={<PortfolioPage />} />
               <Route path="/orc-icr" element={<OcrIcr />} />
+              <Route path="/about-us" element={<AboutUs />} />
             </Routes>
           </>
           <GoToTop />

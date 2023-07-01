@@ -3,7 +3,7 @@ import insta from "../assets/footer/insta.webp";
 import fb from "../assets/footer/fb.webp";
 import slack from "../assets/footer/slack.webp";
 import linkedin from "../assets/footer/linkedin.webp";
-import { Link } from "react-scroll";
+import { NavLink as Link } from "react-router-dom";
 import PrivacyPolicy from "../assets/footer/PrivacyPolicy.pdf";
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around midFM:mr-40">
               <p className="text-2xl sm:text-3xl">MappOptimist</p>
               <ul className="text-xl flex gap-1 flex-col sm:text-2xl mt-5">
-                <Link to={"About"} smooth={true} offset={0} duration={1000}>
+                <Link to="/about-us">
                   <li className="cursor-pointer">About</li>
                 </Link>
                 <li className="cursor-pointer">Careers</li>
