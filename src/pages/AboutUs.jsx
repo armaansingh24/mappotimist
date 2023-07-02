@@ -252,7 +252,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-screen testimonial py-10">
+        <div className="w-screen testimonial py-10 mt-10">
           <div className="w-[80%] mx-auto">
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Testimonial
@@ -269,7 +269,7 @@ const AboutUs = () => {
               sliderClass={true}
               showDots={false}
               autoPlay={ true}
-              autoPlaySpeed={3000}
+              autoPlaySpeed={5000}
             >
               {testimonials.map((testimonial, index) => (
                 <TestimonialsItem testimonial={testimonial} key={index} />
