@@ -446,3 +446,7 @@ body {
 .about{
     background: linear-gradient(225deg, #FBFBFB 0%, rgba(186, 230, 242, 0.48) 100%);
 }
+
+.testimonial{
+    background: rgba(250, 250, 250, 0.95);
+}

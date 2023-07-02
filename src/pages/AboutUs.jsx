@@ -3,12 +3,34 @@ import PortfolioNavbar from "../components/PortfolioNavbar";
 import firstSection from "../assets/aboutUs/firstSection.png";
 import secondSection from "../assets/aboutUs/secondSection.png";
 import picture1 from "../assets/aboutUs/picture1.png";
-import picture2 from "../assets/aboutUs/picture2.png";
 import { SiFacebook } from "react-icons/si";
-import { BsSlack, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import { AiOutlineSlack } from "react-icons/ai";
 import { RiInstagramFill } from "react-icons/ri";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { testimonials } from "../constants";
+import TestimonialsItem from "../components/TestimonialsItem";
 
 const AboutUs = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1.5,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+
   return (
     <>
       <div className="">
@@ -113,12 +135,10 @@ const AboutUs = () => {
         </div>
         <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden sm:grid-cols-2 items-center justify-center">
           <div className="sm:order-2 sm:w-full flex flex-col items-start justify-center">
-            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Yashvant Sikarvar
-            </h3>
-            <p className="text-2xl p-1 sm:text-4xl font-poppins">
-              Founder & CEO
-            </p>
+            </h2>
+            <p className="text-2xl p-1 font-poppins">Founder & CEO</p>
           </div>
           <div className="sm:row-span-2 sm:order-1 mx-auto my-auto">
             <img src={picture1} alt="" />
@@ -137,32 +157,49 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="flex gap-6">
-              <a href="#" className="group">
+              <a
+                href="https://www.facebook.com/yash.sikarvar/"
+                className="group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
               </a>
-              <a href="#" className="group">
-                <BsSlack className="text-[#7F838D] group-hover:text-primary" />
+              <a
+                href="#"
+                className="group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineSlack className="text-[#7F838D] group-hover:text-primary" />
               </a>
-              <a href="#" className="group">
-                <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
+              <a
+                href="https://instagram.com/yash_sikarvar?igshid=MzRlODBiNWFlZA=="
+                className="group object-contain"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <RiInstagramFill className="text-[#7F838D] group-hover:text-primary w-full h-full" />
               </a>
-              <a href="#" className="group">
+              <a
+                href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
+                className="group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BsLinkedin className="text-[#7F838D] group-hover:text-primary" />
               </a>
             </div>
           </div>
         </div>
-
         <div className="hidden xxmd:block mx-auto w-[80%] mt-20">
-          <div className="flex gap-10 items-start">
+          <div className="flex gap-10 items-center justify-center">
             <div className="w-full flex flex-col items-start justify-center gap-5 ">
               <div>
                 <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-4xl font-poppins">
                   Yashvant Sikarvar
                 </h3>
-                <p className="text-2xl  sm:text-2xl font-poppins">
-                  Founder & CEO
-                </p>
+                <p className="text-2xl font-poppins">Founder & CEO</p>
               </div>
               <p className="text-lg">
                 An IIT Graduate ranked 22nd in AIR, is a Gate and NET Qualified
@@ -175,24 +212,69 @@ const AboutUs = () => {
                 Market, Gaming, Keyboard Applications, and various other.
               </p>
               <div className="flex gap-6">
-                <a href="#" className="group">
+                <a
+                  href="https://www.facebook.com/yash.sikarvar/"
+                  className="group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
                 </a>
-                <a href="#" className="group">
-                  <BsSlack className="text-[#7F838D] group-hover:text-primary" />
+                <a
+                  href="#"
+                  className="group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiOutlineSlack className="text-[#7F838D] group-hover:text-primary" />
                 </a>
-                <a href="#" className="group">
-                  <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
+                <a
+                  href="https://instagram.com/yash_sikarvar?igshid=MzRlODBiNWFlZA=="
+                  className="group object-contain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <RiInstagramFill className="text-[#7F838D] group-hover:text-primary w-full h-full" />
                 </a>
-                <a href="#" className="group">
+                <a
+                  href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
+                  className="group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <BsLinkedin className="text-[#7F838D] group-hover:text-primary" />
                 </a>
               </div>
             </div>
             <div className="w-[50%]">
               <img src={picture1} alt="" className="" />
-              {/* <img src={picture2} alt="" /> */}
             </div>
+          </div>
+        </div>
+
+        <div className="w-screen testimonial py-10">
+          <div className="w-[80%] mx-auto">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
+              Testimonial
+            </h2>
+            <p className="text-2xl p-1 font-poppins">
+              See what they say about us
+            </p>
+          </div>
+          <div className="mt-10 w-[90%] mx-auto">
+            <Carousel
+              responsive={responsive}
+              arrows={false}
+              infinite={true}
+              sliderClass={true}
+              showDots={false}
+              autoPlay={ true}
+              autoPlaySpeed={3000}
+            >
+              {testimonials.map((testimonial, index) => (
+                <TestimonialsItem testimonial={testimonial} key={index} />
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>

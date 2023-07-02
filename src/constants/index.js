@@ -84,6 +84,11 @@ import document from "../assets/OcrIcr/document.webp";
 import documentJson from "../assets/OcrIcr/documentJson.webp";
 import passport from "../assets/OcrIcr/passport.webp";
 import passportJaon from "../assets/OcrIcr/passportJaon.webp";
+import Jabier from "../assets/aboutUs/Jabier.webp";
+import Carmel from "../assets/aboutUs/Carmel.webp";
+import Angela from "../assets/aboutUs/Angela.webp";
+import John from "../assets/aboutUs/John.webp";
+import Austin from "../assets/aboutUs/Austin.webp";
 
 export const navLinks = [
   {
@@ -892,5 +897,53 @@ export const Ai = [
     id: 3,
     image: document,
     json: documentJson,
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Jabier Silveira",
+    testimonial:
+      "I have had an excellent experience thus far working with MappOptimist. The managers and teammates have been incredibly cooperative and friendly. The company consistently delivers stable builds that meet client requirements. Regular calls and communication contribute significantly to building confidence in their services.",
+    image: Jabier,
+    date: "12/03/2023",
+    rating: 4,
+  },
+  {
+    id: 2,
+    name: "Carmel Gomez",
+    testimonial:
+      "Working with MappOptimist Technologies has been an exceptional experience. There is no need for hesitation, even if you have a business idea, as their expertise will transform it into reality. I now have a fully functional application, thanks to MappOptimist. I would like to express my special gratitude to the founder, Mr Yashvant Sikarvar, who remained directly involved throughout the entire process.",
+    image: Carmel,
+    date: "23/08/2022",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "John Deckard",
+    testimonial:
+      "Working with MappOptimist Technologies has been a game-changer for our business. Their IT solutions are top-notch, delivering impressive results that have significantly improved our operations. We couldn't be happier with their expertise and professionalism.",
+    image: John,
+    date: "04/02/2021",
+    rating: 4,
+  },
+  {
+    id: 4,
+    name: "Austin Baselga",
+    testimonial:
+      "Choosing MappOptimist Technologies as our IT solution provider was one of the best decisions we made. They seamlessly integrated our systems, streamlined our processes, and provided excellent ongoing support. Their team's knowledge and dedication have been invaluable to our success.",
+    image: Austin,
+    date: "02/01/2022",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Angela Badgi",
+    testimonial:
+      "I recommend MappOptimist Technologies. Their IT solutions have revolutionized our company's efficiency and productivity. The team's innovative approach, coupled with their prompt and reliable support, has exceeded our expectations. We are grateful to have them as our trusted IT partner.",
+    image: Angela,
+    date: "26/11/2021",
+    rating: 5,
   },
 ];
