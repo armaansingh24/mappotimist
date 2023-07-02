@@ -82,7 +82,7 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-[713px] hidden midxmd:block midlg:hidden lg:block z-4">
+            <div className="relative w-[709px] hidden midxmd:block midlg:hidden lg:block z-4">
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {reviewImages1.map((item, index) => (
                   <div
