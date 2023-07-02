@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const TestimonialsItem = ({ testimonial }) => {
   return (
-    <div className="bg-[#FDFFE0]  sm:p-10 rounded-3xl mx-4">
+    <div className="bg-[#FDFFE0]  sm:p-10 rounded-3xl mx-4 h-[24rem] shadow-xl mb-10">
       <div className="flex flex-col p-4 gap-4">
         <div className="flex justify-between items-center">
           <div className="rounded-full flex items-center justify-start gap-4">
@@ -12,7 +12,9 @@ const TestimonialsItem = ({ testimonial }) => {
               alt=""
               className="rounded-full w-[40%] sm:w-[20%]"
             />
-            <p className='text-sm sm:text-lg'>{testimonial.name}</p>
+            <p className="text-sm sm:text-lg font-poppins">
+              {testimonial.name}
+            </p>
           </div>
           <div className="flex">
             <AiFillStar className="text-yellow-400" />
@@ -24,7 +26,9 @@ const TestimonialsItem = ({ testimonial }) => {
         </div>
         <div className="text-base sm:text-lg font-poppins500 flex flex-col gap-2">
           <p>{testimonial.testimonial}</p>
-          <p>Date: {testimonial.date}</p>
+          <p className="text-sm text-gray-400 italic">
+            Date: {testimonial.date}
+          </p>
         </div>
       </div>
     </div>

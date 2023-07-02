@@ -11,6 +11,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { testimonials } from "../constants";
 import TestimonialsItem from "../components/TestimonialsItem";
+import R1 from "../assets/aboutUs/R1.png";
 
 const AboutUs = () => {
   const responsive = {
@@ -252,7 +253,8 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-screen testimonial py-10 mt-10">
+        <div className="w-screen testimonial py-10 mt-10 relative">
+          <img src={R1} alt="" className="absolute -top-32 right-0"/>
           <div className="w-[80%]  mx-auto">
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Testimonial
@@ -261,15 +263,15 @@ const AboutUs = () => {
               See what they say about us
             </p>
           </div>
-          <div className="mt-10 w-[90%] sm:w-[95%] mx-auto">
+          <div className="mt-10 w-[90%] sm:w-[95%] mx-auto h-full ">
             <Carousel
               responsive={responsive}
               arrows={false}
               infinite={true}
               sliderClass={true}
               showDots={false}
-              autoPlay={true}
-              autoPlaySpeed={5000}
+              // autoPlay={true}
+              // autoPlaySpeed={5000}
             >
               {testimonials.map((testimonial, index) => (
                 <TestimonialsItem testimonial={testimonial} key={index} />
