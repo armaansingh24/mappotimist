@@ -73,15 +73,15 @@ const AboutUs = () => {
         </div>
         <div className="w-[80%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10">
           <div className="flex gap-10 items-center">
-            <div className="w-[30%]">
+            <div className="w-[40%] mt-20">
               <img src={secondSection} alt="" className="w-full" />
             </div>
             <div className="w-[80%]">
-              <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-5xl pb-2 font-poppins">
+              <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-4xl pb-2 font-poppins">
                 Building greater futures through innovation and collective
                 knowledge
               </h3>
-              <p className="text-base sm:text-xl font-poppins300 mt-6">
+              <p className="text-base sm:text-lg font-poppins300 mt-6">
                 MappOptimist is a leading IT & Fintech solution provider,
                 dedicated to empowering businesses with cutting-edge
                 technologies. We specialize in delivering end-to-end IT
@@ -94,12 +94,12 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-base sm:text-xl font-poppins300">
+            <p className="text-base sm:text-lg font-poppins300">
               We work closely with our clients to understand their needs, and we
               leverage our expertise to deliver customized solutions that meet
               and exceed their expectations.
             </p>
-            <p className="text-base sm:text-xl font-poppins300">
+            <p className="text-base sm:text-lg font-poppins300">
               At MappOptimist, we are committed to staying ahead of the curve in
               technology trends and advancements. Our team is constantly
               learning and expanding our knowledge to ensure that we are
@@ -153,18 +153,18 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="hidden xxmd:block mx-auto w-[80%] mt-10">
+        <div className="hidden xxmd:block mx-auto w-[80%] mt-20">
           <div className="flex gap-10 items-start">
-            <div className="w-full flex flex-col items-start justify-center gap-5 mt-20">
+            <div className="w-full flex flex-col items-start justify-center gap-5 ">
               <div>
-                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-5xl font-poppins">
+                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-4xl font-poppins">
                   Yashvant Sikarvar
                 </h3>
-                <p className="text-2xl p-1 sm:text-4xl font-poppins">
+                <p className="text-2xl  sm:text-2xl font-poppins">
                   Founder & CEO
                 </p>
               </div>
-              <p>
+              <p className="text-lg">
                 An IIT Graduate ranked 22nd in AIR, is a Gate and NET Qualified
                 professional. With over 10+ years of extensive experience in the
                 IT industry, he possesses a remarkable level of expertise.
@@ -191,7 +191,7 @@ const AboutUs = () => {
             </div>
             <div className="w-[50%]">
               <img src={picture1} alt="" className="" />
-              <img src={picture2} alt="" />
+              {/* <img src={picture2} alt="" /> */}
             </div>
           </div>
         </div>
