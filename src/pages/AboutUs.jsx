@@ -2,6 +2,11 @@ import React from "react";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import firstSection from "../assets/aboutUs/firstSection.png";
 import secondSection from "../assets/aboutUs/secondSection.png";
+import picture1 from "../assets/aboutUs/picture1.png";
+import picture2 from "../assets/aboutUs/picture2.png";
+import { SiFacebook } from "react-icons/si";
+import { BsSlack, BsLinkedin } from "react-icons/bs";
+import { RiInstagramFill } from "react-icons/ri";
 
 const AboutUs = () => {
   return (
@@ -66,7 +71,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="w-[90%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10">
+        <div className="w-[80%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10">
           <div className="flex gap-10 items-center">
             <div className="w-[30%]">
               <img src={secondSection} alt="" className="w-full" />
@@ -104,6 +109,90 @@ const AboutUs = () => {
               growth and success. Connect with us to learn more about how we can
               help your business thrive.
             </p>
+          </div>
+        </div>
+        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden sm:grid-cols-2 items-center justify-center">
+          <div className="sm:order-2 sm:w-full flex flex-col items-start justify-center">
+            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
+              Yashvant Sikarvar
+            </h3>
+            <p className="text-2xl p-1 sm:text-4xl font-poppins">
+              Founder & CEO
+            </p>
+          </div>
+          <div className="sm:row-span-2 sm:order-1 mx-auto my-auto">
+            <img src={picture1} alt="" />
+          </div>
+          <div className="sm:order-3 sm:w-full flex flex-col gap-4 items-start justify-center">
+            <div className="text-base sm:text-xl font-poppins300">
+              <p>
+                An IIT Graduate ranked 22nd in AIR, is a Gate and NET Qualified
+                professional. With over 10+ years of extensive experience in the
+                IT industry, he possesses a remarkable level of expertise.
+                Driven by his curiosity and a relentless pursuit of excellence,
+                he founded MappOptimist Technologies and currently serves as its
+                CEO. Throughout his career, he has successfully ventured into
+                various domains including Healthcare, Banking, E-commerce, Share
+                Market, Gaming, Keyboard Applications, and various other.
+              </p>
+            </div>
+            <div className="flex gap-6">
+              <a href="#" className="group">
+                <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
+              </a>
+              <a href="#" className="group">
+                <BsSlack className="text-[#7F838D] group-hover:text-primary" />
+              </a>
+              <a href="#" className="group">
+                <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
+              </a>
+              <a href="#" className="group">
+                <BsLinkedin className="text-[#7F838D] group-hover:text-primary" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="hidden xxmd:block mx-auto w-[80%] mt-10">
+          <div className="flex gap-10 items-start">
+            <div className="w-full flex flex-col items-start justify-center gap-5 mt-20">
+              <div>
+                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-5xl font-poppins">
+                  Yashvant Sikarvar
+                </h3>
+                <p className="text-2xl p-1 sm:text-4xl font-poppins">
+                  Founder & CEO
+                </p>
+              </div>
+              <p>
+                An IIT Graduate ranked 22nd in AIR, is a Gate and NET Qualified
+                professional. With over 10+ years of extensive experience in the
+                IT industry, he possesses a remarkable level of expertise.
+                Driven by his curiosity and a relentless pursuit of excellence,
+                he founded MappOptimist Technologies and currently serves as its
+                CEO. Throughout his career, he has successfully ventured into
+                various domains including Healthcare, Banking, E-commerce, Share
+                Market, Gaming, Keyboard Applications, and various other.
+              </p>
+              <div className="flex gap-6">
+                <a href="#" className="group">
+                  <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
+                </a>
+                <a href="#" className="group">
+                  <BsSlack className="text-[#7F838D] group-hover:text-primary" />
+                </a>
+                <a href="#" className="group">
+                  <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
+                </a>
+                <a href="#" className="group">
+                  <BsLinkedin className="text-[#7F838D] group-hover:text-primary" />
+                </a>
+              </div>
+            </div>
+            <div className="w-[50%]">
+              <img src={picture1} alt="" className="" />
+              <img src={picture2} alt="" />
+            </div>
           </div>
         </div>
       </div>

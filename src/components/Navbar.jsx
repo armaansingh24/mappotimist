@@ -139,7 +139,7 @@ const Navbar = () => {
                     Developer
                   </Link>
                   <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-[40%]">
-                    <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-7 z-0"></div>
+                    <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-7 shadow-2xl z-0"></div>
                     <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-16 -translate-y-6 w-[85%]">
                       <ul className="list-none flex flex-col items-start justify-center">
                         <li className="font-roboto100">

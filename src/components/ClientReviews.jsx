@@ -14,10 +14,6 @@ import { reviewImages3 } from "../constants/index";
 import { reviewImages2 } from "../constants/index";
 import { reviewImages4 } from "../constants/index";
 import { reviewImages5 } from "../constants/index";
-import insta from "../assets/footer/insta.webp";
-import fb from "../assets/footer/fb.webp";
-import slack from "../assets/footer/slack.webp";
-import linkedin from "../assets/footer/linkedin.webp";
 
 const ClientReviews = () => {
   const data = reviews;
@@ -114,7 +110,7 @@ const ClientReviews = () => {
                     <img
                       src={item.image}
                       alt=""
-                      className="w-[29.5%] rounded-full"
+                      className="w-[30%] rounded-full"
                     />
                   </div>
                 ))}
@@ -153,7 +149,7 @@ const ClientReviews = () => {
                     <img
                       src={item.image}
                       alt=""
-                      className="w-[15.1%] rounded-full"
+                      className="w-[15.8%] rounded-full"
                     />
                   </div>
                 ))}
