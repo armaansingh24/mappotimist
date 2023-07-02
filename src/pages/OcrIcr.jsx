@@ -61,7 +61,11 @@ const OcrIcr = () => {
           <div className="w-[90%] mt-44  mx-auto sm:mt-0 relative z-40">
             <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 sm:h-[90vh]">
               <div className="midxmd:order-2 midxmd:w-full ocr">
-                <img src={First} alt="" className="midxmd:w-full" />
+                <img
+                  src={First}
+                  alt=""
+                  className="midxmd:w-full mix-blend-color-burn"
+                />
               </div>
               <div className="flex flex-col gap-2 midxmd:w-full">
                 <div>
@@ -95,7 +99,11 @@ const OcrIcr = () => {
                 className="absolute bottom-0 left-0 hidden midFM:block z-0"
               />
               <div className="order1 midFM:order-3 ocr">
-                <img src={second} alt="" className="mx-auto" />
+                <img
+                  src={second}
+                  alt=""
+                  className="mx-auto mix-blend-color-burn"
+                />
               </div>
               <div className="midFM:order-1 col-span-2 relative z-50">
                 <h2 className="mx-auto  h-[4rem] z-30 relative text-2xl sm:text-3xl midFM:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
