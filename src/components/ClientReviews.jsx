@@ -138,7 +138,7 @@ const ClientReviews = () => {
                   className="absolute right-20 top-[49.8%] w-[140px] z-30"
                 />
               </div>
-              <div className="absolute -right-[21%] top-[31.3%] rounded-full">
+              <div className="absolute -right-[22%] top-[31.3%] rounded-full">
                 {reviewImages5.map((item, index) => (
                   <div
                     key={index}
