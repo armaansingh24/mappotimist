@@ -12,6 +12,8 @@ import "react-multi-carousel/lib/styles.css";
 import { testimonials } from "../constants";
 import TestimonialsItem from "../components/TestimonialsItem";
 import R1 from "../assets/aboutUs/R1.png";
+import ellips from "../assets/aboutUs/ellips.png";
+import ellips2 from "../assets/aboutUs/ellips2.png";
 
 const AboutUs = () => {
   const responsive = {
@@ -254,7 +256,31 @@ const AboutUs = () => {
         </div>
 
         <div className="w-screen testimonial py-10 mt-10 relative">
-          <img src={R1} alt="" className="absolute -top-32 right-0"/>
+          <img
+            src={R1}
+            alt=""
+            className="absolute -top-32 right-0 hidden midlg:block"
+          />
+          <img
+            src={ellips}
+            alt=""
+            className="absolute right-0 w-[13%] sm:w-[10%] top-2 midlg:hidden"
+          />
+          <img
+            src={ellips2}
+            alt=""
+            className="absolute right-[30%] w-[13%] sm:w-[10%] top-10 midlg:hidden"
+          />
+          <img
+            src={ellips2}
+            alt=""
+            className="absolute right-32 sm:w-[10%] w-[13%] bottom-5 sm:bottom-2 midlg:hidden"
+          />
+          <img
+            src={ellips2}
+            alt=""
+            className="absolute left-0 sm:w-[10%] w-[13%] bottom-20 sm:bottom-10 midlg:hidden"
+          />
           <div className="w-[80%]  mx-auto">
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Testimonial
@@ -270,8 +296,8 @@ const AboutUs = () => {
               infinite={true}
               sliderClass={true}
               showDots={false}
-              // autoPlay={true}
-              // autoPlaySpeed={5000}
+              autoPlay={true}
+              autoPlaySpeed={5000}
             >
               {testimonials.map((testimonial, index) => (
                 <TestimonialsItem testimonial={testimonial} key={index} />
