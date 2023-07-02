@@ -253,7 +253,7 @@ const AboutUs = () => {
         </div>
 
         <div className="w-screen testimonial py-10 mt-10">
-          <div className="w-[80%] mx-auto">
+          <div className="w-[80%]  mx-auto">
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Testimonial
             </h2>
@@ -261,14 +261,14 @@ const AboutUs = () => {
               See what they say about us
             </p>
           </div>
-          <div className="mt-10 w-[90%] mx-auto">
+          <div className="mt-10 w-[90%] sm:w-[95%] mx-auto">
             <Carousel
               responsive={responsive}
               arrows={false}
               infinite={true}
               sliderClass={true}
               showDots={false}
-              autoPlay={ true}
+              autoPlay={true}
               autoPlaySpeed={5000}
             >
               {testimonials.map((testimonial, index) => (
