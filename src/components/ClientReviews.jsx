@@ -99,7 +99,7 @@ const ClientReviews = () => {
                   </div>
                 ))}
               </div>
-              <div className="absolute right-[1.1rem] top-[17.1rem] rounded-full">
+              <div className="absolute right-[0.8rem] top-[17.1rem] rounded-full">
                 {reviewImages3.map((item, index) => (
                   <div
                     key={index}
