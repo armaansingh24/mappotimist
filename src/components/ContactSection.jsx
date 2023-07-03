@@ -138,7 +138,7 @@ const ContactSection = () => {
                   info@mappoptimist.com
                 </p>
               </div>
-              <div className="mt-12 flex items-center gap-3">
+              <div className="mt-12 flex items-center">
                 <div className="">
                   <a
                     href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
