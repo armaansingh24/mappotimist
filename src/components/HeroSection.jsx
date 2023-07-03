@@ -91,7 +91,7 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-full mx-auto flex items-center justify-center md:mt-44 ">
+            <div className="w-full mx-auto flex items-center justify-center md:mt-44 ocr">
               <img src={main} alt="" className="w-[70%]" />
             </div>
           </motion.div>
