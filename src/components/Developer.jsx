@@ -127,9 +127,9 @@ const Developer = () => {
                   </p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
-                    If you are a client, hiring for a skilled professional(s) to
-                    bring expertise and efficiency to your project. Contact us
-                    for details!
+                    If you are interested in looking for a skilled
+                    professional(s) to bring expertise and efficiency to your
+                    project. Contact us for details!
                   </p>
                   <Link to="Developer">
                     <button
@@ -160,9 +160,10 @@ const Developer = () => {
                 <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
                   <p className="text-2xl font-poppins500">Share Thoughts</p>
                   <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
-                  <p className="text-center text-lg font-poppins500">
-                    Share your ideas with us to turn your concepts into reality
-                    with our expertise and ignite them with our knowledge.
+                  <p className="text-center text-lg font-poppins500 mt-9">
+                    Share your ideas with us. We can turn your concepts into
+                    reality with our expertise and ignite them with our
+                    knowledge.
                   </p>
                   <Link
                     to="Contact Us"
@@ -190,8 +191,9 @@ const Developer = () => {
                   <p className="text-2xl font-poppins500"> OCR/ICR</p>
                   <img src={three} alt="" className="mt-12 midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500 mt-6">
-                    Unlock the power of automation with our cutting-edge OCR/ICR
-                    solutions and enhance your productivity effortlessly.
+                    Harness the potential of automation with our
+                    state-of-the-art OCR/ICR solutions, boasting over 90%
+                    accuracy to effortlessly enhance your productivity.
                   </p>
                   <HLink to="/orc-icr">
                     <button className="bg-gradient-to-l text-xl from-secondary to-[#10669C] px-4 py-1 rounded-full text-white mt-2 mb-2">
