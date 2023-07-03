@@ -44,7 +44,7 @@ const Developer = () => {
 
   useEffect(() => {
     const body = document.body;
-    const modalOpen = showForm || showForm2 || showForm3|| showForm4;
+    const modalOpen = showForm || showForm2 || showForm3 || showForm4;
 
     if (modalOpen) {
       body.style.overflow = "hidden";
@@ -156,26 +156,22 @@ const Developer = () => {
                 className="card"
               >
                 <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
-                  <p className="text-2xl font-poppins500">Get Employed</p>
+                  <p className="text-2xl font-poppins500">Share Thoughts</p>
                   <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
-                    If you are a freelancer seeking engaging projects, let's
-                    collaborate and bring your vision to life!
+                    Share your ideas with us to turn your concepts into reality
+                    with our expertise and ignite them with our knowledge.
                   </p>
-                  <Link to="Developer">
-                    <button
-                      className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
-                      onClick={handleGetHire}
-                    >
-                      Get Hire
+                  <Link
+                    to="Contact Us"
+                    smooth={true}
+                    offset={10}
+                    duration={1000}
+                  >
+                    <button className=" bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
+                      Connect Us
                     </button>
                   </Link>
-                  <button
-                    className="block midFM:hidden bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
-                    onClick={handleGetHire1}
-                  >
-                    Get Hire
-                  </button>
                 </div>
               </Tilt>
             </div>

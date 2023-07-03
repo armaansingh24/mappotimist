@@ -1,6 +1,5 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
-import { useEffect } from "react";
 
 const TestimonialsItem = ({ testimonial }) => {
   const stars = [];
