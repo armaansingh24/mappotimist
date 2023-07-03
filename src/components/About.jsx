@@ -39,8 +39,8 @@ const About = () => {
   }, []);
   return (
     <>
-      <div className="w-screen -mt-12 sm:-mt-6 relative z-0" id="About">
-        <div className="bg-[#DBDCE6]">
+      <div className="w-screen -mt-12 sm:-mt-6 relative z-0 " id="About">
+        <div className="bg-[#DBDCE6] pt-10">
           <div className="max-w-[90%] mx-auto grid grid-cols-1 xxmd:grid-cols-2 gap-5 ">
             <motion.div
               ref={ref}

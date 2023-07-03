@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import GetHire from "./GetHire";
 import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
+import location from "../assets/footer/location.png";
 
 const Footer = () => {
   const [showForm2, setShowForm2] = useState(false);
@@ -38,23 +39,26 @@ const Footer = () => {
   }, [showForm2, showForm4]);
   return (
     <>
-      <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[27rem] relative z-30 flex flex-col items-center">
+      <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[26rem] relative z-30 flex flex-col items-center">
         <div className="w-[90%] mx-auto flex h-full p-0">
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
-            <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around items-center midFM:mr-40">
+            <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
               <div className="flex flex-col gap-10">
                 <div className="text-2xl sm:text-3xl">
                   <p>MappOptimist</p>
                 </div>
-                <div className="text-xl">
-                  <ul>
-                    <li>
+                <div className="text-xl hidden sm:block">
+                  <ul className="flex flex-col gap-3">
+                    <li className="flex  items-center justify-start gap-4">
+                      <img src={location} alt="" />
                       <p>Sultanpur, New Delhi 110030</p>
                     </li>
-                    <li>
+                    <li className="flex  items-center justify-start gap-4">
+                      <img src={location} alt="" />
                       <p>+91 8171977577</p>
                     </li>
-                    <li>
+                    <li className="flex  items-center justify-start gap-4">
+                      <img src={location} alt="" />
                       <p>info@mappoptimist.com</p>
                     </li>
                   </ul>
@@ -88,7 +92,7 @@ const Footer = () => {
                 <li className="cursor-pointer">Terms & Conditions</li>
               </ul>
             </div>
-            <div className="self-end justify-items-end h-full mt-5 sm:-mt-5 flex flex-col items-center justify-center gap-4">
+            <div className="self-end justify-items-end h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center gap-4">
               <div>
                 <p className="text-center">Follow Us</p>
               </div>
@@ -126,7 +130,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="text-sm text-white">Copyright © 2023-24 MappOptimist Technologies LLP</p>
+        <p className="text-xs  sm:text-sm text-white">
+          Copyright © 2023-24 MappOptimist Technologies LLP
+        </p>
       </div>
       <div
         className={`absolute inset-0 z-[60] ${

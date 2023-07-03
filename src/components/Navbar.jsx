@@ -61,7 +61,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#F7F5F8] w-screen -mt-10">
+      <div className="w-screen">
         <nav
           className={
             " flex items-center mx-auto mt-6 w-[90%] p-4 sm:p-0 absolute top-0 left-0 right-0 sm:relative z-50 text-black sm:mt-10"
@@ -85,20 +85,20 @@ const Navbar = () => {
                 }`}
                 loading="lazy"
               />
-              <p className="text-[18px] font-poppins cursor-pointer xmd:flex xmd:flex-col xmd:gap-0 hidden mdd:w-0">
+              <p className="text-[18px] font-poppins cursor-pointer xmd:flex xmd:flex-col xmd:gap-0 hidden mdd:w-0 text-white">
                 <span className="mt-6">MappOptimist</span>
-                <span className="text-[10px] -translate-y-4 text-black opacity-[0.5] italic">
+                <span className="text-[10px] -translate-y-4  opacity-[0.5] italic">
                   We code the future
                 </span>
               </p>
             </Link>
             <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center z-50 relative">
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
                 "
               >
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
                   to={`Home`}
                   // spy={true}
                   smooth={true}
@@ -109,11 +109,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
                 "
               >
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
                   to={`Portfolio`}
                   // spy={true}
                   smooth={true}
@@ -129,7 +129,7 @@ const Navbar = () => {
               >
                 <div className="group gap-0 transition-all duration-500">
                   <Link
-                    className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white relative z-10 group overflow-hidden font-poppins "
+                    className="rounded-full py-1 px-3   group-hover:border-2 group-hover:border-white text-white relative z-20 group overflow-hidden font-poppins "
                     to={`Developer`}
                     // spy={true}
                     smooth={true}
@@ -139,8 +139,8 @@ const Navbar = () => {
                     Developer
                   </Link>
                   <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-[40%]">
-                    <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-7 shadow-2xl z-0"></div>
-                    <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-16 -translate-y-6 w-[85%]">
+                    <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-7 translate-y-4 shadow-2xl relative z-0"></div>
+                    <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-16 -translate-y-2 w-[85%]">
                       <ul className="list-none flex flex-col items-start justify-center">
                         <li className="font-roboto100">
                           <button
@@ -196,7 +196,7 @@ const Navbar = () => {
                 "
               >
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                  className="rounded-full py-1 px-3  group-hover:border-2 group-hover:border-white text-white"
                   to={`Expertise`}
                   // spy={true}
                   smooth={true}
@@ -211,7 +211,7 @@ const Navbar = () => {
                 "
               >
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
+                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white text-white"
                   to={`Contact Us`}
                   // spy={true}
                   smooth={true}

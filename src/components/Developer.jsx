@@ -122,7 +122,9 @@ const Developer = () => {
                 className="card"
               >
                 <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3 midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
-                  <p className="text-2xl font-poppins500">Recruit Us</p>
+                  <p className="text-2xl font-poppins500">
+                    Recruit Developer(s){" "}
+                  </p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
                     If you are a client, hiring for a skilled professional(s) to

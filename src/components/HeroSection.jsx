@@ -8,21 +8,18 @@ import image3 from "../assets/hero-section/image3.webp";
 import image4 from "../assets/hero-section/image4.webp";
 import image5 from "../assets/hero-section/image5.webp";
 import { motion, useInView, useAnimation } from "framer-motion";
-import  Comp1  from "../assets/hero-section/Comp1.webm";
-import {Link} from "react-scroll"
+import { Link } from "react-scroll";
+import Navbar from "./Navbar";
+import background from "../assets/hero-section/background.png";
+import techs from "../assets/hero-section/techs.png";
+import main from "../assets/hero-section/main.png";
+import pattern from "../assets/hero-section/pattern.png";
+import pattern2 from "../assets/hero-section/pattern2.png";
+import circle from "../assets/hero-section/circle.png";
+import plus from "../assets/hero-section/plus.png";
+import square from "../assets/hero-section/square.png";
 
 const HeroSection = () => {
-  const [activeParagraph, setActiveParagraph] = useState(0);
-
-  useEffect(() => {
-    const totalParagraphs = 2;
-    const timeout = setTimeout(() => {
-      setActiveParagraph((prev) => (prev + 1) % totalParagraphs);
-    }, 9000);
-
-    return () => clearTimeout(timeout);
-  }, [activeParagraph]);
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -34,9 +31,49 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className="bg-[#F7F5F8] bg-gradient-curve w-screen relative -z-1 h-[85vh]">
+      <div className=" w-screen relative -z-1 h-[150vh] md:h-screen bg-gradient-to-r from-primary to-secondary ">
+        <div className="w-full h-full bg-gradient-to-r from-primary to-secondary absolute">
+          <img
+            src={background}
+            alt=""
+            className="absolute right-0 h-full hidden midFM:block"
+          />
+          <img src={techs} alt="" className="absolute bottom-10 sm:bottom-5" />
+          <img
+            src={pattern}
+            alt=""
+            className="absolute right-9 bottom-44 md:bottom-36 md:right-20"
+          />
+          <img src={pattern2} alt="" className="absolute top-28 left-10" />
+          <img
+            src={plus}
+            alt=""
+            className="absolute left-[70%] md:left-[35%] top-36"
+          />
+          <img
+            src={circle}
+            alt=""
+            className="absolute left-12 top-[62%] md:top-[50%]"
+          />
+          <img
+            src={square}
+            alt=""
+            className="absolute left-[70%] md:right-[3%] top-36 hidden md:block"
+          />
+          <img
+            src={square}
+            alt=""
+            className="absolute right-[10%] md:left-[43%] bottom-24 md:bottom-36"
+          />
+          <img
+            src={plus}
+            alt=""
+            className="absolute right-[10%] md:right-[28%] bottom-[25%] md:bottom-32"
+          />
+        </div>
+        <Navbar />
         <div
-          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto mt-1 md:mt-5 gap-2 md:flex-row lmd:justify-between items-center "
+          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto  md:mt-5 gap-2 md:flex-row lmd:justify-between items-center absolute inset-0 mt-36"
           id="home"
         >
           <motion.div
@@ -50,16 +87,8 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-full mx-auto flex items-center justify-center">
-              <video
-                autoPlay
-                muted
-                loop
-                className="mt-10 midlg:ml-[30%] midlg:-mt-24 z-1"
-              >
-                <source src={Comp1} type="video/webm" />
-                Your browser does not support the video tag.
-              </video>
+            <div className="w-full mx-auto flex items-center justify-center md:mt-24">
+              <img src={main} alt="" />
             </div>
           </motion.div>
 
@@ -74,11 +103,11 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-[300px] sm:w-full md:w-[392px] font-poppins lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
-              <h1 className="font-RobotoSlab text-[30px] lmd:text-[48px] flex gap-2 flex-wrap">
-                <>Hire the perfect</> <>talent for your</>
+            <div className="w-full font-poppins lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
+              <h1 className="font-RobotoSlab text-[30px] lmd:text-[48px] flex gap-2 flex-wrap text-white">
+                Transform your vision into digital reality with our
               </h1>
-              <div className="text-[#DF9507] lmd:text-[48px] -z-1 font-poppins ">
+              <div className=" text-transparent bg-clip-text bg-gradient-to-r from-[#24BBE6]  to-[#737FCF] lmd:text-[48px] -z-1 font-poppins ">
                 <TypeWritter
                   options={{
                     autoStart: true,
@@ -117,35 +146,6 @@ const HeroSection = () => {
                 <div className=" left-[-10px] ml-[-18px] z-1 w-12 h-12 rounded-full bg-[#5871D7] text-[14px] text-white flex items-center justify-center leading-[12px]">
                   +100
                 </div>
-              </div>
-            </div>
-            <div className="flex gap-5 xsm:gap-2 items-center justify-between w-full mt-6 mb-10">
-              <div>
-                <div className="w-[2px] h-10 lmd:h-14 bg-[#6F6C90]"></div>
-              </div>
-              <div className="">
-                {activeParagraph === 0 && (
-                  <p className="font-poppins text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-gray-500">
-                    Hire top-notch remote developers, designers, and product
-                    managers with exceptional technical expertise and effective
-                    communication skills. Our rigorous screening process
-                    guarantees a highly skilled team that will streamline your
-                    recruitment without the burden of high costs or legal
-                    complexities. Transform your ideas into digital reality with
-                    our innovative, optimized solutions.
-                  </p>
-                )}
-                {activeParagraph === 1 && (
-                  <p className="font-poppins text-[8px] md:text-[15px] lmd:text-[17px] leading-[18px] capitalize flex items-center font-medium text-gray-500">
-                    Witness the realisation of your ideas into tangible success
-                    as we guide your path from technologies to solutions. Our
-                    team of trained experts provides cost-effective web and
-                    application development services. At MappOptimist, we are
-                    dedicated to transforming imagination into manifestation.
-                    Explore the power of the digital world with our innovative
-                    digital solutions.
-                  </p>
-                )}
               </div>
             </div>
           </motion.div>
