@@ -129,8 +129,8 @@ const ContactSection = () => {
             Contact Us
           </h2>
           <div className="flex middlesm:mt-32 gap-10">
-            <div className="hidden midxmd:flex flex-col items-center justify-start w-[25%] relative z-10  -ml-10">
-              <div className="ml-4">
+            <div className="hidden midxmd:flex flex-col items-end justify-start w-[25%] relative z-10  -ml-10">
+              <div className="mr-10">
                 <p className="text-sm text-center font-poppins500">
                   You can email us at
                 </p>
@@ -138,7 +138,7 @@ const ContactSection = () => {
                   info@mappoptimist.com
                 </p>
               </div>
-              <div className="mt-12 flex items-center">
+              <div className="mt-12 flex items-center justify-center">
                 <div className="">
                   <a
                     href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
