@@ -1,5 +1,5 @@
 import React from 'react'
-import whatsapp from "../assets/whatsapp.gif"
+import whatsapp from "../assets/whatsapp.png"
 const Whatsapp = () => {
   return (
     <>

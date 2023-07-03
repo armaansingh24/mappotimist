@@ -34,7 +34,7 @@ const TestimonialsItem = ({ testimonial }) => {
         <div className="text-sm font-poppins500 flex flex-col gap-2">
           <p>{testimonial.testimonial}</p>
           <p className="text-sm text-gray-400 italic">
-            Date: {testimonial.date}
+            Date: {testimonial.date} <sup>th</sup> {testimonial.monthYear}
           </p>
         </div>
       </div>

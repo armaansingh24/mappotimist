@@ -71,7 +71,7 @@ const AboutUs = () => {
               MappOptimist is a leading IT & Fintech solution provider,
               dedicated to empowering businesses with cutting-edge technologies.
               We specialize in delivering end-to-end IT solutions, including web
-              development, app development, UI/UX Design, and digital
+              development, app development, UI/UX Design and digital
               transformation services. We have a team of IIT qualified and
               experienced developers, we strive to provide our clients with
               tailored solutions that align with their business objectives and
@@ -111,7 +111,7 @@ const AboutUs = () => {
                 dedicated to empowering businesses with cutting-edge
                 technologies. We specialize in delivering end-to-end IT
                 solutions, including web development, app development, UI/UX
-                Design, and digital transformation services. We have a team of
+                Design and digital transformation services. We have a team of
                 IIT qualified and experienced developers, we strive to provide
                 our clients with tailored solutions that align with their
                 business objectives and drive success.
@@ -158,7 +158,7 @@ const AboutUs = () => {
                 he founded MappOptimist Technologies and currently serves as its
                 CEO. Throughout his career, he has successfully ventured into
                 various domains including Healthcare, Banking, E-commerce, Share
-                Market, Gaming, Keyboard Applications, and various other.
+                Market, Gaming, Keyboard Applications and various other.
               </p>
             </div>
             <div className="flex gap-4">
@@ -214,7 +214,7 @@ const AboutUs = () => {
                 he founded MappOptimist Technologies and currently serves as its
                 CEO. Throughout his career, he has successfully ventured into
                 various domains including Healthcare, Banking, E-commerce, Share
-                Market, Gaming, Keyboard Applications, and various other.
+                Market, Gaming, Keyboard Applications and various other.
               </p>
               <div className="flex gap-4 relative z-50">
                 <a

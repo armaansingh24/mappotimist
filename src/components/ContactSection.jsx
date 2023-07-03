@@ -125,7 +125,7 @@ const ContactSection = () => {
           className="absolute -top-[40%] -left-2 hidden midxmd:block z-0"
         />
         <div className=" mx-auto p-3">
-          <h2 className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32">
+          <h2 className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32 bg-gradient-to-r from-primary via-secondary p-2 to-secondary text-transparent bg-clip-text">
             Contact Us
           </h2>
           <div className="flex middlesm:mt-32 gap-10">
