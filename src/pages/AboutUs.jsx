@@ -141,7 +141,9 @@ const AboutUs = () => {
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Yashvant Sikarvar
             </h2>
-            <p className="text-xl sm:text-2xl p-1 font-poppins">Founder & CEO</p>
+            <p className="text-xl sm:text-2xl p-1 font-poppins">
+              Founder & CEO
+            </p>
           </div>
           <div className="sm:row-span-2 sm:order-1 mx-auto my-auto">
             <img src={picture1} alt="" />
