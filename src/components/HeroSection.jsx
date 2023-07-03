@@ -41,7 +41,7 @@ const HeroSection = () => {
           <img
             src={techs}
             alt=""
-            className="absolute left-2 bottom-10 sm:bottom-5 w-[20%]"
+            className="absolute left-1 bottom-10 sm:bottom-5 w-[20%]"
           />
           <img
             src={pattern}
@@ -125,7 +125,7 @@ const HeroSection = () => {
             <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
               <Link to="Developer" smooth={true} offset={70} duration={1000}>
                 <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12">
-                  Hire Talent
+                  Know more
                   <span>
                     <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
                   </span>
