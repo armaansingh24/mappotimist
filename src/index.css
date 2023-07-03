@@ -279,7 +279,7 @@ body {
 
 .ocr {
     animation-name: slowmo;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
