@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
               <div className="flex flex-col items-center justify-center gap-10">
                 <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-10">
-                  <img src={logo} alt="" className="w-[7%] sm:w-[10%]" />
+                  <img src={logo} alt="" className="w-[7%] sm:w-[12%]" />
                   <p>MappOptimist</p>
                 </div>
                 <div className="text-xl hidden sm:block self-center">
@@ -134,7 +134,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="text-xs  sm:text-sm text-white ">
+        <p className="text-xs  sm:text-sm text-gray-300 mb-2">
           Copyright © 2023-24 MappOptimist Technologies LLP
         </p>
       </div>

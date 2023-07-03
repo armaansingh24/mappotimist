@@ -180,13 +180,13 @@ const ContactSection = () => {
               </div>
 
               <div className="flex flex-col gap-2 mt-10 relative z-20">
-                <p className="text-sm sm:text-lg font-poppins500">
+                <p className="text-sm sm:text-xl font-bold">
                   What services you need?
                 </p>
                 <div className="h-fit flex flex-wrap justify-start items-center gap-2 midxmd:w-[80%]">
                   <div className="anim-btn">
                     <button
-                      className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                      className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                       onClick={() =>
                         handleSelectedService("Mobile App Development")
                       }
@@ -196,34 +196,34 @@ const ContactSection = () => {
                   </div>
 
                   <button
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     onClick={() => handleSelectedService("Website Development")}
                   >
                     Website Development
                   </button>
 
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     onClick={() => handleSelectedService("Website Design")}
                   >
                     Website Design
                   </span>
 
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     onClick={() => handleSelectedService("Mobile App Design")}
                   >
                     Mobile App Design
                   </span>
 
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     onClick={() => handleSelectedService("Product strategy")}
                   >
                     Product strategy
                   </span>
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[10px] h-[25px] flex items-center sm:text-[17px] sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     ref={inputRef}
                     onClick={handleButtonClick}
                   >
