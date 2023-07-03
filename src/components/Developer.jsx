@@ -108,7 +108,7 @@ const Developer = () => {
             className="absolute right-0 bottom-[0%] z-10 block midlg:hidden"
           />
           <h2 className="text-black midlg:text-white font-poppins text-[30px] lmd:text-[48px] text-left midlg:ml-20">
-            Developer
+            Our Vision
           </h2>
           <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
             <div className="sm:w-[50%]  midlg:w-[25%] ">
@@ -125,7 +125,7 @@ const Developer = () => {
                   </p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
-                    If you are interested in looking for a skilled
+                    If you are looking for a skilled
                     professional(s) to bring expertise and efficiency to your
                     project. Contact us for details!
                   </p>

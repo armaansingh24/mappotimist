@@ -699,7 +699,7 @@ export const reviews = [
     name: "Olivia Diniz",
     date: "03/04/2020",
     description:
-      " The IT services and solutions provided by this company are top-notch. Their expertise, reliability and efficiency have greatly enhanced our business operations. Enthusiastically endorsed!",
+      "The IT services and solutions provided by this company are top-notch. Their expertise, reliability and efficiency have greatly enhanced our business operations. Enthusiastically endorsed!",
   },
   {
     id: 2,
@@ -723,7 +723,7 @@ export const reviews = [
     name: "Wilton Hou",
     date: "12/06/2019",
     description:
-      " Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism and timely delivery exceeded our expectations. Highly recommended!",
+      "Highly skilled iOS development team; they crafted a flawless app for our business. Their expertise, professionalism and timely delivery exceeded our expectations. Highly recommended!",
   },
   {
     id: 5,

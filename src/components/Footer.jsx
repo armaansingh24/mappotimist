@@ -13,6 +13,7 @@ import location from "../assets/footer/location.png";
 import call from "../assets/footer/call.png";
 import message from "../assets/footer/message.png";
 import logo from "../assets/navbar/logo.webp";
+import termsAndCond from "../assets/footer/termsAndCond.pdf";
 
 const Footer = () => {
   const [showForm2, setShowForm2] = useState(false);
@@ -93,7 +94,15 @@ const Footer = () => {
                     Privacy Policies
                   </a>
                 </li>
-                <li className="cursor-pointer">Terms & Conditions</li>
+                <li className="cursor-pointer">
+                  <a
+                    href={termsAndCond}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Terms & Conditions
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="self-end justify-items-end h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center gap-4">

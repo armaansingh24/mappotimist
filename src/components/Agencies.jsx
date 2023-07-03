@@ -12,7 +12,7 @@ const Agencies = () => {
           alt=""
           className="absolute top-[-30rem] left-[7rem] h-full scale-[2] hidden xxmd:block z-0 select-none"
         />
-        <div className="block midxs:hidden text-[30px] mt-10 mb-20 ml-10 w-[80%] font-poppins500">
+        <div className="block midxs:hidden text-[30px] mt-20 mb-12 ml-10 w-[80%] font-poppins500 ">
           Available On Top Rated Agencies
         </div>
         <div className="hidden midxs:block w-[79%] mx-auto  mt-10 h-auto z-30 relative">
@@ -20,7 +20,7 @@ const Agencies = () => {
             Available On Top Rated Agencies
           </h2>
         </div>
-        <div className="w-[70%]  mx-auto  xxmd:mt-16 z-0 ">
+        <div className="w-[70%]  mx-auto  xxmd:mt-12 z-0 ">
           <div className="grid grid-cols-2 gap-12 midFM:h-[20rem] midlg:h-[30rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)] rounded-md  justify-between  p-8 mb-16 xxmd:grid-cols-4">
             {agencies.map((agency) => (
               <div

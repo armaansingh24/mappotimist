@@ -123,7 +123,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
-              <Link to="Developer" smooth={true} offset={70} duration={1000}>
+              <Link to="Developer" smooth={true} offset={100} duration={1000}>
                 <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12">
                   Know more
                   <span className="know">
@@ -131,26 +131,28 @@ const HeroSection = () => {
                   </span>
                 </button>
               </Link>
-              <div className=" flex ml-10 mt-4 lmd:mt-2">
-                <span className=" left-[-10px] ml-[-18px] z-1">
-                  <img src={image1} alt="" className=" w-12" />
-                </span>
-                <span className=" left-[-10px] ml-[-18px] z-1">
-                  <img src={image2} alt="" className=" w-12" />
-                </span>
-                <span className=" left-[-10px] ml-[-18px] z-1">
-                  <img src={image3} alt="" className=" w-12" />
-                </span>
-                <span className=" left-[-10px] ml-[-18px] z-1">
-                  <img src={image4} alt="" className=" w-12" />
-                </span>
-                <span className=" left-[-10px] ml-[-18px] z-1">
-                  <img src={image5} alt="" className=" w-12" />
-                </span>
-                <div className=" left-[-10px] ml-[-18px] z-1 w-12 h-12 rounded-full bg-[#5871D7] text-[14px] text-white flex items-center justify-center leading-[12px]">
-                  +100
+              <Link to="Developer" smooth={true} offset={100} duration={1000}>
+                <div className=" flex ml-10 mt-4 lmd:mt-2 cursor-pointer">
+                  <span className=" left-[-10px] ml-[-18px] z-1">
+                    <img src={image1} alt="" className=" w-12" />
+                  </span>
+                  <span className=" left-[-10px] ml-[-18px] z-1">
+                    <img src={image2} alt="" className=" w-12" />
+                  </span>
+                  <span className=" left-[-10px] ml-[-18px] z-1">
+                    <img src={image3} alt="" className=" w-12" />
+                  </span>
+                  <span className=" left-[-10px] ml-[-18px] z-1">
+                    <img src={image4} alt="" className=" w-12" />
+                  </span>
+                  <span className=" left-[-10px] ml-[-18px] z-1">
+                    <img src={image5} alt="" className=" w-12" />
+                  </span>
+                  <div className=" left-[-10px] ml-[-18px] z-1 w-12 h-12 rounded-full bg-[#5871D7] text-[14px] text-white flex items-center justify-center leading-[12px]">
+                    +100
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>
