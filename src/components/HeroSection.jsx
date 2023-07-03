@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className=" w-screen relative -z-1 h-[150vh] sm:h-[130vh] midFM:h-screen bg-gradient-to-r from-primary to-secondary ">
+      <div className=" w-screen relative -z-1 h-[150vh] sm:h-[160vh] md:h-[110vh] midFM:h-screen bg-gradient-to-r from-primary to-secondary ">
         <div className="w-full h-full bg-gradient-to-r from-primary to-secondary absolute">
           <img
             src={background}
@@ -73,7 +73,7 @@ const HeroSection = () => {
         </div>
         <Navbar />
         <div
-          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto  md:mt-5 gap-2 md:flex-row lmd:justify-between items-center absolute inset-0 mt-36"
+          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto  midFM:mt-5 gap-2 md:flex-row lmd:justify-between items-center absolute inset-0 mt-36"
           id="home"
         >
           <motion.div
