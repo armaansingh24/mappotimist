@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import SplashLogo from "../assets/SplashLogo.png";
+import logo from "../assets/navbar/logo.webp";
 
 function SplashScreen() {
   useEffect(() => {
@@ -13,9 +13,9 @@ function SplashScreen() {
   }, []);
 
   return (
-    <div className="splash-screen bg-gradient-to-br overflow-hidden from-secondary to-secondary via-white w-screen h-screen flex items-center justify-center">
+    <div className="splash-screen bg-gradient-to-r overflow-hidden from-primary to-secondary  w-screen h-screen flex items-center justify-center">
       <div className="logo overflow-hidden">
-        <img src={SplashLogo} alt="Logo" className="w-[30%] mx-auto" />
+        <img src={logo} alt="Logo" className="w-[30%] mx-auto" />
       </div>
     </div>
   );
