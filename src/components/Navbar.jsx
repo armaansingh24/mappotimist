@@ -81,7 +81,7 @@ const Navbar = () => {
                 className={`${
                   toggle === true
                     ? "hidden"
-                    : "w-[15%] absolute sm:w-[50%] top-3 sm:relative sm:top-0 z-20"
+                    : "w-[15%] absolute sm:w-[35%] top-3 sm:relative sm:top-0 z-20"
                 }`}
                 loading="lazy"
               />
