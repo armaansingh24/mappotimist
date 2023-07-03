@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className=" w-screen relative -z-1 h-[150vh] md:h-screen bg-gradient-to-r from-primary to-secondary ">
+      <div className=" w-screen relative -z-1 h-[150vh] sm:h-[130vh] midFM:h-screen bg-gradient-to-r from-primary to-secondary ">
         <div className="w-full h-full bg-gradient-to-r from-primary to-secondary absolute">
           <img
             src={background}
