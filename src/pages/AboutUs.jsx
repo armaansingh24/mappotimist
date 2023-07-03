@@ -19,7 +19,7 @@ const AboutUs = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 1.5,
+      items: 2,
       slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
@@ -141,7 +141,7 @@ const AboutUs = () => {
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Yashvant Sikarvar
             </h2>
-            <p className="text-2xl p-1 font-poppins">Founder & CEO</p>
+            <p className="text-xl sm:text-2xl p-1 font-poppins">Founder & CEO</p>
           </div>
           <div className="sm:row-span-2 sm:order-1 mx-auto my-auto">
             <img src={picture1} alt="" />
@@ -285,7 +285,7 @@ const AboutUs = () => {
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
               Testimonial
             </h2>
-            <p className="text-2xl p-1 font-poppins">
+            <p className="text-xl sm:text-2xl p-1 font-poppins">
               See what they say about us
             </p>
           </div>
@@ -296,8 +296,8 @@ const AboutUs = () => {
               infinite={true}
               sliderClass={true}
               showDots={false}
-              autoPlay={true}
-              autoPlaySpeed={5000}
+              // autoPlay={true}
+              // autoPlaySpeed={5000}
             >
               {testimonials.map((testimonial, index) => (
                 <TestimonialsItem testimonial={testimonial} key={index} />

@@ -907,7 +907,7 @@ export const testimonials = [
     testimonial:
       "I have had an excellent experience thus far working with MappOptimist. The managers and teammates have been incredibly cooperative and friendly. The company consistently delivers stable builds that meet client requirements. Regular calls and communication contribute significantly to building confidence in their services.",
     image: Jabier,
-    date: "12/03/2023",
+    date: "12th Mar 2023",
     rating: 4,
   },
   {

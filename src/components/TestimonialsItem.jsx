@@ -12,14 +12,14 @@ const TestimonialsItem = ({ testimonial }) => {
   }
 
   return (
-    <div className="bg-[#FDFFE0]  sm:p-10 rounded-3xl mx-4 h-[27rem] sm:h-[24rem] shadow-xl mb-10">
+    <div className="bg-[#FDFFE0]  sm:p-5 rounded-3xl mx-4 h-[16rem] sm:h-[17rem] shadow-xl mb-10">
       <div className="flex flex-col p-4 gap-4">
         <div className="flex justify-between items-center">
           <div className="rounded-full flex items-center justify-start gap-4">
             <img
               src={testimonial.image}
               alt=""
-              className="rounded-full w-[20%]"
+              className="rounded-full w-[12%]"
             />
             <p className="text-sm sm:text-lg font-poppins">
               {testimonial.name}
@@ -31,7 +31,7 @@ const TestimonialsItem = ({ testimonial }) => {
             })}
           </div>
         </div>
-        <div className="text-base sm:text-lg font-poppins500 flex flex-col gap-2">
+        <div className="text-sm font-poppins500 flex flex-col gap-2">
           <p>{testimonial.testimonial}</p>
           <p className="text-sm text-gray-400 italic">
             Date: {testimonial.date}
