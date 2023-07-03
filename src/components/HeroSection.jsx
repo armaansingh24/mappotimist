@@ -31,14 +31,14 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className=" w-screen relative -z-1 h-[190vh]  xsm:h-[150vh] sm:h-[160vh] lmd:h-[110vh] midxmd:h-screen bg-gradient-to-r from-primary to-secondary ">
+      <div className=" w-screen relative -z-1 h-[190vh]  xsm:h-[150vh] sm:h-[160vh] lmd:h-[110vh]  bg-gradient-to-r from-primary to-secondary ">
         <div className="w-full h-full bg-gradient-to-r from-primary to-secondary absolute">
           <img
             src={background}
             alt=""
             className="absolute right-0 h-full hidden midFM:block"
           />
-          <img src={techs} alt="" className="absolute bottom-10 sm:bottom-5" />
+          <img src={techs} alt="" className="absolute left-3 bottom-10 sm:bottom-5 w-[20%]" />
           <img
             src={pattern}
             alt=""
@@ -87,8 +87,8 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-full mx-auto flex items-center justify-center md:mt-24">
-              <img src={main} alt="" />
+            <div className="w-full mx-auto flex items-center justify-center md:mt-44">
+              <img src={main} alt="" className="w-[70%]" />
             </div>
           </motion.div>
 
