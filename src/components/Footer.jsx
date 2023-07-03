@@ -98,7 +98,7 @@ const Footer = () => {
             </div>
             <div className="self-end justify-items-end h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center gap-4">
               <div>
-                <p className="text-center">Follow Us</p>
+                <p className="text-center text-xl">Follow Us</p>
               </div>
               <div className="flex gap-6 sm:gap-4 items-baseline">
                 <a
