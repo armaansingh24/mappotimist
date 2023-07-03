@@ -267,20 +267,20 @@ const Navbar = () => {
                 <div
                   className={`${genericHamburgerLine} ${
                     isOpen
-                      ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
-                      : "opacity-50 group-hover:opacity-100"
+                      ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100 bg-black"
+                      : "opacity-50 group-hover:opacity-100 bg-white"
                   }`}
                 />
                 <div
                   className={`${genericHamburgerLine} ${
-                    isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"
+                    isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100 bg-white"
                   }`}
                 />
                 <div
                   className={`${genericHamburgerLine} ${
                     isOpen
-                      ? "-rotate-45 -translate-y-1 opacity-50 group-hover:opacity-100"
-                      : "opacity-50 group-hover:opacity-100 "
+                      ? "-rotate-45 -translate-y-1 opacity-50 group-hover:opacity-100 bg-black"
+                      : "opacity-50 group-hover:opacity-100 bg-white"
                   }`}
                 />
               </button>

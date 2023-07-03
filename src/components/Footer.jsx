@@ -10,6 +10,9 @@ import GetHire from "./GetHire";
 import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import location from "../assets/footer/location.png";
+import call from "../assets/footer/call.png";
+import message from "../assets/footer/message.png";
+import logo from "../assets/navbar/logo.webp";
 
 const Footer = () => {
   const [showForm2, setShowForm2] = useState(false);
@@ -43,22 +46,23 @@ const Footer = () => {
         <div className="w-[90%] mx-auto flex h-full p-0">
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
             <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
-              <div className="flex flex-col gap-10">
-                <div className="text-2xl sm:text-3xl">
+              <div className="flex flex-col items-center justify-center gap-10">
+                <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-10">
+                  <img src={logo} alt="" className="w-[7%] sm:w-[10%]" />
                   <p>MappOptimist</p>
                 </div>
-                <div className="text-xl hidden sm:block">
+                <div className="text-xl hidden sm:block self-center">
                   <ul className="flex flex-col gap-3">
                     <li className="flex  items-center justify-start gap-4">
                       <img src={location} alt="" />
                       <p>Sultanpur, New Delhi 110030</p>
                     </li>
                     <li className="flex  items-center justify-start gap-4">
-                      <img src={location} alt="" />
+                      <img src={call} alt="" />
                       <p>+91 8171977577</p>
                     </li>
                     <li className="flex  items-center justify-start gap-4">
-                      <img src={location} alt="" />
+                      <img src={message} alt="" />
                       <p>info@mappoptimist.com</p>
                     </li>
                   </ul>

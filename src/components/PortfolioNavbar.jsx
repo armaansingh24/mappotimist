@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { navLinks } from "../constants";
-import logo from "../assets/navbar/logo.webp";
+import splshLogo from "../assets/SplashLogo.png";
 import eclips1 from "../assets/navbar/eclips1.webp";
 import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
@@ -76,12 +76,12 @@ const Navbar = ({page}) => {
               }}
             >
               <img
-                src={logo}
+                src={splshLogo}
                 alt="logo"
                 className={`${
                   toggle === true
                     ? "hidden"
-                    : "w-[15%] absolute sm:w-[50%] top-3 sm:relative sm:top-0 z-20"
+                    : "w-[15%] absolute sm:w-[45%] top-3 sm:relative sm:top-0 z-20 mb-4"
                 }`}
                 loading="lazy"
               />
@@ -320,7 +320,7 @@ const Navbar = ({page}) => {
                   }}
                 >
                   <img
-                    src={logo}
+                    src={splshLogo}
                     alt="logo"
                     className={`${
                       toggle === false ? "hidden" : "w-[80%] block"
