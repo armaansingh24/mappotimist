@@ -159,7 +159,7 @@ const AboutUs = () => {
                 Market, Gaming, Keyboard Applications, and various other.
               </p>
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/yash.sikarvar/"
                 className="group"
@@ -182,7 +182,7 @@ const AboutUs = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <RiInstagramFill className="text-[#7F838D] group-hover:text-primary w-full h-full" />
+                <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
               </a>
               <a
                 href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
@@ -190,7 +190,7 @@ const AboutUs = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsLinkedin className="text-[#7F838D] group-hover:text-primary" />
+                <BsLinkedin className="text-[#7F838D] group-hover:text-primary text-xl mt-1" />
               </a>
             </div>
           </div>
@@ -214,7 +214,7 @@ const AboutUs = () => {
                 various domains including Healthcare, Banking, E-commerce, Share
                 Market, Gaming, Keyboard Applications, and various other.
               </p>
-              <div className="flex gap-6">
+              <div className="flex gap-4">
                 <a
                   href="https://www.facebook.com/yash.sikarvar/"
                   className="group"
@@ -245,7 +245,7 @@ const AboutUs = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <BsLinkedin className="text-[#7F838D] group-hover:text-primary" />
+                  <BsLinkedin className="text-[#7F838D] group-hover:text-primary text-xl mt-1" />
                 </a>
               </div>
             </div>
