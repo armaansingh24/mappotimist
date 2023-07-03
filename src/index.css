@@ -284,6 +284,20 @@ body {
     animation-iteration-count: infinite;
 }
 
+.know {
+    /* alternate-reverse */
+    animation: goto .8s linear infinite ;
+}
+
+@keyframes goto {
+    0% {
+        transform: translateX(-0.3rem);
+    }
+
+    100% {
+        transform: translateX(0.3rem);
+    }
+}
 @keyframes slowmo {
 
     from,

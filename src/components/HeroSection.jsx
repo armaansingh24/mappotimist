@@ -126,7 +126,7 @@ const HeroSection = () => {
               <Link to="Developer" smooth={true} offset={70} duration={1000}>
                 <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12">
                   Know more
-                  <span>
+                  <span className="know">
                     <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
                   </span>
                 </button>
