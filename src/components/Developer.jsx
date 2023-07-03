@@ -30,7 +30,6 @@ const Developer = () => {
   const handleGetHired = () => {
     setShowForm(!showForm);
   };
-
   const handleGetHire = () => {
     setShowForm2(!showForm2);
   };
@@ -119,7 +118,6 @@ const Developer = () => {
                   scale: 1,
                   speed: 450,
                 }}
-                className="card"
               >
                 <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3 midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
                   <p className="text-2xl font-poppins500">
@@ -155,7 +153,6 @@ const Developer = () => {
                   scale: 1,
                   speed: 450,
                 }}
-                className="card"
               >
                 <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
                   <p className="text-2xl font-poppins500">Share Thoughts</p>
@@ -185,7 +182,6 @@ const Developer = () => {
                   scale: 1,
                   speed: 450,
                 }}
-                className="card"
               >
                 <div className="bg-white flex flex-col justify-between items-center rounded-3xl p-6 gap-3  h-full midlg:h-[32.5rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
                   <p className="text-2xl font-poppins500"> OCR/ICR</p>

@@ -40,7 +40,7 @@ const AboutUs = () => {
         <PortfolioNavbar />
       </div>
       <div className="w-screen mt-36 sm:mt-0 about">
-        <div className="relative">
+        <div className="relative hidden sm:block">
           <img src={firstSection} alt="firstSection" className="w-full" />
           <div className="absolute inset-0 w-[97%] sm:w-[90%] flex flex-col items-end justify-center">
             <div className="text-center">

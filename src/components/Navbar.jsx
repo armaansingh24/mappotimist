@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.webp";
+import logo2 from "../assets/navbar/logo2.png";
 import eclips1 from "../assets/navbar/eclips1.webp";
 import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
@@ -82,6 +83,16 @@ const Navbar = () => {
                   toggle === true
                     ? "hidden"
                     : "w-[15%] absolute sm:w-[35%] top-3 sm:relative sm:top-0 z-20"
+                }`}
+                loading="lazy"
+              />
+              <img
+                src={logo2}
+                alt="logo"
+                className={`${
+                  toggle === true
+                    ? "hidden"
+                    : "w-[15%] sm:hidden absolute sm:w-[35%] top-3 sm:relative sm:top-0 z-20"
                 }`}
                 loading="lazy"
               />
@@ -273,7 +284,9 @@ const Navbar = () => {
                 />
                 <div
                   className={`${genericHamburgerLine} ${
-                    isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100 bg-white"
+                    isOpen
+                      ? "opacity-0"
+                      : "opacity-50 group-hover:opacity-100 bg-white"
                   }`}
                 />
                 <div
@@ -326,7 +339,7 @@ const Navbar = () => {
                   }}
                 >
                   <img
-                    src={logo}
+                    src={logo2}
                     alt="logo"
                     className={`${
                       toggle === false ? "hidden" : "w-[80%] block"
