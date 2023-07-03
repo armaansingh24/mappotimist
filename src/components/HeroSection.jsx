@@ -38,13 +38,17 @@ const HeroSection = () => {
             alt=""
             className="absolute right-0 h-full hidden midFM:block"
           />
-          <img src={techs} alt="" className="absolute left-3 bottom-10 sm:bottom-5 w-[20%]" />
+          <img
+            src={techs}
+            alt=""
+            className="absolute left-2 bottom-10 sm:bottom-5 w-[20%]"
+          />
           <img
             src={pattern}
             alt=""
             className="absolute right-9 bottom-44 md:bottom-36 md:right-20"
           />
-          <img src={pattern2} alt="" className="absolute top-28 left-10" />
+          <img src={pattern2} alt="" className="absolute top-36 left-10" />
           <img
             src={plus}
             alt=""
@@ -87,13 +91,13 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-full mx-auto flex items-center justify-center md:mt-44">
+            <div className="w-full mx-auto flex items-center justify-center md:mt-44 ">
               <img src={main} alt="" className="w-[70%]" />
             </div>
           </motion.div>
 
           <motion.div
-            className="flex flex-col gap-4 w-full lmd:gap-6"
+            className="flex flex-col gap-4 w-full lmd:gap-6 items-start justify-start"
             ref={ref}
             variants={{
               hidden: { opacity: 0, x: -100 },
@@ -103,11 +107,11 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-full font-poppins lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-5">
+            <div className="w-full font-poppins lmd:text-[48px] leading-[50px] lmd:leading-[72px] flex flex-col ml-12">
               <h1 className="font-RobotoSlab text-[30px] lmd:text-[48px] flex gap-2 flex-wrap text-white">
                 Transform your vision into digital reality with our
               </h1>
-              <div className=" text-transparent bg-clip-text bg-gradient-to-r from-[#24BBE6]  to-[#737FCF] lmd:text-[48px] -z-1 font-poppins ">
+              <div className=" text-transparent bg-clip-text bg-gradient-to-r from-[#24BBE6] via-[#737FCF]  to-[#737FCF] lmd:text-[48px] -z-1 font-poppins ">
                 <TypeWritter
                   options={{
                     autoStart: true,
@@ -120,7 +124,7 @@ const HeroSection = () => {
             </div>
             <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
               <Link to="Developer" smooth={true} offset={70} duration={1000}>
-                <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500">
+                <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12">
                   Hire Talent
                   <span>
                     <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
