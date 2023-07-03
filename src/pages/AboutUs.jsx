@@ -237,7 +237,7 @@ const AboutUs = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <RiInstagramFill className="text-[#7F838D] group-hover:text-primary w-full h-full" />
+                  <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
