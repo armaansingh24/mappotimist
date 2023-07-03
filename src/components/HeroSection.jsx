@@ -31,8 +31,8 @@ const HeroSection = () => {
   }, [isInView]);
   return (
     <>
-      <div className=" w-screen relative -z-1 h-[190vh]  xsm:h-[150vh] sm:h-[160vh] lmd:h-[110vh]  bg-gradient-to-r from-primary to-secondary ">
-        <div className="w-full h-full bg-gradient-to-r from-primary to-secondary absolute">
+      <div className=" w-screen relative -z-1  bg-gradient-to-r from-primary to-secondary ">
+        <div className="w-full bg-gradient-to-r from-primary to-secondary ">
           <img
             src={background}
             alt=""
@@ -41,7 +41,7 @@ const HeroSection = () => {
           <img
             src={techs}
             alt=""
-            className="absolute left-1 bottom-10 sm:bottom-5 w-[20%]"
+            className="absolute midFM:left-1 bottom-10 sm:bottom-5 w-[70%] sm:w-[28%] midFM:w-[20%]"
           />
           <img
             src={pattern}
@@ -77,7 +77,7 @@ const HeroSection = () => {
         </div>
         <Navbar />
         <div
-          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto xxmd:mt-36 midxmd:mt-5 gap-2 md:flex-row lmd:justify-between items-center absolute inset-0 mt-36"
+          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto xxmd:mt-36 midxmd:mt-5 gap-2 md:flex-row lmd:justify-between items-center relative z-40 inset-0 mt-24 sm:mt-0 mb-[75%] sm:mb-52"
           id="home"
         >
           <motion.div
@@ -91,13 +91,13 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-full mx-auto flex items-center justify-center md:mt-44 ocr">
+            <div className="w-full mx-auto flex items-center justify-center  ocr">
               <img src={main} alt="" className="w-[70%]" />
             </div>
           </motion.div>
 
           <motion.div
-            className="flex flex-col gap-4 w-full lmd:gap-6 items-start justify-start mt-20"
+            className="flex flex-col gap-4 w-full lmd:gap-6 items-start justify-start"
             ref={ref}
             variants={{
               hidden: { opacity: 0, x: -100 },
@@ -107,11 +107,11 @@ const HeroSection = () => {
             animate={mainControls}
             transition={{ duration: 1.9 }}
           >
-            <div className="w-full font-poppins lmd:text-[46px] leading-[50px] lmd:leading-[72px] flex flex-col ml-12">
+            <div className="w-full font-poppins lmd:text-[46px] leading-[50px] lmd:leading-[72px] flex flex-col middle:ml-12">
               <h1 className="font-RobotoSlab text-[30px] lmd:text-[46px] flex gap-2 flex-wrap text-white">
                 Transform your vision into digital reality with our
               </h1>
-              <div className=" text-transparent bg-clip-text bg-gradient-to-r from-[#24BBE6] via-[#737FCF]  to-[#737FCF] lmd:text-[46px] -z-1 font-poppins ">
+              <div className=" text-transparent bg-clip-text bg-gradient-to-r from-[#24BBE6] via-[#737FCF]  to-[#737FCF] lmd:text-[46px] -z-1 font-poppins mr-10 ">
                 <TypeWritter
                   options={{
                     autoStart: true,
