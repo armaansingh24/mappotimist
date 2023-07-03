@@ -77,7 +77,7 @@ const HeroSection = () => {
         </div>
         <Navbar />
         <div
-          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto xxmd:mt-36 midxmd:mt-5 gap-2 md:flex-row lmd:justify-between items-center relative z-40 inset-0 mt-24 sm:mt-0 mb-[75%] sm:mb-60"
+          className="w-[90%] flex flex-col justify-center h-fit mx-auto my-auto xxmd:mt-36 midxmd:mt-5 gap-2 md:flex-row lmd:justify-between items-center relative z-40 inset-0 mt-24 sm:mt-0 mb-[75%] sm:mb-72"
           id="home"
         >
           <motion.div

@@ -216,7 +216,7 @@ const AboutUs = () => {
                 various domains including Healthcare, Banking, E-commerce, Share
                 Market, Gaming, Keyboard Applications, and various other.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 relative z-50">
                 <a
                   href="https://www.facebook.com/yash.sikarvar/"
                   className="group"
