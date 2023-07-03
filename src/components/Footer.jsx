@@ -42,7 +42,7 @@ const Footer = () => {
   }, [showForm2, showForm4]);
   return (
     <>
-      <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[26rem] relative z-30 flex flex-col items-center">
+      <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[30rem] relative z-30 flex flex-col items-center">
         <div className="w-[90%] mx-auto flex h-full p-0">
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
             <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
@@ -68,7 +68,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <ul className="text-xl flex gap-1 flex-col sm:text-2xl mt-5">
+              <ul className="text-xl flex gap-1 flex-col sm:text-2xl mt-16">
                 <Link to="/about-us">
                   <li className="cursor-pointer">About</li>
                 </Link>
@@ -134,7 +134,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="text-xs  sm:text-sm text-white">
+        <p className="text-xs  sm:text-sm text-white ">
           Copyright © 2023-24 MappOptimist Technologies LLP
         </p>
       </div>

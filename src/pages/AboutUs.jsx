@@ -36,14 +36,15 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="">
+      <div className="bg-gradient-to-r from-primary to-secondary">
         <PortfolioNavbar />
       </div>
       <div className="w-screen mt-36 sm:mt-0 about">
-        <div className="relative hidden sm:block">
-          <img src={firstSection} alt="firstSection" className="w-full" />
-          <div className="absolute inset-0 w-[97%] sm:w-[90%] flex flex-col items-end justify-center">
-            <div className="text-center">
+        <div className="relative">
+          <img src={firstSection} alt="firstSection" className="w-full hidden sm:block" />
+          <div className=""></div>
+          <div className=" bg-gradient-to-r from-primary to-secondary sm:bg-none sm:absolute inset-0 w-[97%] sm:w-[90%] flex flex-col items-start sm:items-end justify-center p-20 sm:p-0">
+            <div className="sm:text-center">
               <p className="sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F6D28C] to-[#FBE6BD] font-poppins">
                 About Us
               </p>
