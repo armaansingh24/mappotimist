@@ -36,12 +36,12 @@ const PortfolioCarausel = ({ page }) => {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 2,
+      slidesToSlide: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 3,
-      slidesToSlide: 2, 
+      slidesToSlide: 1, 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -58,7 +58,7 @@ const PortfolioCarausel = ({ page }) => {
         <button
           className={`absolute w-[2%] h-full ${
             page === "portfolio" ? "text-black" : "text-white"
-          }  -top-[10rem] sm:-top-[15rem]  left-0 text-center p-3 z-[100]`}
+          }  -top-[10rem] sm:-top-[15rem] -left-3 sm:left-0 text-center p-3 z-[100]`}
           onClick={() => previous()}
         >
           {" "}
@@ -68,7 +68,7 @@ const PortfolioCarausel = ({ page }) => {
           <span
             className={`absolute w-[2%] h-20 -top-[10rem] sm:-top-[15rem] ${
               page === "portfolio" ? "text-black" : "text-white"
-            } sm:right-[0.3rem] text-center p-3 z-[100]`}
+            } -right-[0rem] sm:right-[0.3rem] text-center p-3 z-[100]`}
           >
             <AiOutlineArrowRight className="text-[1.75rem] absolute top-6 left-0 right-[-2rem]" />
           </span>

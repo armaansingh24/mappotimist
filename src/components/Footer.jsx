@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
             <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
               <div className="flex flex-col items-center justify-center gap-10">
-                <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-10">
+                <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-32 midFM:ml-5">
                   <img src={logo} alt="" className="w-[7%] sm:w-[12%]" />
                   <p>MappOptimist</p>
                 </div>

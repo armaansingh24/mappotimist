@@ -75,7 +75,7 @@ const PortfolioPage = () => {
               <img
                 src={item.feature}
                 alt=""
-                className="w-[50%] mx-auto sm:w-[20%] midFM:w-[100%] xxmd:w-[20%]"
+                className="w-[50%] mx-auto sm:w-[20%]  xxmd:w-[20%]"
               />
             </div>
             <div className="grid grid-cols-2 gap-5 w-[90%] mx-auto items-center justify-center mt-10">
@@ -369,30 +369,30 @@ const PortfolioPage = () => {
             )}
           </div>
         </div>
-        <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row sm:h-screen relative">
+        <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 lmd:flex-row lmd:h-screen relative">
           <img
             src={R1}
             alt=""
-            className="absolute  -top-[32.9%] -right-8 block sm:hidden z-0"
+            className="absolute  -top-[32.9%] -right-16 h-full block lmd:hidden z-0"
           />
           <img
             src={R2}
             alt=""
-            className="absolute  -top-[2%] -right-44 hidden sm:block z-0"
+            className="absolute  -top-[2%] -right-44 hidden lmd:block z-0"
           />
           <div className="w-full">
             <img
               src={item.leftImage}
               alt=""
-              className="w-full midFM:ml-8 midFM:scale-[1.2]"
+              className="w-full midFM:ml-8 scale-[1.2]"
             />
           </div>
           <div className="flex flex-col items-center justify-center gap-3 relative z-10">
             <div className="flex flex-col items-center justify-center gap-2">
-              <p className="text-xl font-poppins500 sm:text-3xl">
+              <p className="text-xl font-poppins500 lmd:text-3xl">
                 UI/UX Design
               </p>
-              <p className="text-sm font-poppins300 text-center sm:text-sm sm:w-[70%]">
+              <p className="font-poppins300 text-center text-sm lmd:w-[70%]">
                 We utilized tools like Zeplin and Figma to create a
                 comprehensive UI/UX design. Our responsive designs cater to
                 various screen sizes, and adhere to established design
@@ -400,18 +400,18 @@ const PortfolioPage = () => {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
-              <p className="text-xl font-poppins500 sm:text-3xl">
+              <p className="text-xl font-poppins500 lmd:text-3xl">
                 Work Distribution
               </p>
-              <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+              <p className="text-sm font-poppins300 text-center w-[95%]  lmd:w-[70%]">
                 Thoroughly analyzed the project requirements and allocated
                 specific tasks to individuals to ensure timely completion.
                 Employed the Divide and Conquer strategy to meet deadlines.
               </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
-              <p className="text-xl font-poppins500 sm:text-3xl">Testing</p>
-              <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+              <p className="text-xl font-poppins500 lmd:text-3xl">Testing</p>
+              <p className="text-sm font-poppins300 text-center w-[95%]  lmd:w-[70%]">
                 Developed a variety of test cases and thoroughly examined each
                 one. Implemented the Beta version technique to ensure
                 comprehensive coverage of edge cases.
@@ -423,10 +423,10 @@ const PortfolioPage = () => {
           <img
             src={R4}
             alt=""
-            className="absolute -top-20 z-0 block sm:hidden"
+            className="absolute -top-20 z-0 w-screen block lmd:hidden"
           />
-          <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row relative h-fit mt-36 sm:mt-0">
-            <div className="sm:order-2 w-full">
+          <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 lmd:flex-row relative h-fit mt-36 lmd:mt-0">
+            <div className="lmd:order-2 w-full">
               <img
                 src={item.rightImage}
                 alt=""
@@ -435,26 +435,26 @@ const PortfolioPage = () => {
             </div>
             <div className="flex flex-col items-baseline justify-center gap-3 relative z-10">
               <div className="flex flex-col items-center justify-center gap-2">
-                <p className="text-xl font-poppins500 sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <p className="text-xl font-poppins500 lmd:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   {item.rightImage1}
                 </p>
-                <p className="text-sm font-poppins300 text-center sm:text-sm sm:w-[70%]">
+                <p className="text-sm font-poppins300 text-center lmd:text-sm lmd:w-[70%]">
                   {item.rightImage1Desc}
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center gap-2 ">
-                <p className="text-xl font-poppins500 sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <p className="text-xl font-poppins500 lmd:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   {item.rightImage2}
                 </p>
-                <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+                <p className="text-sm font-poppins300 text-center w-[95%] lmd:text-sm lmd:w-[70%]">
                   {item.rightImage2Desc}
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center gap-2 mb-24">
-                <p className="text-xl font-poppins500 sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <p className="text-xl font-poppins500 lmd:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   {item.rightImage3}
                 </p>
-                <p className="text-sm font-poppins300 text-center w-[95%] sm:text-sm sm:w-[70%]">
+                <p className="text-sm font-poppins300 text-center w-[95%]  lmd:w-[70%]">
                   {item.rightImage3Desc}
                 </p>
               </div>

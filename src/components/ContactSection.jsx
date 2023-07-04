@@ -122,7 +122,7 @@ const ContactSection = () => {
         <img
           src={R2}
           alt=""
-          className="absolute -top-[40%] -left-2 hidden midxmd:block z-0"
+          className="absolute -top-[34%] -left-2 hidden midxmd:block z-0"
         />
         <div className=" mx-auto midFM:mt-10 p-3">
           <h2 className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32 bg-gradient-to-r from-primary via-secondary p-2 to-secondary text-transparent bg-clip-text">
