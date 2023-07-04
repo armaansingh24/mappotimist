@@ -391,14 +391,18 @@ const OcrIcr = () => {
                         <img
                           src={arrow}
                           alt=""
-                          className="translate-x-3 midlg:translate-x-9 "
+                          className="translate-x-3 midlg:translate-x-6 -translate-y-5 midFM:-translate-y-12"
                         />
                       </div>
-                      <div className="w-[30%]">
+                      <div className="w-[30%] -translate-y-5 midFM:-translate-y-12">
                         <img src={ai} alt="" />
                       </div>
                       <div className="h-[10%] w-[15%]">
-                        <img src={arrow} alt="" className="-translate-x-4 " />
+                        <img
+                          src={arrow}
+                          alt=""
+                          className="-translate-x-4 -translate-y-5 midFM:-translate-y-12"
+                        />
                       </div>
                       <div className="w-[25%]">
                         <img src={item.json} alt="" />
