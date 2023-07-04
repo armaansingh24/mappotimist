@@ -73,7 +73,7 @@ const ClientReviews = () => {
         </h2>
         <div className="w-full mt-[6%]">
           <div className="w-full flex justify-start items-end text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
-            <div className="w-full midlg:w-[45%] h-full lg:w-[45%]">
+            <div className="w-full xl:w-[45%] h-full lg:w-[45%]">
               {data.map((item, index) => (
                 <div
                   key={index}
@@ -84,7 +84,7 @@ const ClientReviews = () => {
               ))}
             </div>
             <div className="hidden midxmd:block w-full h-full -mt-24 xl:hidden -translate-y-20">
-              <img src={staticView} alt="" className="w-full" />
+              <img src={staticView} alt="" className="" />
             </div>
             <div className="relative w-[709px] hidden xl:block z-4">
               <div className="absolute left-[-3rem] top-4 rounded-full">
