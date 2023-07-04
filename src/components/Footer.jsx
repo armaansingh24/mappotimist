@@ -137,7 +137,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/mappoptimist-technologies/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer w-[11%] sm:w-[90%] mt-2 sm:mt-0"
+                  className="cursor-pointer w-[15%] sm:w-[90%] mt-2 sm:mt-0"
                 >
                   <img src={linkedin} alt="" className="mt-0 translate-y-1" />
                 </a>
