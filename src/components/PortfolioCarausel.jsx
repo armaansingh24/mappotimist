@@ -179,7 +179,7 @@ const PortfolioCarausel = ({ page }) => {
                   className={`${
                     page === "portfolio"
                       ? "text-black"
-                      : "text-white absolute top-[1.3rem] right-[.6rem]"
+                      : "text-white absolute top-[1.3rem] -right-[0.5rem]"
                   }`}
                 ></AiOutlineArrowLeft>
               </div>
