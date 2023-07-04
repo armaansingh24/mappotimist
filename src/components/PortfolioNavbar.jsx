@@ -39,7 +39,7 @@ const Navbar = ({ page }) => {
                 className={`${
                   toggle === true
                     ? "hidden"
-                    : "w-[15%] absolute sm:w-[45%] top-3 sm:relative sm:top-0 z-20 mb-4"
+                    : "w-[15%] midxs:w-[10%] absolute sm:w-[45%] top-3 sm:relative sm:top-0 z-20 mb-4"
                 }`}
                 loading="lazy"
               />
@@ -50,7 +50,7 @@ const Navbar = ({ page }) => {
                 </span>
               </p>
             </Link>
-            <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center z-50 relative">
+            <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-4 order-3 self-center z-50 relative">
               <li
                 className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
                 "
@@ -187,7 +187,7 @@ const Navbar = ({ page }) => {
                   !toggle ? "opacity-0 h-0" : "opacity-100 h-fit"
                 }  justify-center items-center mx-auto transition-all duration-[2000ms] linear`}
               >
-                <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-screen mt-12 transform transition duration-1000 ease-linear">
+                <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-full mt-12 transform transition duration-1000 ease-linear">
                   <li
                     className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
                hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"

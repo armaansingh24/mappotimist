@@ -116,7 +116,7 @@ const ContactSection = () => {
   return (
     <>
       <div
-        className="relative z-30 w-full -mt-10 midxmd:-mt-60 "
+        className="relative z-30 w-full -mt-24 midxmd:-mt-60 "
         id="Contact Us"
       >
         <img
@@ -124,12 +124,12 @@ const ContactSection = () => {
           alt=""
           className="absolute -top-[40%] -left-2 hidden midxmd:block z-0"
         />
-        <div className=" mx-auto p-3">
+        <div className=" mx-auto midFM:mt-10 p-3">
           <h2 className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32 bg-gradient-to-r from-primary via-secondary p-2 to-secondary text-transparent bg-clip-text">
             Contact Us
           </h2>
-          <div className="flex middlesm:mt-32 gap-10">
-            <div className="hidden midxmd:flex flex-col items-end justify-start w-[25%] relative z-10  -ml-10">
+          <div className="flex mt-5 midFM:mt-32 gap-10">
+            <div className="hidden midxmd:flex flex-col  justify-start w-[25%] relative z-10  ">
               <div className="mr-10">
                 <p className="text-sm text-center font-poppins500">
                   You can email us at
@@ -168,11 +168,11 @@ const ContactSection = () => {
               <div className="w-1 bg-via-[rgb(0,0,0,0.6)] relative" />
             </div>
             <div>
-              <div className="flex flex-col flex-wrap mt-8 midxmd:mt-0 w-full font-poppins500">
+              <div className="flex flex-col flex-wrap   w-full font-poppins500">
                 <span className="midxmd:text-5xl">Hey there!</span>
                 <div className="flex flex-wrap gap-1 items-baseline">
                   <span className=" midxmd:text-5xl">Do you have a </span>
-                  <span className="text-[#DF9507] lmd:text-[48px] -z-1 inline midxmd:text-5xl midlg:ml-2">
+                  <span className="text-[#DF9507]  -z-1 inline midxmd:text-5xl midlg:ml-2">
                     {text}
                   </span>
                 </div>
@@ -320,7 +320,7 @@ const ContactSection = () => {
                         )}
                       </div>
                     </div>
-                    <button className="relative z-30 text-sm w-[30%] h-fit bg-gradient-to-r from-[#000046] to-[#1CB5E0] hover:from-secondary hover:to-primary transition-all duration-1000 rounded-lg text-white font-poppins py-2 mt-8 sm:text-lg midxmd:mb-[20%]">
+                    <button className="relative z-30 text-sm w-[30%] h-fit bg-gradient-to-r from-[#000046] to-[#1CB5E0] hover:from-secondary hover:to-primary transition-all duration-1000 rounded-lg text-white font-poppins py-2 mt-8 sm:text-lg mb-[15%] midxmd:mb-[20%]">
                       Submit
                     </button>
                   </form>

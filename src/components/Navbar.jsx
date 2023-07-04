@@ -58,7 +58,7 @@ const Navbar = () => {
                 </span>
               </p>
             </Link>
-            <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-10 order-3 self-center z-50 relative">
+            <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-4 order-3 self-center z-50 relative">
               <li
                 className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
                 "

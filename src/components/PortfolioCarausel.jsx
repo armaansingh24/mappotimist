@@ -58,7 +58,7 @@ const PortfolioCarausel = ({ page }) => {
         <button
           className={`absolute w-[2%] h-full ${
             page === "portfolio" ? "text-black" : "text-white"
-          } -top-[15rem]  left-0 text-center p-3 z-[100]`}
+          }  -top-[10rem] sm:-top-[15rem]  left-0 text-center p-3 z-[100]`}
           onClick={() => previous()}
         >
           {" "}
@@ -66,9 +66,9 @@ const PortfolioCarausel = ({ page }) => {
         </button>
         <button onClick={() => next()}>
           <span
-            className={`absolute w-[2%] h-20 -top-[15rem] ${
+            className={`absolute w-[2%] h-20 -top-[10rem] sm:-top-[15rem] ${
               page === "portfolio" ? "text-black" : "text-white"
-            } right-[0.3rem] text-center p-3 z-[100]`}
+            } sm:right-[0.3rem] text-center p-3 z-[100]`}
           >
             <AiOutlineArrowRight className="text-[1.75rem] absolute top-6 left-0 right-[-2rem]" />
           </span>
