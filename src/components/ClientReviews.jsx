@@ -14,6 +14,7 @@ import { reviewImages3 } from "../constants/index";
 import { reviewImages2 } from "../constants/index";
 import { reviewImages4 } from "../constants/index";
 import { reviewImages5 } from "../constants/index";
+import staticView from "../assets/clientReviews/staticView.png";
 
 const ClientReviews = () => {
   const data = reviews;
@@ -82,7 +83,10 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-[709px] hidden midlg:block z-4">
+            <div className="hidden midxmd:block w-full h-full -mt-24 xl:hidden -translate-y-20">
+              <img src={staticView} alt="" className="w-full" />
+            </div>
+            <div className="relative w-[709px] hidden xl:block z-4">
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {reviewImages1.map((item, index) => (
                   <div

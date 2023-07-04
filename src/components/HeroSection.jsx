@@ -117,7 +117,7 @@ const HeroSection = () => {
                     autoStart: true,
                     loop: true,
                     delay: 100,
-                    strings: ["Company", "Organization", "Agency", "Firm"],
+                    strings: ["Company", "Organization", "Agency", "Firm","Experties"],
                   }}
                 />
               </div>
