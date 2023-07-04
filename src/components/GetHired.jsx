@@ -313,14 +313,14 @@ const GetHired = () => {
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                       <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                      <RxDividerVertical className="text-4xl" />
+                      <RxDividerVertical className="text-4xl text-gray-400" />
                       <input
                         type="text"
                         name="name"
                         onChange={changeHandler}
                         placeholder="Name"
                         value={formData.name}
-                        className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
+                        className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
                       />
                     </div>
                     {error1.length !== 0 && (
@@ -332,7 +332,7 @@ const GetHired = () => {
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                       <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                      <RxDividerVertical className="text-4xl" />
+                      <RxDividerVertical className="text-4xl text-gray-400" />
                       <input
                         type="number"
                         name="contact"
@@ -340,7 +340,7 @@ const GetHired = () => {
                         placeholder="Contact no"
                         value={formData.contact}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent appearance-none custom-input"
+                        className="h-full w-full rounded-full focus:outline-none text-base bg-transparent appearance-none custom-input"
                       />
                     </div>
                     {error2.length !== 0 && (
@@ -352,7 +352,7 @@ const GetHired = () => {
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                       <HiOutlineMail className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                      <RxDividerVertical className="text-4xl" />
+                      <RxDividerVertical className="text-4xl text-gray-400" />
                       <input
                         type="email"
                         name="email"
@@ -360,7 +360,7 @@ const GetHired = () => {
                         placeholder="Email"
                         value={formData.email}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
+                        className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
                       />
                     </div>
                     {error3.length !== 0 && (
@@ -373,7 +373,7 @@ const GetHired = () => {
                     <div>
                       <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                         <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                        <RxDividerVertical className="text-4xl" />
+                        <RxDividerVertical className="text-4xl text-gray-400" />
                         <input
                           type="text"
                           name="required"
@@ -381,7 +381,7 @@ const GetHired = () => {
                           placeholder="Required Skills"
                           value={formData.required}
                           onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent appearance-none custom-input"
+                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent appearance-none custom-input"
                         />
                       </div>
                       {error7.length !== 0 && (
@@ -393,9 +393,8 @@ const GetHired = () => {
                   )}
                   {accountType === "Hire Team" && (
                     <div>
-                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 ">
                         <GrAttachment className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                        <RxDividerVertical className="text-4xl translate-x-[0.4rem]" />
                         <input
                           type={`${
                             accountType === "Hire Team" ? "file" : "text"
@@ -418,13 +417,13 @@ const GetHired = () => {
                           // className="w-full h-full cursor-pointer ml-3"
                         >
                           {formData.file !== "" ? (
-                            <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">
+                            <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-base bg-transparentl mr-16">
                               {formData.file.name.length > 20
                                 ? formData.file.name.slice(0, 15) + "..."
                                 : formData.file.name}
                             </span>
                           ) : (
-                            <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-16">
+                            <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-base bg-transparent mr-16">
                               {accountType === "Hire Team" ? "Attach File" : ""}
                             </span>
                           )}
@@ -440,9 +439,9 @@ const GetHired = () => {
 
                   {accountType === "Hire Team" && (
                     <div>
-                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                         <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                        <RxDividerVertical className="text-4xl" />
+                        <RxDividerVertical className="text-4xl text-gray-400" />
                         <input
                           type="text"
                           name="type"
@@ -450,7 +449,7 @@ const GetHired = () => {
                           placeholder="Project Type"
                           value={formData.type}
                           onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
+                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
                         />
                       </div>
                       {error5.length !== 0 && (
@@ -462,9 +461,9 @@ const GetHired = () => {
                   )}
                   {accountType === "Hire Team" && (
                     <div>
-                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                         <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                        <RxDividerVertical className="text-4xl" />
+                        <RxDividerVertical className="text-4xl text-gray-400" />
                         <input
                           type="text"
                           name="duration"
@@ -472,7 +471,7 @@ const GetHired = () => {
                           placeholder="Duration"
                           value={formData.duration}
                           onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
+                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
                         />
                       </div>
                       {error6.length !== 0 && (
@@ -485,7 +484,7 @@ const GetHired = () => {
                   <div className="col-span-2">
                     <div className="flex items-start  bg-richblack-800 rounded-xl text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]  h-[8rem]">
                       <MdOutlineMessage className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                      <RxDividerVertical className="text-4xl -translate-x-1 -translate-y-1" />
+                      <RxDividerVertical className="text-4xl -translate-x-1 -translate-y-1 text-gray-400" />
                       <textarea
                         name="summery"
                         onChange={changeHandler}
@@ -493,7 +492,7 @@ const GetHired = () => {
                         value={formData.summery}
                         minLength={10}
                         onClick={errorHandler}
-                        className="h-full w-full focus:outline-none text-xl mr-20 resize-none"
+                        className="h-full w-full focus:outline-none text-base mr-20 resize-none"
                       />
                     </div>
                     {error8.length !== 0 && (

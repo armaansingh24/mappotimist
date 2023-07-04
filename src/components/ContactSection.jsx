@@ -116,15 +116,15 @@ const ContactSection = () => {
   return (
     <>
       <div
-        className="relative z-30 w-full -mt-24 midxmd:-mt-60 "
+        className="relative z-30 w-full -mt-24 midxmd:-mt-64"
         id="Contact Us"
       >
         <img
           src={R2}
           alt=""
-          className="absolute -top-[34%] -left-2 hidden midxmd:block z-0"
+          className="absolute -top-[52%] -left-1 hidden midxmd:block z-0"
         />
-        <div className=" mx-auto midFM:mt-10 p-3">
+        <div className=" mx-auto p-3">
           <h2 className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32 bg-gradient-to-r from-primary via-secondary p-2 to-secondary text-transparent bg-clip-text">
             Contact Us
           </h2>
@@ -320,7 +320,7 @@ const ContactSection = () => {
                         )}
                       </div>
                     </div>
-                    <button className="relative z-30 text-sm w-[30%] h-fit bg-gradient-to-r from-[#000046] to-[#1CB5E0] hover:from-secondary hover:to-primary transition-all duration-1000 rounded-lg text-white font-poppins py-2 mt-8 sm:text-lg mb-[15%] midxmd:mb-[20%]">
+                    <button className="relative z-30 text-sm w-[30%] h-fit bg-gradient-to-r from-[#000046] to-[#1CB5E0] hover:from-secondary hover:to-primary transition-all duration-1000 rounded-lg text-white font-poppins py-2 mt-8 sm:text-lg mb-[15%] midxmd:mb-[5%]">
                       Submit
                     </button>
                   </form>

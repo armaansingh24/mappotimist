@@ -105,29 +105,29 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="self-end justify-items-end h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center gap-4">
+            <div className="self-end justify-items-end h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center sm:gap-4">
               <div>
-                <p className="text-center text-xl">Follow Us</p>
+                <p className="text-center text-base sm:text-xl">Follow Us</p>
               </div>
-              <div className="flex gap-6 sm:gap-4 items-baseline">
+              <div className="flex ml-10 gap-4 items-baseline">
                 <a
                   href="https://www.facebook.com/profile.php?id=100093856182734&sk=about_details"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[75%]"
+                  className="cursor-pointer w-[11%] sm:w-[75%]"
                 >
                   <img src={fb} alt="" />
                 </a>
                 <img
                   src={slack}
                   alt=""
-                  className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[70%]"
+                  className="cursor-pointer w-[11%] sm:w-[70%]"
                 />
                 <a
                   href="https://www.instagram.com/mappoptimist_technologies/?igshid=MjAxZDBhZDhlNA%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer h-[67%] sm:h-[90%] sm:w-[75%]"
+                  className="cursor-pointer w-[11%] sm:w-[75%]"
                 >
                   <img src={insta} alt="" />
                 </a>
@@ -135,7 +135,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/mappoptimist-technologies/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer h-[66%] sm:h-[89%] sm:w-[80%] mt-2 sm:mt-1 translate-y-1"
+                  className="cursor-pointer w-[11%] sm:w-[80%] mt-2 sm:mt-0"
                 >
                   <img src={linkedin} alt="" />
                 </a>

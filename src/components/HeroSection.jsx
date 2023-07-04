@@ -122,7 +122,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            <div className="flex justify-center flex-wrap items-center mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
+            <div className="flex justify-center flex-wrap items-center mr-10 sm:mr-0 mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
               <Link to="Developer" smooth={true} offset={100} duration={1000}>
                 <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12">
                   Know more
@@ -132,8 +132,8 @@ const HeroSection = () => {
                 </button>
               </Link>
               <Link to="Developer" smooth={true} offset={100} duration={1000}>
-                <div className=" flex ml-10 mt-4 lmd:mt-2 cursor-pointer">
-                  <span className=" left-[-10px] ml-[-18px] z-1">
+                <div className=" flex ml-20 sm:ml-10 mt-4 lmd:mt-2 cursor-pointer ">
+                  <span className=" left-[-10px] ml-[-18px] z-1 hidden sm:block">
                     <img src={image1} alt="" className=" w-12" />
                   </span>
                   <span className=" left-[-10px] ml-[-18px] z-1">

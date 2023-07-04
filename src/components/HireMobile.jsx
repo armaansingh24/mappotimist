@@ -206,7 +206,7 @@ const HireMobile = () => {
               <div>
                 <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                   <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                  <RxDividerVertical className="text-4xl" />
+                  <RxDividerVertical className="text-4xl text-gray-400" />
                   <input
                     type="text"
                     name="name"
@@ -214,7 +214,7 @@ const HireMobile = () => {
                     placeholder="Name"
                     value={formData.name}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
+                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
                   />
                 </div>
                 {error1.length !== 0 && (
@@ -226,7 +226,7 @@ const HireMobile = () => {
               <div>
                 <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                   <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                  <RxDividerVertical className="text-4xl" />
+                  <RxDividerVertical className="text-4xl text-gray-400" />
                   <input
                     type="number"
                     name="contact"
@@ -234,7 +234,7 @@ const HireMobile = () => {
                     placeholder="Contact no"
                     value={formData.contact}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent appearance-none custom-input"
+                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
                   />
                 </div>
                 {error2.length !== 0 && (
@@ -244,9 +244,9 @@ const HireMobile = () => {
                 )}
               </div>
               <div>
-                <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                   <HiOutlineMail className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                  <RxDividerVertical className="text-4xl" />
+                  <RxDividerVertical className="text-4xl text-gray-400" />
                   <input
                     type="email"
                     name="email"
@@ -254,7 +254,7 @@ const HireMobile = () => {
                     placeholder="Email"
                     value={formData.email}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
+                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
                   />
                 </div>
                 {error3.length !== 0 && (
@@ -263,10 +263,54 @@ const HireMobile = () => {
                   </p>
                 )}
               </div>
+
+              {
+                <div className="relative z-30">
+                  <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
+                    <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                    <RxDividerVertical className="text-4xl text-gray-400" />
+                    <input
+                      type="text"
+                      name="expertise"
+                      onChange={changeHandler}
+                      placeholder="Area Of Expertise"
+                      value={formData.expertise}
+                      onClick={errorHandler}
+                      className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                    />
+                  </div>
+                  {error5.length !== 0 && (
+                    <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                      {error5}
+                    </p>
+                  )}
+                </div>
+              }
+              {
+                <div className="relative z-20">
+                  <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
+                    <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                    <RxDividerVertical className="text-4xl text-gray-400" />
+                    <input
+                      type="text"
+                      name="experience"
+                      onChange={changeHandler}
+                      placeholder="Years of Experience"
+                      value={formData.experience}
+                      onClick={errorHandler}
+                      className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                    />
+                  </div>
+                  {error6.length !== 0 && (
+                    <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                      {error6}
+                    </p>
+                  )}
+                </div>
+              }
               <div>
-                <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1">
                   <GrAttachment className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                  <RxDividerVertical className="text-4xl translate-x-[0.4rem]" />
                   <input
                     type="file"
                     id="fileInput"
@@ -285,11 +329,11 @@ const HireMobile = () => {
                     }}
                   >
                     {formData.file !== "" ? (
-                      <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparentl mr-16">
+                      <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-base bg-transparentl mr-16">
                         {formData.file.name}
                       </span>
                     ) : (
-                      <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent mr-24">
+                      <span className="text-gray-400 pointer-events-none h-full w-full rounded-full focus:outline-none text-base bg-transparent mr-24">
                         Resume
                       </span>
                     )}
@@ -301,55 +345,10 @@ const HireMobile = () => {
                   </p>
                 )}
               </div>
-
-              {
-                <div>
-                  <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                    <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                    <RxDividerVertical className="text-4xl" />
-                    <input
-                      type="text"
-                      name="expertise"
-                      onChange={changeHandler}
-                      placeholder="Area Of Expertise"
-                      value={formData.expertise}
-                      onClick={errorHandler}
-                      className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
-                    />
-                  </div>
-                  {error5.length !== 0 && (
-                    <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                      {error5}
-                    </p>
-                  )}
-                </div>
-              }
-              {
-                <div>
-                  <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                    <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                    <RxDividerVertical className="text-4xl" />
-                    <input
-                      type="text"
-                      name="experience"
-                      onChange={changeHandler}
-                      placeholder="Years of Experience"
-                      value={formData.experience}
-                      onClick={errorHandler}
-                      className="h-full w-full rounded-full focus:outline-none text-xl px-1 bg-transparent"
-                    />
-                  </div>
-                  {error6.length !== 0 && (
-                    <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                      {error6}
-                    </p>
-                  )}
-                </div>
-              }
-              <div className="col-span-2">
-                <div className="flex items-start  bg-richblack-800 rounded-xl text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]  h-[8rem]">
+              <div className="col-span-2 relative z-30">
+                <div className="flex items-start  bg-richblack-800 rounded-xl text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]  h-[8rem] bg-white">
                   <MdOutlineMessage className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                  <RxDividerVertical className="text-4xl -translate-x-1 -translate-y-1" />
+                  <RxDividerVertical className="text-4xl -translate-x-1 -translate-y-1 text-gray-400" />
                   <textarea
                     name="bio"
                     onChange={changeHandler}
@@ -357,7 +356,7 @@ const HireMobile = () => {
                     value={formData.bio}
                     minLength={10}
                     onClick={errorHandler}
-                    className="h-full w-full focus:outline-none text-lg  resize-none"
+                    className="h-full w-full focus:outline-none text-base  resize-none"
                   />
                 </div>
                 {error7.length !== 0 && (
