@@ -1,6 +1,6 @@
 import React from "react";
-import insta from "../assets/footer/insta.webp";
-import fb from "../assets/footer/fb.webp";
+import insta from "../assets/footer/insta.png";
+import fb from "../assets/footer/fb.png";
 import slack from "../assets/footer/slack.webp";
 import linkedin from "../assets/footer/linkedin.png";
 import { NavLink as Link } from "react-router-dom";
@@ -107,16 +107,16 @@ const Footer = () => {
             </div>
             <div className="self-center justify-items-center h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center sm:gap-4 midxs:mr-20">
               <div>
-                <p className="text-center text-base sm:text-xl midFM:ml-6">
+                <p className="text-center text-base sm:text-xl ml-6">
                   Follow Us
                 </p>
               </div>
-              <div className="flex ml-10 gap-4 items-baseline">
+              <div className="flex ml-10 gap-2 items-center justify-center">
                 <a
                   href="https://www.facebook.com/profile.php?id=100093856182734&sk=about_details"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer w-[11%] sm:w-[75%]"
+                  className="cursor-pointer w-[11%] sm:w-[7%] self-center"
                 >
                   <img src={fb} alt="" />
                 </a>
@@ -128,14 +128,14 @@ const Footer = () => {
                   <img
                     src={slack}
                     alt=""
-                    className="cursor-pointer w-[11%] sm:w-[70%]"
+                    className="cursor-pointer w-[80%] sm:w-[95%] self-center"
                   />
                 </a>
                 <a
                   href="https://www.instagram.com/mappoptimist_technologies/?igshid=MjAxZDBhZDhlNA%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer w-[11%] sm:w-[75%]"
+                  className="cursor-pointer w-[11%] sm:w-[7%] self-center"
                 >
                   <img src={insta} alt="" />
                 </a>
@@ -143,9 +143,9 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/mappoptimist-technologies/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer w-[15%] sm:w-[90%] mt-2 sm:mt-0"
+                  className="cursor-pointer w-[11%] sm:w-[7%] self-center"
                 >
-                  <img src={linkedin} alt="" className="mt-0 translate-y-1" />
+                  <img src={linkedin} alt="" className="mt-0 translate-y-0" />
                 </a>
               </div>
             </div>
