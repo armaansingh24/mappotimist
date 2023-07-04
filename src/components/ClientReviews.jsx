@@ -83,7 +83,7 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="hidden midxmd:block w-full h-full -mt-24 xl:hidden -translate-y-20">
+            <div className="hidden middleXmd:block w-full h-full -mt-24 xl:hidden -translate-y-20">
               <img src={staticView} alt="" className="" />
             </div>
             <div className="relative w-[709px] hidden xl:block z-4">

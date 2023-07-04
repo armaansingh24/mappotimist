@@ -120,11 +120,17 @@ const Footer = () => {
                 >
                   <img src={fb} alt="" />
                 </a>
-                <img
-                  src={slack}
-                  alt=""
-                  className="cursor-pointer w-[11%] sm:w-[70%]"
-                />
+                <a
+                  href="https://join.slack.com/t/mappoptimistworkspace/shared_invite/zt-1y2d2e3n9-73Lrc1VdxYMQ97RKAz393g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={slack}
+                    alt=""
+                    className="cursor-pointer w-[11%] sm:w-[70%]"
+                  />
+                </a>
                 <a
                   href="https://www.instagram.com/mappoptimist_technologies/?igshid=MjAxZDBhZDhlNA%3D%3D"
                   target="_blank"

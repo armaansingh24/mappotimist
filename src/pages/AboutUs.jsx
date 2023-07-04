@@ -5,7 +5,7 @@ import secondSection from "../assets/aboutUs/secondSection.png";
 import picture1 from "../assets/aboutUs/picture1.png";
 import { SiFacebook } from "react-icons/si";
 import { BsLinkedin } from "react-icons/bs";
-import { AiOutlineSlack } from "react-icons/ai";
+import { SiTwitter } from "react-icons/si";
 import { RiInstagramFill } from "react-icons/ri";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -189,12 +189,12 @@ const AboutUs = () => {
                 <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
               </a>
               <a
-                href="#"
+                href="https://twitter.com/sikarvarsikarva"
                 className="group"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiOutlineSlack className="text-[#7F838D] group-hover:text-primary" />
+                <SiTwitter className="text-[#7F838D] group-hover:text-primary" />
               </a>
               <a
                 href="https://instagram.com/yash_sikarvar?igshid=MzRlODBiNWFlZA=="
@@ -244,12 +244,12 @@ const AboutUs = () => {
                   <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
                 </a>
                 <a
-                  href="#"
+                  href="https://twitter.com/sikarvarsikarva"
                   className="group"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiOutlineSlack className="text-[#7F838D] group-hover:text-primary" />
+                  <SiTwitter className="text-[#7F838D] group-hover:text-primary" />
                 </a>
                 <a
                   href="https://instagram.com/yash_sikarvar?igshid=MzRlODBiNWFlZA=="
