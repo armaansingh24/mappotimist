@@ -14,6 +14,11 @@ import TestimonialsItem from "../components/TestimonialsItem";
 import R1 from "../assets/aboutUs/R1.png";
 import ellips from "../assets/aboutUs/ellips.png";
 import ellips2 from "../assets/aboutUs/ellips2.png";
+import pattern2 from "../assets/hero-section/pattern2.png";
+import bubble1 from "../assets/aboutUs/bubble1.png";
+import bubble2 from "../assets/aboutUs/bubble2.png";
+import bubble3 from "../assets/aboutUs/bubble3.png";
+import bubble4 from "../assets/aboutUs/bubble4.png";
 
 const AboutUs = () => {
   const responsive = {
@@ -41,34 +46,46 @@ const AboutUs = () => {
       </div>
       <div className="w-screen mt-36 sm:mt-0 about">
         <div className="relative">
-          <img src={firstSection} alt="firstSection" className="w-full hidden sm:block" />
-          <div className=""></div>
-          <div className=" bg-gradient-to-r from-primary to-secondary sm:bg-none sm:absolute inset-0 w-[97%] sm:w-[90%] flex flex-col items-start sm:items-end justify-center p-20 sm:p-0">
-            <div className="sm:text-center">
-              <p className="sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F6D28C] to-[#FBE6BD] font-poppins">
+          <img
+            src={firstSection}
+            alt="firstSection"
+            className="w-full hidden middle:block"
+          />
+          <div className="">
+            <img src={pattern2} alt="" className=" absolute right-32 top-14" />
+            <img src={bubble1} alt="" className="absolute left-20 top-5" />
+            <img src={bubble1} alt="" className="absolute right-32 top-2" />
+            <img src={bubble1} alt="" className="absolute right-24 bottom-2" />
+            <img src={bubble2} alt="" className="absolute left-52 top-16" />
+            <img src={bubble3} alt="" className="absolute left-44 top-44" />
+            <img src={bubble4} alt="" className="absolute left-0 bottom-0" />
+          </div>
+          <div className=" bg-gradient-to-tr from-primary to-secondary middle:bg-none middle:absolute inset-0 w-[97%] middle:w-[90%] flex flex-col items-start middle:items-end justify-center p-20 middle:p-0">
+            <div className="middle:text-center">
+              <p className="middle:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F6D28C] to-[#FBE6BD] font-poppins">
                 About Us
               </p>
-              <p className="text-base sm:text-3xl text-white font-poppins">
+              <p className="text-base middle:text-3xl text-white font-poppins">
                 Innovating with passion,
               </p>
-              <p className="text-base sm:text-3xl text-white font-poppins">
+              <p className="text-base middle:text-3xl text-white font-poppins">
                 delivering with precision
               </p>
             </div>
           </div>
         </div>
-        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden  sm:grid-cols-2 items-center justify-center">
-          <div className="sm:order-2 sm:w-full">
-            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
+        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden  middle:grid-cols-2 items-center justify-center">
+          <div className="middle:order-2 middle:w-full">
+            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">
               Building greater futures through innovation and collective
               knowledge
             </h3>
           </div>
-          <div className="sm:row-span-2 sm:order-1 mx-auto my-auto">
+          <div className="middle:row-span-2 middle:order-1 mx-auto my-auto">
             <img src={secondSection} alt="" className="" />
           </div>
-          <div className="sm:order-3 sm:w-full">
-            <p className="text-base sm:text-xl font-poppins300">
+          <div className="middle:order-3 middle:w-full">
+            <p className="text-base middle:text-xl font-poppins300">
               MappOptimist is a leading IT & Fintech solution provider,
               dedicated to empowering businesses with cutting-edge technologies.
               We specialize in delivering end-to-end IT solutions, including web
@@ -79,13 +96,13 @@ const AboutUs = () => {
               drive success.
             </p>
           </div>
-          <div className="col-span-2 order-4 hidden sm:flex sm:w-full sm:flex-col gap-4">
-            <p className="text-base sm:text-xl font-poppins300">
+          <div className="col-span-2 order-4 hidden middle:flex middle:w-full middle:flex-col gap-4">
+            <p className="text-base middle:text-xl font-poppins300">
               We work closely with our clients to understand their needs, and we
               leverage our expertise to deliver customized solutions that meet
               and exceed their expectations.
             </p>
-            <p className="text-base sm:text-xl font-poppins300">
+            <p className="text-base middle:text-xl font-poppins300">
               At MappOptimist, we are committed to staying ahead of the curve in
               technology trends and advancements. Our team is constantly
               learning and expanding our knowledge to ensure that we are
@@ -107,7 +124,7 @@ const AboutUs = () => {
                 Building greater futures through innovation and collective
                 knowledge
               </h3>
-              <p className="text-base sm:text-lg font-poppins300 mt-6">
+              <p className="text-base middle:text-lg font-poppins300 mt-6">
                 MappOptimist is a leading IT & Fintech solution provider,
                 dedicated to empowering businesses with cutting-edge
                 technologies. We specialize in delivering end-to-end IT
@@ -120,12 +137,12 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-base sm:text-lg font-poppins300">
+            <p className="text-base middle:text-lg font-poppins300">
               We work closely with our clients to understand their needs, and we
               leverage our expertise to deliver customized solutions that meet
               and exceed their expectations.
             </p>
-            <p className="text-base sm:text-lg font-poppins300">
+            <p className="text-base middle:text-lg font-poppins300">
               At MappOptimist, we are committed to staying ahead of the curve in
               technology trends and advancements. Our team is constantly
               learning and expanding our knowledge to ensure that we are
@@ -137,20 +154,20 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden sm:grid-cols-2 items-center justify-center">
-          <div className="sm:order-2 sm:w-full flex flex-col items-start justify-center">
-            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
+        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden middle:grid-cols-2 items-center justify-center">
+          <div className="middle:order-2 middle:w-full flex flex-col items-start justify-center">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">
               Yashvant Sikarvar
             </h2>
-            <p className="text-xl sm:text-2xl p-1 font-poppins">
+            <p className="text-xl middle:text-2xl p-1 font-poppins">
               Founder & CEO
             </p>
           </div>
-          <div className="sm:row-span-2 sm:order-1 mx-auto my-auto">
+          <div className="middle:row-span-2 middle:order-1 mx-auto my-auto">
             <img src={picture1} alt="" />
           </div>
-          <div className="sm:order-3 sm:w-full flex flex-col gap-4 items-start justify-center">
-            <div className="text-base sm:text-xl font-poppins300">
+          <div className="middle:order-3 middle:w-full flex flex-col gap-4 items-start justify-center">
+            <div className="text-base middle:text-xl font-poppins300">
               <p>
                 An IIT Graduate ranked 22nd in AIR, is a Gate and NET Qualified
                 professional. With over 10+ years of extensive experience in the
@@ -267,32 +284,32 @@ const AboutUs = () => {
           <img
             src={ellips}
             alt=""
-            className="absolute right-0 w-[13%] sm:w-[10%] top-2 midlg:hidden"
+            className="absolute right-0 w-[13%] middle:w-[10%] top-2 midlg:hidden"
           />
           <img
             src={ellips2}
             alt=""
-            className="absolute right-[30%] w-[13%] sm:w-[10%] top-10 midlg:hidden"
+            className="absolute right-[30%] w-[13%] middle:w-[10%] top-10 midlg:hidden"
           />
           <img
             src={ellips2}
             alt=""
-            className="absolute right-32 sm:w-[10%] w-[13%] bottom-5 sm:bottom-2 midlg:hidden"
+            className="absolute right-32 middle:w-[10%] w-[13%] bottom-5 middle:bottom-2 midlg:hidden"
           />
           <img
             src={ellips2}
             alt=""
-            className="absolute left-0 sm:w-[10%] w-[13%] bottom-20 sm:bottom-10 midlg:hidden"
+            className="absolute left-0 middle:w-[10%] w-[13%] bottom-20 middle:bottom-10 midlg:hidden"
           />
           <div className="w-[80%]  mx-auto">
-            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 sm:text-4xl font-poppins">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">
               Testimonial
             </h2>
-            <p className="text-xl sm:text-2xl p-1 font-poppins">
+            <p className="text-xl middle:text-2xl p-1 font-poppins">
               See what they say about us
             </p>
           </div>
-          <div className="mt-10 w-[90%] sm:w-[95%] mx-auto h-full ">
+          <div className="mt-10 w-[90%] middle:w-[95%] mx-auto h-full ">
             <Carousel
               responsive={responsive}
               arrows={false}

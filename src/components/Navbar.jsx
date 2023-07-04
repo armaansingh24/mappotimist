@@ -2,63 +2,18 @@ import React, { useState } from "react";
 // import { HashRouter as Link  } from "react-router-dom";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import { navLinks } from "../constants";
 import logo from "../assets/navbar/logo.webp";
 import logo2 from "../assets/navbar/logo2.png";
 import eclips1 from "../assets/navbar/eclips1.webp";
 import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
 // import { HashLink as Link } from "react-router-hash-link";
-import GetHired from "./GetHired";
-import GetHire from "./GetHire";
-import GetHiredMobile from "./GetHiredMobile";
-import HireMobile from "./HireMobile";
-import { SlClose } from "react-icons/sl";
-import { useEffect } from "react";
-import recruit from "../assets/developer/recruit.png";
-import getHired from "../assets/developer/getHired.png";
-import ocr from "../assets/developer/ocr.png";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const genericHamburgerLine = `h-1 w-6 rounded-full bg-black transition ease transform duration-300`;
-
-  const [showForm, setShowForm] = useState(false);
-  const [showForm2, setShowForm2] = useState(false);
-  const [showForm3, setShowForm3] = useState(false);
-  const [showForm4, setShowForm4] = useState(false);
-
-  const handleGetHired = () => {
-    setShowForm(!showForm);
-  };
-
-  const handleGetHire = () => {
-    setShowForm2(!showForm2);
-  };
-  const handleGetHired1 = () => {
-    setShowForm3(!showForm3);
-  };
-
-  const handleGetHire1 = () => {
-    setShowForm4(!showForm4);
-  };
-
-  useEffect(() => {
-    const body = document.body;
-    const modalOpen = showForm || showForm2 || showForm3 || showForm4;
-
-    if (modalOpen) {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "auto";
-    }
-
-    return () => {
-      body.style.overflow = "auto";
-    };
-  }, [showForm, showForm2, showForm3, showForm4]);
 
   return (
     <>
@@ -123,6 +78,17 @@ const Navbar = () => {
                 className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
                 "
               >
+                <NavLink
+                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
+                  to={`/about-us`}
+                >
+                  About
+                </NavLink>
+              </li>
+              <li
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
+                "
+              >
                 <Link
                   className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
                   to={`Portfolio`}
@@ -133,74 +99,6 @@ const Navbar = () => {
                 >
                   Portfolio
                 </Link>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group 
-                "
-              >
-                <div className="group gap-0 transition-all duration-500">
-                  <Link
-                    className="rounded-full py-1 px-3   group-hover:border-2 group-hover:border-white text-white relative z-20 group overflow-hidden font-poppins "
-                    to={`Developer`}
-                    // spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={1000}
-                  >
-                    Developer
-                  </Link>
-                  <div className="hidden group-hover:block transition-all ease-in duration-500 z-0 absolute w-[40%]">
-                    <div className="w-16 h-10 rotate-90 bg-white rounded-full translate-x-7 translate-y-4 shadow-2xl relative z-0"></div>
-                    <div className="absolute mt-2 py-2 bg-white rounded-lg shadow-2xl p-6 -translate-x-16 -translate-y-2 w-[85%]">
-                      <ul className="list-none flex flex-col items-start justify-center">
-                        <li className="font-roboto100">
-                          <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-start gap-2 transition-all duration-300 group hover:translate-x-4 text-xl"
-                            onClick={() => {
-                              setIsOpen(!isOpen);
-                              handleGetHired();
-                            }}
-                          >
-                            <span className="w-[15%]">
-                              <img src={recruit} alt="" />
-                            </span>
-                            <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
-                              Recruit Us
-                            </span>
-                          </button>
-                        </li>
-                        <li className="font-roboto100">
-                          <button
-                            className="px-4 py-2 text-gray-800 flex items-center justify-start gap-2 transition-all duration-300 group hover:translate-x-4 "
-                            onClick={() => {
-                              setIsOpen(!isOpen);
-                              handleGetHire();
-                            }}
-                          >
-                            <span className="w-[15%]">
-                              <img src={getHired} alt="" />
-                            </span>
-                            <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
-                              Get Employed
-                            </span>
-                          </button>
-                        </li>
-                        <li className="font-roboto100">
-                          <NavLink to="/orc-icr">
-                            <button className="px-4 py-2 text-gray-800 flex items-center justify-start gap-2 transition-all duration-300 group hover:translate-x-4 ">
-                              <span className="w-[15%]">
-                                <img src={ocr} alt="" />
-                              </span>
-                              <span className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary  hover:text-transparent hover:bg-clip-text transition-all duration-300">
-                                OCR/ICR
-                              </span>
-                            </button>
-                          </NavLink>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </li>
               <li
                 className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
@@ -302,32 +200,109 @@ const Navbar = () => {
                   !toggle ? "opacity-0 h-0" : "opacity-100 h-fit"
                 }  justify-center items-center mx-auto transition-all duration-[2000ms] linear`}
               >
-                <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-full mt-12 transform transition duration-1000">
-                  {navLinks.map((link) => (
-                    <li
-                      key={link.id}
-                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-[2000ms] z-10"
+                <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-full mt-12 transform transition duration-1000 ease-linear">
+                  <li
+                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setIsOpen(!isOpen);
+                    }}
+                  >
+                    <Link
+                      to={`Home`}
+                      smooth={true}
+                      offset={100}
+                      duration={1000}
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
-                      <Link
-                        to={`${link.id}`}
-                        // spy={true}
-                        smooth={true}
-                        offset={100}
-                        duration={1000}
-                        onClick={() => {
-                          setToggle(!toggle);
-                          setIsOpen(!isOpen);
-                        }}
-                      >
-                        {link.title}
-                      </Link>
-                    </li>
-                  ))}
+                      Home
+                    </Link>
+                  </li>
+                  <li
+                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setIsOpen(!isOpen);
+                    }}
+                  >
+                    <NavLink
+                      to={`/about-us`}
+                      onClick={() => {
+                        setToggle(!toggle);
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      About
+                    </NavLink>
+                  </li>
+                  <li
+                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setIsOpen(!isOpen);
+                    }}
+                  >
+                    <Link
+                      to={`Portfolio`}
+                      smooth={true}
+                      offset={100}
+                      duration={1000}
+                      onClick={() => {
+                        setToggle(!toggle);
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      Portfolio
+                    </Link>
+                  </li>
+                  <li
+                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setIsOpen(!isOpen);
+                    }}
+                  >
+                    <Link
+                      to={`Expertise`}
+                      smooth={true}
+                      offset={100}
+                      duration={1000}
+                      onClick={() => {
+                        setToggle(!toggle);
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      Expertise
+                    </Link>
+                  </li>
+                  <li
+                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setIsOpen(!isOpen);
+                    }}
+                  >
+                    <Link
+                      to={`Contact Us`}
+                      smooth={true}
+                      offset={100}
+                      duration={1000}
+                      onClick={() => {
+                        setToggle(!toggle);
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className="flex justify-end w-[13%]">
@@ -350,64 +325,6 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-      </div>
-      <div
-        className={`absolute inset-0 z-[60] ${
-          showForm || showForm2 || showForm3 || showForm4
-            ? "pointer-events-auto"
-            : "pointer-events-none"
-        } `}
-      >
-        {showForm && (
-          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
-            <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
-              <button onClick={handleGetHired}>
-                <SlClose />
-              </button>
-            </div>
-            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
-              <GetHired />
-            </div>
-          </div>
-        )}
-
-        {showForm3 && (
-          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
-            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
-              <button onClick={handleGetHired1}>
-                <SlClose />
-              </button>
-            </div>
-            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
-              <GetHiredMobile />
-            </div>
-          </div>
-        )}
-
-        {showForm2 && (
-          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
-            <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
-              <button onClick={handleGetHire}>
-                <SlClose />
-              </button>
-            </div>
-            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
-              <GetHire />
-            </div>
-          </div>
-        )}
-        {showForm4 && (
-          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
-            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
-              <button onClick={handleGetHire1}>
-                <SlClose />
-              </button>
-            </div>
-            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
-              <HireMobile />
-            </div>
-          </div>
-        )}
       </div>
     </>
   );
