@@ -30,7 +30,7 @@ const PortfolioPage = () => {
   return (
     <>
       {loading && <Loader />}
-      <div className="w-full relative z-50">
+      <div className="w-screen relative z-50">
         <PortfolioNavbar page={"portfolio"} />
       </div>
       <div className="w-full relative z-10">

@@ -17,7 +17,7 @@ const Navbar = ({ page }) => {
     <>
       <div
         className={`bg-white -mt-6 ${
-          page === "portfolio" ? "sm:absolute sm:opacity-[0.7]" : ""
+          page === "portfolio" ? "sm:absolute sm:opacity-[0.7] w-screen" : ""
         }`}
       >
         <nav
