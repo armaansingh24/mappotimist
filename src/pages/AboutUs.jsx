@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import firstSection from "../assets/aboutUs/firstSection.webp";
 import secondSection from "../assets/aboutUs/secondSection.webp";
@@ -19,18 +19,8 @@ import bubble1 from "../assets/aboutUs/bubble1.png";
 import bubble2 from "../assets/aboutUs/bubble2.png";
 import bubble3 from "../assets/aboutUs/bubble3.png";
 import bubble4 from "../assets/aboutUs/bubble4.png";
-import { Blurhash } from "react-blurhash";
 
 const AboutUs = () => {
-  const [imageLoaded, setimageLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.onLoad = () => {
-      setimageLoaded(true);
-    };
-    img.src = firstSection;
-  }, [firstSection]);
 
   const responsive = {
     desktop: {
@@ -57,16 +47,8 @@ const AboutUs = () => {
       </div>
       <div className="w-screen mt-36 sm:mt-0 about">
         <div className="relative">
-          <div style={{ display: imageLoaded ? "inline" : "none" }}>
-            <Blurhash hash="LM6Sv|*0oskot+tktRoyOrS~o}o}" 
-              width={"100vw"}
-              height={"80vh"}
-              resolutionX={32}
-              resolutionY={32}
-              punch={1}
-               />
-          </div>
-          <img src={firstSection} style={{display:imageLoaded?"none":"inline"}} alt="" className="w-screen" />
+        
+          <img src={firstSection}  alt="" className="w-screen" />
           <div className="">
             <img src={pattern2} alt="" className=" absolute right-32 top-14" />
             <img src={bubble1} alt="" className="absolute left-20 top-5" />
