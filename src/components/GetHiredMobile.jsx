@@ -9,6 +9,9 @@ import ellips1 from "../assets/contactUs/ellips1.webp";
 import ellips2 from "../assets/contactUs/ellips2.webp";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import call from "../assets/forms/call.png";
+import type from "../assets/forms/type.png";
+import duration from "../assets/forms/duration.png";
 
 const GetHiredMobile = () => {
   const fileInputRef = useRef(null);
@@ -289,7 +292,7 @@ const GetHiredMobile = () => {
               </div>
               <div>
                 <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                  <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                  <img src={call} alt="" className="w-[3%] ml-2" />
                   <RxDividerVertical className="text-4xl text-gray-400" />
                   <input
                     type="number"
@@ -353,7 +356,7 @@ const GetHiredMobile = () => {
               {accountType === "Hire Team" && (
                 <div>
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                    <img src={type} alt="" className="w-[3%] ml-2" />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"
@@ -375,7 +378,7 @@ const GetHiredMobile = () => {
               {accountType === "Hire Team" && (
                 <div className="relative z-20">
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                    <img src={duration} alt="" className="w-[3%] ml-2" />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"

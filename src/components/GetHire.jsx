@@ -9,6 +9,9 @@ import { useState, useRef } from "react";
 import ellips from "../assets/contactUs/ellipes.webp";
 import { MdOutlineMessage } from "react-icons/md";
 import axios from "axios";
+import expertise from "../assets/forms/expertise.png";
+import cal from "../assets/forms/cal.png";
+import call from "../assets/forms/call.png";
 import { toast } from "react-hot-toast";
 
 const GetHired = () => {
@@ -65,11 +68,11 @@ const GetHired = () => {
       setError1("This field is necessary");
       return;
     }
-    if(formData.name.trim().length < 3){
+    if (formData.name.trim().length < 3) {
       setError1("Name should be atleast 3 characters long");
       return;
     }
-    if(formData.name.trim().length > 25){
+    if (formData.name.trim().length > 25) {
       setError1("Name should be less than 25 characters");
       return;
     }
@@ -78,11 +81,11 @@ const GetHired = () => {
       setError2("This field is necessary");
       return;
     }
-    if(formData.contact.trim().length < 3){
+    if (formData.contact.trim().length < 3) {
       setError2("Contact should be atleast 3");
       return;
     }
-    if(formData.contact.trim().length > 13){
+    if (formData.contact.trim().length > 13) {
       setError2("Contact should be less than 13");
       return;
     }
@@ -101,11 +104,11 @@ const GetHired = () => {
       setError5("This field is necessary");
       return;
     }
-    if(formData.expertise.trim().length < 3){
+    if (formData.expertise.trim().length < 3) {
       setError5("Expertise should be atleast 3 characters");
       return;
     }
-    if(formData.expertise.trim().length > 20){
+    if (formData.expertise.trim().length > 20) {
       setError5("Expertise should be less than 20 characters");
       return;
     }
@@ -258,7 +261,7 @@ const GetHired = () => {
                   </div>
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                      <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                      <img src={call} alt="" className="w-[7%] ml-2"/>
                       <RxDividerVertical className="text-4xl text-gray-400" />
                       <input
                         type="number"
@@ -298,7 +301,7 @@ const GetHired = () => {
                   </div>
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                      <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                      <img src={cal} alt="" className="w-[7%] ml-2" />
                       <RxDividerVertical className="text-4xl text-gray-400" />
                       <input
                         type="text"
@@ -319,7 +322,7 @@ const GetHired = () => {
                   {
                     <div>
                       <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                        <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                        <img src={expertise} alt="" className="w-[7%] ml-2" />
                         <RxDividerVertical className="text-4xl text-gray-400" />
                         <input
                           type="text"

@@ -9,6 +9,9 @@ import { MdOutlineMessage } from "react-icons/md";
 import { useState, useRef } from "react";
 import ellips from "../assets/contactUs/ellipes.webp";
 import { toast } from "react-hot-toast";
+import call from "../assets/forms/call.png";
+import type from "../assets/forms/type.png";
+import duration from "../assets/forms/duration.png";
 import axios from "axios";
 
 const GetHired = () => {
@@ -331,7 +334,7 @@ const GetHired = () => {
                   </div>
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                      <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
+                      <img src={call} alt="" className="w-[7%] ml-2" />
                       <RxDividerVertical className="text-4xl text-gray-400" />
                       <input
                         type="number"
@@ -391,6 +394,51 @@ const GetHired = () => {
                       )}
                     </div>
                   )}
+
+                  {accountType === "Hire Team" && (
+                    <div>
+                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                        <img src={type} alt="" className="w-[7%] ml-2" />
+                        <RxDividerVertical className="text-4xl text-gray-400" />
+                        <input
+                          type="text"
+                          name="type"
+                          onChange={changeHandler}
+                          placeholder="Project Type"
+                          value={formData.type}
+                          onClick={errorHandler}
+                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
+                        />
+                      </div>
+                      {error5.length !== 0 && (
+                        <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                          {error5}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                  {accountType === "Hire Team" && (
+                    <div>
+                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
+                        <img src={duration} alt="" className="w-[6%] ml-2" />
+                        <RxDividerVertical className="text-4xl text-gray-400" />
+                        <input
+                          type="text"
+                          name="duration"
+                          onChange={changeHandler}
+                          placeholder="Duration"
+                          value={formData.duration}
+                          onClick={errorHandler}
+                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
+                        />
+                      </div>
+                      {error6.length !== 0 && (
+                        <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
+                          {error6}
+                        </p>
+                      )}
+                    </div>
+                  )}
                   {accountType === "Hire Team" && (
                     <div>
                       <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 ">
@@ -432,51 +480,6 @@ const GetHired = () => {
                       {error4.length !== 0 && (
                         <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
                           {error4}
-                        </p>
-                      )}
-                    </div>
-                  )}
-
-                  {accountType === "Hire Team" && (
-                    <div>
-                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                        <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                        <RxDividerVertical className="text-4xl text-gray-400" />
-                        <input
-                          type="text"
-                          name="type"
-                          onChange={changeHandler}
-                          placeholder="Project Type"
-                          value={formData.type}
-                          onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
-                        />
-                      </div>
-                      {error5.length !== 0 && (
-                        <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                          {error5}
-                        </p>
-                      )}
-                    </div>
-                  )}
-                  {accountType === "Hire Team" && (
-                    <div>
-                      <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                        <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                        <RxDividerVertical className="text-4xl text-gray-400" />
-                        <input
-                          type="text"
-                          name="duration"
-                          onChange={changeHandler}
-                          placeholder="Duration"
-                          value={formData.duration}
-                          onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
-                        />
-                      </div>
-                      {error6.length !== 0 && (
-                        <p className="text-red-500 text-sm text-left rounded-lg relative z-10 flex items-center justify-start ml-5">
-                          {error6}
                         </p>
                       )}
                     </div>
