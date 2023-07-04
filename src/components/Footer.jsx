@@ -69,7 +69,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <ul className="text-xl flex gap-1 flex-col sm:text-2xl mt-16">
+              <ul className="text-xl flex gap-1 flex-col sm:text-2xl mt-20 ">
                 <Link to="/about-us">
                   <li className="cursor-pointer">About</li>
                 </Link>
@@ -105,9 +105,11 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="self-end justify-items-end h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center sm:gap-4">
+            <div className="self-center justify-items-center h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center sm:gap-4 midxs:mr-20">
               <div>
-                <p className="text-center text-base sm:text-xl">Follow Us</p>
+                <p className="text-center text-base sm:text-xl midFM:ml-6">
+                  Follow Us
+                </p>
               </div>
               <div className="flex ml-10 gap-4 items-baseline">
                 <a
@@ -143,7 +145,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="text-xs  sm:text-sm text-gray-300 mb-2">
+        <p className="text-xs  sm:text-sm text-gray-300 mb-2 mr-10">
           Copyright © 2023-24 MappOptimist Technologies LLP
         </p>
       </div>

@@ -3,7 +3,7 @@ import React from "react";
 const ClientReviewsItem = ({ item }) => {
   return (
     <>
-      <div className="w-[90%] sm:w-[70%] rounded-lg">
+      <div className="w-[90%] sm:w-[70%] rounded-lg h-full">
         <div className="text-[80%] sm:text-[100%] leading-relaxed mb-20 w-full font-poppins300">
           <p>"{item.description}"</p>
         </div>

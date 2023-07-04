@@ -66,13 +66,13 @@ const ClientReviews = () => {
   }, []);
   return (
     <>
-      <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30">
+      <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30 h-[70vh] sm:h-[90vh] middle:h-[110vh]">
         <h2 className="font-poppins500 text-[30px] lmd:text-[47px] flex gap-2 flex-wrap sm:mt-24 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary p-1">
           Client Reviews
         </h2>
         <div className="w-full mt-[6%]">
           <div className="w-full flex justify-start items-end text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
-            <div className="w-full midxmd:w-[45%] h-full midlg:w-full lg:w-[45%]">
+            <div className="w-full midlg:w-[45%] h-full lg:w-[45%]">
               {data.map((item, index) => (
                 <div
                   key={index}
@@ -82,7 +82,7 @@ const ClientReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-[709px] hidden midxmd:block midlg:hidden lg:block z-4">
+            <div className="relative w-[709px] hidden midlg:block z-4">
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {reviewImages1.map((item, index) => (
                   <div
