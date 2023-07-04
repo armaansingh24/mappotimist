@@ -1,6 +1,6 @@
 import React from "react";
 import PortfolioNavbar from "../components/PortfolioNavbar";
-import firstSection from "../assets/aboutUs/firstSection.png";
+import firstSection from "../assets/aboutUs/firstSection.webp";
 import secondSection from "../assets/aboutUs/secondSection.png";
 import picture1 from "../assets/aboutUs/picture1.png";
 import { SiFacebook } from "react-icons/si";
