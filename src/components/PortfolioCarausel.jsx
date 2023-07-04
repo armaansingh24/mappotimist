@@ -58,7 +58,7 @@ const PortfolioCarausel = ({ page }) => {
         <button
           className={`absolute w-[2%] h-full ${
             page === "portfolio" ? "text-black" : "text-white"
-          }  -top-[10rem] sm:-top-[15rem] -left-3 sm:left-0 text-center p-3 z-[100]`}
+          }  -top-[18rem] smm:-top-[10rem] sm:-top-[15rem] -left-3 sm:left-0 text-center p-3 z-[100]`}
           onClick={() => previous()}
         >
           {" "}
@@ -66,7 +66,7 @@ const PortfolioCarausel = ({ page }) => {
         </button>
         <button onClick={() => next()}>
           <span
-            className={`absolute w-[2%] h-20 -top-[10rem] sm:-top-[15rem] ${
+            className={`absolute w-[2%] h-20 -top-[18rem] smm:-top-[10rem] sm:-top-[15rem] ${
               page === "portfolio" ? "text-black" : "text-white"
             } -right-[0rem] sm:right-[0.3rem] text-center p-3 z-[100]`}
           >
