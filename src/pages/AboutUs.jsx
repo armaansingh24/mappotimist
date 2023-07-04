@@ -60,7 +60,7 @@ const AboutUs = () => {
             <img src={bubble3} alt="" className="absolute left-44 top-44" />
             <img src={bubble4} alt="" className="absolute left-0 bottom-0" />
           </div>
-          <div className=" bg-gradient-to-tr from-primary to-secondary middle:bg-none middle:absolute inset-0 w-[97%] middle:w-[90%] flex flex-col items-start middle:items-end justify-center p-20 middle:p-0">
+          <div className=" bg-gradient-to-tr from-primary to-secondary middle:bg-none middle:absolute inset-0 w-[100%] middle:w-[90%] flex flex-col items-start middle:items-end justify-center p-20 middle:p-0">
             <div className="middle:text-center">
               <p className="middle:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F6D28C] to-[#FBE6BD] font-poppins">
                 About Us
