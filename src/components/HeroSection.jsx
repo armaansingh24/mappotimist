@@ -1,7 +1,7 @@
 import React from "react";
 import TypeWritter from "typewriter-effect";
 import { BsArrowRightCircleFill } from "react-icons/bs";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import image1 from "../assets/hero-section/image1.webp";
 import image2 from "../assets/hero-section/image2.webp";
 import image3 from "../assets/hero-section/image3.webp";
