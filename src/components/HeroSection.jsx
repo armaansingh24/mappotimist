@@ -10,14 +10,14 @@ import image5 from "../assets/hero-section/image5.webp";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Link } from "react-scroll";
 import Navbar from "./Navbar";
-import background from "../assets/hero-section/background.png";
-import techs from "../assets/hero-section/techs.png";
-import main from "../assets/hero-section/main.png";
-import pattern from "../assets/hero-section/pattern.png";
-import pattern2 from "../assets/hero-section/pattern2.png";
-import circle from "../assets/hero-section/circle.png";
-import plus from "../assets/hero-section/plus.png";
-import square from "../assets/hero-section/square.png";
+import background from "../assets/hero-section/background.webp";
+import techs from "../assets/hero-section/techs.webp";
+import main from "../assets/hero-section/main.webp";
+import pattern from "../assets/hero-section/pattern.webp";
+import pattern2 from "../assets/hero-section/pattern2.webp";
+import circle from "../assets/hero-section/circle.webp";
+import plus from "../assets/hero-section/plus.webp";
+import square from "../assets/hero-section/square.webp";
 
 const HeroSection = () => {
   const ref = useRef(null);

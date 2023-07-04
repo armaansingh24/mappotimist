@@ -14,7 +14,7 @@ import TestimonialsItem from "../components/TestimonialsItem";
 import R1 from "../assets/aboutUs/R1.png";
 import ellips from "../assets/aboutUs/ellips.png";
 import ellips2 from "../assets/aboutUs/ellips2.png";
-import pattern2 from "../assets/hero-section/pattern2.png";
+import pattern2 from "../assets/hero-section/pattern2.webp";
 import bubble1 from "../assets/aboutUs/bubble1.png";
 import bubble2 from "../assets/aboutUs/bubble2.png";
 import bubble3 from "../assets/aboutUs/bubble3.png";
