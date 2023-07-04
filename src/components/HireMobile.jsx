@@ -44,7 +44,7 @@ const HireMobile = () => {
       }
       setFormData((prevData) => ({
         ...prevData,
-        file: event.target.files[0], // Update file value with the selected file
+        file: event.target.files[0],
       }));
     } else {
       setFormData((prevData) => ({

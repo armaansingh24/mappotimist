@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { HashRouter as Link  } from "react-router-dom";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/navbar/logo.webp";
@@ -7,7 +6,6 @@ import logo2 from "../assets/navbar/logo2.png";
 import eclips1 from "../assets/navbar/eclips1.webp";
 import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
-// import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -66,7 +64,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
                   to={`Home`}
-                  // spy={true}
                   smooth={true}
                   offset={100}
                   duration={1000}
@@ -92,7 +89,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
                   to={`Portfolio`}
-                  // spy={true}
                   smooth={true}
                   offset={100}
                   duration={1000}
@@ -107,7 +103,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3  group-hover:border-2 group-hover:border-white text-white"
                   to={`Expertise`}
-                  // spy={true}
                   smooth={true}
                   offset={450}
                   duration={1000}
@@ -122,7 +117,6 @@ const Navbar = () => {
                 <Link
                   className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white text-white"
                   to={`Contact Us`}
-                  // spy={true}
                   smooth={true}
                   offset={10}
                   duration={1000}

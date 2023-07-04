@@ -213,7 +213,6 @@ const GetHired = () => {
         }
       } catch (error) {
         toast.error("Email not sent");
-        console.log(error);
       }
     }
     errorHandler();
@@ -460,9 +459,7 @@ const GetHired = () => {
                             handleFileReset();
                             fileInputRef.current.click();
                             errorHandler();
-                          }} // Open file selection dialog
-                          // htmlFor="fileInput"
-                          // className="w-full h-full cursor-pointer ml-3"
+                          }} 
                         >
                           {formData.file !== "" ? (
                             <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-base bg-transparentl mr-16">

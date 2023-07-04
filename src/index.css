@@ -107,9 +107,7 @@ body {
 }
 
 .swiper-slide {
-    /* width: 4rem; */
     height: auto;
-    /* position: relative; */
 }
 
 .swiper-slide {
@@ -158,7 +156,6 @@ body {
 
     .swiper_container {
         height: 40rem;
-        /* width: 80%; */
     }
 }
 
@@ -208,7 +205,6 @@ body {
 
 
 .agencies {
-    /* background-position: 60% 15%; */
     background-position: top 15px right 0px;
     background-position-x: 60%;
     background-position-y: 15%;
@@ -285,7 +281,6 @@ body {
 }
 
 .know {
-    /* alternate-reverse */
     animation: goto .8s linear infinite ;
 }
 
@@ -374,7 +369,6 @@ body {
     scrollbar-color: transparent transparent;
 }
 
-/* For WebKit browsers (Chrome, Safari) */
 .scrollbar-hide::-webkit-scrollbar {
     width: 6px;
     height: 6px;

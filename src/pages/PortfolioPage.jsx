@@ -58,7 +58,6 @@ const PortfolioPage = () => {
                     src={item.mainImage}
                     alt=""
                     className={`${item.css}`}
-                    // className="hidden sm:block mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:-mt-32 middleXmd:scale-[1.7]  middleXmd:ml-[14%] transition duration-1000"
                   />
                 )}
               </div>
