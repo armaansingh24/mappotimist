@@ -1,8 +1,8 @@
 import React from "react";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import firstSection from "../assets/aboutUs/firstSection.webp";
-import secondSection from "../assets/aboutUs/secondSection.png";
-import picture1 from "../assets/aboutUs/picture1.png";
+import secondSection from "../assets/aboutUs/secondSection.webp";
+import picture1 from "../assets/aboutUs/picture1.webp";
 import { SiFacebook } from "react-icons/si";
 import { BsLinkedin } from "react-icons/bs";
 import { SiTwitter } from "react-icons/si";
