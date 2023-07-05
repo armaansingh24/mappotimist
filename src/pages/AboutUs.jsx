@@ -196,7 +196,17 @@ const AboutUs = () => {
             </p>
           </div>
         </motion.div>
-        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden middle:grid-cols-2 items-center justify-center">
+        <motion.div
+          className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden middle:grid-cols-2 items-center justify-center"
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, x: 10 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1.6 }}
+        >
           <div className="middle:order-2 middle:w-full flex flex-col items-start justify-center">
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">
               Yashvant Sikarvar
@@ -256,7 +266,7 @@ const AboutUs = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="hidden xxmd:block mx-auto w-[80%] mt-20">
           <div className="flex gap-10 items-center justify-center">
             <div className="w-full flex flex-col items-start justify-center gap-5 ">
