@@ -19,8 +19,19 @@ import bubble1 from "../assets/aboutUs/bubble1.png";
 import bubble2 from "../assets/aboutUs/bubble2.png";
 import bubble3 from "../assets/aboutUs/bubble3.png";
 import bubble4 from "../assets/aboutUs/bubble4.png";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const AboutUs = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView]);
 
   const responsive = {
     desktop: {
@@ -47,7 +58,11 @@ const AboutUs = () => {
       </div>
       <div className="w-screen mt-36 sm:mt-0 about">
         <div className="relative">
-          <img src={firstSection} alt="" className="w-screen hidden middle:block" />
+          <img
+            src={firstSection}
+            alt=""
+            className="w-screen hidden middle:block"
+          />
           <div className="">
             <img src={pattern2} alt="" className=" absolute right-32 top-14" />
             <img src={bubble1} alt="" className="absolute left-20 top-5" />
@@ -58,7 +73,17 @@ const AboutUs = () => {
             <img src={bubble4} alt="" className="absolute left-0 bottom-0" />
           </div>
           <div className=" bg-gradient-to-tr from-primary to-secondary middle:bg-none middle:absolute inset-0 w-[100%] middle:w-[90%] flex flex-col items-start middle:items-end justify-center p-20 middle:p-0">
-            <div className="middle:text-center">
+            <motion.div
+              className="middle:text-center"
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, x: 10 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               <p className="middle:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F6D28C] to-[#FBE6BD] font-poppins">
                 About Us
               </p>
@@ -68,15 +93,25 @@ const AboutUs = () => {
               <p className="text-base middle:text-3xl text-white font-poppins">
                 delivering with precision
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden  middle:grid-cols-2 items-center justify-center">
           <div className="middle:order-2 middle:w-full">
-            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">
+            <motion.h3
+              className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins"
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               Building greater futures through innovation and collective
               knowledge
-            </h3>
+            </motion.h3>
           </div>
           <div className="middle:row-span-2 middle:order-1 mx-auto my-auto">
             <img src={secondSection} alt="" className="" />
@@ -111,7 +146,17 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="w-[80%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10">
+        <motion.div
+          className="w-[80%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10"
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1.6 }}
+        >
           <div className="flex gap-10 items-center">
             <div className="w-[40%] mt-20">
               <img src={secondSection} alt="" className="w-full" />
@@ -150,7 +195,7 @@ const AboutUs = () => {
               help your business thrive.
             </p>
           </div>
-        </div>
+        </motion.div>
         <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden middle:grid-cols-2 items-center justify-center">
           <div className="middle:order-2 middle:w-full flex flex-col items-start justify-center">
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">

@@ -1,10 +1,11 @@
 import { useTypewriter } from "react-simple-typewriter";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import image1 from "../assets/contactUs/image1.webp";
 import R2 from "../assets/contactUs/R2.webp";
 import linkedin from "../assets/contactUs/linkedin.webp";
 import { toast } from "react-hot-toast";
 import axios from "axios";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const ContactSection = () => {
   const [text] = useTypewriter({
@@ -113,6 +114,16 @@ const ContactSection = () => {
     setCustomService(event.target.value);
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView]);
+
   return (
     <>
       <div
@@ -125,10 +136,30 @@ const ContactSection = () => {
           className="absolute -top-[52%] -left-1 hidden midxmd:block z-0"
         />
         <div className=" mx-auto p-3">
-          <h2 className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32 bg-gradient-to-r from-primary via-secondary p-2 to-secondary text-transparent bg-clip-text">
+          <motion.h2
+            className="font-poppins500 text-[30px] lmd:text-[48px] text-start midxmd:ml-32 bg-gradient-to-r from-primary via-secondary p-2 to-secondary text-transparent bg-clip-text"
+            ref={ref}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 1.6 }}
+          >
             Contact Us
-          </h2>
-          <div className="flex mt-5 midFM:mt-32 gap-10">
+          </motion.h2>
+          <motion.div
+            className="flex mt-5 midFM:mt-32 gap-10"
+            ref={ref}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 1.6 }}
+          >
             <div className="hidden midxmd:flex flex-col  justify-start w-[25%] relative z-10  ">
               <div className="mr-10">
                 <p className="text-sm text-center font-poppins500">
@@ -327,7 +358,7 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

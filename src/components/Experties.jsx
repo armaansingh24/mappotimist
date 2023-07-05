@@ -9,7 +9,19 @@ import Ellipse1 from "../assets/expertise/Ellipse1.webp";
 import Ellipse2 from "../assets/expertise/Ellipse2.webp";
 import Ellipse3 from "../assets/expertise/Ellipse3.webp";
 import R1 from "../assets/expertise/R1.webp";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 const Experties = () => {
+ const ref = useRef(null);
+ const isInView = useInView(ref, { once: true });
+ const mainControls = useAnimation();
+ useEffect(() => {
+   if (isInView) {
+     mainControls.start("visible");
+   }
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+ }, [isInView]);
   const [expanded, setExpanded] = useState(false);
 
   const toggleDivHeight = () => {
@@ -41,9 +53,19 @@ const Experties = () => {
           className="absolute top-[11%] right-1 z-5 hidden xxmd:block"
         />
         <img src={upper} alt="" className="w-full scale-[1.1] relative z-10" />
-        <h2 className="h-[4rem] text-bold w-[79%] font-poppins500  text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mx-auto xxmd:mt-[-9%] relative z-30 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+        <motion.h2
+          className="h-[4rem] text-bold w-[79%] font-poppins500  text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mx-auto xxmd:mt-[-9%] relative z-30 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1.6 }}
+        >
           Expertise
-        </h2>
+        </motion.h2>
         <div
           className={`w-[90%] mx-auto grid grid-cols-2 gap-6 sm:grid-cols-3 p-5 sm:p-10 justify-between items-center mt-10 overflow-hidden transition-h duration-[1000ms] ease-in-out ${
             expanded

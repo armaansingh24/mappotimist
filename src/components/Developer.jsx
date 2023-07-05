@@ -2,7 +2,7 @@ import bgVideo from "../assets/developer/bgVideo.mp4";
 import one from "../assets/developer/one.webp";
 import two from "../assets/developer/two.webp";
 import three from "../assets/developer/three.webp";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import GetHired from "./GetHired";
 import GetHire from "./GetHire";
 import GetHiredMobile from "./GetHiredMobile";
@@ -11,6 +11,7 @@ import { SlClose } from "react-icons/sl";
 import { Tilt } from "react-tilt";
 import { Link } from "react-scroll";
 import { Link as HLink } from "react-router-dom";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 import ellips1 from "../assets/developer/ellips1.webp";
 import ellips2 from "../assets/developer/ellips2.webp";
@@ -21,6 +22,16 @@ import ellips6 from "../assets/developer/ellips6.webp";
 import ellips7 from "../assets/developer/ellips7.webp";
 
 const Developer = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView]);
+
   const [showForm, setShowForm] = useState(false);
   const [showForm2, setShowForm2] = useState(false);
   const [showForm3, setShowForm3] = useState(false);
@@ -110,7 +121,17 @@ const Developer = () => {
             Our Vision
           </h2>
           <div className="w-full flex flex-col midlg:flex-row gap-10 items-center justify-evenly mt-[10%] relative z-20">
-            <div className="sm:w-[50%]  midlg:w-[25%] ">
+            <motion.div
+              className="sm:w-[50%]  midlg:w-[25%] "
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, y: 0 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               <Tilt
                 options={{
                   max: 45,
@@ -124,9 +145,9 @@ const Developer = () => {
                   </p>
                   <img src={one} alt="" className="midFM:w-[80%]" />
                   <p className="text-center text-lg font-poppins500">
-                    If you are looking for a skilled
-                    professional(s) to bring expertise and efficiency to your
-                    project. Contact us for details!
+                    If you are looking for a skilled professional(s) to bring
+                    expertise and efficiency to your project. Contact us for
+                    details!
                   </p>
                   <Link to="Developer">
                     <button
@@ -144,7 +165,7 @@ const Developer = () => {
                   </button>
                 </div>
               </Tilt>
-            </div>
+            </motion.div>
             <div className="sm:w-[50%]  midlg:w-[25%] ">
               <Tilt
                 options={{
@@ -153,25 +174,72 @@ const Developer = () => {
                   speed: 450,
                 }}
               >
-                <div className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]">
-                  <p className="text-2xl font-poppins500">Share Thoughts</p>
-                  <img src={two} alt="" className="mt-12 midFM:w-[80%]" />
-                  <p className="text-center text-lg font-poppins500 mt-9">
+                <motion.div
+                  className="bg-white flex flex-col justify-between items-center  rounded-3xl p-6 gap-3 h-full midlg:h-[32.7rem] shadow-[10px_20px_50px_-10px_rgba(0,0,0,0.6)]"
+                  
+                >
+                  <motion.p
+                    className="text-2xl font-poppins500"
+                    ref={ref}
+                    variants={{
+                      hidden: { opacity: 0, y: 50 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{ duration: 1.6 }}
+                  >
+                    Share Thoughts
+                  </motion.p>
+                  <motion.img
+                    src={two}
+                    alt=""
+                    className="mt-12 midFM:w-[80%]"
+                    ref={ref}
+                    variants={{
+                      hidden: { opacity: 0, y: 50 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{ duration: 1.6 }}
+                  />
+                  <motion.p
+                    className="text-center text-lg font-poppins500 mt-9"
+                    ref={ref}
+                    variants={{
+                      hidden: { opacity: 0, y: 50 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{ duration: 1.6 }}
+                  >
                     Share your ideas with us. We can turn your concepts into
                     reality with our expertise and ignite them with our
                     knowledge.
-                  </p>
+                  </motion.p>
                   <Link
                     to="Contact Us"
                     smooth={true}
                     offset={10}
                     duration={1000}
                   >
-                    <button className=" bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2">
+                    <motion.button
+                      className=" bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
+                      ref={ref}
+                      variants={{
+                        hidden: { opacity: 0, y: 50 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 1.6 }}
+                    >
                       Connect Us
-                    </button>
+                    </motion.button>
                   </Link>
-                </div>
+                </motion.div>
               </Tilt>
             </div>
             <div className="sm:w-[50%] midlg:w-[25%] ">

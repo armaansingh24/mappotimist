@@ -6,7 +6,7 @@ import pattern3 from "../assets/clientReviews/pattern3.webp";
 import pattern4 from "../assets/clientReviews/pattern4.webp";
 import curve1 from "../assets/clientReviews/curve1.webp";
 import curve2 from "../assets/clientReviews/curve2.webp";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import { reviews } from "../constants/index";
 import ClientReviewsItem from "./ClientReviewsItem";
 import { reviewImages1 } from "../constants/index";
@@ -15,8 +15,18 @@ import { reviewImages2 } from "../constants/index";
 import { reviewImages4 } from "../constants/index";
 import { reviewImages5 } from "../constants/index";
 import staticView from "../assets/clientReviews/staticView.png";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const ClientReviews = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+    const mainControls = useAnimation();
+    useEffect(() => {
+      if (isInView) {
+        mainControls.start("visible");
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isInView]);
   const data = reviews;
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeIndex1, setActiveIndex1] = useState(2);
@@ -68,12 +78,32 @@ const ClientReviews = () => {
   return (
     <>
       <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30 h-[70vh] sm:h-[90vh] middle:h-[110vh]">
-        <h2 className="font-poppins500 text-[30px] lmd:text-[47px] flex gap-2 flex-wrap sm:mt-24 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary p-1">
+        <motion.h2
+          className="font-poppins500 text-[30px] lmd:text-[47px] flex gap-2 flex-wrap sm:mt-24 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary p-1"
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1.6 }}
+        >
           Client Reviews
-        </h2>
+        </motion.h2>
         <div className="w-full mt-[6%]">
           <div className="w-full flex justify-start items-end text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
-            <div className="w-full xl:w-[45%] h-full lg:w-[45%]">
+            <motion.div
+              className="w-full xl:w-[45%] h-full lg:w-[45%]"
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, x: -100 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               {data.map((item, index) => (
                 <div
                   key={index}
@@ -82,11 +112,31 @@ const ClientReviews = () => {
                   <ClientReviewsItem item={item} />
                 </div>
               ))}
-            </div>
-            <div className="hidden middleXmd:block w-full h-full -mt-24 xl:hidden -translate-y-20">
+            </motion.div>
+            <motion.div
+              className="hidden middleXmd:block w-full h-full -mt-24 xl:hidden -translate-y-20"
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, x: 100 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               <img src={staticView} alt="" className="" />
-            </div>
-            <div className="relative w-[709px] hidden xl:block z-4">
+            </motion.div>
+            <motion.div
+              className="relative w-[709px] hidden xl:block z-4"
+              ref={ref}
+              variants={{
+                hidden: { opacity: 0, x: 100 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1.6 }}
+            >
               <div className="absolute left-[-3rem] top-4 rounded-full">
                 {reviewImages1.map((item, index) => (
                   <div
@@ -207,7 +257,7 @@ const ClientReviews = () => {
                 className="absolute bottom-36 left-[-6%] rounded-lg"
               />
               <img src={pattern} alt="" className="" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

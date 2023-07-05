@@ -1,9 +1,29 @@
 import React from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const ExpertiseItem = ({ item }) => {
- 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView]);
   return (
-    <div className="w-full p-[0.15rem] group  rounded-lg  relative ">
+    <motion.div
+      className="w-full p-[0.15rem] group  rounded-lg  relative "
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 100 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 1.6 }}
+    >
       <div
         className="w-full h-full opacity-0 group-hover:opacity-100 absolute z-0 bg-gradient-to-bl from-secondary to-primary transition-all 
     ease duration-[500ms] inset-0 rounded-lg shadow-[1px_1px_10px_0px_#1CB5E0] "
@@ -31,7 +51,7 @@ const ExpertiseItem = ({ item }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
