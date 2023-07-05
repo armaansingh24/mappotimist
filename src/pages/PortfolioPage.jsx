@@ -373,7 +373,7 @@ const PortfolioPage = () => {
             )}
           </div>
         </div>
-        <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 lmd:flex-row lmd:h-screen relative">
+        <div className="w-[80%] mx-auto flex flex-col items-center justify-center gap-4 lmd:flex-row lmd:h-screen relative mt-10 sm:mt-0">
           <img
             src={R1}
             alt=""
