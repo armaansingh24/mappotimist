@@ -58,11 +58,12 @@ const Navbar = () => {
             </Link>
             <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-4 order-3 self-center z-50 relative">
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
                 "
               >
+                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full z-0"></div>
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
+                  className="rounded-full py-1 px-3 relative z-10"
                   to={`Home`}
                   smooth={true}
                   offset={100}
@@ -72,22 +73,25 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins group text-white  relative
                 "
               >
+                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full z-0"></div>
+
                 <NavLink
-                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
+                  className="  rounded-full py-2 px-4  relative z-10"
                   to={`/about-us`}
                 >
                   About
                 </NavLink>
               </li>
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
                 "
               >
+                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white "
+                  className="rounded-full py-1 px-3 relative z-10"
                   to={`Portfolio`}
                   smooth={true}
                   offset={100}
@@ -97,11 +101,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
                 "
               >
+                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
                 <Link
-                  className="rounded-full py-1 px-3  group-hover:border-2 group-hover:border-white text-white"
+                  className="rounded-full py-1 px-3 text-white relative z-10"
                   to={`Expertise`}
                   smooth={true}
                   offset={450}
@@ -111,11 +116,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
+                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
                 "
               >
+                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
                 <Link
-                  className="rounded-full py-1 px-3 group-hover:border-2 group-hover:border-white text-white"
+                  className="rounded-full py-1 px-3  text-white relative z-10"
                   to={`Contact Us`}
                   smooth={true}
                   offset={10}
