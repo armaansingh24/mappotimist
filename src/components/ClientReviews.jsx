@@ -77,7 +77,17 @@ const ClientReviews = () => {
   }, []);
   return (
     <>
-      <div className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30 h-[70vh] sm:h-[90vh] middle:h-[110vh]">
+      <motion.div
+        className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30 h-[70vh] sm:h-[90vh] middle:h-[110vh]"
+        ref={ref}
+        variants={{
+          hidden: { opacity: 0, x: 0 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 1.6 }}
+      >
         <motion.h2
           className="font-poppins500 text-[30px] lmd:text-[47px] flex gap-2 flex-wrap sm:mt-24 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary p-1"
           ref={ref}
@@ -260,7 +270,7 @@ const ClientReviews = () => {
             </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
