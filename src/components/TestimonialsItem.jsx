@@ -12,7 +12,7 @@ const TestimonialsItem = ({ testimonial }) => {
   }
 
   return (
-    <div className="bg-[#FDFFE0]  sm:p-5 rounded-3xl mx-4 h-[17rem] shadow-xl mb-10">
+    <div className="bg-[#FDFFE0]  sm:p-5 rounded-3xl mx-4 h-[20rem] midxs:h-[17rem] shadow-xl mb-10">
       <div className="flex flex-col p-4 gap-4">
         <div className="flex justify-between items-center">
           <div className="rounded-full flex items-center justify-start gap-4">

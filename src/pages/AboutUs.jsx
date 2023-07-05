@@ -47,8 +47,7 @@ const AboutUs = () => {
       </div>
       <div className="w-screen mt-36 sm:mt-0 about">
         <div className="relative">
-        
-          <img src={firstSection}  alt="" className="w-screen" />
+          <img src={firstSection} alt="" className="w-screen hidden middle:block" />
           <div className="">
             <img src={pattern2} alt="" className=" absolute right-32 top-14" />
             <img src={bubble1} alt="" className="absolute left-20 top-5" />

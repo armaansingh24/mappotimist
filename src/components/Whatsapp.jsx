@@ -4,9 +4,6 @@ import whatsapp from "../assets/whatsapp.png";
 
 const Whatsapp = () => {
   const [isVisiable, setIsVisiable] = useState(false);
-  const goToBtn = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  };
 
   const listenToScroll = () => {
     let heightToHidden = 250;
