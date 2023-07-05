@@ -614,11 +614,11 @@ export const reviewImages2 = [
   {
     id: 4,
 
-    image: image6,
+    image: image7,
   },
   {
     id: 5,
-    image: image7,
+    image: image9,
   },
 ];
 
@@ -652,12 +652,12 @@ export const reviewImages4 = [
   },
   {
     id: 2,
-    image: image14,
+    image: image12,
   },
   {
     id: 3,
 
-    image: image10,
+    image: image9,
   },
   {
     id: 4,
@@ -665,7 +665,7 @@ export const reviewImages4 = [
   },
   {
     id: 5,
-    image: image9,
+    image: image8,
   },
 ];
 export const reviewImages5 = [
