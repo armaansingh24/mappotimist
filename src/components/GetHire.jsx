@@ -138,7 +138,7 @@ const GetHired = () => {
     errorHandler();
     try {
       const response = await axios.post(
-        "http://128.199.17.62:8080/v1/send-email-hire",
+        "https://mappoptimist.com/v1/send-email-hire",
         formData,
         {
           headers: {
@@ -250,7 +250,7 @@ const GetHired = () => {
                         placeholder="Name"
                         value={formData.name}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent "
+                        className="h-full w-full focus:outline-none text-base px-1 bg-transparent "
                       />
                     </div>
                     {error1.length !== 0 && (
@@ -261,7 +261,7 @@ const GetHired = () => {
                   </div>
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                      <img src={call} alt="" className="w-[7%] ml-2"/>
+                      <img src={call} alt="" className="w-[7%] ml-2" />
                       <RxDividerVertical className="text-4xl text-gray-400" />
                       <input
                         type="number"
@@ -270,7 +270,7 @@ const GetHired = () => {
                         placeholder="Contact no"
                         value={formData.contact}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
+                        className="h-full w-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
                       />
                     </div>
                     {error2.length !== 0 && (
@@ -290,7 +290,7 @@ const GetHired = () => {
                         placeholder="Email"
                         value={formData.email}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                        className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                       />
                     </div>
                     {error3.length !== 0 && (
@@ -310,7 +310,7 @@ const GetHired = () => {
                         placeholder="Years of Experience"
                         value={formData.experience}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                        className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                       />
                     </div>
                     {error6.length !== 0 && (
@@ -331,7 +331,7 @@ const GetHired = () => {
                           placeholder="Area Of Expertise"
                           value={formData.expertise}
                           onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                          className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                         />
                       </div>
                       {error5.length !== 0 && (

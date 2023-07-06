@@ -37,35 +37,33 @@ const GetHired = () => {
     summery: "",
   });
 
-   const handleFlieInput = () => {
-     setError4("File size should be less than 5 MB");
-   };
-   function changeHandler(event) {
-     if (event.target.name === "file") {
-       if (event.target.files[0].size > 5242880) {
-         handleFlieInput();
-         return;
-       }
-       setFormData((prevData) => ({
-         ...prevData,
-         file: event.target.files[0],
-       }));
-     } else {
-       setFormData((prevData) => ({
-         ...prevData,
-         [event.target.name]: event.target.value,
-        }));
-        if (
-          event.target.value.trim().length > 300 &&
-          event.target.name === "summery"
-        ) {
-          setError8("Summery should be less than 300 characters");
-          return;
-        }
-     }
-   }
-
-
+  const handleFlieInput = () => {
+    setError4("File size should be less than 5 MB");
+  };
+  function changeHandler(event) {
+    if (event.target.name === "file") {
+      if (event.target.files[0].size > 5242880) {
+        handleFlieInput();
+        return;
+      }
+      setFormData((prevData) => ({
+        ...prevData,
+        file: event.target.files[0],
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [event.target.name]: event.target.value,
+      }));
+      if (
+        event.target.value.trim().length > 300 &&
+        event.target.name === "summery"
+      ) {
+        setError8("Summery should be less than 300 characters");
+        return;
+      }
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -74,28 +72,27 @@ const GetHired = () => {
       setError1("This field is necessary");
       return;
     }
-     if (formData.name.trim().length < 3) {
-       setError1("Name should be atleast 3 characters long");
-       return;
-     }
-     if (formData.name.trim().length > 25) {
-       setError1("Name should be less than 25 characters");
-       return;
-     }
-
+    if (formData.name.trim().length < 3) {
+      setError1("Name should be atleast 3 characters long");
+      return;
+    }
+    if (formData.name.trim().length > 25) {
+      setError1("Name should be less than 25 characters");
+      return;
+    }
 
     if (formData.contact.trim() === "") {
       setError2("This field is necessary");
       return;
     }
-     if (formData.contact.trim().length < 3) {
-       setError2("Contact should be atleast 3");
-       return;
-     }
-     if (formData.contact.trim().length > 13) {
-       setError2("Contact should be less than 13");
-       return;
-     }
+    if (formData.contact.trim().length < 3) {
+      setError2("Contact should be atleast 3");
+      return;
+    }
+    if (formData.contact.trim().length > 13) {
+      setError2("Contact should be less than 13");
+      return;
+    }
 
     if (formData.email.trim() === "") {
       setError3("This field is necessary");
@@ -105,7 +102,7 @@ const GetHired = () => {
       setError5("This field is necessary");
       return;
     }
-    if(formData.type.trim().length < 3 && accountType === "Hire Team"){
+    if (formData.type.trim().length < 3 && accountType === "Hire Team") {
       setError5("Type should be atleast 3 characters");
       return;
     }
@@ -120,7 +117,7 @@ const GetHired = () => {
     }
     if (formData.duration.trim().length < 3 && accountType === "Hire Team") {
       setError6("Duration should be atleast 3 characters");
-      return;  
+      return;
     }
     if (formData.duration.trim().length > 10 && accountType === "Hire Team") {
       setError6("Duration should be less than 10 characters");
@@ -138,26 +135,26 @@ const GetHired = () => {
     if (formData.required.trim().length > 50 && accountType !== "Hire Team") {
       setError7("Required should be less than 50 characters");
       return;
-    } 
+    }
 
-     if (formData.summery.trim().length > 300) {
-       setError8("Summery should be less than 300 characters");
-       return;
-     }
+    if (formData.summery.trim().length > 300) {
+      setError8("Summery should be less than 300 characters");
+      return;
+    }
 
     if (accountType === "Hire Team") {
       const formDataSent = {
         name: formData.name,
         contact: formData.contact,
         email: formData.email,
-        type:formData.type,
-        duration:formData.duration,
+        type: formData.type,
+        duration: formData.duration,
         summery: formData.summery,
-        file:formData.file
+        file: formData.file,
       };
       try {
         const response = await axios.post(
-          "http://128.199.17.62:8080/v1/send-email-hire-team",
+          "https://mappoptimist.com/v1/send-email-hire-team",
           formDataSent,
           {
             headers: {
@@ -193,7 +190,7 @@ const GetHired = () => {
       };
       try {
         const response = await axios.post(
-          "http://128.199.17.62:8080/v1/send-email-individual",
+          "https://mappoptimist.com/v1/send-email-individual",
           formDataSent
         );
         if (response.status === 200) {
@@ -315,14 +312,14 @@ const GetHired = () => {
                   <div>
                     <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
                       <BsPersonFill className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />
-                      <RxDividerVertical className="text-4xl text-gray-400" />
+                      <RxDividerVertical className="text-4xl text-gray-400 " />
                       <input
                         type="text"
                         name="name"
                         onChange={changeHandler}
                         placeholder="Name"
                         value={formData.name}
-                        className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
+                        className="h-full w-full focus:outline-none text-base bg-transparent"
                       />
                     </div>
                     {error1.length !== 0 && (
@@ -342,7 +339,7 @@ const GetHired = () => {
                         placeholder="Contact no"
                         value={formData.contact}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-base bg-transparent appearance-none custom-input"
+                        className="h-full w-full  focus:outline-none text-base bg-transparent appearance-none custom-input"
                       />
                     </div>
                     {error2.length !== 0 && (
@@ -362,7 +359,7 @@ const GetHired = () => {
                         placeholder="Email"
                         value={formData.email}
                         onClick={errorHandler}
-                        className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
+                        className="h-full w-full  focus:outline-none text-base bg-transparent"
                       />
                     </div>
                     {error3.length !== 0 && (
@@ -383,7 +380,7 @@ const GetHired = () => {
                           placeholder="Required Skills"
                           value={formData.required}
                           onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent appearance-none custom-input"
+                          className="h-full w-full focus:outline-none text-base bg-transparent appearance-none custom-input"
                         />
                       </div>
                       {error7.length !== 0 && (
@@ -406,7 +403,7 @@ const GetHired = () => {
                           placeholder="Project Type"
                           value={formData.type}
                           onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
+                          className="h-full w-full focus:outline-none text-base bg-transparent"
                         />
                       </div>
                       {error5.length !== 0 && (
@@ -428,7 +425,7 @@ const GetHired = () => {
                           placeholder="Duration"
                           value={formData.duration}
                           onClick={errorHandler}
-                          className="h-full w-full rounded-full focus:outline-none text-base bg-transparent"
+                          className="h-full w-full focus:outline-none text-base bg-transparent"
                         />
                       </div>
                       {error6.length !== 0 && (
@@ -459,7 +456,7 @@ const GetHired = () => {
                             handleFileReset();
                             fileInputRef.current.click();
                             errorHandler();
-                          }} 
+                          }}
                         >
                           {formData.file !== "" ? (
                             <span className="text-gray-400 pointer-events-noneh-full w-full rounded-full focus:outline-none text-base bg-transparentl mr-16">

@@ -149,7 +149,7 @@ const GetHiredMobile = () => {
       };
       try {
         const response = await axios.post(
-          "http://128.199.17.62:8080/v1/send-email-hire-team",
+          "https://mappoptimist.com/v1/send-email-hire-team",
           formDataSent,
           {
             headers: {
@@ -185,7 +185,7 @@ const GetHiredMobile = () => {
       };
       try {
         const response = await axios.post(
-          "http://128.199.17.62/v1/send-email-individual",
+          "https://mappoptimist.com/v1/send-email-individual",
           formDataSent
         );
         if (response.status === 200) {
@@ -281,7 +281,7 @@ const GetHiredMobile = () => {
                     placeholder="Name"
                     value={formData.name}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                    className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                   />
                 </div>
                 {error1.length !== 0 && (
@@ -301,7 +301,7 @@ const GetHiredMobile = () => {
                     placeholder="Contact no"
                     value={formData.contact}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
+                    className="h-full w-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
                   />
                 </div>
                 {error2.length !== 0 && (
@@ -321,7 +321,7 @@ const GetHiredMobile = () => {
                     placeholder="Email"
                     value={formData.email}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                    className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                   />
                 </div>
                 {error3.length !== 0 && (
@@ -342,7 +342,7 @@ const GetHiredMobile = () => {
                       placeholder="Required Skills"
                       value={formData.required}
                       onClick={errorHandler}
-                      className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
+                      className="h-full w-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
                     />
                   </div>
                   {error7.length !== 0 && (
@@ -365,7 +365,7 @@ const GetHiredMobile = () => {
                       placeholder="Project Type"
                       value={formData.type}
                       onClick={errorHandler}
-                      className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                      className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                     />
                   </div>
                   {error5.length !== 0 && (
@@ -387,7 +387,7 @@ const GetHiredMobile = () => {
                       placeholder="Duration"
                       value={formData.duration}
                       onClick={errorHandler}
-                      className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                      className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                     />
                   </div>
                   {error6.length !== 0 && (

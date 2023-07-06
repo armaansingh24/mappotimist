@@ -142,7 +142,7 @@ const HireMobile = () => {
 
     try {
       const response = await axios.post(
-        "http://128.199.17.62:8080/v1/send-email-hire",
+        "https://mappoptimist.com/v1/send-email-hire",
         formData,
         {
           headers: {
@@ -237,7 +237,7 @@ const HireMobile = () => {
                     placeholder="Contact no"
                     value={formData.contact}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
+                    className="h-full w-full focus:outline-none text-base px-1 bg-transparent appearance-none custom-input"
                   />
                 </div>
                 {error2.length !== 0 && (
@@ -257,7 +257,7 @@ const HireMobile = () => {
                     placeholder="Email"
                     value={formData.email}
                     onClick={errorHandler}
-                    className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                    className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                   />
                 </div>
                 {error3.length !== 0 && (
@@ -279,7 +279,7 @@ const HireMobile = () => {
                       placeholder="Area Of Expertise"
                       value={formData.expertise}
                       onClick={errorHandler}
-                      className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                      className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                     />
                   </div>
                   {error5.length !== 0 && (
@@ -301,7 +301,7 @@ const HireMobile = () => {
                       placeholder="Years of Experience"
                       value={formData.experience}
                       onClick={errorHandler}
-                      className="h-full w-full rounded-full focus:outline-none text-base px-1 bg-transparent"
+                      className="h-full w-full focus:outline-none text-base px-1 bg-transparent"
                     />
                   </div>
                   {error6.length !== 0 && (
