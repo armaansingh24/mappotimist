@@ -36,6 +36,7 @@ const HireMobile = () => {
   const handleFlieInput = () => {
     setError4("File size should be less than 5 MB");
   };
+  
   function changeHandler(event) {
     if (event.target.name === "file") {
       if (event.target.files[0].size > 5242880) {
