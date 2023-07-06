@@ -178,7 +178,7 @@ export const about = [
 export const portfolioImages = [
   {
     id: "Bobble",
-    css: "hidden sm:block mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[60%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[65%] mt-14 middleXmd:-mt-32 middleXmd:mr-[5%] transition duration-1000",
+    css: "hidden middleXl:block mx-auto midms:w-[95%] xsm:w-[89%] sm:w-[60%] sm:mt-32 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[65%] mt-14 middleXmd:-mt-32 middleXmd:mr-[5%] ",
     image: bobble2,
     title: "Bobble",
     mainImage: bobble4,
@@ -234,7 +234,7 @@ export const portfolioImages = [
   {
     id: "FTL",
     image: FTL2,
-    css: "hidden middleXl:block mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[30%] mt-14 middleXmd:-mt-32 middleXmd:mr-[24%] transition duration-1000",
+    css: "hidden middleXl:block mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[30%] mt-14 middleXmd:-mt-32 middleXmd:mr-[24%] ",
     title: "FTL: Fantasy trading league",
     mainImage: FTL4,
     feature: FTLmain,
@@ -284,7 +284,7 @@ export const portfolioImages = [
   },
   {
     id: "GoFetch",
-    css: "hidden middleXl:block mx-auto scale-[2] mt-36 midms:w-[95%] xsm:w-[89%] sm:w-[100%] sm:scale-[2.5] sm:-mr-24 sm:mt-44 midFM:mt-10 midFM:scale-[2.2] xmd:-mt-[70%] midxmd:w-[75%] middleXmd:-mt-32 middleXmd:scale-[2] middleXmd:mr-[4%] transition duration-1000",
+    css: "hidden middleXl:block mx-auto scale-[2] mt-36 midms:w-[95%] xsm:w-[89%] sm:w-[100%] sm:scale-[2.5] sm:-mr-24 sm:mt-44 midFM:mt-10 midFM:scale-[2.2] xmd:-mt-[70%] midxmd:w-[75%] middleXmd:-mt-32 middleXmd:scale-[2] middleXmd:mr-[4%] ",
     image: Fetch2,
     title: "GoFetch",
     mainImage: Fetch4,
@@ -337,7 +337,7 @@ export const portfolioImages = [
   {
     id: "Website1",
     image: onemain,
-    css: "hidden middleXl:block mx-auto mt-[45%] midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-[60%] midFM:mt-32 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-[1%] rotate-[4deg] middleXmd:mr-[4%] transition duration-1000",
+    css: "hidden middleXl:block mx-auto mt-[45%] midms:w-[95%] xsm:w-[89%] sm:w-[600%] sm:mt-[60%] midFM:mt-32 xmd:-mt-[77%] midxmd:w-[75%] middleXmd:-mt-[1%] rotate-[4deg] middleXmd:mr-[4%] ",
     title: "Website",
     mainImage: one3,
     feature: onemain,
@@ -388,7 +388,7 @@ export const portfolioImages = [
   },
   {
     id: "Website2",
-    css: "hidden middleXl:block mx-auto w-full scale-[2.2] ml-6 mt-[65%] midms:w-[95%] xsm:w-[89%] xsm:mt-52 sm:w-[60%] sm:scale-[4]  sm:ml-24 sm:mt-[100%] midFM:mt-[62%] xmd:-mt-[98%] xmd:scale-[2.4] xmd:ml-44 midxmd:w-[75%] middleXmd:-mt-[10%] mr-[10%] -translate-x-10 transition duration-1000",
+    css: "hidden middleXl:block mx-auto w-full scale-[2.2] ml-6 mt-[65%] midms:w-[95%] xsm:w-[89%] xsm:mt-52 sm:w-[60%] sm:scale-[4]  sm:ml-24 sm:mt-[100%] midFM:mt-[62%] xmd:-mt-[98%] xmd:scale-[2.4] xmd:ml-44 midxmd:w-[75%] middleXmd:-mt-[10%] mr-[10%] -translate-x-10 ",
     image: two2,
     title: "Website",
     mainImage: two1,
@@ -440,7 +440,7 @@ export const portfolioImages = [
   },
   {
     id: "MediHelp",
-    css: "hidden sm:block mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:-mt-32 middleXmd:scale-[1.7]  middleXmd:ml-[14%] transition duration-1000",
+    css: "hidden sm:block mx-auto w-[100%] mt-40 scale-[1.2] midms:w-[87%] sm:w-[100%] sm:mt-52 sm:ml-4 sm:scale-[1.5] midFM:w-[90%] midFM:-mr-12 midFM:mt-40 xmd:-mt-[77%] midxmd:w-[65%] middleXmd:-mt-32 middleXmd:scale-[1.7]  middleXmd:ml-[14%] ",
     image: medi2,
     title: "MediHelp",
     mainImage: medi4,
@@ -491,7 +491,7 @@ export const portfolioImages = [
   {
     id: "Happy Ride",
     image: Happy2,
-    css: "hidden middleXl:block mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[60%] mt-14 middleXmd:-mt-28 middleXmd:mr-[15%] transition duration-1000",
+    css: "hidden middleXl:block mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[60%] mt-14 middleXmd:-mt-28 middleXmd:mr-[15%] ",
     title: "Happy Ride",
     mainImage: Happy4,
     feature: Happymain,
