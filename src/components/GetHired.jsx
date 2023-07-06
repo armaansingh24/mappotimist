@@ -55,6 +55,10 @@ const GetHired = () => {
         setError2("Contact should be less than 13");
         return;
       }
+      if (event.target.name === "duration" && event.target.value.length > 10) {
+        setError6("Duration should be less than 10 characters");
+        return;
+      }
       setFormData((prevData) => ({
         ...prevData,
         [event.target.name]: event.target.value,
@@ -121,10 +125,6 @@ const GetHired = () => {
     }
     if (formData.duration.trim().length < 3 && accountType === "Hire Team") {
       setError6("Duration should be atleast 3 characters");
-      return;
-    }
-    if (formData.duration.trim().length > 10 && accountType === "Hire Team") {
-      setError6("Duration should be less than 10 characters");
       return;
     }
 
