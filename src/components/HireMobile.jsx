@@ -47,6 +47,10 @@ const HireMobile = () => {
         file: event.target.files[0],
       }));
     } else {
+      if (event.target.name === "contact" && event.target.value.length > 13) {
+        setError2("Contact should be less than 13");
+        return;
+      }
       setFormData((prevData) => ({
         ...prevData,
         [event.target.name]: event.target.value,
