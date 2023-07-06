@@ -102,7 +102,7 @@ const ClientReviews = () => {
           Client Reviews
         </motion.h2>
         <div className="w-full mt-[6%]">
-          <div className="w-full flex justify-start items-end text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
+          <div className="w-full flex justify-start items-start text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
             <motion.div
               className="w-full xl:w-[45%] h-full lg:w-[45%]"
               ref={ref}
