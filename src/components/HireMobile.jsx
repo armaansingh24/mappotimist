@@ -233,6 +233,7 @@ const HireMobile = () => {
                   <input
                     type="number"
                     name="contact"
+                    maxLength={13}
                     onChange={changeHandler}
                     placeholder="Contact no"
                     value={formData.contact}
