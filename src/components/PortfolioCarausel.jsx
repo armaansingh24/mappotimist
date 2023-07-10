@@ -113,7 +113,6 @@ const PortfolioCarausel = ({ page }) => {
             onSlideChange={handleSlideChange}
             centeredSlides={true}
             loop={true}
-            autoWidth={false}
             coverflowEffect={{
               rotate: 14,
               stretch: 0,

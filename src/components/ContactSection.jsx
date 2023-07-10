@@ -62,7 +62,7 @@ const ContactSection = () => {
     setError2("");
     try {
       const response = await axios.post(
-        "http://128.199.17.62:8080/v1/send-email-contact",
+        "https://mappoptimist.com/v1/send-email-contact",
         formData
       );
       if (response.status === 200) {
@@ -216,47 +216,32 @@ const ContactSection = () => {
                 </p>
                 <div className="h-fit flex flex-wrap justify-start items-center gap-2 midxmd:w-[80%]">
                   <div className="anim-btn">
-                    <button
-                      className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
-                      onClick={() =>
-                        handleSelectedService("Mobile App Development")
-                      }
-                    >
+                    <button className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button">
                       Mobile App Development
                     </button>
                   </div>
 
-                  <button
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
-                    onClick={() => handleSelectedService("Website Development")}
-                  >
+                  <button className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button">
                     Website Development
                   </button>
 
-                  <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
-                    onClick={() => handleSelectedService("Website Design")}
-                  >
+                  <span className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button">
                     Website Design
                   </span>
 
-                  <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
-                    onClick={() => handleSelectedService("Mobile App Design")}
-                  >
+                  <span className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button">
                     Mobile App Design
                   </span>
 
-                  <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
-                    onClick={() => handleSelectedService("Product strategy")}
-                  >
+                  <span className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button">
                     Product strategy
                   </span>
                   <span
                     className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
                     ref={inputRef}
-                    onClick={handleButtonClick}
+                    onClick={() => {
+                      handleButtonClick();
+                    }}
                   >
                     Others
                   </span>
@@ -311,7 +296,7 @@ const ContactSection = () => {
                             error1 ? "border-red-500" : "border-gray-300"
                           } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
                           onClick={errorHandler}
-                          placeholder="yourName@gmail.com"
+                          placeholder="example@example.com"
                         />
                         {error1.length !== 0 && (
                           <p className="text-red-500 text-sm  text-left rounded-lg  relative z-10  flex items-center justify-start">

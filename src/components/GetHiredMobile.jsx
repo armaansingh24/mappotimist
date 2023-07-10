@@ -296,7 +296,7 @@ const GetHiredMobile = () => {
               </div>
               <div>
                 <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                  <img src={call} alt="" className="w-[3%] ml-2" />
+                  <img src={call} alt="" className="w-[8%] ml-2" />
                   <RxDividerVertical className="text-4xl text-gray-400" />
                   <input
                     type="number"
@@ -361,7 +361,7 @@ const GetHiredMobile = () => {
               {accountType === "Hire Team" && (
                 <div>
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <img src={type} alt="" className="w-[3%] ml-2" />
+                    <img src={type} alt="" className="w-[8%] ml-2" />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"
@@ -383,7 +383,7 @@ const GetHiredMobile = () => {
               {accountType === "Hire Team" && (
                 <div className="relative z-20">
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <img src={duration} alt="" className="w-[3%] ml-2" />
+                    <img src={duration} alt="" className="w-[8%] ml-2" />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"

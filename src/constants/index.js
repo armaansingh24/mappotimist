@@ -489,7 +489,7 @@ export const portfolioImages = [
       "The prescription is personalized with dropdown options and allows selecting dates from a calendar, tailoring medication instructions to individual needs for enhanced convenience and accuracy.",
   },
   {
-    id: "Happy Ride",
+    id: "HappyRide",
     image: Happy2,
     css: "hidden middleXl:block mx-auto w-[53%] midms:w-[45%] sm:w-[70%] sm:mt-2 midFM:w-[50%] midFM:-mr-6 midFM:mt-10 xmd:-mt-[77%] midxmd:w-[60%] mt-14 middleXmd:-mt-28 middleXmd:mr-[15%] ",
     title: "Happy Ride",

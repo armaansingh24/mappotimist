@@ -54,7 +54,11 @@ const AboutUs = () => {
             className="w-screen hidden middle:block"
           />
           <div className="">
-            <img src={pattern2} alt="" className=" absolute right-32 top-14" />
+            <img
+              src={pattern2}
+              alt=""
+              className=" absolute right-32 top-14 z-0"
+            />
             <img src={bubble1} alt="" className="absolute left-20 top-5" />
             <img src={bubble1} alt="" className="absolute right-32 top-2" />
             <img src={bubble1} alt="" className="absolute right-24 bottom-2" />
@@ -63,17 +67,14 @@ const AboutUs = () => {
             <img src={bubble4} alt="" className="absolute left-0 bottom-0" />
           </div>
           <div className=" bg-gradient-to-tr from-primary to-secondary middle:bg-none middle:absolute inset-0 w-[100%] middle:w-[90%] flex flex-col items-start middle:items-end justify-center p-20 middle:p-0">
-            <div
-              className="middle:text-center"
-              
-            >
-              <p className="middle:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F6D28C] to-[#FBE6BD] font-poppins">
+            <div className="middle:text-center">
+              <p className="middle:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F6D28C] to-[#FBE6BD] font-poppins relative z-10">
                 About Us
               </p>
-              <p className="text-base middle:text-3xl text-white font-poppins">
+              <p className="text-base middle:text-3xl text-white font-poppins relative z-10">
                 Innovating with passion,
               </p>
-              <p className="text-base middle:text-3xl text-white font-poppins">
+              <p className="text-base middle:text-3xl text-white font-poppins relative z-10">
                 delivering with precision
               </p>
             </div>
@@ -81,10 +82,7 @@ const AboutUs = () => {
         </div>
         <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden  middle:grid-cols-2 items-center justify-center">
           <div className="middle:order-2 middle:w-full">
-            <h3
-              className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins"
-            
-            >
+            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">
               Building greater futures through innovation and collective
               knowledge
             </h3>
@@ -122,10 +120,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div
-          className="w-[80%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10"
-      
-        >
+        <div className="w-[80%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10">
           <div className="flex gap-10 items-center">
             <div className="w-[40%] mt-20">
               <img src={secondSection} alt="" className="w-full" />
@@ -165,10 +160,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div
-          className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden middle:grid-cols-2 items-center justify-center"
-         
-        >
+        <div className="grid grid-rows-1 w-[90%] mx-auto mt-10 gap-4 xxmd:hidden middle:grid-cols-2 items-center justify-center">
           <div className="middle:order-2 middle:w-full flex flex-col items-start justify-center">
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-2xl p-1 middle:text-4xl font-poppins">
               Yashvant Sikarvar

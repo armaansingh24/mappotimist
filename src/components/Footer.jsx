@@ -46,7 +46,7 @@ const Footer = () => {
       <div className="w-screen bg-gradient-to-r from-primary to-secondary sm:h-[30rem] relative z-30 flex flex-col items-center">
         <div className="w-[90%] mx-auto flex h-full p-0">
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
-            <div className="flex flex-col gap-10 w-full sm:flex-row sm:gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
+            <div className="flex flex-col w-full sm:flex-row gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
               <div className="flex flex-col items-center justify-center gap-10">
                 <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-32 midFM:ml-5">
                   <img src={logo} alt="" className="w-[7%] sm:w-[12%]" />
@@ -107,7 +107,7 @@ const Footer = () => {
             </div>
             <div className="self-center justify-items-center h-full mt-5 sm:-mt-20 flex flex-col items-center justify-center mr-8 sm:gap-4 midxs:mr-20">
               <div>
-                <p className="text-center text-base sm:text-xl ml-6">
+                <p className="text-center text-base sm:text-xl ml-10 sm:ml-6">
                   Follow Us
                 </p>
               </div>
@@ -128,7 +128,7 @@ const Footer = () => {
                   <img
                     src={slack}
                     alt=""
-                    className="cursor-pointer w-[80%] sm:w-[95%] self-center"
+                    className="cursor-pointer w-[80%] sm:w-[95%] self-center mx-auto"
                   />
                 </a>
                 <a
