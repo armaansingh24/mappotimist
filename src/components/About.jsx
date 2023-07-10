@@ -39,8 +39,28 @@ const About = () => {
   }, []);
   return (
     <>
-      <div className="w-screen -mt-12 sm:-mt-6 relative z-0 " id="About">
-        <div className="bg-[#DBDCE6] pt-10">
+      <motion.div
+        className="w-screen -mt-12 sm:-mt-6 relative z-0 "
+        id="About"
+        ref={ref}
+        variants={{
+          hidden: { opacity: 1, y: 0 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="visible"
+        animate={mainControls}
+        transition={{ duration: 1.6 }}
+      >
+        <motion.div
+          className="bg-[#DBDCE6] pt-10"
+          ref={ref}
+          variants={{
+            hidden: { opacity: 1, y: 0 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="visible"
+          animate={mainControls}
+        >
           <div className="max-w-[90%] mx-auto grid grid-cols-1 xxmd:grid-cols-2 gap-5 ">
             <motion.div
               ref={ref}
@@ -150,8 +170,8 @@ const About = () => {
               ))}
             </motion.div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };
