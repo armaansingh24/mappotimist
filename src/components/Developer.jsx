@@ -66,21 +66,38 @@ const Developer = () => {
     };
   }, [showForm, showForm2, showForm3, showForm4]);
 
+  const [showElement, setShowElement] = useState(false);
+
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+    setShowElement(screenWidth > 1350);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div id="Developer" className="w-screen relative z-0">
-        <div className="relative z-0 w-full">
-          <video
-            autoPlay
-            muted
-            loop
-            className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block
+        {showElement && (
+          <div className="relative z-0 w-full">
+            <video
+              autoPlay
+              muted
+              loop
+              className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block
       scale-[1.3]"
-          >
-            <source src={bgVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+            >
+              <source src={bgVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
         <div className="midlg:absolute midlg:inset-0 w-[90%] mx-auto mt-14 mb-24">
           <img
             src={ellips1}
