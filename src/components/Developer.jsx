@@ -66,20 +66,20 @@ const Developer = () => {
     };
   }, [showForm, showForm2, showForm3, showForm4]);
 
-  const [showElement, setShowElement] = useState(false);
+  // const [showElement, setShowElement] = useState(false);
 
-  const handleResize = () => {
-    const screenWidth = window.innerWidth;
-    setShowElement(screenWidth > 1350);
-  };
+  // const handleResize = () => {
+  //   const screenWidth = window.innerWidth;
+  //   setShowElement(screenWidth > 1350);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   return (
     <>
