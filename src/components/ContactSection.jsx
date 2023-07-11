@@ -294,9 +294,9 @@ const ContactSection = () => {
                           value={formData.name}
                           className={`w-[90%] border  ${
                             error ? "border-red-500" : "border-gray-300"
-                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
+                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20 placeholder-gray-300`}
                           onClick={errorHandler}
-                          placeholder="Your Name"
+                          placeholder="Enter Your Name"
                         />
                         {error.length !== 0 && (
                           <p className="text-red-500 text-sm  text-left rounded-lg  relative z-10  flex items-center justify-start">
@@ -319,7 +319,7 @@ const ContactSection = () => {
                           value={formData.email}
                           className={`w-[90%] border  ${
                             error1 ? "border-red-500" : "border-gray-300"
-                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20`}
+                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20 placeholder-gray-300`}
                           onClick={errorHandler}
                           placeholder="example@example.com"
                         />
@@ -347,10 +347,10 @@ const ContactSection = () => {
                             !selectedService && error2
                               ? "border-red-500"
                               : "border-gray-300"
-                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20 resize-none`}
+                          } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20 resize-none placeholder-gray-300`}
                           onClick={errorHandler}
                           placeholder={
-                            selectedService ? "" : "tell us about your idea"
+                            selectedService ? "" : "Share your thoughts"
                           }
                           ref={inputRef}
                         />
