@@ -66,25 +66,21 @@ const Developer = () => {
     };
   }, [showForm, showForm2, showForm3, showForm4]);
 
-  // const [showElement, setShowElement] = useState(false);
+  const [showElement, setShowElement] = useState(false);
 
-  // const handleResize = () => {
-  //   const screenWidth = window.innerWidth;
-  //   setShowElement(screenWidth > 1350);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
+  
+  
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if(screenWidth > 1000){
+      setShowElement(true);
+    }
+  }, []);
 
   return (
     <>
       <div id="Developer" className="w-screen relative z-0">
-        { (
+        {showElement && (
           <div className="relative z-0 w-full">
             <video
               autoPlay
