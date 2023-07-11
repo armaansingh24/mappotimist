@@ -4,7 +4,7 @@ import eclips1 from "../assets/navbar/eclips1.webp";
 import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
 import { HashLink as Link } from "react-router-hash-link";
-import { NavLink } from "react-router-dom";
+import { Link as HLink } from "react-router-dom";
 
 
 const Navbar = ({ page }) => {
@@ -69,12 +69,12 @@ const Navbar = ({ page }) => {
                 className="text-[20px]  cursor-pointer leading-[30px] group font-poppins
                 "
               >
-                <NavLink
+                <HLink
                   className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
                   to={`/about-us`}
                 >
                   About
-                </NavLink>
+                </HLink>
               </li>
               <li
                 className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
@@ -217,7 +217,7 @@ const Navbar = ({ page }) => {
                       setIsOpen(!isOpen);
                     }}
                   >
-                    <NavLink
+                    <HLink
                       to={`/about-us`}
                       onClick={() => {
                         setToggle(!toggle);
@@ -225,7 +225,7 @@ const Navbar = ({ page }) => {
                       }}
                     >
                       About
-                    </NavLink>
+                    </HLink>
                   </li>
                   <li
                     className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
