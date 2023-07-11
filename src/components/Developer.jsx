@@ -84,7 +84,7 @@ const Developer = () => {
   return (
     <>
       <div id="Developer" className="w-screen relative z-0">
-        {showElement && (
+        { (
           <div className="relative z-0 w-full">
             <video
               autoPlay
