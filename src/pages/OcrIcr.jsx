@@ -219,7 +219,7 @@ const OcrIcr = () => {
                   </h2>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-10">
+                <div className="mt-10 flex flex-col gap-10 relative z-10">
                   <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center">
                     <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
                       ✔
