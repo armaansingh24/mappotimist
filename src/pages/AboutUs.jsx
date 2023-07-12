@@ -57,7 +57,7 @@ const AboutUs = () => {
             <img
               src={pattern2}
               alt=""
-              className=" absolute right-32 top-14 z-0"
+              className=" absolute right-12 top-14 z-0"
             />
             <img src={bubble1} alt="" className="absolute left-20 top-5" />
             <img src={bubble1} alt="" className="absolute right-32 top-2" />

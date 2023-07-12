@@ -6,7 +6,6 @@ import eclips3 from "../assets/navbar/eclips3.webp";
 import { HashLink as Link } from "react-router-hash-link";
 import { Link as HLink } from "react-router-dom";
 
-
 const Navbar = ({ page }) => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -51,74 +50,87 @@ const Navbar = ({ page }) => {
               </p>
             </Link>
             <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-4 order-3 self-center z-50 relative">
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
-                "
+              <HLink
+                className=" group"
+                to={`/`}
+                smooth={true}
+                offset={100}
+                duration={1000}
               >
-                <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  to={`/#Home`}
-                  smooth={true}
-                  offset={100}
-                  duration={1000}
+                <li
+                  className="text-[20px] rounded-full cursor-pointer leading-[30px] py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins 
+                "
                 >
                   Home
-                </Link>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins
+                </li>
+              </HLink>
+              <HLink className="group" to={`/about-us`}>
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins
                 "
-              >
-                <HLink
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  to={`/about-us`}
                 >
                   About
-                </HLink>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
-                "
+                </li>
+              </HLink>
+              <Link
+                className="group"
+                to={`/#Portfolio`}
+                scroll={(el) => {
+                  const yCoordinate = el.getBoundingClientRect().top;
+                  const yOffset = 100;
+                  window.scrollTo({
+                    top: yCoordinate + yOffset,
+                    behavior: "smooth",
+                  });
+                }}
               >
-                <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  to={`/#Portfolio`}
-                  smooth={true}
-                  offset={200}
-                  duration={1000}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins 
+                "
                 >
                   Portfolio
-                </Link>
-              </li>
+                </li>
+              </Link>
 
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
-                "
+              <Link
+                className="group"
+                to={`/#Expertise`}
+                smooth={true}
+                scroll={(el) => {
+                  const yCoordinate = el.getBoundingClientRect().top;
+                  const yOffset = 1300;
+                  window.scrollTo({
+                    top: yCoordinate + yOffset,
+                    behavior: "smooth",
+                  });
+                }}
               >
-                <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  to={`/#Expertise`}
-                  smooth={true}
-                  offset={450}
-                  duration={1000}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins 
+                "
                 >
                   Expertise
-                </Link>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins 
-                "
+                </li>
+              </Link>
+              <Link
+                className="group"
+                to={`/#Contact Us`}
+                smooth={true}
+                scroll={() => {
+                  const yOffset = 15000;
+                  window.scrollTo({
+                    top: 5000 + yOffset,
+                    behavior: "smooth",
+                  });
+                }}
               >
-                <Link
-                  className="rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white"
-                  to={`/#Contact Us`}
-                  smooth={true}
-                  offset={10}
-                  duration={1000}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins 
+                "
                 >
                   Contact Us
-                </Link>
-              </li>
+                </li>
+              </Link>
             </ul>
 
             <div
@@ -244,6 +256,14 @@ const Navbar = ({ page }) => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
+                      scroll={(el) => {
+                        const yCoordinate = el.getBoundingClientRect().top;
+                        const yOffset = 100;
+                        window.scrollTo({
+                          top: yCoordinate + yOffset,
+                          behavior: "smooth",
+                        });
+                      }}
                     >
                       Portfolio
                     </Link>
@@ -264,6 +284,14 @@ const Navbar = ({ page }) => {
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
+                      }}
+                      scroll={(el) => {
+                        const yCoordinate = el.getBoundingClientRect().top;
+                        const yOffset = 100;
+                        window.scrollTo({
+                          top: yCoordinate + yOffset,
+                          behavior: "smooth",
+                        });
                       }}
                     >
                       Expertise

@@ -57,79 +57,78 @@ const Navbar = () => {
               </p>
             </Link>
             <ul className="list-none hidden sm:flex flex-row  lmd:gap-2 lmd:text-[12px] md:gap-4 order-3 self-center z-50 relative">
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
-                "
+              <Link
+                className="rounded-full  relative z-10"
+                to={`Home`}
+                smooth={true}
+                offset={100}
+                duration={1000}
               >
-                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full z-0"></div>
-                <Link
-                  className="rounded-full py-1 px-3 relative z-10"
-                  to={`Home`}
-                  smooth={true}
-                  offset={100}
-                  duration={1000}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
+                py-1 px-3"
                 >
+                  <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full z-0"></div>
                   Home
-                </Link>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins group text-white  relative
-                "
+                </li>
+              </Link>
+              <NavLink
+                className="  rounded-full   relative z-10"
+                to={`/about-us`}
               >
-                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full z-0"></div>
-
-                <NavLink
-                  className="  rounded-full py-2 px-4  relative z-10"
-                  to={`/about-us`}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] group font-poppins group text-white  relative
+                py-1 px-3"
                 >
+                  <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full z-0"></div>
                   About
-                </NavLink>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
-                "
+                </li>
+              </NavLink>
+              <Link
+                className="rounded-full  relative z-10"
+                to={`Portfolio`}
+                smooth={true}
+                offset={100}
+                duration={1000}
               >
-                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
-                <Link
-                  className="rounded-full py-1 px-3 relative z-10"
-                  to={`Portfolio`}
-                  smooth={true}
-                  offset={100}
-                  duration={1000}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
+               py-1 px-3 "
                 >
+                  <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
                   Portfolio
-                </Link>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
-                "
+                </li>
+              </Link>
+              <Link
+                className="rounded-full  text-white relative z-10"
+                to={`Expertise`}
+                smooth={true}
+                offset={450}
+                duration={1000}
               >
-                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
-                <Link
-                  className="rounded-full py-1 px-3 text-white relative z-10"
-                  to={`Expertise`}
-                  smooth={true}
-                  offset={450}
-                  duration={1000}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
+                py-1 px-3"
                 >
+                  <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
                   Expertise
-                </Link>
-              </li>
-              <li
-                className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
-                "
+                </li>
+              </Link>
+              <Link
+                className="rounded-full   text-white relative z-10"
+                to={`Contact Us`}
+                smooth={true}
+                offset={10}
+                duration={1000}
               >
-                <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
-                <Link
-                  className="rounded-full py-1 px-3  text-white relative z-10"
-                  to={`Contact Us`}
-                  smooth={true}
-                  offset={10}
-                  duration={1000}
+                <li
+                  className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
+                py-1 px-3"
                 >
+                  <div className="absolute w-full h-full inset-0 group-hover:border-2 rounded-full"></div>
                   Contact Us
-                </Link>
-              </li>
+                </li>
+              </Link>
             </ul>
 
             <div
@@ -201,108 +200,108 @@ const Navbar = () => {
                 }  justify-center items-center mx-auto transition-all duration-[2000ms] linear`}
               >
                 <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-full mt-12 transform transition duration-1000 ease-linear">
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                  <Link
+                    to={`Home`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
                     }}
                   >
-                    <Link
-                      to={`Home`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       Home
-                    </Link>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </Link>
+                  <NavLink
+                    to={`/about-us`}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
                     }}
                   >
-                    <NavLink
-                      to={`/about-us`}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       About
-                    </NavLink>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </NavLink>
+                  <Link
+                    to={`Portfolio`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
                     }}
                   >
-                    <Link
-                      to={`Portfolio`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       Portfolio
-                    </Link>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </Link>
+                  <Link
+                    to={`Expertise`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
                     }}
                   >
-                    <Link
-                      to={`Expertise`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       Expertise
-                    </Link>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </Link>
+                  <Link
+                    to={`Contact Us`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
                     }}
                   >
-                    <Link
-                      to={`Contact Us`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       Contact Us
-                    </Link>
-                  </li>
+                    </li>
+                  </Link>
                 </ul>
               </div>
               <div className="flex justify-end w-[13%]">
