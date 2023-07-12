@@ -37,7 +37,7 @@ const ClientReviews = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 9000);
+    }, 1000);
     return () => clearInterval(interval);
   }, [data.length]);
 
@@ -104,7 +104,7 @@ const ClientReviews = () => {
         <div className="w-full mt-[6%]">
           <div className="w-full flex justify-start items-start text-black text-3xl my-auto mx-auto sm:mt-1 xxmd:p-2">
             <motion.div
-              className="w-full xl:w-[45%]  lg:w-[45%]"
+              className="w-full xl:w-[45%] h-full lg:w-[45%]"
               ref={ref}
               variants={{
                 hidden: { opacity: 0, x: -100 },
@@ -124,7 +124,7 @@ const ClientReviews = () => {
               ))}
             </motion.div>
             <motion.div
-              className="hidden middleXmd:block w-full -mt-24 xl:hidden -translate-y-20"
+              className="hidden middleXmd:block w-full h-full -mt-24 xl:hidden -translate-y-20"
               ref={ref}
               variants={{
                 hidden: { opacity: 0, x: 100 },
