@@ -78,7 +78,7 @@ const ClientReviews = () => {
   return (
     <>
       <motion.div
-        className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative   midxmd:overflow-visible z-30"
+        className="w-[90%] mt-10 sm:mt-0 ml-[10%] mx-auto  relative midxmd:overflow-visible z-30"
         ref={ref}
         variants={{
           hidden: { opacity: 0, x: 0 },
