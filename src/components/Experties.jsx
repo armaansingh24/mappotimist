@@ -98,7 +98,7 @@ const Experties = () => {
         <img
           src={lower}
           alt=""
-          className="w-full scale-[1.1] relative mt-[-10%]"
+          className="w-full scale-[1.1] relative mt-[-10%]  z-10"
         />
       </div>
     </>
