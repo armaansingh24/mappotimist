@@ -37,7 +37,7 @@ const ClientReviews = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 1000);
+    }, 9000);
     return () => clearInterval(interval);
   }, [data.length]);
 
