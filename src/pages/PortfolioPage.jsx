@@ -46,7 +46,7 @@ const PortfolioPage = () => {
           <div className="relative z-0 bg-gradient-to-r from-secondary via-secondary to-white">
             <img
               src={backgroudPortfolio}
-              alt=""
+              alt="Office Culture"
               className=" object-cover h-[700px] midxmd:h-full w-screen  opacity-70"
             />
           </div>

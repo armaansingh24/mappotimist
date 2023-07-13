@@ -28,7 +28,7 @@ const CarouselItem = ({ item }) => {
           <div className="w-full hidden ssm:flex xsm:w-full ml-5 mt-5 xsm:mt-0 xsm:ml-1  sm:w-[40%] sm:ml-10 sm:mt-8 md:mt-4 md:w-[80%] xxmd:w-[50%]">
             <img
               src={item.image}
-              alt=""
+              alt={item.alternate}
               className="w-full xsm:w-[40%] sm:w-[20%]"
             />
           </div>

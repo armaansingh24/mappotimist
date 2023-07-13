@@ -41,7 +41,7 @@ const PortfolioSlider = ({ index, currentSlideIndex, item }) => {
               "Clicked on Portfolio Carausel"
             );
           }}
-          alt="slide_image"
+          alt={item.title}
           className={`z-[-10] ${
             index === currentSlideIndex ? "" : ""
           } transition-all  delay-75 ease-in-out midFM:mr-20 midFM:ml-2 middleXmd:ml-2 object-fill w-[90%]`}

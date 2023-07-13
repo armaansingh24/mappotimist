@@ -31,7 +31,7 @@ const ExpertiseItem = ({ item }) => {
       <div className="flex mx-auto items-center flex-col gap-0 bg-[#F7F5F8] rounded-lg relative z-1 overflow-hidden">
         <img
           src={item.image}
-          alt=""
+          alt={item.name}
           className="w-[30%] lmd:w-[20%] mt-4 xxmd:w-[17%] relative z-10"
         />
         <p className="text-[50%] sm:text-[58%] lmd:text-[60%] font-poppins500">

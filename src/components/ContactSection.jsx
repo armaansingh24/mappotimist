@@ -183,7 +183,7 @@ const ContactSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={image1} alt="" className="" />
+                    <img src={image1} alt="Founder  " className="" />
                     <img
                       src={linkedin}
                       alt=""

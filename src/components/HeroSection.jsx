@@ -42,7 +42,7 @@ const HeroSection = () => {
           />
           <img
             src={techs}
-            alt=""
+            alt="Bubble Technologies"
             className="absolute midFM:left-1 bottom-10 sm:bottom-5 w-[50%] sm:w-[25%] midFM:w-[20%]"
           />
           <img
@@ -94,7 +94,7 @@ const HeroSection = () => {
             transition={{ duration: 1.9 }}
           >
             <div className="w-full mx-auto flex items-center justify-center  ocr">
-              <img src={main} alt="" className="w-[70%]" />
+              <img src={main} alt="Working Culture" className="w-[70%]" />
             </div>
           </motion.div>
 
@@ -150,7 +150,7 @@ const HeroSection = () => {
               <Link to="Developer" smooth={true} offset={75} duration={1000}>
                 <div className=" flex ml-20 sm:ml-10 mt-4 lmd:mt-2 cursor-pointer ">
                   <span className=" left-[-10px] ml-[-18px] z-1 hidden sm:block">
-                    <img src={image1} alt="" className=" w-12" />
+                    <img src={image1} alt="rounded clients" className=" w-12" />
                   </span>
                   <span className=" left-[-10px] ml-[-18px] z-1">
                     <img src={image2} alt="" className=" w-12" />

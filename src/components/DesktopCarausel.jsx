@@ -41,7 +41,7 @@ const DesktopCarausel = ({ image, index, currentSlideIndex, item }) => {
               "Clicked on Portfolio Carausel"
             );
           }}
-          alt="slide_image"
+          alt={item.title}
           className={`z-[-10] ${
             index === currentSlideIndex ? "" : ""
           } transition-all delay-75 ease-in-out mr-16 midxmd:mr-10 mt-24 object-fill`}

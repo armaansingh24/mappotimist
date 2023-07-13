@@ -169,7 +169,7 @@ const Developer = () => {
                   </motion.p>
                   <motion.img
                     src={one}
-                    alt="Hiring Image"
+                    alt="Hiring Professionals"
                     className="midFM:w-[80%]"
                     ref={ref}
                     variants={{
@@ -266,7 +266,7 @@ const Developer = () => {
                   </motion.p>
                   <motion.img
                     src={two}
-                    alt="Discussion Image"
+                    alt="Sharing Thoughts"
                     className="mt-12 midFM:w-[80%]"
                     ref={ref}
                     variants={{
@@ -356,7 +356,7 @@ const Developer = () => {
                   </motion.p>
                   <motion.img
                     src={three}
-                    alt="Document Parsing Image"
+                    alt="Document Parsing"
                     className="mt-12 midFM:w-[80%]"
                     ref={ref}
                     variants={{

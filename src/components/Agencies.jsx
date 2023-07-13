@@ -60,7 +60,7 @@ const Agencies = () => {
               >
                 <img
                   src={agency.image}
-                  alt=""
+                  alt={agency.name}
                   key={agency.id}
                   className="sm:w-[50%] xsm:w-[70%] xxmd:w-[90%] midxmd:w-[70%]"
                 />

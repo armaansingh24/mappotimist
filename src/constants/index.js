@@ -90,29 +90,6 @@ import Angela from "../assets/aboutUs/Angela.webp";
 import John from "../assets/aboutUs/John.webp";
 import Austin from "../assets/aboutUs/Austin.webp";
 
-export const navLinks = [
-  {
-    id: "Home",
-    title: "Home",
-  },
-  {
-    id: "Portfolio",
-    title: "Portfolio",
-  },
-  {
-    id: "Developer",
-    title: "Developer",
-  },
-  {
-    id: "Expertise",
-    title: "Expertise",
-  },
-  {
-    id: "Contact Us",
-    title: "Contact Us",
-  },
-];
-
 export const carouselItems = [
   {
     backgroudImage: bg1,
@@ -122,6 +99,7 @@ export const carouselItems = [
     description:
       "To ensure project success, it is important to understand the client's requirements, goals and target audience. This involves proper thinking, conducting thorough market research, and competitor analysis. With this information in hand, we define the project scope, features, and deliverables. Finally, a comprehensive project plan is created, outlining timelines and resource allocations for smooth execution.",
     image: slider1,
+    alternate: "Way of thinking",
   },
   {
     backgroudImage: bg2,
@@ -131,6 +109,7 @@ export const carouselItems = [
     description:
       "With a plan ready then we assign tasks to our expert developer for execution as well as monazite regular progress. Maintain open communication and collaboration, implement quality assurance measures, and manage project risks. Continuously track progress, review and adapt the plan and conduct a post-project evaluation for improvement.",
     image: slider2,
+    alternate: "Way of development",
   },
   {
     backgroudImage: bg3,
@@ -140,6 +119,7 @@ export const carouselItems = [
     description:
       "After development, a deployment strategy is defined, accompanied by comprehensive testing and user acceptance testing. A detailed deployment plan is created, along with training and documentation. Incremental deployment is considered. Scalability is planned, performance is monitored, feedback is gathered for iteration and post-deployment support is provided for long-term success.",
     image: slider3,
+    alternate: "Deliver and Scaling product",
   },
 ];
 
@@ -544,34 +524,42 @@ export const agencies = [
   {
     id: 1,
     image: behance,
+    name:"Behance logo"
   },
   {
     id: 2,
     image: dribble,
+    name:"Dribble logo"
   },
   {
     id: 3,
     image: fiverr,
+    name:"Fiverr logo"
   },
   {
     id: 4,
     image: upwork,
+    name:"Upwork logo"
   },
   {
     id: 5,
     image: freelancer,
+    name:"Freelancer logo"
   },
   {
     id: 6,
     image: pangian,
+    name:"Pangian logo"
   },
   {
     id: 7,
     image: indeed,
+    name:"Indeed logo"
   },
   {
     id: 8,
     image: flexjobs,
+    name:"Flexjobs logo"
   },
 ];
 

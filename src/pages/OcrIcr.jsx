@@ -71,7 +71,7 @@ const OcrIcr = () => {
               <div className="midxmd:order-2 midxmd:w-full ocr">
                 <img
                   src={First}
-                  alt=""
+                  alt="Document Parsing"
                   className="midxmd:w-full mix-blend-color-burn"
                 />
               </div>
@@ -109,7 +109,7 @@ const OcrIcr = () => {
               <div className="order1 midFM:order-3 ocr">
                 <img
                   src={second}
-                  alt=""
+                  alt="Qr scanning"
                   className="mx-auto mix-blend-color-burn"
                 />
               </div>
@@ -364,7 +364,7 @@ const OcrIcr = () => {
                   </p>
                 </div>
                 <div className="order-4 midFM:order-3">
-                  <img src={third} alt="" className="mx-auto" />
+                  <img src={third} alt="OCR-ICR procedure" className="mx-auto" />
                 </div>
               </div>
             </div>

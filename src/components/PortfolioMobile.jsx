@@ -14,7 +14,7 @@ const PortfolioMobile = ({ item }) => {
     <div className="relative z-60">
       <img
         src={item.image}
-        alt="slide_image"
+        alt={item.title}
         className={`${
           item.id === "Website1" || item.id === "Website2"
             ? "w-[68%] mt-10 middleXmd:mt-44 mx-auto"

@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="flex flex-col w-full sm:flex-row gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
               <div className="flex flex-col items-center justify-center gap-10">
                 <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-32 midFM:ml-5">
-                  <img src={logo} alt="" className="w-[7%] sm:w-[12%]" />
+                  <img src={logo} alt="logo" className="w-[7%] sm:w-[12%]" />
                   <p>MappOptimist</p>
                 </div>
                 <div className="text-xl hidden sm:block self-center">
@@ -158,7 +158,7 @@ const Footer = () => {
                     );
                   }}
                 >
-                  <img src={fb} alt="" />
+                  <img src={fb} alt="meta" />
                 </a>
                 <a
                   href="https://join.slack.com/t/mappoptimistworkspace/shared_invite/zt-1y2d2e3n9-73Lrc1VdxYMQ97RKAz393g"
@@ -173,7 +173,7 @@ const Footer = () => {
                 >
                   <img
                     src={slack}
-                    alt=""
+                    alt="slack"
                     className="cursor-pointer w-[80%] sm:w-[95%] self-center mx-auto"
                   />
                 </a>
@@ -189,7 +189,7 @@ const Footer = () => {
                     );
                   }}
                 >
-                  <img src={insta} alt="" />
+                  <img src={insta} alt="insta" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/mappoptimist-technologies/"
@@ -203,7 +203,7 @@ const Footer = () => {
                     );
                   }}
                 >
-                  <img src={linkedin} alt="" className="mt-0 translate-y-0" />
+                  <img src={linkedin} alt="linkedin" className="mt-0 translate-y-0" />
                 </a>
               </div>
             </div>

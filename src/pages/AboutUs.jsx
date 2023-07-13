@@ -57,7 +57,7 @@ const AboutUs = () => {
         <div className="relative">
           <img
             src={firstSection}
-            alt=""
+            alt="Device and coding"
             className="w-screen hidden middle:block"
           />
           <div className="">
@@ -95,7 +95,7 @@ const AboutUs = () => {
             </h3>
           </div>
           <div className="middle:row-span-2 middle:order-1 mx-auto my-auto">
-            <img src={secondSection} alt="" className="" />
+            <img src={secondSection} alt="About MappOptimist" className="" />
           </div>
           <div className="middle:order-3 middle:w-full">
             <p className="text-base middle:text-xl font-poppins300">
@@ -130,7 +130,11 @@ const AboutUs = () => {
         <div className="w-[80%] mx-auto  flex-col gap-4 hidden xxmd:flex mt-10">
           <div className="flex gap-10 items-center">
             <div className="w-[40%] mt-20">
-              <img src={secondSection} alt="" className="w-full" />
+              <img
+                src={secondSection}
+                alt="About MappOptimist"
+                className="w-full"
+              />
             </div>
             <div className="w-[80%]">
               <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-4xl pb-2 font-poppins">
@@ -177,7 +181,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="middle:row-span-2 middle:order-1 mx-auto my-auto">
-            <img src={picture1} alt="" />
+            <img src={picture1} alt="Founder" />
           </div>
           <div className="middle:order-3 middle:w-full flex flex-col gap-4 items-start justify-center">
             <div className="text-base middle:text-xl font-poppins300">
@@ -339,7 +343,7 @@ const AboutUs = () => {
               </div>
             </div>
             <div className="w-[50%]">
-              <img src={picture1} alt="" className="" />
+              <img src={picture1} alt="Founder" className="" />
             </div>
           </div>
         </div>
