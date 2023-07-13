@@ -2,8 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const DesktopCarauselTwo = ({ image, index, currentSlideIndex, item }) => {
+  const gaEventTracker = useAnalyticsEventTracker("Portfolio");
   const ref = useRef(null);
   const mainControls = useAnimation();
   const navigate = useNavigate();
@@ -35,7 +37,13 @@ const DesktopCarauselTwo = ({ image, index, currentSlideIndex, item }) => {
           className={`z-[-10] ${
             index === currentSlideIndex ? "" : ""
           } transition-all delay-75 ease-in-out mr-16 midxmd:mr-10 mt-24 object-fill`}
-          onClick={handleReadMore}
+          onClick={() => {
+            handleReadMore();
+            gaEventTracker(
+              `Clicked on ${item.title}`,
+              "Clicked on Portfolio Carausel"
+            );
+          }}
         />
         <div
           className={`opacity-0 ${
@@ -72,7 +80,13 @@ const DesktopCarauselTwo = ({ image, index, currentSlideIndex, item }) => {
             >
               <button
                 className="sm:text-base xxmd:text-xl text-white font-light border-[1px] p-1 xxmd:p-2 rounded-lg border-white mx-auto midxmd:mb-3"
-                onClick={handleReadMore}
+                onClick={() => {
+                  handleReadMore();
+                  gaEventTracker(
+                    `Clicked on ${item.title}`,
+                    "Clicked on Portfolio Carausel"
+                  );
+                }}
               >
                 Read More
               </button>

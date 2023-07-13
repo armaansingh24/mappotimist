@@ -4,9 +4,7 @@ import two from "../assets/developer/two.webp";
 import three from "../assets/developer/three.webp";
 import { useState, useEffect, useRef } from "react";
 import GetHired from "./GetHired";
-import GetHire from "./GetHire";
 import GetHiredMobile from "./GetHiredMobile";
-import HireMobile from "./HireMobile";
 import { SlClose } from "react-icons/sl";
 import { Tilt } from "react-tilt";
 import { Link } from "react-scroll";
@@ -20,8 +18,10 @@ import ellips4 from "../assets/developer/ellips4.webp";
 import ellips5 from "../assets/developer/ellips5.webp";
 import ellips6 from "../assets/developer/ellips6.webp";
 import ellips7 from "../assets/developer/ellips7.webp";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const Developer = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Button");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -33,27 +33,20 @@ const Developer = () => {
   }, [isInView]);
 
   const [showForm, setShowForm] = useState(false);
-  const [showForm2, setShowForm2] = useState(false);
   const [showForm3, setShowForm3] = useState(false);
-  const [showForm4, setShowForm4] = useState(false);
 
   const handleGetHired = () => {
     setShowForm(!showForm);
   };
-  const handleGetHire = () => {
-    setShowForm2(!showForm2);
-  };
+
   const handleGetHired1 = () => {
     setShowForm3(!showForm3);
   };
 
-  const handleGetHire1 = () => {
-    setShowForm4(!showForm4);
-  };
 
   useEffect(() => {
     const body = document.body;
-    const modalOpen = showForm || showForm2 || showForm3 || showForm4;
+    const modalOpen = showForm || showForm3;
 
     if (modalOpen) {
       body.style.overflow = "hidden";
@@ -64,15 +57,13 @@ const Developer = () => {
     return () => {
       body.style.overflow = "auto";
     };
-  }, [showForm, showForm2, showForm3, showForm4]);
+  }, [showForm, showForm3]);
 
   const [showElement, setShowElement] = useState(false);
 
-  
-  
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    if(screenWidth > 1000){
+    if (screenWidth > 1000) {
       setShowElement(true);
     }
   }, []);
@@ -86,7 +77,7 @@ const Developer = () => {
               autoPlay
               muted
               loop
-              className="bg-transparent w-screen mb-24 hidden midFM:h-screen midlg:block
+              className="bg-transparent w-screen mb-24 hidden  midlg:block
       scale-[1.3]"
             >
               <source src={bgVideo} type="video/mp4" />
@@ -178,7 +169,7 @@ const Developer = () => {
                   </motion.p>
                   <motion.img
                     src={one}
-                    alt=""
+                    alt="Hiring Image"
                     className="midFM:w-[80%]"
                     ref={ref}
                     variants={{
@@ -207,7 +198,13 @@ const Developer = () => {
                   <Link to="Developer">
                     <motion.button
                       className="hidden midFM:block bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
-                      onClick={handleGetHired}
+                      onClick={() => {
+                        handleGetHired();
+                        gaEventTracker(
+                          "Recruit btn",
+                          "Click on Recruit btn from our vision section"
+                        );
+                      }}
                       ref={ref}
                       variants={{
                         hidden: { opacity: 0, y: 50 },
@@ -222,7 +219,13 @@ const Developer = () => {
                   </Link>
                   <button
                     className="block midFM:hidden bg-gradient-to-l text-xl from-secondary to-[#10669C] px-6 py-1 rounded-full text-white mb-2"
-                    onClick={handleGetHired1}
+                    onClick={() => {
+                      handleGetHired1();
+                      gaEventTracker(
+                        "Recruit btn",
+                        "Click on Recruit btn from our vision section"
+                      );
+                    }}
                   >
                     Recruit
                   </button>
@@ -263,7 +266,7 @@ const Developer = () => {
                   </motion.p>
                   <motion.img
                     src={two}
-                    alt=""
+                    alt="Discussion Image"
                     className="mt-12 midFM:w-[80%]"
                     ref={ref}
                     variants={{
@@ -305,6 +308,12 @@ const Developer = () => {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 1.6 }}
+                      onClick={() => {
+                        gaEventTracker(
+                          "Connect Us btn",
+                          "Click on Connect Us btn from our vision section"
+                        );
+                      }}
                     >
                       Connect Us
                     </motion.button>
@@ -347,7 +356,7 @@ const Developer = () => {
                   </motion.p>
                   <motion.img
                     src={three}
-                    alt=""
+                    alt="Document Parsing Image"
                     className="mt-12 midFM:w-[80%]"
                     ref={ref}
                     variants={{
@@ -384,6 +393,12 @@ const Developer = () => {
                       initial="hidden"
                       animate={mainControls}
                       transition={{ duration: 1.6 }}
+                      onClick={() => {
+                        gaEventTracker(
+                          "View More btn",
+                          "Click on View More btn from our vision section"
+                        );
+                      }}
                     >
                       View More
                     </motion.button>
@@ -396,7 +411,7 @@ const Developer = () => {
       </div>
       <div
         className={`absolute inset-0 z-[60] ${
-          showForm || showForm2 || showForm3 || showForm4
+          showForm || showForm3
             ? "pointer-events-auto"
             : "pointer-events-none"
         } `}
@@ -416,38 +431,13 @@ const Developer = () => {
 
         {showForm3 && (
           <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
-            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
+            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70] middleXmd:top-20 middleXmd:right-12">
               <button onClick={handleGetHired1}>
                 <SlClose />
               </button>
             </div>
             <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
               <GetHiredMobile />
-            </div>
-          </div>
-        )}
-
-        {showForm2 && (
-          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto w-full">
-            <div className="absolute top-20 right-20 text-[50px] text-white z-[70]">
-              <button onClick={handleGetHire}>
-                <SlClose />
-              </button>
-            </div>
-            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
-              <GetHire />
-            </div>
-          </div>
-        )}
-        {showForm4 && (
-          <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
-            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
-              <button onClick={handleGetHire1}>
-                <SlClose />
-              </button>
-            </div>
-            <div className="bg-transparent h-full w-full mx-auto p-6 rounded-lg">
-              <HireMobile />
             </div>
           </div>
         )}

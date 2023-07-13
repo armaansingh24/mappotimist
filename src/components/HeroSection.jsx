@@ -18,8 +18,10 @@ import pattern2 from "../assets/hero-section/pattern2.webp";
 import circle from "../assets/hero-section/circle.webp";
 import plus from "../assets/hero-section/plus.webp";
 import square from "../assets/hero-section/square.webp";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const HeroSection = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Button");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -117,13 +119,27 @@ const HeroSection = () => {
                     autoStart: true,
                     loop: true,
                     delay: 100,
-                    strings: ["Company", "Organization", "Agency", "Firm","Experties"],
+                    strings: [
+                      "Company",
+                      "Organization",
+                      "Agency",
+                      "Firm",
+                      "Experties",
+                    ],
                   }}
                 />
               </div>
             </div>
             <div className="flex justify-center flex-wrap items-center mr-10 sm:mr-0 mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
-              <Link to="Developer" smooth={true} offset={100} duration={1000}>
+              <Link
+                to="Developer"
+                smooth={true}
+                offset={100}
+                duration={1000}
+                onClick={() => {
+                  gaEventTracker("Know More Btn", "Clicked from Home Page");
+                }}
+              >
                 <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12">
                   Know more
                   <span className="know">

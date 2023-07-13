@@ -13,6 +13,7 @@ import PortfolioNavbar from "../components/PortfolioNavbar";
 import message from "../assets/portfolio/message.webp";
 import { portfolioImages } from "../constants/index";
 import Loader from "../components/Loader";
+import ReactGA from "react-ga4";
 
 const PortfolioPage = () => {
   const id = useParams();
@@ -26,6 +27,13 @@ const PortfolioPage = () => {
     setItem(SelectedItem[0]);
     setLoading(false);
   }, [id, item]);
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "Portfolio",
+      page: "/portfolio/:itemId",
+      title: "Portfolio",
+    });
+  }, []);
 
   return (
     <>
@@ -54,11 +62,7 @@ const PortfolioPage = () => {
               </div>
               <div className="w-full">
                 {item && item.mainImage && (
-                  <img
-                    src={item.mainImage}
-                    alt=""
-                    className={`${item.css}`}
-                  />
+                  <img src={item.mainImage} alt="" className={`${item.css}`} />
                 )}
               </div>
             </div>

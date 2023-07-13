@@ -6,8 +6,11 @@ import linkedin from "../assets/contactUs/linkedin.webp";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { motion, useAnimation, useInView } from "framer-motion";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const ContactSection = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Button");
+  const gaEventTracker2 = useAnalyticsEventTracker("Image");
   const [text] = useTypewriter({
     words: [" Project?", "Idea?"],
     loop: {},
@@ -19,12 +22,11 @@ const ContactSection = () => {
     name: "",
     email: "",
     idea: "",
+    selectedService: [],
   });
   const [error, setError] = useState("");
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
-  const [selectedService, setSelectedService] = useState("");
-  const [customService, setCustomService] = useState("");
   const inputRef = useRef(null);
   const form = useRef();
 
@@ -71,9 +73,12 @@ const ContactSection = () => {
           name: "",
           email: "",
           idea: "",
+          selectedService: [],
         });
-        setCustomService("");
-        setSelectedService("");
+        gaEventTracker(
+          "Contact Us btn",
+          "Clicked on Contact Us btn from Home Page"
+        );
       } else {
         toast.error("Email not sent");
       }
@@ -89,29 +94,23 @@ const ContactSection = () => {
   };
 
   const handleSelectedService = (service) => {
-    if (selectedService === "") {
-      setSelectedService(service);
-      setFormData((prevData) => ({
-        ...prevData,
-        idea: service,
-      }));
+    if (formData.selectedService.includes(service) === true) {
+      setFormData((prevData) => {
+        return {
+          ...prevData,
+          selectedService: prevData.selectedService.filter(
+            (item) => item !== service
+          ),
+        };
+      });
     } else {
-      setSelectedService((prevService) => prevService + ", " + service);
-      setFormData((prevData) => ({
-        ...prevData,
-        idea: prevData.idea + ", " + service,
-      }));
+      setFormData((prevData) => {
+        return {
+          ...prevData,
+          selectedService: [...prevData.selectedService, service],
+        };
+      });
     }
-    setCustomService("");
-  };
-
-  const handleCustomServiceChange = (event) => {
-    setSelectedService("");
-    setFormData((prevData) => ({
-      ...prevData,
-      idea: event.target.value,
-    }));
-    setCustomService(event.target.value);
   };
 
   const ref = useRef(null);
@@ -170,7 +169,15 @@ const ContactSection = () => {
                 </p>
               </div>
               <div className="mt-12 flex items-center justify-center">
-                <div className="">
+                <div
+                  className=""
+                  onClick={() => {
+                    gaEventTracker2(
+                      "Linkedin Profile",
+                      "Clicked on Linkedin Profile from Contact Us Section"
+                    );
+                  }}
+                >
                   <a
                     href="https://www.linkedin.com/in/yashvant-sikarvar-52022064/"
                     target="_blank"
@@ -217,9 +224,21 @@ const ContactSection = () => {
                 <div className="h-fit flex flex-wrap justify-start items-center gap-2 midxmd:w-[80%]">
                   <div className="anim-btn">
                     <button
-                      className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                      className={`px-2 rounded-lg  text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button 
+                        ${
+                          formData.selectedService.includes(
+                            "Mobile App Development"
+                          )
+                            ? "active-service"
+                            : "bg-[#F5F7FE] text-black"
+                        }
+                      `}
                       onClick={() => {
                         handleSelectedService("Mobile App Development");
+                        gaEventTracker(
+                          "App Development btn",
+                          "Cliked on mobile app dev. services"
+                        );
                       }}
                     >
                       Mobile App Development
@@ -227,36 +246,78 @@ const ContactSection = () => {
                   </div>
 
                   <button
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className={`px-2 rounded-lg  text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button 
+                        ${
+                          formData.selectedService.includes(
+                            "Website Development"
+                          )
+                            ? "active-service"
+                            : "bg-[#F5F7FE] text-black"
+                        }
+                      `}
                     onClick={() => {
                       handleSelectedService("Website Development");
+                      gaEventTracker(
+                        "Web Development btn",
+                        "Cliked on Web dev. services"
+                      );
                     }}
                   >
                     Website Development
                   </button>
 
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className={`px-2 rounded-lg  text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button 
+                        ${
+                          formData.selectedService.includes("Website Design")
+                            ? "active-service"
+                            : "bg-[#F5F7FE] text-black"
+                        }
+                      `}
                     onClick={() => {
                       handleSelectedService("Website Design");
+                      gaEventTracker(
+                        "Web. Design btn",
+                        "Cliked on Web. Design services"
+                      );
                     }}
                   >
                     Website Design
                   </span>
 
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className={`px-2 rounded-lg  text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button 
+                        ${
+                          formData.selectedService.includes("Mobile App Design")
+                            ? "active-service"
+                            : "bg-[#F5F7FE] text-black"
+                        }
+                      `}
                     onClick={() => {
                       handleSelectedService("Mobile App Design");
+                      gaEventTracker(
+                        "Mobile app Design btn",
+                        "Cliked on Mobile app Design services"
+                      );
                     }}
                   >
                     Mobile App Design
                   </span>
 
                   <span
-                    className="px-2 rounded-lg bg-[#F5F7FE] text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button"
+                    className={`px-2 rounded-lg  text-[9px] h-[25px] flex items-center sm:text-[17px] italic sm:h-[37px] border-2 cursor-pointer font-poppins500 anim-btn__button 
+                        ${
+                          formData.selectedService.includes("Product strategy")
+                            ? "active-service"
+                            : "bg-[#F5F7FE] text-black"
+                        }
+                      `}
                     onClick={() => {
                       handleSelectedService("Product strategy");
+                      gaEventTracker(
+                        "Product Stratagy btn",
+                        "Cliked on Product Stratagy services"
+                      );
                     }}
                   >
                     Product strategy
@@ -266,6 +327,7 @@ const ContactSection = () => {
                     ref={inputRef}
                     onClick={() => {
                       handleButtonClick();
+                      gaEventTracker("others btn", "Cliked on others services");
                     }}
                   >
                     Others
@@ -341,20 +403,16 @@ const ContactSection = () => {
                           maxLength={500}
                           id="idea"
                           name="idea"
-                          onChange={handleCustomServiceChange}
-                          value={selectedService || customService}
+                          onChange={changeHandler}
+                          value={formData.idea}
                           className={`w-[90%] border  ${
-                            !selectedService && error2
-                              ? "border-red-500"
-                              : "border-gray-300"
+                            error2 ? "border-red-500" : "border-gray-300"
                           } py-1 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary text-lg relative z-20 resize-none placeholder-gray-300`}
                           onClick={errorHandler}
-                          placeholder={
-                            selectedService ? "" : "Share your thoughts"
-                          }
+                          placeholder="Share your thoughts"
                           ref={inputRef}
                         />
-                        {!selectedService && error2.length !== 0 && (
+                        {!error2.length !== 0 && (
                           <p className="text-red-500 text-sm  text-left rounded-lg  relative z-10  flex items-center justify-start">
                             {error2}
                           </p>

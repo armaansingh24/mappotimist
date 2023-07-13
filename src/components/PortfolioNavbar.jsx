@@ -5,8 +5,10 @@ import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
 import { HashLink as Link } from "react-router-hash-link";
 import { Link as HLink } from "react-router-dom";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const Navbar = ({ page }) => {
+  const gaEventTracker = useAnalyticsEventTracker("Navbar");
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,6 +32,7 @@ const Navbar = ({ page }) => {
               className="flex items-center cursor-pointer justify-end gap-1 sm:w-[15%] order-2 sm:justify-start bg-transparent"
               onClick={() => {
                 window.scrollTo(0, 0);
+                gaEventTracker("nav-Logo", `Cliked on nav from ${page}`);
               }}
             >
               <img
@@ -56,6 +59,9 @@ const Navbar = ({ page }) => {
                 smooth={true}
                 offset={100}
                 duration={1000}
+                onClick={() => {
+                  gaEventTracker("nav-Home", `Cliked on nav from ${page}`);
+                }}
               >
                 <li
                   className="text-[20px] rounded-full cursor-pointer leading-[30px] py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins 
@@ -64,7 +70,13 @@ const Navbar = ({ page }) => {
                   Home
                 </li>
               </HLink>
-              <HLink className="group" to={`/about-us`}>
+              <HLink
+                className="group"
+                to={`/about-us`}
+                onClick={() => {
+                  gaEventTracker("nav-About", `Cliked on nav from ${page}`);
+                }}
+              >
                 <li
                   className="text-[20px]  cursor-pointer leading-[30px] rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins
                 "
@@ -82,6 +94,9 @@ const Navbar = ({ page }) => {
                     top: yCoordinate + yOffset,
                     behavior: "smooth",
                   });
+                }}
+                onClick={() => {
+                  gaEventTracker("nav-Portfolio", `Cliked on nav from ${page}`);
                 }}
               >
                 <li
@@ -104,6 +119,9 @@ const Navbar = ({ page }) => {
                     behavior: "smooth",
                   });
                 }}
+                onClick={() => {
+                  gaEventTracker("nav-Expertise", `Cliked on nav from ${page}`);
+                }}
               >
                 <li
                   className="text-[20px]  cursor-pointer leading-[30px] rounded-full py-1 px-3 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white font-poppins 
@@ -122,6 +140,12 @@ const Navbar = ({ page }) => {
                     top: 5000 + yOffset,
                     behavior: "smooth",
                   });
+                }}
+                onClick={() => {
+                  gaEventTracker(
+                    "nav-Contact-Us",
+                    `Cliked on nav from ${page}`
+                  );
                 }}
               >
                 <li
@@ -200,124 +224,138 @@ const Navbar = ({ page }) => {
                 }  justify-center items-center mx-auto transition-all duration-[2000ms] linear`}
               >
                 <ul className="list-none flex justify-between items-start flex-col gap-4 mb-12 w-full mt-12 transform transition duration-1000 ease-linear">
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                  <Link
+                    to={`/#Home`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker("nav-Home", `Cliked on nav from ${page}`);
                     }}
                   >
-                    <Link
-                      to={`/#Home`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       Home
-                    </Link>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </Link>
+                  <HLink
+                    to={`/about-us`}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker("nav-About", `Cliked on nav from ${page}`);
                     }}
                   >
-                    <HLink
-                      to={`/about-us`}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       About
-                    </HLink>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </HLink>
+                  <Link
+                    to={`/#Portfolio`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker(
+                        "nav-Portfolio",
+                        `Cliked on nav from ${page}`
+                      );
+                    }}
+                    scroll={(el) => {
+                      const yCoordinate = el.getBoundingClientRect().top;
+                      const yOffset = 100;
+                      window.scrollTo({
+                        top: yCoordinate + yOffset,
+                        behavior: "smooth",
+                      });
                     }}
                   >
-                    <Link
-                      to={`/#Portfolio`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
-                      }}
-                      scroll={(el) => {
-                        const yCoordinate = el.getBoundingClientRect().top;
-                        const yOffset = 100;
-                        window.scrollTo({
-                          top: yCoordinate + yOffset,
-                          behavior: "smooth",
-                        });
                       }}
                     >
                       Portfolio
-                    </Link>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </Link>
+                  <Link
+                    to={`/#Expertise`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker(
+                        "nav-Expertise",
+                        `Cliked on nav from ${page}`
+                      );
+                    }}
+                    scroll={(el) => {
+                      const yCoordinate = el.getBoundingClientRect().top;
+                      const yOffset = 100;
+                      window.scrollTo({
+                        top: yCoordinate + yOffset,
+                        behavior: "smooth",
+                      });
                     }}
                   >
-                    <Link
-                      to={`/#Expertise`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
-                      scroll={(el) => {
-                        const yCoordinate = el.getBoundingClientRect().top;
-                        const yOffset = 100;
-                        window.scrollTo({
-                          top: yCoordinate + yOffset,
-                          behavior: "smooth",
-                        });
-                      }}
                     >
                       Expertise
-                    </Link>
-                  </li>
-                  <li
-                    className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
-               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
+                    </li>
+                  </Link>
+                  <Link
+                    to={`/#Contact Us`}
+                    smooth={true}
+                    offset={100}
+                    duration={1000}
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker(
+                        "nav-Contact-Us",
+                        `Cliked on nav from ${page}`
+                      );
                     }}
                   >
-                    <Link
-                      to={`/#Contact Us`}
-                      smooth={true}
-                      offset={100}
-                      duration={1000}
+                    <li
+                      className="text-[20px] cursor-pointer font-poppins leading-[30px] py-1 px-3 rounded-full
+               hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition duration-300 z-10"
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
                       }}
                     >
                       Contact Us
-                    </Link>
-                  </li>
+                    </li>
+                  </Link>
                 </ul>
               </div>
               <div className="flex justify-end w-[13%]">
@@ -326,6 +364,7 @@ const Navbar = ({ page }) => {
                   className=""
                   onClick={() => {
                     window.scrollTo(0, 0);
+                    gaEventTracker("nav-Logo", `Cliked on nav from ${page}`);
                   }}
                 >
                   <img

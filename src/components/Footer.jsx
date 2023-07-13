@@ -14,8 +14,10 @@ import call from "../assets/footer/call.png";
 import message from "../assets/footer/message.png";
 import logo from "../assets/navbar/logo.webp";
 import termsAndCond from "../assets/footer/termsAndCond.pdf";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const Footer = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Footer");
   const [showForm2, setShowForm2] = useState(false);
   const [showForm4, setShowForm4] = useState(false);
 
@@ -70,18 +72,38 @@ const Footer = () => {
                 </div>
               </div>
               <ul className="text-xl flex gap-1 flex-col mt-20 ">
-                <Link to="/about-us">
+                <Link
+                  to="/about-us"
+                  onClick={() => {
+                    gaEventTracker(
+                      "About Clicked Footer",
+                      "About Clicked from Footer"
+                    );
+                  }}
+                >
                   <li className="cursor-pointer">About</li>
                 </Link>
                 <li
                   className="cursor-pointer hidden midFM:block"
-                  onClick={handleGetHire}
+                  onClick={() => {
+                    handleGetHire();
+                    gaEventTracker(
+                      "Careers Clicked",
+                      "Careers Clicked from Footer"
+                    );
+                  }}
                 >
                   Careers
                 </li>
                 <li
                   className="cursor-pointer midFM:hidden"
-                  onClick={handleGetHire1}
+                  onClick={() => {
+                    handleGetHire1();
+                    gaEventTracker(
+                      "Careers Clicked",
+                      "Careers Clicked from Footer"
+                    );
+                  }}
                 >
                   Careers
                 </li>
@@ -90,6 +112,12 @@ const Footer = () => {
                     href={PrivacyPolicy}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      gaEventTracker(
+                        "Privacy Policies Clicked",
+                        "Privacy Policies Clicked from Footer"
+                      );
+                    }}
                   >
                     Privacy Policies
                   </a>
@@ -99,6 +127,12 @@ const Footer = () => {
                     href={termsAndCond}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      gaEventTracker(
+                        "Terms & Conditions Clicked",
+                        "Terms & Conditions Clicked from Footer"
+                      );
+                    }}
                   >
                     Terms & Conditions
                   </a>
@@ -117,6 +151,12 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer w-[11%] sm:w-[7%] self-center"
+                  onClick={() => {
+                    gaEventTracker(
+                      "Facebook Visited footer",
+                      "Facebook Visited footer Clicked from Footer"
+                    );
+                  }}
                 >
                   <img src={fb} alt="" />
                 </a>
@@ -124,6 +164,12 @@ const Footer = () => {
                   href="https://join.slack.com/t/mappoptimistworkspace/shared_invite/zt-1y2d2e3n9-73Lrc1VdxYMQ97RKAz393g"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    gaEventTracker(
+                      "slack Visited footer",
+                      "slack Visited footer Clicked from Footer"
+                    );
+                  }}
                 >
                   <img
                     src={slack}
@@ -136,6 +182,12 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer w-[11%] sm:w-[7%] self-center"
+                  onClick={() => {
+                    gaEventTracker(
+                      "insta Visited footer",
+                      "insta Visited footer Clicked from Footer"
+                    );
+                  }}
                 >
                   <img src={insta} alt="" />
                 </a>
@@ -144,6 +196,12 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer w-[11%] sm:w-[7%] self-center"
+                  onClick={() => {
+                    gaEventTracker(
+                      "Linkedin Visited footer",
+                      "Linkedin Visited footer Clicked from Footer"
+                    );
+                  }}
                 >
                   <img src={linkedin} alt="" className="mt-0 translate-y-0" />
                 </a>
@@ -174,7 +232,7 @@ const Footer = () => {
         )}
         {showForm4 && (
           <div className="fixed inset-0 flex items-center justify-center bg-[rgb(0,0,0,0.76)] scrollbar-hide overflow-x-hidden overflow-y-auto">
-            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70]">
+            <div className="absolute top-12 right-8 text-[28px] text-secondary z-[70] middleXmd:top-20 middleXmd:right-12">
               <button onClick={handleGetHire1}>
                 <SlClose />
               </button>

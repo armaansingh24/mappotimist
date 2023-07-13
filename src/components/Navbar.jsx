@@ -6,8 +6,10 @@ import logo2 from "../assets/navbar/logo2.png";
 import eclips1 from "../assets/navbar/eclips1.webp";
 import eclips2 from "../assets/navbar/eclips2.webp";
 import eclips3 from "../assets/navbar/eclips3.webp";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const Navbar = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Navbar");
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,6 +29,7 @@ const Navbar = () => {
               className="flex items-center cursor-pointer justify-end gap-1 sm:w-[15%] order-2 sm:justify-start bg-transparent"
               onClick={() => {
                 window.scrollTo(0, 0);
+                gaEventTracker("nav-Logo", "Cliked on nav from HomePage");
               }}
             >
               <img
@@ -63,6 +66,9 @@ const Navbar = () => {
                 smooth={true}
                 offset={100}
                 duration={1000}
+                onClick={() => {
+                  gaEventTracker("nav-Home", "Cliked on nav from HomePage");
+                }}
               >
                 <li
                   className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
@@ -75,6 +81,9 @@ const Navbar = () => {
               <NavLink
                 className="  rounded-full   relative z-10"
                 to={`/about-us`}
+                onClick={() => {
+                  gaEventTracker("nav-About", "Cliked on nav from HomePage");
+                }}
               >
                 <li
                   className="text-[20px]  cursor-pointer leading-[30px] group font-poppins group text-white  relative
@@ -90,6 +99,12 @@ const Navbar = () => {
                 smooth={true}
                 offset={100}
                 duration={1000}
+                onClick={() => {
+                  gaEventTracker(
+                    "nav-Portfolio",
+                    "Cliked on nav from HomePage"
+                  );
+                }}
               >
                 <li
                   className="text-[20px]  cursor-pointer leading-[30px] group font-poppins text-white relative
@@ -105,6 +120,12 @@ const Navbar = () => {
                 smooth={true}
                 offset={450}
                 duration={1000}
+                onClick={() => {
+                  gaEventTracker(
+                    "nav-Expertise",
+                    "Cliked on nav from HomePage"
+                  );
+                }}
               >
                 <li
                   className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
@@ -120,6 +141,12 @@ const Navbar = () => {
                 smooth={true}
                 offset={10}
                 duration={1000}
+                onClick={() => {
+                  gaEventTracker(
+                    "nav-Contact-US",
+                    "Cliked on nav from HomePage"
+                  );
+                }}
               >
                 <li
                   className="text-[20px]  cursor-pointer leading-[30px] group font-poppins relative
@@ -208,6 +235,7 @@ const Navbar = () => {
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker("nav-Home", "Cliked on nav from HomePage");
                     }}
                   >
                     <li
@@ -226,6 +254,10 @@ const Navbar = () => {
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker(
+                        "nav-About",
+                        "Cliked on nav from HomePage"
+                      );
                     }}
                   >
                     <li
@@ -247,6 +279,10 @@ const Navbar = () => {
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker(
+                        "nav-Portfolio",
+                        "Cliked on nav from HomePage"
+                      );
                     }}
                   >
                     <li
@@ -268,6 +304,10 @@ const Navbar = () => {
                     onClick={() => {
                       setToggle(!toggle);
                       setIsOpen(!isOpen);
+                      gaEventTracker(
+                        "nav-Expertise",
+                        "Cliked on nav from HomePage"
+                      );
                     }}
                   >
                     <li
@@ -297,6 +337,10 @@ const Navbar = () => {
                       onClick={() => {
                         setToggle(!toggle);
                         setIsOpen(!isOpen);
+                        gaEventTracker(
+                          "nav-Contact-US",
+                          "Cliked on nav from HomePage"
+                        );
                       }}
                     >
                       Contact Us
@@ -310,6 +354,10 @@ const Navbar = () => {
                   className=""
                   onClick={() => {
                     window.scrollTo(0, 0);
+                     gaEventTracker(
+                       "nav-Logo",
+                       "Cliked on nav from HomePage"
+                     );
                   }}
                 >
                   <img

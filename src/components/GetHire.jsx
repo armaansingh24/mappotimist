@@ -13,8 +13,10 @@ import expertise from "../assets/forms/expertise.png";
 import cal from "../assets/forms/cal.png";
 import call from "../assets/forms/call.png";
 import { toast } from "react-hot-toast";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const GetHired = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Button");
   const fileInputRef = useRef(null);
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
@@ -158,6 +160,10 @@ const GetHired = () => {
           experience: "",
           bio: "",
         });
+        gaEventTracker(
+          "Submit btn",
+          "Clcked on submit btn for Carreers form"
+        );
       } else {
         toast.error("Email not sent");
       }
@@ -199,7 +205,7 @@ const GetHired = () => {
               </p>
             </div>
 
-            <div className="bg-white w-[80%] h-full flex rounded-xl p-2 mb-10 mt-10">
+            <div className="bg-white w-[95%] middleXmd:w-[80%] h-full flex rounded-xl p-2 mb-10 mt-10">
               <div className="w-[60%] p-7 rounded-xl bg-gradient-to-tl from-[#1CB5E0] to-[#8ed7ec] relative">
                 <img
                   src={ellips}

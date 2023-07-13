@@ -19,10 +19,17 @@ import bubble1 from "../assets/aboutUs/bubble1.png";
 import bubble2 from "../assets/aboutUs/bubble2.png";
 import bubble3 from "../assets/aboutUs/bubble3.png";
 import bubble4 from "../assets/aboutUs/bubble4.png";
-
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 const AboutUs = () => {
- 
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "About Us",
+      page: "/about-us",
+      title: "About us",
+    });
+  }, []);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -44,7 +51,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-primary to-secondary">
-        <PortfolioNavbar />
+        <PortfolioNavbar page={`OCR-ICR`} />
       </div>
       <div className="w-screen mt-36 sm:mt-0 about">
         <div className="relative">
@@ -191,6 +198,13 @@ const AboutUs = () => {
                 className="group"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Facebook",
+                    label: "Clicked on Personal Facebook profile",
+                  });
+                }}
               >
                 <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
               </a>
@@ -199,6 +213,13 @@ const AboutUs = () => {
                 className="group"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Twitter",
+                    label: "Clicked on Personal Twitter profile",
+                  });
+                }}
               >
                 <SiTwitter className="text-[#7F838D] group-hover:text-primary" />
               </a>
@@ -207,6 +228,13 @@ const AboutUs = () => {
                 className="group object-contain"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Instagram",
+                    label: "Clicked on Personal Instagram profile",
+                  });
+                }}
               >
                 <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
               </a>
@@ -215,6 +243,13 @@ const AboutUs = () => {
                 className="group"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "Social Media",
+                    action: "Linkedin",
+                    label: "Clicked on Personal Linkedin profile",
+                  });
+                }}
               >
                 <BsLinkedin className="text-[#7F838D] group-hover:text-primary text-xl mt-1" />
               </a>
@@ -246,6 +281,13 @@ const AboutUs = () => {
                   className="group"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "Social Media",
+                      action: "Facebook",
+                      label: "Clicked on Personal Facebook profile",
+                    });
+                  }}
                 >
                   <SiFacebook className="text-[#7F838D] group-hover:text-primary" />
                 </a>
@@ -254,6 +296,13 @@ const AboutUs = () => {
                   className="group"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "Social Media",
+                      action: "Twitter",
+                      label: "Clicked on Personal Twitter profile",
+                    });
+                  }}
                 >
                   <SiTwitter className="text-[#7F838D] group-hover:text-primary" />
                 </a>
@@ -262,6 +311,13 @@ const AboutUs = () => {
                   className="group object-contain"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "Social Media",
+                      action: "Instagram",
+                      label: "Clicked on Personal Instagram profile",
+                    });
+                  }}
                 >
                   <RiInstagramFill className="text-[#7F838D] group-hover:text-primary" />
                 </a>
@@ -270,6 +326,13 @@ const AboutUs = () => {
                   className="group"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "Social Media",
+                      action: "Linkedin",
+                      label: "Clicked on Personal Linkedin profile",
+                    });
+                  }}
                 >
                   <BsLinkedin className="text-[#7F838D] group-hover:text-primary text-xl mt-1" />
                 </a>

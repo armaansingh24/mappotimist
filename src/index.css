@@ -281,7 +281,7 @@ body {
 }
 
 .know {
-    animation: goto .8s linear infinite ;
+    animation: goto .8s linear infinite;
 }
 
 @keyframes goto {
@@ -293,6 +293,7 @@ body {
         transform: translateX(0.3rem);
     }
 }
+
 @keyframes slowmo {
 
     from,
@@ -323,10 +324,9 @@ body {
     transform: scale(0.8);
 }
 
-.anim-btn__button:hover {
+.active-service {
     color: #fff;
     background-image: -webkit-linear-gradient(45deg, #000046, #1CB5E0);
-    cursor: pointer;
 }
 
 @keyframes pop-up {

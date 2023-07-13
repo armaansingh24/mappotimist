@@ -12,8 +12,10 @@ import { toast } from "react-hot-toast";
 import expertise from "../assets/forms/expertise.png";
 import cal from "../assets/forms/cal.png";
 import call from "../assets/forms/call.png";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const HireMobile = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Button");
   const fileInputRef = useRef(null);
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
@@ -36,7 +38,7 @@ const HireMobile = () => {
   const handleFlieInput = () => {
     setError4("File size should be less than 5 MB");
   };
-  
+
   function changeHandler(event) {
     if (event.target.name === "file") {
       if (event.target.files[0].size > 5242880) {
@@ -166,6 +168,7 @@ const HireMobile = () => {
           experience: "",
           bio: "",
         });
+        gaEventTracker("Submit btn", "Clcked on submit btn for Carreer form");
       } else {
         toast.error("Email not sent");
       }
@@ -233,7 +236,11 @@ const HireMobile = () => {
               </div>
               <div>
                 <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]">
-                  <img src={call} alt="" className="w-[8%] ml-2" />
+                  <img
+                    src={call}
+                    alt=""
+                    className="w-[8%] middlesm:w-[3.5%] midFM:w-[3%] middleXmd:w-[2.2%] ml-2"
+                  />
                   <RxDividerVertical className="text-4xl text-gray-400" />
                   <input
                     type="number"
@@ -276,7 +283,11 @@ const HireMobile = () => {
               {
                 <div className="relative z-30">
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <img src={expertise} alt="" className="w-[8%] ml-2" />
+                    <img
+                      src={expertise}
+                      alt=""
+                      className="w-[8%] middlesm:w-[3.5%] midFM:w-[3%] middleXmd:w-[2.2%] ml-2"
+                    />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"
@@ -298,7 +309,11 @@ const HireMobile = () => {
               {
                 <div className="relative z-20">
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <img src={cal} alt="" className="w-[8%] ml-2" />
+                    <img
+                      src={cal}
+                      alt=""
+                      className="w-[8%] middlesm:w-[3.5%] midFM:w-[3%] middleXmd:w-[2.2%] ml-2"
+                    />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"

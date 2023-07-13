@@ -9,6 +9,9 @@ import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
 import AboutUs from "./pages/AboutUs";
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-65J0K14JMS"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);

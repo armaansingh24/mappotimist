@@ -12,8 +12,10 @@ import { toast } from "react-hot-toast";
 import call from "../assets/forms/call.png";
 import type from "../assets/forms/type.png";
 import duration from "../assets/forms/duration.png";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const GetHiredMobile = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Button");
   const fileInputRef = useRef(null);
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
@@ -173,6 +175,7 @@ const GetHiredMobile = () => {
             duration: "",
             summery: "",
           });
+          gaEventTracker("Submit btn", "Clcked on submit btn for Hire Team");
         } else {
           toast.error("Email not sent");
         }
@@ -204,6 +207,10 @@ const GetHiredMobile = () => {
             duration: "",
             summery: "",
           });
+          gaEventTracker(
+            "Submit btn",
+            "Clcked on submit btn for Hire Individual"
+          );
         } else {
           toast.error("Email not sent");
         }
@@ -296,7 +303,11 @@ const GetHiredMobile = () => {
               </div>
               <div>
                 <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                  <img src={call} alt="" className="w-[8%] ml-2" />
+                  <img
+                    src={call}
+                    alt=""
+                    className="w-[8%] middlesm:w-[3.5%] midFM:w-[3%] middleXmd:w-[2.2%] ml-2"
+                  />
                   <RxDividerVertical className="text-4xl text-gray-400" />
                   <input
                     type="number"
@@ -361,7 +372,11 @@ const GetHiredMobile = () => {
               {accountType === "Hire Team" && (
                 <div>
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <img src={type} alt="" className="w-[8%] ml-2" />
+                    <img
+                      src={type}
+                      alt=""
+                      className="w-[8%] middlesm:w-[3.5%] midFM:w-[3%] middleXmd:w-[2.2%] ml-2"
+                    />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"
@@ -383,7 +398,11 @@ const GetHiredMobile = () => {
               {accountType === "Hire Team" && (
                 <div className="relative z-20">
                   <div className="flex items-center bg-richblack-800 rounded-full text-richblack-5 w-full p-1 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)] bg-white">
-                    <img src={duration} alt="" className="w-[8%] ml-2" />
+                    <img
+                      src={duration}
+                      alt=""
+                      className="w-[8%] middlesm:w-[3.5%] midFM:w-[3%] middleXmd:w-[2.2%] ml-2"
+                    />
                     <RxDividerVertical className="text-4xl text-gray-400" />
                     <input
                       type="text"

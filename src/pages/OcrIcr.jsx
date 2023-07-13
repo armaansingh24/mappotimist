@@ -20,8 +20,16 @@ import ellips6 from "../assets/OcrIcr/ellips6.webp";
 import ellips7 from "../assets/OcrIcr/ellips7.webp";
 import ellips8 from "../assets/OcrIcr/ellips8.webp";
 import ellips9 from "../assets/OcrIcr/ellips9.webp";
+import ReactGA from "react-ga4";
 
 const OcrIcr = () => {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "OCR-ICR",
+      page: "/orc-icr",
+      title: "OCR-ICR",
+    });
+  }, []);
   const data = Ai;
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
@@ -41,7 +49,7 @@ const OcrIcr = () => {
           <img
             src={R1}
             alt=""
-            className="absolute w-[50%] -top-7 -left-[30%] z-0 hidden sm:block"
+            className="absolute w-[50%] -top-[5%] -left-[30%] z-0 hidden sm:block"
           />
           <img
             src={ellips6}
@@ -59,7 +67,7 @@ const OcrIcr = () => {
             className="absolute  top-[43rem] left-0 hidden midFM:block z-0"
           />
           <div className="w-[90%] mt-44  mx-auto sm:mt-0 relative z-40">
-            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 sm:h-[90vh]">
+            <div className="flex flex-col gap-6 justify-center items-center midxmd:flex-row midxmd:gap-20 mb-[10%] mt-[10%]">
               <div className="midxmd:order-2 midxmd:w-full ocr">
                 <img
                   src={First}
@@ -106,7 +114,7 @@ const OcrIcr = () => {
                 />
               </div>
               <div className="midFM:order-1 col-span-2 relative z-50">
-                <h2 className="mx-auto  h-[4rem] z-30 relative text-2xl sm:text-3xl midFM:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <h2 className="mx-auto  p-2 z-30 relative text-2xl sm:text-3xl midFM:text-5xl font-poppins text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Key Features of OCR/ICR (Handwritten)
                 </h2>
                 <p className="text-sm midxmd:text-lg font-poppins mt-4">
@@ -178,7 +186,15 @@ const OcrIcr = () => {
                     </p>
                   </li>
                 </ul>
-                <Link to="demo" smooth={true} offset={-20} duration={1000}>
+                <Link to="demo" smooth={true} offset={-20} duration={1000} 
+                  onClick={()=>{
+                    ReactGA.event({
+                      category: "OCR/ICR Page",
+                      action: "Demo button clicked",
+                      label: "Demo button clicked from OCR/ICR page"
+                    });
+                  }}
+                >
                   <button className="mx-auto bg-gradient-to-r from-primary to-secondary rounded-lg text-white font-poppins text-lg px-6 py-1 relative z-50">
                     View a Demo
                   </button>
@@ -191,12 +207,12 @@ const OcrIcr = () => {
                 alt=""
                 className="absolute -top-[80%] w-screen -left-20 z-0 hidden midFM:block"
               />
-              <div className="w-[90%]">
+              <div className="w-[90%] z-0">
                 <img src={ellips1} alt="" className="absolute right-0 z-0" />
                 <img
                   src={ellips2}
                   alt=""
-                  className="absolute top-44 -left-20 z-0"
+                  className="absolute top-44 -left-20 z-10"
                 />
                 <img
                   src={ellips3}
@@ -219,8 +235,8 @@ const OcrIcr = () => {
                   </h2>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-10 relative z-10">
-                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center">
+                <div className="mt-10 flex flex-col gap-10 z-50 relative">
+                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center z-40 relative ">
                     <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
                       ✔
                     </p>
@@ -233,11 +249,11 @@ const OcrIcr = () => {
                       complexity in their operation.
                     </p>
                   </div>
-                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center">
+                  <div className="text-sm midFM:text-lg flex gap-1 items-start justify-center z-40 relative">
                     <p className="text-base text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
                       ✔
                     </p>
-                    <p className="font-poppins">
+                    <p className="font-poppins z-40 relative">
                       OCR is primarily used for reading printed text. It works
                       by analyzing the shapes and patterns of the letters in the
                       scanned image of a document. The OCR software compares
@@ -372,7 +388,7 @@ const OcrIcr = () => {
                 </p>
               </div>
               <div
-                className="bg-gradient-to-r from-primary to-secondary h-[15rem]  sm:h-[40rem] mx-auto mt-10 mb-32 w-[80%] ml-4 midFM:ml-20 relative z-40"
+                className="bg-gradient-to-r from-primary to-secondary  mx-auto mt-10 mb-32 w-[80%] ml-4 midFM:ml-20 relative z-40"
                 id="demo"
               >
                 {data.map((item, index) => (

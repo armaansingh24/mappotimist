@@ -1,9 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import whatsapp from "../assets/whatsapp.png";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const Whatsapp = () => {
   const [isVisiable, setIsVisiable] = useState(false);
+  const gaEventTracker = useAnalyticsEventTracker("Button");
 
   const listenToScroll = () => {
     let heightToHidden = 250;
@@ -30,6 +32,9 @@ const Whatsapp = () => {
             href="https://wa.me/918171977577?text="
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              gaEventTracker("Whatsapp");
+            }}
           >
             <img
               src={whatsapp}

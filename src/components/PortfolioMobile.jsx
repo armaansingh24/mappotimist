@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const PortfolioMobile = ({ item }) => {
+  const gaEventTracker = useAnalyticsEventTracker("Portfolio");
   const navigate = useNavigate();
 
   const handleReadMore = () => {
@@ -18,7 +20,13 @@ const PortfolioMobile = ({ item }) => {
             ? "w-[68%] mt-10 middleXmd:mt-44 mx-auto"
             : " w-[80%]  p-5 mr-0 ml-7  z-50"
         }`}
-        onClick={handleReadMore}
+        onClick={() => {
+          handleReadMore();
+          gaEventTracker(
+            `Clicked on ${item.title}`,
+            "Clicked on Portfolio Carausel"
+          );
+        }}
       />
     </div>
   );

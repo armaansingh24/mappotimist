@@ -11,17 +11,19 @@ import Ellipse3 from "../assets/expertise/Ellipse3.webp";
 import R1 from "../assets/expertise/R1.webp";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const Experties = () => {
- const ref = useRef(null);
- const isInView = useInView(ref, { once: true });
- const mainControls = useAnimation();
- useEffect(() => {
-   if (isInView) {
-     mainControls.start("visible");
-   }
-   // eslint-disable-next-line react-hooks/exhaustive-deps
- }, [isInView]);
+  const gaEventTracker = useAnalyticsEventTracker("Button");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView]);
   const [expanded, setExpanded] = useState(false);
 
   const toggleDivHeight = () => {
@@ -79,14 +81,26 @@ const Experties = () => {
         </div>
         <div className="mt-10 mx-auto w-full">
           <p
-            onClick={toggleDivHeight}
+            onClick={() => {
+              toggleDivHeight();
+              gaEventTracker(
+                "Expertise View More btn",
+                "Clicked on Expertise View More btn"
+              );
+            }}
             className="relative cursor-pointer text-center text-transparent bg-gradient-to-tr from-primary to-secondary bg-clip-text z-20"
           >
             {expanded ? "View Less" : "View More"}
           </p>
           <p
-            className="relative cursor-pointer text-center bg-gradient-to-tr from-primary to-secondary bg-clip-text z-20"
-            onClick={toggleDivHeight}
+            className="relative cursor-pointer text-center bg-gradient-to-tr from-primary to-secondary bg-clip-text z-50"
+            onClick={() => {
+              toggleDivHeight();
+              gaEventTracker(
+                "Expertise View More btn",
+                "Clicked on Expertise View More btn"
+              );
+            }}
           >
             {!expanded ? (
               <AiOutlineDown className="mx-auto" />

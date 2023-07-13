@@ -13,8 +13,10 @@ import call from "../assets/forms/call.png";
 import type from "../assets/forms/type.png";
 import duration from "../assets/forms/duration.png";
 import axios from "axios";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker ";
 
 const GetHired = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Button");
   const fileInputRef = useRef(null);
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
@@ -178,6 +180,7 @@ const GetHired = () => {
             duration: "",
             summery: "",
           });
+          gaEventTracker("Submit btn","Clcked on submit btn for Hire Team");
         } else {
           toast.error("Email not sent");
         }
@@ -209,6 +212,7 @@ const GetHired = () => {
             duration: "",
             summery: "",
           });
+           gaEventTracker("Submit btn", "Clcked on submit btn for Hire Individual");
         } else {
           toast.error("email not sent");
         }
@@ -272,7 +276,7 @@ const GetHired = () => {
                 Hire Individual Developer
               </button>
             </div>
-            <div className="bg-white w-[80%] h-full flex rounded-xl p-2 mb-10">
+            <div className="bg-white w-[95%] middleXmd:w-[80%] h-full flex rounded-xl p-2 mb-10">
               <div className="w-[60%] p-7 rounded-xl bg-gradient-to-tl from-[#1CB5E0] to-[#8ed7ec] relative">
                 <img
                   src={ellips}
