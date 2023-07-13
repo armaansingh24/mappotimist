@@ -59,7 +59,7 @@ const HeroSection = () => {
           <img
             src={circle}
             alt=""
-            className="absolute left-12 top-[62%] md:top-[50%]"
+            className="absolute left-12 top-[68%] md:top-[50%]"
           />
           <img
             src={square}
@@ -130,7 +130,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            <div className="flex justify-center flex-wrap items-center mr-10 sm:mr-0 mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
+            <div className="flex justify-center flex-wrap items-center mr-10 sm:mr-24 lmd:mr-0 mx-auto gap-2 md:flex-row md:justify-start md:mx-0 mt-4">
               <Link
                 to="Developer"
                 smooth={true}
@@ -140,14 +140,14 @@ const HeroSection = () => {
                   gaEventTracker("Know More Btn", "Clicked from Home Page");
                 }}
               >
-                <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12">
+                <button className="flex items-center mt-2 gap-3 justify-center bg-gradient-to-r from-primary to-secondary py-[6px] px-[12px] rounded-full cursor-pointer text-[22px] font-medium text-white font-poppins500 ml-12 ">
                   Know more
                   <span className="know">
                     <BsArrowRightCircleFill className="text-white bg-black rounded-full" />
                   </span>
                 </button>
               </Link>
-              <Link to="Developer" smooth={true} offset={100} duration={1000}>
+              <Link to="Developer" smooth={true} offset={75} duration={1000}>
                 <div className=" flex ml-20 sm:ml-10 mt-4 lmd:mt-2 cursor-pointer ">
                   <span className=" left-[-10px] ml-[-18px] z-1 hidden sm:block">
                     <img src={image1} alt="" className=" w-12" />
