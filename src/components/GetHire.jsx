@@ -396,7 +396,7 @@ const GetHired = () => {
                       <textarea
                         name="bio"
                         onChange={changeHandler}
-                        placeholder="Bio"
+                        placeholder="Cover Letter"
                         value={formData.bio}
                         onClick={errorHandler}
                         className="h-full w-full focus:outline-none text-base mr-20 resize-none"

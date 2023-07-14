@@ -57,7 +57,7 @@ const PortfolioPage = () => {
                   We Provide{" "}
                 </p>
                 <p className="text-[#DF9507] lmd:text-[48px] -z-1 font-poppins ">
-                  Great Service.
+                  Great Services.
                 </p>
               </div>
               <div className="w-full">

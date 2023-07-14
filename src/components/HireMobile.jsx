@@ -376,7 +376,7 @@ const HireMobile = () => {
                   <textarea
                     name="bio"
                     onChange={changeHandler}
-                    placeholder="Bio"
+                    placeholder="Cover Letter"
                     value={formData.bio}
                     minLength={10}
                     onClick={errorHandler}
