@@ -327,6 +327,7 @@ const GetHired = () => {
                         onChange={changeHandler}
                         placeholder="Name"
                         value={formData.name}
+                        onClick={errorHandler}
                         className="h-full w-full focus:outline-none text-base bg-transparent"
                       />
                     </div>

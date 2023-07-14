@@ -3,7 +3,7 @@ import insta from "../assets/footer/insta.png";
 import fb from "../assets/footer/fb.png";
 import slack from "../assets/footer/slack.webp";
 import linkedin from "../assets/footer/linkedin.png";
-import { NavLink as Link } from "react-router-dom";
+import { NavLink as Link, useNavigate, useLocation } from "react-router-dom";
 import PrivacyPolicy from "../assets/footer/PrivacyPolicy.pdf";
 import { useState, useEffect } from "react";
 import GetHire from "./GetHire";
@@ -20,6 +20,17 @@ const Footer = () => {
   const gaEventTracker = useAnalyticsEventTracker("Footer");
   const [showForm2, setShowForm2] = useState(false);
   const [showForm4, setShowForm4] = useState(false);
+
+  const navigate = useNavigate();
+  const loc = useLocation();
+
+  const handleNavigation = () => {
+    if (loc.pathname === "/about-us") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      navigate("/about-us");
+    }
+  };
 
   const handleGetHire = () => {
     setShowForm2(!showForm2);
@@ -50,10 +61,18 @@ const Footer = () => {
           <div className="mt-10 text-white flex flex-col h-[80%] gap-20 items-end w-full mb-3">
             <div className="flex flex-col w-full sm:flex-row gap-0 sm:mr-20 midxs:justify-around items-start sm:items-center midFM:mr-40">
               <div className="flex flex-col items-center justify-center gap-10">
-                <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-32 midFM:ml-5">
-                  <img src={logo} alt="logo" className="w-[7%] sm:w-[12%]" />
-                  <p>MappOptimist</p>
-                </div>
+                <Link to="/" 
+                  onClick={()=>{
+                    if(window.location.pathname==="/"){
+                       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                    }
+                  }}
+                >
+                  <div className="text-2xl sm:text-3xl flex items-center gap-4 sm:ml-32 midFM:ml-5">
+                    <img src={logo} alt="logo" className="w-[7%] sm:w-[12%]" />
+                    <p>MappOptimist</p>
+                  </div>
+                </Link>
                 <div className="text-xl hidden sm:block self-center">
                   <ul className="flex flex-col gap-3">
                     <li className="flex  items-center justify-start gap-4">
@@ -72,17 +91,17 @@ const Footer = () => {
                 </div>
               </div>
               <ul className="text-xl flex gap-1 flex-col mt-20 ">
-                <Link
-                  to="/about-us"
+                <div
                   onClick={() => {
                     gaEventTracker(
                       "About Clicked Footer",
                       "About Clicked from Footer"
                     );
+                    handleNavigation();
                   }}
                 >
                   <li className="cursor-pointer">About</li>
-                </Link>
+                </div>
                 <li
                   className="cursor-pointer hidden midFM:block"
                   onClick={() => {
@@ -203,7 +222,11 @@ const Footer = () => {
                     );
                   }}
                 >
-                  <img src={linkedin} alt="linkedin" className="mt-0 translate-y-0" />
+                  <img
+                    src={linkedin}
+                    alt="linkedin"
+                    className="mt-0 translate-y-0"
+                  />
                 </a>
               </div>
             </div>
