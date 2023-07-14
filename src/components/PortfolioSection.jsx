@@ -9,7 +9,7 @@ const PortfolioSection = (props) => {
         id="Portfolio"
       >
         <div className="w-[90%] mx-auto p-10">
-          <h2 className="font-poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mt-6">
+          <h2 className="font-poppins text-[30px] lmd:text-[48px] flex gap-2 flex-wrap mt-10">
             Our Portfolios
           </h2>
         </div>
