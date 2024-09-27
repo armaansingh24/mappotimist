@@ -141,7 +141,7 @@ const GetHired = () => {
     errorHandler();
     try {
       const response = await axios.post(
-        "https://mappoptimist.com/v1/send-email-hire",
+        "https://mappoptimist-server.onrender.com/send-email-hire",
         formData,
         {
           headers: {
@@ -388,7 +388,7 @@ const GetHired = () => {
                       </p>
                     )}
                   </div>
-                  {}
+                  { }
                   <div className="col-span-2">
                     <div className="flex items-start  bg-richblack-800 rounded-xl text-richblack-5 w-full p-2 gap-1 shadow-[1px_4px_20px_-7px_rgba(0,0,0,0.6)]  h-[8rem]">
                       <MdOutlineMessage className="text-[rgb(0,0,0,0.4)] text-2xl ml-2 mt-1" />

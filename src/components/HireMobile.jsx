@@ -149,7 +149,7 @@ const HireMobile = () => {
 
     try {
       const response = await axios.post(
-        "https://mappoptimist.com/v1/send-email-hire",
+        "https://mappoptimist-server.onrender.com/send-email-hire",
         formData,
         {
           headers: {

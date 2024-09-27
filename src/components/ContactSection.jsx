@@ -64,7 +64,7 @@ const ContactSection = () => {
     setError2("");
     try {
       const response = await axios.post(
-        "https://mappoptimist.com/v1/send-email-contact",
+        "https://mappoptimist-server.onrender.com/send-email-contact",
         formData
       );
       if (response.status === 200) {

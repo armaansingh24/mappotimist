@@ -155,7 +155,7 @@ const GetHiredMobile = () => {
       };
       try {
         const response = await axios.post(
-          "https://mappoptimist.com/v1/send-email-hire-team",
+          "https://mappoptimist-server.onrender.com/send-email-hire-team",
           formDataSent,
           {
             headers: {
@@ -192,7 +192,7 @@ const GetHiredMobile = () => {
       };
       try {
         const response = await axios.post(
-          "https://mappoptimist.com/v1/send-email-individual",
+          "https://mappoptimist-server.onrender.com/send-email-individual",
           formDataSent
         );
         if (response.status === 200) {
